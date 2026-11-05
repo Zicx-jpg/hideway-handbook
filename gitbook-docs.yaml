@@ -1,0 +1,11 @@
+version: 1
+site:
+  title: Hideway Docs
+  structure:
+    - type: space
+      key: space-handbook
+      title: Handbook
+      path: handbook
+      default: true
+      content:
+        directory: ./handbook
