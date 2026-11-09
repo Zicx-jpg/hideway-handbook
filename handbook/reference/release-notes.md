@@ -3,8 +3,9 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
-## Latest update
+## 3.1.0
 
+* The menu now has the pages Aimbot, Weapons, Triggerbot, Visuals, Radar, Misc and Config. **Close aim**, **Sticky aim** and **Prediction** are cards on the Aimbot page.
 * The Simple / Advanced menu is gone: the menu is now all-in-one. Every option is on its page, the **Mode** button in the top bar and the **Menu mode** option are removed, and the search box still finds any option.
 
 ## 2.10.2 - 2026-11-05

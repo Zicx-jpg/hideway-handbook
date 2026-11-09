@@ -25,7 +25,7 @@
 * [Menu overview](the-menu/overview.md)
 * [Aimbot](the-menu/aimbot.md)
 * [Weapons](the-menu/weapons.md)
-* [Assist](the-menu/assist.md)
+* [Triggerbot](the-menu/assist.md)
 * [Visuals](the-menu/visuals.md)
 * [Radar](the-menu/radar.md)
 * [Misc](the-menu/misc.md)

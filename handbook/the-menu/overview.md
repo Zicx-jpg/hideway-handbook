@@ -8,9 +8,9 @@ Press **Insert** (default) to open or close the menu. It has a left side bar wit
 
 | Page | What is on it |
 |---|---|
-| [**Aimbot**](aimbot.md) | Aim key, bone, field of view, smoothing, visibility rules, humanizing, calibration |
+| [**Aimbot**](aimbot.md) | Aim key, bone, field of view, smoothing, visibility rules, humanizing, calibration, plus the Close aim, Sticky aim and Prediction cards |
 | [**Weapons**](weapons.md) | Per-class overrides (rifle, pistol, SMG, shotgun, sniper) and weapon detection |
-| [**Assist**](assist.md) | Triggerbot, close aim, sticky aim, prediction, ballistics per weapon |
+| [**Triggerbot**](assist.md) | Triggerbot: target part, delay, hold time, range, confirmation, visibility checks |
 | [**Visuals**](visuals.md) | Everything drawn on players, loot, reboot cards, spectators, audio alerts, colours |
 | [**Radar**](radar.md) | On-screen radar and the web radar |
 | [**Misc**](misc.md) | Overlay settings, notifications, keys, input device, debug switches, engine |

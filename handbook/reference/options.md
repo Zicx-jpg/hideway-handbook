@@ -55,7 +55,7 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **SMG anim id** | whole number | 5 | 0 to 40 | Raw weapon animation id the game reports for SMGs. Only change it if the Debug page shows another id for the weapon you hold. |
 | **Sniper anim id** | whole number | 6 | 0 to 40 | Raw weapon animation id the game reports for sniper rifles. Only change it if the Debug page shows another id for the weapon you hold. |
 
-## Assist: trigger, close aim, sticky aim, prediction
+## Triggerbot, close aim, sticky aim, prediction
 
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|

@@ -28,12 +28,12 @@ On **Aimbot > CALIBRATION**, **Counts per degree X** and **Y** are the mouse cou
 ## 4. Per-weapon behaviour
 
 * **Weapons page**: give a class its own field of view, smoothing and bone with **Override**.
-* **Assist > CLOSE AIM**: a different field of view, smoothing and bone for close enemies.
-* **Assist > STICKY AIM**: once close to a target, the aim stays attached; turn it off against groups.
+* **Aimbot > CLOSE AIM**: a different field of view, smoothing and bone for close enemies.
+* **Aimbot > STICKY AIM**: once close to a target, the aim stays attached; turn it off against groups.
 
 ## 5. Prediction
 
-For moving targets: **Assist > PREDICTION**. Set **Projectile speed** and **gravity** (or use **Per-weapon ballistics**), and **Prediction lead** for the delay between your input and what you see.
+For moving targets: **Aimbot > PREDICTION**. Set **Projectile speed** and **gravity** (or use **Per-weapon ballistics**), and **Prediction lead** for the delay between your input and what you see.
 
 **Measure your lead:** Debug > LATENCY > **Measure latency** (stand still in a match, hands off the mouse). It measures the mouse-to-camera delay and offers **Use as Prediction lead** / **Use as Trigger lead**.
 
@@ -52,7 +52,7 @@ For moving targets: **Assist > PREDICTION**. Set **Projectile speed** and **grav
 ## 7. Understand what it is doing
 
 * The **Highlight target** option (Visuals) draws the player the aim or trigger picked in its own colour.
-* The Assist page shows why the trigger did or did not fire (**Last check**, with Advanced debug).
+* The Triggerbot page shows why the trigger did or did not fire (**Last check**, with Advanced debug).
 * Debug > TELEMETRY counts key-held ticks, ticks with a target and shots.
 
 ## 8. When something goes wrong

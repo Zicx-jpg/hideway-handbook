@@ -11,7 +11,7 @@ Every key can be rebound. Click the box next to a key option, then press the key
 | **Next config key** | not set | Switch to the next config | Misc > KEYS |
 | **Previous config key** | not set | Switch to the previous config | Misc > KEYS |
 | **Aim key** | Mouse 2 | Hold to aim | Aimbot |
-| **Trigger key** | Mouse 5 | Activates the triggerbot in *Hold key* mode | Assist |
+| **Trigger key** | Mouse 5 | Activates the triggerbot in *Hold key* mode | Triggerbot |
 | **Radar toggle key** | not set | Show / hide the radar | Radar |
 | **Radar enlarge key** | not set | Make the radar bigger while toggled | Radar |
 | **Fuser toggle key** | not set | Open / close the fuser window | Visuals > HUD |

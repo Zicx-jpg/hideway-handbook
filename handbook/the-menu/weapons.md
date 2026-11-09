@@ -25,4 +25,4 @@ The id table is only partly known on Fortnite 43.00. Recorded matches confirmed 
 
 ## Per-weapon ballistics
 
-Projectile speed and gravity per class (used by prediction) are on the **Assist** page under **BALLISTICS PER WEAPON**.
+Projectile speed and gravity per class (used by prediction) are on the **Aimbot** page (PREDICTION card) under **BALLISTICS PER WEAPON**.

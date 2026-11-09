@@ -49,7 +49,7 @@ Several reasons, from most to least common:
 * Menu open? **Trigger pause in menu** stops it by design.
 * **Trigger max distance**, **Trigger team check**, **Ignore knocked / bots**.
 * Holding something with no ammo (**Only with a gun in hand**).
-* The Assist page's **Last check** line (with Advanced debug) names the reason.
+* The Triggerbot page's **Last check** line (with Advanced debug) names the reason.
 
 ## The mouse button stays down
 

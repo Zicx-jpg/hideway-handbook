@@ -1,8 +1,6 @@
-# Assist
+# Triggerbot
 
-Assist holds the helpers around aiming: the triggerbot, close aim, sticky aim and prediction. All of them need a connected input device.
-
-<figure><img src="../.gitbook/assets/menu-assist-advanced.png" alt="Assist page"><figcaption><p>The Assist page: TRIGGERBOT on the left, CLOSE AIM and STICKY AIM on the right.</p></figcaption></figure>
+The Triggerbot page holds the triggerbot. It needs a connected input device. Close aim, sticky aim and prediction are cards on the [Aimbot](aimbot.md) page; they are described at the bottom of this page.
 
 ## TRIGGERBOT
 
