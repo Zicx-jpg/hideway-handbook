@@ -1,8 +1,8 @@
-# Menu overview: Simple and Advanced
+# Menu overview
 
-Press **Insert** (default) to open or close the menu. It has a left side bar with the pages, a top bar with search, the config dropdown and the **Mode** button, and a bottom bar with the license state and frame rate.
+Press **Insert** (default) to open or close the menu. It has a left side bar with the pages, a top bar with search and the config dropdown, and a bottom bar with the license state and frame rate.
 
-<figure><img src="../.gitbook/assets/menu-aimbot-simple.png" alt="The Hideway menu in Simple mode, Aimbot page"><figcaption><p>Simple mode, Aimbot page. Side bar on the left; search, config dropdown and Mode button on top.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot-advanced.png" alt="The Hideway menu, Aimbot page"><figcaption><p>The Aimbot page. Side bar on the left; search and config dropdown on top.</p></figcaption></figure>
 
 ## The pages
 
@@ -17,17 +17,12 @@ Press **Insert** (default) to open or close the menu. It has a left side bar wit
 | [**Config**](config.md) | Configs, presets, backups, keybinds, files, sharing, license, updates, about |
 | [**Debug**](debug.md) | Hidden by default. Ready check, data health, performance, log. Turn it on in Misc |
 
-## Simple and Advanced mode
+## One menu, everything in it
 
-The **Mode** button in the top bar switches between two views of the same settings:
-
-* **Simple**: the essentials of every page.
-* **Advanced**: every setting (274 options).
-
-<figure><img src="../.gitbook/assets/menu-mode-button.png" alt="Advanced mode, Aimbot page"><figcaption><p>Advanced mode shows more rows on the same page.</p></figcaption></figure>
+The menu is **all-in-one**: every setting is on its page, nothing is hidden and there is no mode to switch. Older versions had a **Simple / Advanced** Mode button; it is gone.
 
 {% hint style="success" %}
-**Nothing is switched off by Simple.** Hidden settings keep the value they have. The search box finds every option in both modes. The mode itself is the option **Menu mode** and is saved with your config.
+**Looking for an option?** Type its name in the search box: it lists the matching options from every page and takes you straight there.
 {% endhint %}
 
 ## Search

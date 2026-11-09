@@ -2,7 +2,7 @@
 
 Everything Hideway draws on players and in the world. The page opens on a **PREVIEW** card that shows your current style on sample players.
 
-<figure><img src="../.gitbook/assets/menu-visuals-simple.png" alt="Visuals page in Simple mode with the preview card"><figcaption><p>Visuals in Simple mode. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it change the outfit.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-simple.png" alt="Visuals page with the preview card"><figcaption><p>The Visuals page. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it change the outfit.</p></figcaption></figure>
 
 ## Cards
 
@@ -22,7 +22,7 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 | **AUDIO ALERTS** | Generated positional tones when an enemy comes in range |
 | **COLORS** | Every colour used above |
 
-<figure><img src="../.gitbook/assets/menu-visuals-advanced.png" alt="Visuals page in Advanced mode"><figcaption><p>Advanced mode: the ESP card with every box and skeleton option.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-advanced.png" alt="Visuals page, ESP card"><figcaption><p>The ESP card with every box and skeleton option.</p></figcaption></figure>
 
 ## Team ID
 
@@ -45,4 +45,4 @@ Bars next to the box, read from the game. Read the rules on [Health and shield b
 
 How smooth the boxes move is set on the **Misc** page (Smooth ESP, ESP smoothness, Smooth skeleton, Motion estimator). See [Set up the ESP](../guides/esp-setup.md).
 
-<figure><img src="../.gitbook/assets/menu-visuals-advanced-2.png" alt="Visuals page, lower half in Advanced mode"><figcaption><p>Lower half in Advanced mode: skeleton, head, HUD, loot.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-advanced-2.png" alt="Visuals page, lower half"><figcaption><p>Lower half: skeleton, head, HUD, loot.</p></figcaption></figure>

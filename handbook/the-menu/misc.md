@@ -2,7 +2,7 @@
 
 System settings: the overlay, motion smoothing, keys, input device, debug switches and engine tuning.
 
-<figure><img src="../.gitbook/assets/menu-misc-advanced.png" alt="Misc page, Advanced mode"><figcaption><p>Misc page in Advanced mode.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-misc-advanced.png" alt="Misc page"><figcaption><p>The Misc page.</p></figcaption></figure>
 
 ## GENERAL
 
@@ -42,7 +42,7 @@ Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. Full
 | **Advanced debug** | Raw addresses and discovered offsets on the Debug page |
 | **Player list** | The players Hideway currently reads, on the Debug page |
 
-## ENGINE (ADVANCED)
+## ENGINE
 
 | Option | What it does |
 |---|---|

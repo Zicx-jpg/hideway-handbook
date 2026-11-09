@@ -2,7 +2,7 @@
 
 Assist holds the helpers around aiming: the triggerbot, close aim, sticky aim and prediction. All of them need a connected input device.
 
-<figure><img src="../.gitbook/assets/menu-assist-advanced.png" alt="Assist page, Advanced mode"><figcaption><p>Assist page in Advanced mode: TRIGGERBOT on the left, CLOSE AIM and STICKY AIM on the right.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-assist-advanced.png" alt="Assist page"><figcaption><p>The Assist page: TRIGGERBOT on the left, CLOSE AIM and STICKY AIM on the right.</p></figcaption></figure>
 
 ## TRIGGERBOT
 

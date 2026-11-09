@@ -125,9 +125,9 @@ Hidden by default. **Misc > Debug > Show debug page**.
 ## The menu and configs
 
 <details>
-<summary>What is the difference between Simple and Advanced?</summary>
+<summary>Where did the Simple and Advanced modes go?</summary>
 
-Simple shows the essentials of each page; Advanced shows every option (274). **Nothing is switched off by Simple**: hidden settings keep their value, and search finds everything. See [Menu overview](the-menu/overview.md).
+They were removed in the latest update. The menu is now **all-in-one**: every option is on its page and there is no Mode button to press. Use the search box to jump to any option. See [Menu overview](the-menu/overview.md).
 
 </details>
 

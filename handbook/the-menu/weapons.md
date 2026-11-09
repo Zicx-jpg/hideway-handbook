@@ -2,7 +2,7 @@
 
 The Weapons page lets each class of weapon use its own aim settings, and shows how Hideway recognises the weapon you hold.
 
-<figure><img src="../.gitbook/assets/menu-weapons-advanced.png" alt="Weapons page in Advanced mode"><figcaption><p>Per-class overrides on the left, DETECTION on the right (Advanced mode).</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-weapons-advanced.png" alt="Weapons page"><figcaption><p>Per-class overrides on the left, DETECTION on the right.</p></figcaption></figure>
 
 ## Per-class overrides
 

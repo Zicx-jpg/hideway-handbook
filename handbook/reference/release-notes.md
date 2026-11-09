@@ -3,6 +3,10 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## Latest update
+
+* The Simple / Advanced menu is gone: the menu is now all-in-one. Every option is on its page, the **Mode** button in the top bar and the **Menu mode** option are removed, and the search box still finds any option.
+
 ## 2.10.2 - 2026-11-05
 
 * Fix: with Mouse 1 as the aim key, clicking to place a wall no longer makes the aim lock onto an enemy behind it.

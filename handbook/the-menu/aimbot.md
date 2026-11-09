@@ -2,27 +2,27 @@
 
 The Aimbot page controls aim assist. It moves the mouse through your **input device**, so aim does nothing until a device is connected and verified ([Connect an input device](../guides/input-device.md)).
 
-<figure><img src="../.gitbook/assets/menu-aimbot-advanced.png" alt="Aimbot page, Advanced mode"><figcaption><p>Aimbot page in Advanced mode: AIMBOT card on the left, HUMANIZE &#x26; TIMING on the right.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot-advanced.png" alt="Aimbot page"><figcaption><p>The Aimbot page: AIMBOT card on the left, HUMANIZE &#x26; TIMING on the right.</p></figcaption></figure>
 
 ## AIMBOT card
 
-| Option | What it does | Simple |
-|---|---|---|
-| **Enable aimbot** | Master switch for aim assist. Needs a connected, verified input device | yes |
-| **Aim key** | Hold it to aim. Click the box, press a key or mouse button; click the box a second time to use Mouse 1; right-click to clear. Default: Mouse 2 | yes |
-| **Aim bone** | Head, Neck, Chest, Pelvis or Closest bone | yes |
-| **Field of view** | Only targets inside this cone around your crosshair count. Smaller = more selective | yes |
-| **Smoothing** | How slowly the aim closes the gap. 1 = instant, higher = slower | yes |
-| **Max aim distance** | Targets further than this are ignored | yes |
-| **Team check** | Never aim at teammates | yes |
-| **Ignore knocked** | Skip downed players | yes |
-| **Only with a gun in hand** | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon | yes |
-| Aim between bones | Aim at the closest point on the skeleton instead of one joint | |
-| Ignore bots | Skip AI-controlled players | |
-| Prefer standing targets | Standing players are chosen before downed ones | |
-| Target priority | Closest to crosshair, or closest distance | |
-| Lock until key release | Stay on the first target until you let go of the aim key | |
-| Dead zone | Inside this angle the aim stops moving, so it does not shake | |
+| Option | What it does |
+|---|---|
+| **Enable aimbot** | Master switch for aim assist. Needs a connected, verified input device |
+| **Aim key** | Hold it to aim. Click the box, press a key or mouse button; click the box a second time to use Mouse 1; right-click to clear. Default: Mouse 2 |
+| **Aim bone** | Head, Neck, Chest, Pelvis or Closest bone |
+| **Field of view** | Only targets inside this cone around your crosshair count. Smaller = more selective |
+| **Smoothing** | How slowly the aim closes the gap. 1 = instant, higher = slower |
+| **Max aim distance** | Targets further than this are ignored |
+| **Team check** | Never aim at teammates |
+| **Ignore knocked** | Skip downed players |
+| **Only with a gun in hand** | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon |
+| Aim between bones | Aim at the closest point on the skeleton instead of one joint |
+| Ignore bots | Skip AI-controlled players |
+| Prefer standing targets | Standing players are chosen before downed ones |
+| Target priority | Closest to crosshair, or closest distance |
+| Lock until key release | Stay on the first target until you let go of the aim key |
+| Dead zone | Inside this angle the aim stops moving, so it does not shake |
 
 ### Only with a gun in hand
 

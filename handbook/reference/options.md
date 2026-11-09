@@ -1,9 +1,9 @@
 # Options reference
 
-Every option of Hideway 2.10.2, taken from the program's own option list (274 options). The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
+Every option of Hideway, taken from the program's own option list. The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
 
 {% hint style="info" %}
-Not every option is on screen in **Simple** mode. Press the **Mode** button at the top of the menu to see everything, or type in the search box: it finds every option in both modes.
+The menu is all-in-one: every option below is on its page. Type in the search box at the top of the menu to jump to one.
 {% endhint %}
 
 ## Aimbot
@@ -206,7 +206,6 @@ Not every option is on screen in **Simple** mode. Press the **Mode** button at t
 | **Auto-save config** | on / off | on |  | Writes the active config 2.5 seconds after your last change, and when the program closes. The old file is kept as a backup first (CONFIG > BACKUPS). Off = only Save config writes it. |
 | **Next config key** | key | not set |  | Switches to the next config in the list (the one you leave is saved first when Auto-save is on). A small message shows the name. |
 | **Previous config key** | key | not set |  | Switches to the previous config in the list. |
-| **Menu mode** | choice | Simple | Simple / Advanced | Simple shows the essentials of every page. Advanced shows every setting. Nothing is switched off by Simple: hidden settings keep the value they have. Also on the Mode button at the top of the menu. |
 | **Snaplines** | choice | Off | Off / Bottom / Middle / Top | Lines from the screen edge or centre to every player. |
 | **Snapline thickness** | number | 1. | 0.5 to 4. | Thickness of the snaplines in pixels. |
 | **Off-screen arrows** | on / off | off |  | Arrows at the edge of the screen pointing to players you cannot see. |

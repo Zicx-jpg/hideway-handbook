@@ -30,7 +30,7 @@ This handbook is the one place for everything: how to install and start it, what
 {% endtab %}
 
 {% tab title="I want to set it up" %}
-1. [Menu overview: Simple and Advanced](the-menu/overview.md)
+1. [Menu overview](the-menu/overview.md)
 2. [Set up the ESP](guides/esp-setup.md)
 3. [Connect an input device](guides/input-device.md)
 4. [Tune aim and trigger](guides/aim-and-trigger.md)
@@ -56,7 +56,7 @@ This handbook is the one place for everything: how to install and start it, what
 | **Hardware** | A DMA card in the game PC, a second PC to run Hideway. Optional input device (MAKCU, Ferrum or KMBox NET) for aim and trigger |
 | **System** | Windows 10 / 11, 64-bit, administrator rights on the overlay PC |
 | **Menu key** | **Insert** (change it in Misc). **End** exits |
-| **Modes** | **Simple** shows the essentials of every page. **Advanced** shows all 274 options |
+| **Menu** | One all-in-one menu: every option is on its page, with search to find any of them |
 | **Updates** | Signed releases through the launcher. A bad update rolls back by itself |
 | **Support** | Copy diagnostics (Debug page) and the log file; see [Collect diagnostics](troubleshooting/collecting-diagnostics.md) |
 

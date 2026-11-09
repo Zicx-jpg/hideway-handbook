@@ -22,7 +22,7 @@
 
 ## The menu, page by page
 
-* [Menu overview: Simple and Advanced](the-menu/overview.md)
+* [Menu overview](the-menu/overview.md)
 * [Aimbot](the-menu/aimbot.md)
 * [Weapons](the-menu/weapons.md)
 * [Assist](the-menu/assist.md)
