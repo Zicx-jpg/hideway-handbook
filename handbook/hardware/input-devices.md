@@ -60,19 +60,19 @@ Flash only if our team tells you to, and do it from the **overlay PC** (the flas
 
 ## Keyboard and mouse (no controller)
 
-<figure><img src="../.gitbook/assets/makcu-kbm.jpg" alt="MAKCU board for a keyboard and mouse setup"><figcaption><p>MAKCU with a keyboard and mouse.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/makcu-kbm.jpg" alt="MAKCU board for a keyboard and mouse setup"><figcaption><p>Keyboard and mouse: left port to the main PC (game PC), middle port to the 2nd PC (overlay PC), right port to your mouse.</p></figcaption></figure>
 
 This is the standard setup: wire the MAKCU as in **MAKCU: wiring** above (left to the game PC, middle to the overlay PC, right to your real mouse), install the CH343 driver, then connect it in Hideway (**Misc > INPUT DEVICE**).
 
 ## Controller (XIM Matrix and others)
 
-<figure><img src="../.gitbook/assets/makcu-controller.jpg" alt="MAKCU board for a controller setup"><figcaption><p>MAKCU with a controller and a XIM Matrix (or a similar adapter).</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/makcu-controller.jpg" alt="MAKCU board for a controller setup"><figcaption><p>Controller: left port to the XIM (or a similar adapter), middle port to the 2nd PC (overlay PC), right port to your mouse.</p></figcaption></figure>
 
 If you play with a gamepad and want the game to see mouse input, a **XIM Matrix** translates the controller into mouse and keyboard, and the MAKCU is wired behind it. The general flow:
 
 1. Pair the controller with the XIM Matrix (wired to its controller port, or wirelessly). Xbox pads: hold the sync button until the guide button flashes fast. PlayStation pads: hold **Share** then **PS** until the light flashes quickly.
 2. On the game PC install the XIM manager software, connect the XIM Matrix and create a new config: pick the game and PC, input **Gamepad**, output **Mouse and keyboard**.
-3. Connect the MAKCU as in the wiring above, with the XIM Matrix on the cable shown in the wiring diagram of your revision.
+3. Connect the MAKCU as in the picture above: **left** port to the XIM, **middle** port to the 2nd PC (the overlay PC), **right** port to your mouse.
 4. In the game set the input to mouse and keyboard.
 
 Follow the wiring picture for your exact revision; the Hideway side stays the same (Misc > INPUT DEVICE).
