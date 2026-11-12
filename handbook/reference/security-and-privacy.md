@@ -51,7 +51,6 @@ Test-only switches in the program need both an environment variable **and** a ma
 {% hint style="warning" %}
 * The install folder is **writable by your Windows user**, while the launcher and overlay run **elevated** from it. The launch-time checks narrow this but do not remove it. Install the package in a folder only you can write to, and do not run it from a shared or download folder.
 * The programs are **not Authenticode-signed** (no code-signing certificate yet), so Windows shows "unknown publisher".
-* Offsets come from a third-party community source; their *correctness* is trusted, their *format* is validated.
 {% endhint %}
 
 ## Reporting a security problem

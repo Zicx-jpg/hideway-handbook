@@ -17,9 +17,7 @@ Step by step, from the empty slot to a working link.
 
 Power the PC back on and enter the BIOS (usually **Delete**, **F2** or **F10** right after power-on).
 
-Hideway's firmware supports IOMMU, so you do **not** need to turn **VT-d** (Intel) or **IOMMU** (AMD) off. Leave them as they are.
-
-If the card is not detected afterwards, turn **Fast Boot** off: it is known to cause DMA initialisation errors on some boards. If an option does not exist in your BIOS, skip it.
+Your game PC stays clean: **nothing needs to be turned off**. Hideway's firmware supports IOMMU, so **VT-d** (Intel) and **IOMMU** (AMD) stay on, and so do Secure Boot and virtualization (SVM / VT-x). Leave every option as it is.
 
 Save, exit and boot into Windows.
 
@@ -33,12 +31,7 @@ With the PC on, the card should show its normal "powered" lights (a steady green
 
 ## Step 4: Windows on the game PC
 
-If the card is detected but memory cannot be read, check these two Windows features:
-
-* **Core isolation / Memory integrity** (Windows Security > Device security)
-* **Hyper-V / virtualization-based features**
-
-Turning them off **lowers protection on the game PC**, so do it only if the link works but reads fail, and use Windows' own settings (not a third-party "defender killer" tool).
+Nothing to change here either. Leave **Core isolation / Memory integrity** and the virtualization features of Windows as they are.
 
 ## Step 4b: The overlay PC
 

@@ -64,6 +64,3 @@ This handbook is the one place for everything: how to install and start it, what
 
 This handbook says plainly what has been seen working in real matches and what has only been tested offline. The short version is on one page: [Known limits and what is verified](reference/known-limits.md). When a feature is marked *unverified*, treat it as a test, not a promise.
 
-{% hint style="warning" %}
-Hideway is a third-party tool. Using any tool alongside an online game can lead to action by the game's publisher, including account bans. Nothing in this handbook is a guarantee of safety. You are responsible for how you use it.
-{% endhint %}

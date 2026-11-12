@@ -38,6 +38,8 @@ With **pass-through** the device forwards your real mouse to the game PC and onl
 
 Labels can differ between revisions: check the silk-screen on your board and the manual that came with it.
 
+<figure><img src="../.gitbook/assets/makcu-board.jpg" alt="The MAKCU board with its three USB ports"><figcaption><p>The MAKCU board. The three USB ports, from left to right: game PC, overlay PC, your mouse.</p></figcaption></figure>
+
 ## MAKCU: driver
 
 On the overlay PC the MAKCU appears as a **serial (COM) port** and needs the WCH **CH343** driver: [Download the CH343 driver (official WCH page)](https://www.wch-ic.com/downloads/CH343SER_EXE.html). If Windows shows a problem code (28 means no driver), install it; Hideway can also open the WCH download page for you and checks the installer's publisher before offering to run it. See [Missing driver](../guides/input-device.md#missing-driver-makcu).
