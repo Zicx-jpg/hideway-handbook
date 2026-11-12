@@ -36,7 +36,7 @@ Nothing to change here either. Leave **Core isolation / Memory integrity** and t
 ## Step 4b: The overlay PC
 
 * Hideway ships its own Visual C++ runtime in `core\`, so you do **not** install one separately. DirectX 11 is part of Windows 10 / 11.
-* The card talks through an **FTDI FT601** USB 3 chip. Windows normally installs its driver by itself when the cable is connected; Hideway also ships the `FTD3XX.dll` it needs. If the card shows up with a warning icon in Device Manager, install the FTD3XX driver: [Download the FTD3XX driver (official FTDI page)](https://ftdichip.com/drivers/d3xx-drivers/).
+* The card talks through an **FTDI FT601** USB 3 chip. Windows normally installs its driver by itself when the cable is connected; Hideway also ships the `FTD3XX.dll` it needs. If the card shows up with a warning icon in Device Manager, install the FTD3XX driver: [Download the FTD3XX driver](https://download.hideway.cc/drivers/FTD3XX-WinUSB-driver-1.4.0.6.zip) (FTDI WinUSB D3XX 1.4.0.6). Unzip it, open the `WU_FTD3XX_Driver` folder, right-click `FTD3XXWU.inf` and choose **Install**, then replug the card's USB cable.
 
 ## Step 5: Connect the card to the overlay PC
 

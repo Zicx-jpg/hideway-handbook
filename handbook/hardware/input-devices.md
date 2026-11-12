@@ -38,8 +38,6 @@ With **pass-through** the device forwards your real mouse to the game PC and onl
 
 Labels can differ between revisions: check the silk-screen on your board and the manual that came with it.
 
-<figure><img src="../.gitbook/assets/makcu-board.jpg" alt="The MAKCU board with its three USB ports"><figcaption><p>The MAKCU board. The three USB ports, from left to right: game PC, overlay PC, your mouse.</p></figcaption></figure>
-
 ## MAKCU: driver
 
 On the overlay PC the MAKCU appears as a **serial (COM) port** and needs the WCH **CH343** driver: [Download the CH343 driver (official WCH page)](https://www.wch-ic.com/downloads/CH343SER_EXE.html). If Windows shows a problem code (28 means no driver), install it; Hideway can also open the WCH download page for you and checks the installer's publisher before offering to run it. See [Missing driver](../guides/input-device.md#missing-driver-makcu).
@@ -60,11 +58,15 @@ Flash only if our team tells you to, and do it from the **overlay PC** (the flas
 
 **Misc > INPUT DEVICE > Enable input device > Connect > Test move (+/-60)**. The top bar shows the real device state. If it does not connect, see [Not working?](../guides/input-device.md#not-working).
 
-## Without a controller (mouse and keyboard)
+## Keyboard and mouse (no controller)
+
+<figure><img src="../.gitbook/assets/makcu-kbm.jpg" alt="MAKCU board for a keyboard and mouse setup"><figcaption><p>MAKCU with a keyboard and mouse.</p></figcaption></figure>
 
 This is the standard setup: wire the MAKCU as in **MAKCU: wiring** above (left to the game PC, middle to the overlay PC, right to your real mouse), install the CH343 driver, then connect it in Hideway (**Misc > INPUT DEVICE**).
 
-## With a controller: XIM Matrix and MAKCU
+## Controller (XIM Matrix and others)
+
+<figure><img src="../.gitbook/assets/makcu-controller.jpg" alt="MAKCU board for a controller setup"><figcaption><p>MAKCU with a controller and a XIM Matrix (or a similar adapter).</p></figcaption></figure>
 
 If you play with a gamepad and want the game to see mouse input, a **XIM Matrix** translates the controller into mouse and keyboard, and the MAKCU is wired behind it. The general flow:
 
