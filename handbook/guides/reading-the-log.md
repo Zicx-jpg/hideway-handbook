@@ -25,7 +25,7 @@
 | `OFFSET:` | An offset was discovered at runtime |
 | `DEVICE:` | Input device connecting / connected / lost |
 | `LOOT:` / `REBOOT:` | Loot and reboot card readers |
-| `VISCHECK:` | Whether the render timestamps look like times |
+| `VISCHECK:` | The visibility check (Raycast VisCheck): whether the level geometry was read |
 | `HEALTH:` | A probe of what each health source holds when none is readable |
 | `MATCH:` | One summary line when a match ends |
 | `FATAL` | A crash inside Hideway, with the module, address and call chain |
@@ -43,9 +43,7 @@ DMA: 10 s: 1188 ticks, avg 5 ms, max 14 ms, 12 player(s), 7 skeleton(s) | bones 
 | `bones read / carried / skipped` | The load governor's work: skeletons read, reused, skipped far or off-screen |
 | `governor xN` | 1.00 = full rate; up to 4 = heavily thinned because the link is the bottleneck |
 | `health: N direct (M mates, K enemies)` | Players whose health was read directly, split by team. `unknown` = nothing readable |
-| `vis: layout ok` | Render timestamps looked like times. `NOT times` = they did not (normal for a few seconds at the start of a match) |
-| `submit-time V O OOV ?` | Visible / Occluded / Out-of-view / unknown counts |
-| `agree X of Y` | How often submit-time agrees with the render-time rule |
+| `vis: layout ok` | The level geometry was read and rays can be traced. It can read `not ready` for a few seconds at the start of a match |
 
 ## The match summary
 

@@ -17,12 +17,9 @@ Step by step, from the empty slot to a working link.
 
 Power the PC back on and enter the BIOS (usually **Delete**, **F2** or **F10** right after power-on).
 
-| Platform | Change |
-|---|---|
-| **Intel** | Turn **VT-d** off |
-| **AMD** | Turn **IOMMU** off |
+Hideway's firmware supports IOMMU, so you do **not** need to turn **VT-d** (Intel) or **IOMMU** (AMD) off. Leave them as they are.
 
-Some guides also list **Secure Boot**, **SVM** and **Fast Boot**. Start with the row above; touch the others only if the card is still not found. **Fast Boot** is known to cause DMA initialisation errors on some boards. If an option does not exist in your BIOS, skip it.
+If the card is not detected afterwards, turn **Fast Boot** off: it is known to cause DMA initialisation errors on some boards. If an option does not exist in your BIOS, skip it.
 
 Save, exit and boot into Windows.
 
@@ -36,17 +33,17 @@ With the PC on, the card should show its normal "powered" lights (a steady green
 
 ## Step 4: Windows on the game PC
 
-If the card is detected but memory cannot be read, two Windows features are commonly mentioned by DMA vendors:
+If the card is detected but memory cannot be read, check these two Windows features:
 
 * **Core isolation / Memory integrity** (Windows Security > Device security)
 * **Hyper-V / virtualization-based features**
 
-Turning them off **lowers protection on the game PC**, so do it only if the link works but reads fail, and use Windows' own settings (not a third-party "defender killer" tool). This is vendor guidance; Hideway has not measured how much each one matters.
+Turning them off **lowers protection on the game PC**, so do it only if the link works but reads fail, and use Windows' own settings (not a third-party "defender killer" tool).
 
 ## Step 4b: The overlay PC
 
 * Hideway ships its own Visual C++ runtime in `core\`, so you do **not** install one separately. DirectX 11 is part of Windows 10 / 11.
-* The card talks through an **FTDI FT601** USB 3 chip. Windows normally installs its driver by itself when the cable is connected; Hideway also ships the `FTD3XX.dll` it needs.
+* The card talks through an **FTDI FT601** USB 3 chip. Windows normally installs its driver by itself when the cable is connected; Hideway also ships the `FTD3XX.dll` it needs. If the card shows up with a warning icon in Device Manager, install the FTD3XX driver: [Download the FTD3XX driver (official FTDI page)](https://ftdichip.com/drivers/d3xx-drivers/).
 
 ## Step 5: Connect the card to the overlay PC
 
@@ -56,7 +53,7 @@ Turning them off **lowers protection on the game PC**, so do it only if the link
 
 ## Step 6: Test the link
 
-Run your seller's **DMA speed test** on the overlay PC and keep its whole folder together. A healthy link is above both of these:
+Run the **DMA speed test** you received with the card on the overlay PC and keep its whole folder together. A healthy link is above both of these:
 
 | Measure | Healthy |
 |---|---|

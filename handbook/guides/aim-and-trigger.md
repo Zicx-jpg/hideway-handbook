@@ -23,7 +23,7 @@ On **Aimbot > CALIBRATION**, **Counts per degree X** and **Y** are the mouse cou
 
 ## 3. Visibility
 
-**Visible only** (Aimbot > VISIBILITY) makes the aim ignore targets the game is not drawing. How "visible" is judged is a separate choice: see [Visibility](visibility.md). If aim seems to work through walls, read that page and [Aim through walls](../troubleshooting/aim-and-trigger.md#aim-reaches-through-a-wall).
+**Visible only** (Aimbot) makes the aim ignore targets that are not visible. Visibility is judged by Raycast VisCheck against the level geometry: see [Visibility](visibility.md). If aim seems to work through walls, read that page and [Aim through walls](../troubleshooting/aim-and-trigger.md#aim-reaches-through-a-wall).
 
 ## 4. Per-weapon behaviour
 

@@ -18,29 +18,23 @@ Keep `HidewayLauncher.exe` and the `core` folder together. You never start anyth
 The DMA runtime files (`vmm.dll`, `leechcore.dll`, `FTD3XX.dll`, `dbghelp.dll`, `symsrv.dll`) must stay next to `Hideway.exe` inside `core\`. They are hash-checked on every start; a missing or changed file is refused.
 {% endhint %}
 
-## 2. (Recommended) verify the download
-
-Open PowerShell in the `core` folder and run:
-
-```bash
-powershell -ExecutionPolicy Bypass -File .\verify_package.ps1 -ExpectedFingerprint <fingerprint from the download page>
-```
-
-It checks the publisher's signature on `release.json` and the SHA-256 of every file. Windows SmartScreen may warn about the programs because they are not Authenticode-signed yet: verify first, then choose "Run anyway". Do not turn off Windows protections.
-
-## 3. Power up the hardware
+## 2. Power up the hardware
 
 1. Start the **game PC** with the DMA card installed.
 2. Plug the card's USB cable into the **overlay PC**.
 3. Optional: plug in your input device.
 
-## 4. Start the launcher
+## 3. Start the launcher
 
 Double-click `HidewayLauncher.exe` and accept the Windows administrator prompt. The launcher is the front door for every Hideway game. See [The launcher](the-launcher.md).
 
+{% hint style="info" %}
+Windows SmartScreen may show a warning the first time, because the programs are not code-signed yet. Choose **More info > Run anyway**. Do not turn off Windows protections.
+{% endhint %}
+
 Click **Launch** on the Fortnite card. The launcher first checks the module's files against the publisher's signed manifest, then starts it.
 
-## 5. Sign in
+## 4. Sign in
 
 Use **one** of these:
 
@@ -54,11 +48,11 @@ Sign in on the Hideway website / customer panel and press the **Web Loader** but
 {% endtab %}
 {% endtabs %}
 
-## 6. Start Fortnite on the game PC
+## 5. Start Fortnite on the game PC
 
 After signing in the overlay starts. **Insert** opens the menu, **End** exits (both can be changed in Misc > Keys). Wait for the game's lobby, then join a match.
 
-## 7. Check that everything is connected
+## 6. Check that everything is connected
 
 Open **Debug**. If you do not see a Debug page, turn on **Misc > Debug > Show debug page**. The **READY CHECK** card at the top lists each part in green, orange or red. See [READY CHECK](ready-check.md).
 

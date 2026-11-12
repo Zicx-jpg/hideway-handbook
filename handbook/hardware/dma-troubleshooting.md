@@ -1,6 +1,6 @@
 # DMA troubleshooting
 
-Hardware and driver problems, grouped by what you see. The messages in this page come from the DMA runtime underneath Hideway (**MemProcFS / LeechCore**) and from the vendors' speed-test tools, so exact wording can differ a little. Hideway's own symptoms (`DMA OFFLINE`, `WAITING FOR FORTNITE`, `Game data`) are in [DMA card](../troubleshooting/dma-card.md).
+Hardware and driver problems, grouped by what you see. The messages in this page come from the DMA runtime underneath Hideway (**MemProcFS / LeechCore**) and from the speed-test tool, so exact wording can differ a little. Hideway's own symptoms (`DMA OFFLINE`, `WAITING FOR FORTNITE`, `Game data`) are in [DMA card](../troubleshooting/dma-card.md).
 
 Always change **one thing at a time** and retest.
 
@@ -14,13 +14,13 @@ Try in this order, retesting after each one:
 4. The driver is correct (FTDI FT601 without a warning in Device Manager).
 5. **Hard power cycle of the game PC:** shut down, switch the power supply off, unplug the power cable and the card's USB cable, hold the power button for 15 seconds, then plug back in and boot.
 6. Move the card to the **main GPU slot** (the first x16) and re-check the [BIOS settings](dma-card-setup.md#step-2-bios-settings).
-7. Still failing: ask your seller for a test firmware, to rule out the firmware.
+7. Still failing: open a ticket on our Discord and we will prepare a test firmware to rule out the firmware.
 
 ## Failed to retrieve the physical memory map
 
 * Check the USB connection as above.
-* Remove **OneDrive** from the game PC (vendors report this clears it on some systems).
-* Last resort: reinstall Windows on the game PC (vendors suggest Windows 11 23H2).
+* Remove **OneDrive** from the game PC (this clears it on some systems).
+* Last resort: reinstall Windows on the game PC (Windows 11 23H2 is suggested).
 
 ## Unable to locate a valid DTB / unable to identify the operating system
 
@@ -52,7 +52,7 @@ A test failure usually means **too low a speed**: under about 4000 reads per sec
 * On the overlay PC set the power plan to **High performance**.
 * Re-seat the card.
 * An overlay PC far below the recommended level can lower the speed.
-* A custom firmware can lower speed on purpose; ask its vendor if that is normal.
+* A custom firmware can lower speed on purpose; ask the team in a ticket if that is normal.
 * Close other tools that use the card. A speed slightly under the thresholds can still work.
 
 Inside Hideway, the real numbers are on **Debug > PERFORMANCE**: see [Slow reads, choppy data](../troubleshooting/dma-card.md#slow-reads-choppy-data).
@@ -72,7 +72,7 @@ When the game PC is short of memory, Windows moves some of it to the **page file
 | `DMA OFFLINE` | USB cable, port, power cycle |
 | VMM init failed | JTAG vs DATA port, driver, cable |
 | Physical memory map | USB, OneDrive |
-| DTB / unknown OS | BIOS (VT-d / IOMMU), USB |
+| DTB / unknown OS | BIOS settings, USB |
 | Symbols | `symsrv.dll`, `dbghelp.dll`, internet |
 | Low speed | Cable, port, seating, power plan |
 | Data comes and goes | RAM on the game PC |

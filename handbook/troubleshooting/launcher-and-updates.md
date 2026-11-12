@@ -5,7 +5,7 @@
 A file in `core\` does not match the publisher's signed manifest: it was changed, deleted, or partly downloaded. The launcher refuses to start the module.
 
 1. Press **Restore the files** (it sends you to **Updates**), or
-2. Download the package again and run `verify_package.ps1` (see [Install and first start](../getting-started/install-and-first-start.md)).
+2. Download the package again from your account or the [download page](https://download.hideway.cc/download) and unzip it into a fresh folder (see [Install and first start](../getting-started/install-and-first-start.md)).
 
 Antivirus can quarantine a DLL; check its history if a file vanished.
 

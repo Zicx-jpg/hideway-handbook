@@ -90,7 +90,7 @@ Only `HidewayLauncher.exe` at the top of the folder. Everything else is inside `
 <details>
 <summary>I get a SmartScreen warning.</summary>
 
-The programs are not Authenticode-signed yet, so Windows warns. Verify the download with `verify_package.ps1` first (see [Install](getting-started/install-and-first-start.md)), then choose "Run anyway". Do not turn off Windows protections.
+The programs are not code-signed yet, so Windows warns the first time. Choose **More info > Run anyway**. Do not turn off Windows protections.
 
 </details>
 
@@ -229,7 +229,7 @@ That was a bug, fixed in **2.10.2**: with **Only with a gun in hand** on (defaul
 <details>
 <summary>Why can the aim still lock onto someone behind a wall?</summary>
 
-The wall check knows the level's static geometry, **not walls that players build**. Also check **Visible only** and the **Visibility check** style. See [Visibility](guides/visibility.md).
+Visibility is judged by ray-casting against the level's static geometry, which does **not** include walls that players build. Also check **Visible only**. See [Visibility](guides/visibility.md).
 
 </details>
 

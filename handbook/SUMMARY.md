@@ -37,7 +37,7 @@
 * [Set up the ESP](guides/esp-setup.md)
 * [Connect an input device](guides/input-device.md)
 * [Tune aim and trigger](guides/aim-and-trigger.md)
-* [Visibility: three ways to know who is visible](guides/visibility.md)
+* [Visibility: Raycast VisCheck](guides/visibility.md)
 * [Configs: presets, auto-save, backups](guides/configs.md)
 * [Hotkeys](guides/hotkeys.md)
 * [Web radar on your phone](guides/web-radar.md)

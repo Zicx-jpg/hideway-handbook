@@ -10,7 +10,6 @@ Honest status of version **2.10.2**. *Seen live* means it was observed working i
 | Loot ESP | The pickup layout is proven live: ammo and item names read correctly |
 | Skeletons | Bones verified correct against a recording |
 | Smooth ESP | Measured on real recordings |
-| Visibility timestamps (render / submit) | Read as times on 43.00; submit-time agreed with the render-time rule in about 9 of 10 comparisons |
 | Match counters in the log | The per-match summary line is written |
 
 ## Limits you will run into
@@ -40,7 +39,7 @@ Honest status of version **2.10.2**. *Seen live* means it was observed working i
 
 * Programs are not Authenticode-signed.
 * The install folder is writable by your user while the launcher and overlay run elevated.
-* Ferrum: follows the vendor documentation but is the least proven of the three devices.
+* Ferrum: follows the manufacturer's documentation but is the least proven of the three devices.
 * The web radar has not been penetration-tested from another machine.
 
 {% hint style="info" %}

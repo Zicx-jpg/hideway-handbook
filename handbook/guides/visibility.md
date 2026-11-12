@@ -1,41 +1,28 @@
-# Visibility: three ways to know who is visible
+# Visibility: Raycast VisCheck (Unreal Engine 5)
 
-"Visible" decides the box colour (visible / hidden), whether aim and trigger consider a player, and more. Hideway has **three independent sources**. Knowing them explains most "it aimed through a wall" or "it turned red too early" questions.
+"Visible" decides the box colour (visible / hidden), whether aim and trigger consider a player, and more. Hideway judges it with **Raycast VisCheck** for Unreal Engine 5: rays are traced from your camera to the player against the **level's collision geometry**, and a player is visible only if the line is clear.
 
-## 1. Render time (default)
+## How it works
 
-**Visibility check: UE5 render time only.** The engine's own check: a player is visible when the game drew their mesh within a **tolerance window** of the world clock (**Visibility tolerance**, default 200 ms).
-
-* Works from the first second of a match; reads no geometry.
-* A player drawn behind **thin cover** can count as visible.
-* Lower tolerance = stricter and quicker to turn hidden; higher = steadier.
-
-## 2. Wall check (ray-cast)
-
-**Visibility check: Unreal line of sight** or **Bones (head, chest, knee)** traces rays against the **level's collision geometry**, which Hideway reads a few seconds into a match.
-
-* *Unreal line of sight*: one ray to the middle, one to the head, two to the capsule sides; hidden only if all are blocked.
-* *Bones*: rays to the head, chest and one knee.
-* Needs **Wall check (ray-cast)** (Misc > ENGINE), also used by the loot reader.
+* Hideway reads the level's collision geometry a few seconds into a match. From then on every player is checked against it.
 * Aim always checks the bone it wants to shoot at.
-* Until the geometry is ready, **Wait for wall check** (Aimbot > VISIBILITY, on by default) pauses aim instead of trusting the render-time flag.
+* Until the geometry is ready, aim waits instead of guessing, so aim does not start in the first seconds of a match.
+* The same rule is used by the trigger (**Trigger visible only**) together with the hitbox point under the crosshair.
 
 {% hint style="warning" %}
-The wall check reads the **level's static geometry**. It does not know about **walls players build**. A target behind your own or an enemy's built wall can still count as visible.
+The level's geometry is **static**. It does not know about **walls players build**. A target behind your own or an enemy's built wall can still count as visible.
 {% endhint %}
 
-## 3. Submit-time visibility (experimental)
+## Settings
 
-**Submit-time visibility** judges from three render timestamps of each mesh (submitted, rendered, rendered on screen): submitted recently but not drawn = culled. It is checked against the world clock on every tick and ignored when the numbers do not look like times. Off by default.
+**Visible only** (Aimbot) makes the aim ignore targets that are not visible. There is nothing else to tune: the method is automatic.
 
-In recorded matches on 43.00 the timestamps did read as times and the result agreed with the render-time rule in roughly nine of ten comparisons; whether it is *better* than the render-time rule has not been settled. The Aimbot page's **Submit-time reading** line says whether it works on your build, and **Debug > DATA HEALTH** shows its agreement.
+## If something looks wrong
 
-## Which should I use?
-
-| You want | Use |
+| You see | Try |
 |---|---|
-| Works immediately, minimal setup | UE5 render time only (default) |
-| Strict against static walls | Unreal line of sight, after a few seconds in a match |
-| To experiment | Tick Submit-time visibility and watch DATA HEALTH |
+| Aim works in the first seconds of a match | It should wait for the level geometry. If it does not, report it with **Copy diagnostics** |
+| Aim or trigger goes through a wall | **Visible only** is off, or the wall was built by a player (see the note above) |
+| Boxes stay red / hidden for everyone | Check **Debug > DATA HEALTH**; the level may not have been read yet |
 
-For aim, combine **Visible only** with the style you chose. For the trigger, **Trigger visible only** uses the same rules plus the hitbox point under the crosshair.
+See also [Aim reaches through a wall](../troubleshooting/aim-and-trigger.md#aim-reaches-through-a-wall).

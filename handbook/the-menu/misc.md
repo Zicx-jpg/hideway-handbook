@@ -52,7 +52,7 @@ Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. Full
 | **Thin skeleton reads** | In crowded matches, distant and off-screen players do not get a skeleton read every tick |
 | **DMA stall guard** | Pauses MemProcFS's background process refresh (a ~105 ms freeze every ~10 s on some setups) |
 | **Read game-PC mouse buttons** | The input device reports the game PC's mouse buttons, so aim and trigger keys work from the mouse in your hand |
-| **Wall check (ray-cast)** | Reads the level's collision geometry; needed by the wall-trace visibility styles and by loot |
+| **Wall check (ray-cast)** | Reads the level's collision geometry; needed by Raycast VisCheck and by loot |
 | **Telemetry CSV** | One row per second of measured numbers to `telemetry.csv` |
 
 {% hint style="info" %}

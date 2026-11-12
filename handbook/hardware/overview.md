@@ -2,10 +2,6 @@
 
 This section is the **hardware side** of the handbook: the DMA card, the input device, the fuser and the two PCs. Read it if you are building a setup from scratch or something below the software is not working.
 
-{% hint style="warning" %}
-**Where this section comes from.** It is rewritten for Hideway from public setup guides of DMA hardware vendors. The publisher has not re-tested every step on every card, input device or fuser model. When your own hardware manual disagrees with a page here, **follow the manual**. Anything that is only a vendor recommendation is marked as such.
-{% endhint %}
-
 ## What DMA is, in two minutes
 
 **Direct Memory Access (DMA)** is a normal PCIe feature: a device on the bus can read and write the PC's memory without going through the CPU. A DMA card turns that feature into a link to **another computer**: the second PC asks the card for memory, and the card fetches it from the game PC.
@@ -24,7 +20,7 @@ Using any tool next to an online game can break the game's rules and lead to a b
 
 | Part | Where | Notes |
 |---|---|---|
-| **DMA card** | Game PC (PCIe) | Cards with an FPGA such as 35T / 75T are the usual kind. Follow your seller's manual |
+| **DMA card** | Game PC (PCIe) | Cards with an FPGA such as 35T / 75T are the usual kind. Follow the card's manual |
 | **USB data cable** | Card to overlay PC | A real **USB 3** data cable (not charge-only), into a port **directly on the motherboard** |
 | **Overlay PC** | Next to your monitor | Windows 10 / 11 64-bit. It also needs a GPU able to output the same resolution as your game PC |
 | **Input device** (optional) | Between mouse and PCs | MAKCU, Ferrum or KMBox NET. See [Input devices](input-devices.md) |
@@ -41,14 +37,14 @@ A laptop needs a way to reach PCIe. Typical routes are a free **M.2 slot** with 
 
 ### Overlay PC
 
-Hideway has **no measured minimum spec**. The vendor guides recommend roughly an Intel i5 4th generation as a floor and an i5 9th generation / Ryzen 5 5600G as a comfortable level, with an integrated or dedicated GPU. Judge your own PC with **Debug > PERFORMANCE** (*Tick* well below 10 ms, *Data age* below about 20 ms; see [DMA card](../troubleshooting/dma-card.md#slow-reads-choppy-data)).
+Hideway has **no measured minimum spec**. An Intel i5 4th generation is a practical floor and an i5 9th generation / Ryzen 5 5600G a comfortable level, with an integrated or dedicated GPU. Judge your own PC with **Debug > PERFORMANCE** (*Tick* well below 10 ms, *Data age* below about 20 ms; see [DMA card](../troubleshooting/dma-card.md#slow-reads-choppy-data)).
 
 ## Does your motherboard allow it?
 
 1. On the game PC press **Win + R**, type `msinfo32` and press Enter.
 2. Look for **Kernel DMA Protection** in the system summary.
 3. If it says **Off**, nothing blocks the card at the Windows level.
-4. If it says **On**, the platform restricts what devices may read. DMA guides ask you to switch the matching option off in the BIOS (called **VT-d** on Intel and **IOMMU** on AMD). Some boards do not offer that switch; on those the card may not work. See [Install the DMA card](dma-card-setup.md#step-2-bios-settings).
+4. If it says **On**, the platform restricts what devices may read. Hideway's firmware supports IOMMU, so this is normally fine and you do not need to turn **VT-d** (Intel) or **IOMMU** (AMD) off. If the card is not found, see [Install the DMA card](dma-card-setup.md#step-2-bios-settings).
 
 ## The order to build it
 

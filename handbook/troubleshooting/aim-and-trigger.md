@@ -11,7 +11,7 @@ Work through these:
 3. Press **Test move (+/-60)** (Misc > INPUT DEVICE). If the crosshair does not move, the problem is the device link, not aim.
 4. **Only with a gun in hand** (Aimbot page): aim is off while you hold a pickaxe, a build piece or an empty weapon. Hold a loaded gun.
 5. A target must be inside the **Field of view**, within **Max aim distance**, and pass **Visible only** / **Team check** / **Ignore knocked**.
-6. **Wait for wall check** (default on): with a ray-cast visibility style, aim pauses until the wall check has read the level, a few seconds into a match.
+6. In the first seconds of a match aim waits until the level geometry has been read (Raycast VisCheck).
 7. The overshoot / undershoot is a **calibration** problem: tune **Counts per degree X / Y** (Aimbot > CALIBRATION).
 
 ## Aim locks on while I place a wall
@@ -35,9 +35,9 @@ The "has ammo" rule can misjudge a weapon whose ammo is not readable. Untick **O
 Several reasons, from most to least common:
 
 1. **Visible only** is off.
-2. The **visibility style** is *UE5 render time only*: a player drawn behind **thin cover** counts as visible. Try **Unreal line of sight** (Aimbot > VISIBILITY > Visibility check). See [Visibility](../guides/visibility.md).
-3. **A wall that a player built.** The wall check reads the level's static geometry only; it does not know about built walls. A target behind a built wall can still count as visible.
-4. Too soon in a match: before the wall check is ready, aim uses the render-time flag alone (the Visibility line says which one is in use).
+2. The level geometry is not read yet (the first seconds of a match). Aim waits for it; see [Visibility](../guides/visibility.md).
+3. **A wall that a player built.** The level geometry is static; it does not include built walls. A target behind a built wall can still count as visible.
+4. Too soon in a match: the level geometry is read a few seconds after the match starts.
 
 ## Trigger fires through a wall
 

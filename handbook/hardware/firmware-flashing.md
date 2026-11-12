@@ -1,9 +1,9 @@
 # Flash the card firmware
 
-Most cards arrive ready. You flash only when your seller tells you to: a new firmware, a fix, or a card that comes blank. This page describes the general procedure for the common **Xilinx 35T / 75T cards flashed through a CH347 USB-JTAG adapter**.
+Hideway's **Basic** and **Advanced** firmware packages are prepared for your card and delivered by the team in a ticket on our Discord, usually within 24 hours. You flash when you receive a new firmware, a fix, or if your card arrives blank. This page describes the general procedure for the common **Xilinx 35T / 75T cards flashed through a CH347 USB-JTAG adapter**; the team guides you through it in your ticket.
 
 {% hint style="warning" %}
-**Hideway does not ship firmware and does not flash anything.** Get the flashing tool, the driver and the firmware file from **your card's seller** and check each file against what they publish. Do not run files from random links. A wrong firmware or an interrupted flash can leave the card unusable.
+Use only the flashing tool, the driver and the firmware file that Hideway gives you in your ticket. Do not run files from random links. A wrong firmware or an interrupted flash can leave the card unusable. If you are not sure, open a ticket **before** you flash.
 {% endhint %}
 
 {% hint style="info" %}
@@ -35,7 +35,7 @@ On the overlay PC run the setup of the CH34x / CH347 driver **as administrator**
 {% step %}
 ### Start the flashing tool
 
-Run the vendor's FPGA download tool as administrator.
+Run the FPGA download tool you received as administrator.
 {% endstep %}
 
 {% step %}
@@ -64,6 +64,6 @@ Shut both PCs down, switch the power supply off, press the power button a few ti
 | `jtagspi_init_chain_id proxy_bit` or a similar init error | Rename the firmware to `firmware.bin` and move it and the tool folder to the root of `C:` (for example `C:\flash\`), then retry |
 | Tool does not see the adapter | Reinstall the driver as administrator, try another USB port and cable |
 | Flash completes but the card is not detected afterwards | Cable still on JTAG instead of DATA; do the cold power cycle again |
-| Still failing | Ask the seller for a known-good test firmware to rule out the file |
+| Still failing | Open a ticket: we will send a known-good test firmware to rule out the file |
 
 After flashing, run the [speed test](dma-card-setup.md#step-6-test-the-link) and then check [READY CHECK](../getting-started/ready-check.md).

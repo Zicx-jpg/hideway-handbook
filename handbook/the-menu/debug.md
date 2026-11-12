@@ -33,7 +33,7 @@ Added in 2.10.1. One table, one row per data source, with a state and the share 
 | **WAITING** | Nothing to judge yet: lobby, loading screen, nobody in view |
 | **OFF** | You turned the option off |
 
-Rows: **Names**, **Team ID**, **Health / shield**, **Weapon**, **Skeleton**, **Visibility: render time**, **Visibility: wall check**, **Visibility: submit time**, **Loot**, **Match counters**.
+Rows: **Names**, **Team ID**, **Health / shield**, **Weapon**, **Skeleton**, **Visibility**, **Loot**, **Match counters**.
 
 {% hint style="info" %}
 A lobby is *WAITING*, never *MISSING*: nothing is broken just because nobody is there. An option you turned off is *OFF*, not *MISSING*.

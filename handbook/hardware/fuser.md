@@ -63,5 +63,5 @@ Button functions differ by model, so use your model's manual. Two common layouts
 | Choppy picture | A black fuser window on the same GPU as the game competes for GPU time: run it on the overlay PC only |
 
 {% hint style="info" %}
-Some vendors ship fusers that handle monitor identification (EDID) themselves. How a particular fuser does that is a matter between you and its manual and is not covered by Hideway.
+Some fusers handle monitor identification (EDID) themselves. How your fuser does that is described in its manual.
 {% endhint %}

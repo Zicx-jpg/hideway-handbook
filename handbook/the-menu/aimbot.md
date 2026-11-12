@@ -37,10 +37,7 @@ The "has ammo" rule was derived from a recorded match (pickaxe and build tool re
 | Option | What it does |
 |---|---|
 | **Visible only** | Only aim at targets the game is currently drawing (not behind walls) |
-| Visibility check | How visibility is judged: render time, Unreal line of sight, or bones. See [Visibility](../guides/visibility.md) |
-| Wait for wall check | With a ray-cast style, do nothing until the wall check has read the level (a few seconds into a match) |
-| Visibility tolerance | How many ms a player counts as visible after the game drew them (default 200) |
-| Submit-time visibility | Experimental: judge from the mesh's render timestamps instead |
+| Raycast VisCheck | Visibility is judged automatically by ray-casting against the level geometry. See [Visibility](../guides/visibility.md) |
 
 Lines under the card say which method is active right now (for example "active: timestamps read as times").
 
