@@ -1,55 +1,56 @@
 # Aimbot
 
-The Aimbot page controls aim assist. It moves the mouse through your **input device**, so aim does nothing until a device is connected and verified ([Connect an input device](../guides/input-device.md)).
+This page controls aim assist, close aim, sticky aim and prediction. Aim assist moves your mouse through the **input device**, so it does nothing until a device is connected. See [Connect an input device](../guides/input-device.md). For a walk-through of the settings in a sensible order, read [Tune aim and trigger](../guides/aim-and-trigger.md).
 
-<figure><img src="../.gitbook/assets/menu-aimbot-advanced.png" alt="Aimbot page, Advanced mode"><figcaption><p>Aimbot page in Advanced mode: AIMBOT card on the left, HUMANIZE &#x26; TIMING on the right.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, top"><figcaption><p>The AIMBOT card on the left, close aim, sticky aim and prediction on the right.</p></figcaption></figure>
 
-## AIMBOT card
+<figure><img src="../.gitbook/assets/menu-aimbot-2.png" alt="Aimbot page, scrolled down"><figcaption><p>Scrolled down: the rest of the AIMBOT card, the FOV circle and humanizing.</p></figcaption></figure>
 
-| Option | What it does | Simple |
-|---|---|---|
-| **Enable aimbot** | Master switch for aim assist. Needs a connected, verified input device | yes |
-| **Aim key** | Hold it to aim. Click the box, press a key or mouse button; click the box a second time to use Mouse 1; right-click to clear. Default: Mouse 2 | yes |
-| **Aim bone** | Head, Neck, Chest, Pelvis or Closest bone | yes |
-| **Field of view** | Only targets inside this cone around your crosshair count. Smaller = more selective | yes |
-| **Smoothing** | How slowly the aim closes the gap. 1 = instant, higher = slower | yes |
-| **Max aim distance** | Targets further than this are ignored | yes |
-| **Team check** | Never aim at teammates | yes |
-| **Ignore knocked** | Skip downed players | yes |
-| **Only with a gun in hand** | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon | yes |
-| Aim between bones | Aim at the closest point on the skeleton instead of one joint | |
-| Ignore bots | Skip AI-controlled players | |
-| Prefer standing targets | Standing players are chosen before downed ones | |
-| Target priority | Closest to crosshair, or closest distance | |
-| Lock until key release | Stay on the first target until you let go of the aim key | |
-| Dead zone | Inside this angle the aim stops moving, so it does not shake | |
-
-### Only with a gun in hand
-
-With **Mouse 1** as your aim key, a click to place a wall would otherwise start the aim and lock onto an enemy behind it. With this option on (default), aim and trigger are off while the held item has no ammo: a build piece, the pickaxe, an empty weapon. If the game's weapon cannot be read, aim keeps working as before.
-
-{% hint style="warning" %}
-The "has ammo" rule was derived from a recorded match (pickaxe and build tool read 0 ammo almost all the time, firearms 1 to 30). If aim switches off wrongly for a weapon of yours, untick the option and report the weapon (the **Debug > LOCAL PLAYER** card shows its id and ammo).
-{% endhint %}
-
-## VISIBILITY card
+## Aimbot
 
 | Option | What it does |
 |---|---|
-| **Visible only** | Only aim at targets the game is currently drawing (not behind walls) |
-| Visibility check | How visibility is judged: render time, Unreal line of sight, or bones. See [Visibility](../guides/visibility.md) |
-| Wait for wall check | With a ray-cast style, do nothing until the wall check has read the level (a few seconds into a match) |
-| Visibility tolerance | How many ms a player counts as visible after the game drew them (default 200) |
-| Submit-time visibility | Experimental: judge from the mesh's render timestamps instead |
+| Enable aimbot | Master switch. Needs a connected input device |
+| Aim key | Hold it to aim. Click the box and press a key or mouse button; click it again to pick Mouse 1; right-click to clear. Default Mouse 2 |
+| Aim bone | Head, Neck, Chest, Pelvis or Closest bone |
+| Field of view | Only targets inside this cone around the crosshair count. Smaller is more selective |
+| Smoothing | How slowly the aim closes the gap. 1 is instant. Each step adds about 8 ms to the time it takes to get there |
+| Max aim distance | Targets further than this are ignored |
+| Team check | Never aim at teammates |
+| Ignore knocked | Skip downed players |
+| Only with a gun in hand | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon |
+| Aim between bones | Aim at the closest point on the skeleton instead of a single joint |
+| Ignore bots | Skip bots |
+| Prefer standing targets | Standing players are picked before downed ones |
+| Target priority | Closest to the crosshair, or closest in distance |
+| Lock until key release | Stay on the first target until you let go of the aim key |
+| Dead zone | Inside this angle the aim stops moving, so it does not shake |
 
-Lines under the card say which method is active right now (for example "active: timestamps read as times").
+### Only with a gun in hand
 
-## FOV CIRCLE, CALIBRATION, HUMANIZE & TIMING
+If Mouse 1 is your aim key, clicking to place a wall would start the aim and lock onto whoever stands behind it. With this option on (the default), aim and trigger are off while the item in your hand has no ammo. If the game's weapon cannot be read, aim keeps working. If it switches off for a weapon that does shoot, untick the option and tell support which weapon it was: **Debug > LOCAL PLAYER** shows the weapon id and the ammo.
 
-* **FOV CIRCLE**: draw the aim cone and pick its colour; **Target line** draws a line to the current target.
-* **CALIBRATION**: **Counts per degree X / Y**, the mouse counts that turn your view one degree. Tune them until the aim lands exactly on target. See [Tune aim and trigger](../guides/aim-and-trigger.md).
-* **HUMANIZE & TIMING**: Reaction delay, Target switch delay, Jitter, Miss chance, Deceleration, Step limit, Random smoothing (min / max), Dynamic smoothing. These add variation to the movement; they are tuning controls, not a promise of anything.
+## Visibility
 
-{% hint style="info" %}
-Aim key and trigger key can be read from the **game PC's mouse** through the input device (**Read game-PC mouse buttons**, Misc), so the keys work from the mouse you are actually holding.
-{% endhint %}
+| Option | What it does |
+|---|---|
+| Visible only | Only aim at players the game is drawing, not the ones behind walls |
+| Visibility check | How "visible" is decided: render time, Unreal line of sight, or bones. See [Visibility](../guides/visibility.md) |
+| Wait for wall check | With a ray-cast style, do nothing until the level has been read, a few seconds into a match |
+| Visibility tolerance | How many ms a player still counts as visible after the game drew them (default 200) |
+
+The lines under the card say which method is active right now.
+
+## Close aim, sticky aim, prediction
+
+* **Close aim** uses its own field of view, smoothing and bone for enemies within a short range.
+* **Sticky aim** keeps the aim attached once the crosshair is near a target: activation radius, max distance, smoothing, *slippery*, and *off vs groups*, which turns it off when several enemies are close.
+* **Prediction** aims ahead of moving players: projectile speed and gravity (or **Per-weapon ballistics**), **Prediction lead** in milliseconds, **Hitscan weapon** to lead only, and a **Prediction dot** that shows where the aim expects the target.
+
+## FOV circle, calibration, humanizing
+
+* **FOV circle** draws the aim cone and lets you pick its colour. **Target line** draws a line to the current target.
+* **Calibration** holds **Counts per degree X / Y**, the mouse counts that turn your view by one degree. The program measures them itself at start; change them only if the aim overshoots or falls short.
+* **Humanizing and timing**: reaction delay, target switch delay, jitter, miss chance, deceleration, step limit, random smoothing and dynamic smoothing. They add variation to the movement.
+
+The aim key and the trigger key can be read from the game PC's mouse through the input device (**Read game-PC mouse buttons** on Misc), so they work from the mouse you are really holding.

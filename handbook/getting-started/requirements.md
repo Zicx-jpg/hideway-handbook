@@ -1,49 +1,38 @@
-# What you need
+# Before you start
 
-Hideway is built for a **two-PC DMA setup**. Read this page before anything else; most start-up problems are a missing piece here.
+Hideway needs two PCs. Most first-day problems come from a missing piece on this list, so check it before you install anything.
 
-## The two PCs
+## How the two PCs fit together
 
 ```
-   GAME PC                                   OVERLAY PC
- +----------------------+   USB cable    +----------------------------+
- | Fortnite             |<-------------->| Hideway (launcher + overlay)|
- | DMA card (PCIe)      |  (card to PC)  | draws ESP / radar           |
- +----------------------+                | input device (optional)     |
-                                         +----------------------------+
-                                                     |
-                                              monitor / capture
+ GAME PC                                  OVERLAY PC
+ Fortnite                  USB cable      Hideway (launcher + overlay)
+ DMA card in a PCIe slot  ------------->  draws ESP and radar
+                                          input device (optional)
 ```
 
-| | Game PC | Overlay PC |
-|---|---|---|
-| Runs | Fortnite | Hideway |
-| Needs | The DMA card installed in a PCIe slot | The card's USB cable plugged in, Windows 10 / 11 (64-bit), administrator rights |
-| Hideway touches it | **Read-only** over the card. Nothing is installed or started on it | The overlay window and the input device live here |
+The **game PC** runs Fortnite and holds the DMA card. The **overlay PC** runs Hideway, draws the overlay and drives the input device. Hideway only reads memory through the card. It does not put anything on the game PC.
 
-{% hint style="info" %}
-Hideway reads game memory through the card. It does not inject anything into the game or run code on the game PC.
-{% endhint %}
+## What you need
 
-## Checklist
+* A **DMA card** in the game PC, with its USB cable plugged into the overlay PC. Use a USB port on the motherboard itself, and USB 3 if you have it.
+* **Windows 10 or 11, 64-bit** on the overlay PC. It was tested on Windows 10 22H2.
+* **Administrator rights** on the overlay PC. Windows asks once; the card driver needs it.
+* A **license key** from the seller. Keep it private.
+* **Internet** on the overlay PC for the license and update checks.
+* A **correct clock** on the overlay PC. If it is off by more than about 25 seconds, sign-in fails.
 
-* [ ] A **DMA card** in the game PC, with its USB cable to the overlay PC (use a USB port directly on the motherboard, preferably USB 3).
-* [ ] **Windows 10 or 11, 64-bit** on the overlay PC. The publisher tested Windows 10 22H2; other versions are untested.
-* [ ] **Administrator rights.** Windows asks once through the normal UAC prompt. The DMA transport needs them.
-* [ ] A **license key** (or a KeyAuth account with an active subscription) from the publisher. Never post it anywhere.
-* [ ] An **internet connection** for the license check and update check.
-* [ ] A correct **system clock** on the overlay PC (within about 25 seconds). A wrong clock fails the signed license answer.
-* [ ] Optional: an **input device** for aim and trigger: MAKCU, Ferrum or KMBox NET. See [Connect an input device](../guides/input-device.md).
-* [ ] Optional: a phone or tablet on the same network for the [web radar](../guides/web-radar.md).
+Optional:
 
-{% hint style="info" %}
-Building the hardware from scratch? Step-by-step pages for the card, BIOS, input device and fuser are in [Hardware at a glance](../hardware/overview.md).
-{% endhint %}
+* An **input device** (MAKCU, Ferrum or KMBox NET) if you want aim assist or the triggerbot. See [Connect an input device](../guides/input-device.md).
+* A phone or tablet on your network for the [web radar](../guides/web-radar.md).
+
+Building the hardware yourself? The step-by-step pages start at [Hardware at a glance](../hardware/overview.md).
 
 ## No hardware yet?
 
-You can explore everything with synthetic data. Start Hideway with `--demo` (see [Demo mode](demo-mode.md)). It needs no license, no card and no game.
+You can try the whole menu with generated players and no card, no game and no license. See [Demo mode](demo-mode.md).
 
-## Fortnite build
+## The Fortnite build
 
-Hideway reads the game with a table of structure offsets (the `all\` folder). Each Fortnite patch can move them. This release carries offsets for **Fortnite 43.00**. After a patch there can be a short period without ESP until a new dump is made; see [After a Fortnite update](../guides/after-a-fortnite-update.md).
+Hideway finds players through a table of memory offsets that belongs to one Fortnite build. This release is made for **43.10**. After a Fortnite patch the offsets can move and the ESP can stay empty until new data is out. The program checks for signed game data on its own, and [After a Fortnite update](../guides/after-a-fortnite-update.md) explains what you will see in the meantime.

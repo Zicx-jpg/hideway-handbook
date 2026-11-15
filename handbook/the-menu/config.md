@@ -2,7 +2,7 @@
 
 Everything about saving, sharing and housekeeping: configs, presets, backups, keybinds, files, license, updates and about.
 
-<figure><img src="../.gitbook/assets/menu-config-simple.png" alt="Config page in Simple mode"><figcaption><p>Config page: presets, keybinds, files and share cards.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-config.png" alt="Config page"><figcaption><p>The Config page: configs, presets, menu style and keybinds.</p></figcaption></figure>
 
 ## Cards
 
@@ -22,9 +22,7 @@ Everything about saving, sharing and housekeeping: configs, presets, backups, ke
 | **DEVICES** | Quick view of the input device |
 | **ABOUT** | Product, version, support link |
 
-<figure><img src="../.gitbook/assets/menu-config-presets.png" alt="Config page showing the presets"><figcaption><p>PRESETS with one-line descriptions.</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/menu-config-advanced.png" alt="Config page, manage and backups"><figcaption><p>MANAGE, BACKUPS, license, updates and about (Advanced mode).</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-config-2.png" alt="Config page, manage, files and share"><figcaption><p>Scrolled down: MANAGE, FILES, SHARE, LICENSE, ABOUT and BACKUPS.</p></figcaption></figure>
 
 ## Where configs live
 

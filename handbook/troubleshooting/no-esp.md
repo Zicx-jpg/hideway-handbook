@@ -1,44 +1,44 @@
 # No ESP
 
-Check these **in this order**. Open the Debug page (Misc > Debug > Show debug page) and read **READY CHECK**, **OFFSET HEALTH** and **DATA HEALTH**.
+Turn on **Misc > Debug > Show debug page**, open Debug, and keep READY CHECK, OFFSET HEALTH and DATA HEALTH in view while you go through this.
 
-## 1. Is the game running and are you in a match?
+## 1. Are you in a match?
 
-The lobby has nobody to draw. In OFFSET HEALTH, **Other players** says `none in view (lobby, bus, or PlayerArray offset?)` until a match starts. Boxes appear once a match has begun; during the bus phase players may be few.
+The lobby has nobody to draw. OFFSET HEALTH says "none in view" for the other players until a match starts, and during the bus phase there are few players. Boxes appear once the match has begun.
 
 ## 2. World not found
 
-OFFSET HEALTH: **World** red with `GEngine / World / Level offsets are probably outdated`. The game was patched. → [After a Fortnite update](../guides/after-a-fortnite-update.md).
+OFFSET HEALTH shows **World** in red with a note that the GEngine / World / Level offsets are probably outdated. The game was patched. See [After a Fortnite update](../guides/after-a-fortnite-update.md).
 
 ## 3. Camera not valid
 
-Same cause, or you are in a loading screen. The log shows `CAMERA: camera no longer valid (loading screen / lobby)` at match transitions, which is normal.
+Same cause, or you are on a loading screen. The log prints "camera no longer valid (loading screen / lobby)" at match changes, which is normal.
 
-## 4. Players = 0 in a match
+## 4. Zero players in a match
 
-The player offsets are stale, or the server is empty. **DATA HEALTH > Names** says how many of the players read have names.
+Either the server is empty or the player offsets are out of date. **DATA HEALTH > Names** tells you how many of the players that were read have a name.
 
-## 5. Boxes are drawn but offset from the players
+## 5. Boxes are drawn but not on the players
 
-* Adjust **ESP time offset** (Misc) a few milliseconds.
-* Make sure the game runs **borderless or full-screen** on the **same monitor** you capture.
-* Check **Overlay monitor** (Misc).
+* Change **ESP time offset** (Misc) by a few milliseconds.
+* The game must run borderless or full screen on the same monitor you capture.
+* Check **Overlay monitor** on Misc.
 
-## 6. The ESP master switch or a filter
+## 6. A switch or a filter is hiding them
 
 * **Visuals > ESP > Enable ESP** must be on.
-* **Show bots** and **Show teammates** are separate switches; a lobby of bots shows nothing if bots are hidden (the default is *on*).
-* **Render distance** and **Max ESP players** cap what is drawn.
-* **Master toggle key** or **Panic key**: if you pressed it, everything is hidden. Press it again.
+* **Show bots** and **Show teammates** are separate. A lobby full of bots shows nothing if bots are hidden (they are shown by default).
+* **Render distance** and **Max ESP players** limit what is drawn.
+* Did you press the **Master toggle key** or the **Panic key**? Everything is hidden until you press it again.
 
 ## 7. A black screen
 
-**Visuals > HUD > Fuser mode** draws a pure-black window under the overlay. Switch it off if you do not use a capture card.
+**Visuals > Fuser mode** draws a pure black window under the overlay. Turn it off if you do not use a capture card.
 
-## 8. Only the first few seconds are wrong
+## 8. Only the first seconds look wrong
 
-At the start of every match the world is found again (the log shows `WORLD: UWorld ... resolved`). Visibility and the wall check need a few seconds more. Wait about ten seconds.
+At the start of every match the world is found again (the log shows "UWorld ... resolved"). Visibility and the wall check need a few more seconds. Give it ten.
 
 ## Still nothing?
 
-[Collect diagnostics](collecting-diagnostics.md) and include the log (`hideway.log` and `hideway.log.1`).
+[Collect diagnostics](collecting-diagnostics.md) and send the log files with them (`hideway.log` and `hideway.log.1`).

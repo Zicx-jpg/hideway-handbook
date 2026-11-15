@@ -19,7 +19,7 @@ Aim and trigger move and click the mouse **through a hardware input device**. No
 5. Press **Connect**. The top bar shows the real device state.
 6. Press **Test move (+/-60)**: it sends one small movement so you can see it works.
 
-<figure><img src="../.gitbook/assets/menu-misc-advanced-2.png" alt="Input device card"><figcaption><p>INPUT DEVICE, DETECTED DEVICES: ports found, and which one answered.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-misc-2.png" alt="Input device card"><figcaption><p>INPUT DEVICE, DETECTED DEVICES: ports found, and which one answered.</p></figcaption></figure>
 
 ## "Connected" really means connected
 

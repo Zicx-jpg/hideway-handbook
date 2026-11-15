@@ -14,7 +14,7 @@
 
 ## The program starts but the overlay is black
 
-**Visuals > HUD > Fuser mode** puts a pure-black window under the overlay for capture-card setups. Switch it off if you do not use a capture card.
+**Visuals > Fuser mode** puts a pure black window under the overlay for capture-card setups. Turn it off if you do not use a capture card.
 
 ## License
 
@@ -24,6 +24,10 @@
 | *Device limit reached* | Ask support to deactivate an old device. Reinstalling Windows changes your device fingerprint |
 | *Cannot reach license server* | The app keeps working for up to **15 minutes** offline, then locks. Check your internet connection and the **system clock** (a wrong clock fails the signed answer check) |
 | *HWID mismatch* | A license is tied to one Windows account on first use. Ask support to reset it to move it |
+
+## Locked after about an hour
+
+If the log ends with `locked: sig_missing` roughly an hour after you started, you are on a version before 3.2.6. The license service answered a routine check without its signature, and the program took that as a refused session and locked. From 3.2.6 on, Hideway opens a fresh session with your license instead, and an answer it cannot verify gets the same 15 minutes of grace as a lost connection. Update to 3.2.6 or later (the launcher's Updates page). A signed "banned" or "expired" answer still locks at once, as it should.
 
 ## Web Loader sign-in does not work
 

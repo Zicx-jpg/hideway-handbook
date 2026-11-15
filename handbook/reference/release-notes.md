@@ -3,6 +3,101 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.2.5 - 2026-11-14
+
+* Aimbot: no more jolts. The camera answers a mouse move about 50 ms late (measured on a real match) and the aim loop kept re-correcting an error it had already corrected; it now subtracts the motion still in flight. In a simulation the old loop overshot a 10 degree target by 1.1 to 3.9 degrees depending on the smoothing, the new one by 0
+* ESP: bots use the normal hidden (pink) / visible (green) colours like everybody else and carry a small BOT tag, so the visibility check can be read on them (a hidden bot used to be orange-yellow)
+* Fortnite 43.10 game data unchanged
+
+## 3.2.4 - 2026-11-13
+
+* Aim and trigger lead: the velocity used to aim ahead of a moving player is smoothed (40 ms), so the aim point no longer jumps with every network update - about 8x less jolt in the air and on the ground in a measured 15-minute match, with the same prediction accuracy
+* ESP smoothness is Balanced by default again (it was forced to Responsive)
+* Fortnite 43.10 game data unchanged
+
+## 3.2.3 - 2026-11-13
+
+* ESP lag fix: the reader no longer drops to slow one-by-one reads (300+ ms per tick) at match start when the bus, a skydive or a teleport moves players; it keeps the fast path and re-checks after 3 s instead of 20-120 s
+* ESP no longer blanks when one player-list read fails: it is re-read at once and the players stay on screen for up to 1.5 s
+* ESP no longer drops a player standing close in front of you (the head is checked as well as the waist)
+* On a slow link the ESP keeps players on screen between reads (age and extrapolation limits follow the measured read interval)
+* Fortnite 43.10 game data unchanged
+
+## 3.2.2 - 2026-11-12
+
+* Fix: bots now show the 'visible' colour when you can see them (they were always the bot colour, so the visibility check looked dead in bot lobbies)
+* Fortnite 43.10 game data unchanged from 3.2.1
+
+## 3.2.1 - 2026-11-12
+
+* Fortnite 43.10 (CL-60118918): new game data (classes and offsets) - not verified in a live match yet; Auto-update game data can still replace it with a signed pack
+* Wardogs v1.00 module in the launcher (ESP, radar, nearby-enemy warning, black fuser window, web radar, aim assist through MAKCU / Ferrum / KMBox NET)
+* Download site moved to download.hideway.cc
+
+## 3.2.0 - 2026-11-12
+
+* New game: Wardogs (v1.00) in the launcher - ESP with boxes, skeleton, names, distance, off-screen arrows, radar, nearby-enemy warning
+* Wardogs: black fuser window, web radar / tactical map for a phone or second screen, aim assist through MAKCU / Ferrum / KMBox NET
+* Hideway menu, logo and KeyAuth sign-in shared with the Fortnite build
+
+## 3.1.0 - 2026-11-09
+
+* One simple menu: no Simple/Advanced mode, one list.
+* Automatic now (not in the menu): gun-in-hand rule, aim between bones, UE5 visibility, trigger source, per-weapon ballistics, smooth ESP, engine switches, weapon detection.
+* Humanizing is one switch.
+* Aim calibration measures counts per degree by itself.
+* Assist page is now Triggerbot; close aim, sticky aim and prediction moved to Aimbot.
+* One Loot card.
+* Updates are only in the launcher.
+
+## 3.0.0 - 2026-11-08
+
+* Customer care update. The launcher has a new Help page: report a problem in one click with your diagnostics attached, and read the answer of support in the same place. The overlay's Debug page can send a report too.
+* A help page on the web lets you check your license and move it to a new PC yourself. Announcements from support show in the launcher and the overlay.
+* New Team panel (your squadmates' health, shield, weapon and distance) and a Radar auto range option.
+
+## 2.10.10 - 2026-11-07
+
+* New Black box on the Debug page: it keeps the last minute of what the overlay had and drew (counts only, no names or positions). Copy it or save it to a file and send it to support.
+* If the ESP goes blank for more than half a second, Hideway now logs the reason and saves that minute by itself.
+
+## 2.10.9 - 2026-11-07
+
+* Fix: the Web radar names option now works. In 2.10.8 it was ignored, so player names were always sent to the web radar and to the online share even when it was switched off.
+* If you use Share radar online with names off, update now.
+
+## 2.10.8 - 2026-11-07
+
+* Share radar online: a friend on another network can now open your web radar. Turn it on in the Radar page, press Copy online link and send it. It is off by default, and New online link cuts everyone off.
+* The local radar link is easier to use: Allow other devices (LAN) is visible in Simple mode, and the Radar page says which link works where.
+
+## 2.10.7 - 2026-11-07
+
+* The launcher now greets you: a short welcome with three setup steps the first time, and after each update a What's new message with the changes and a support link.
+* Nothing changes in the game overlay in this version.
+
+## 2.10.6 - 2026-11-07
+
+* Calmer look across the launcher sign-in screen and the website: flat dark design, one accent colour, no glow or orbiting effects, plainer wording.
+* The sign-in screen now shows the logo, the name and three plain facts, and the home page text is simpler.
+
+## 2.10.5 - 2026-11-07
+
+* New launcher look: a flat dark design with a sidebar, a top bar showing live Server / DMA card / Input device status, and a Your library page with search (Ctrl+K), All / Installed / Coming soon tabs and product cards.
+* Signed files status with a shield on every card, a refresh button for the checks, and the same style on every launcher page.
+
+## 2.10.4 - 2026-11-07
+
+* The wall check now sees the walls and floors you build: new pieces are picked up within about a second, edited pieces are re-read and destroyed ones are removed, so aim and trigger no longer pick a player standing behind your own wall.
+* Debug page: the Wall check row shows how many player builds were placed.
+
+## 2.10.3 - 2026-11-07
+
+* Fix: the Team ID badge no longer disappears for members of a squad. A team number now counts as a squad for the whole match, even while a squadmate is out of range.
+* Fix: your own team number no longer blinks to 0 about one frame in ten, so your real teammates are never treated as enemies by the team check, the ESP colours or the radar.
+* Radar: view cone, height arrows, squad colours, movement direction ticks, an N marker, an optional team number, dim dots beyond the range and a better draw order (RADAR page, READABILITY card).
+* Game data updates after a Fortnite patch: Hideway can fetch a pack of new offsets signed by Hideway, install it only when your game is not found with your current files, check it against the running game and go back to your previous files if it does not work (MISC page, GAME DATA card; switch: Auto-update game data).
+
 ## 2.10.2 - 2026-11-05
 
 * Fix: with Mouse 1 as the aim key, clicking to place a wall no longer makes the aim lock onto an enemy behind it.

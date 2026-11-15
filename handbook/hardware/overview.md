@@ -2,8 +2,8 @@
 
 This section is the **hardware side** of the handbook: the DMA card, the input device, the fuser and the two PCs. Read it if you are building a setup from scratch or something below the software is not working.
 
-{% hint style="warning" %}
-**Where this section comes from.** It is rewritten for Hideway from public setup guides of DMA hardware vendors. The publisher has not re-tested every step on every card, input device or fuser model. When your own hardware manual disagrees with a page here, **follow the manual**. Anything that is only a vendor recommendation is marked as such.
+{% hint style="info" %}
+These pages are based on the setup guides of the DMA hardware makers and have not been tried on every card, input device and fuser. If your hardware manual says something different, follow the manual.
 {% endhint %}
 
 ## What DMA is, in two minutes
@@ -16,8 +16,8 @@ For Hideway that means:
 * **Hideway runs on the overlay PC** and reads the game through the card. It only **reads**; it does not write to game memory.
 * The overlay PC draws the ESP, radar and menu, and (optionally) drives an input device.
 
-{% hint style="danger" %}
-Using any tool next to an online game can break the game's rules and lead to a ban or other action by the publisher. **Nobody can promise you will not be banned.** You use Hideway at your own risk. See [Security and privacy](../reference/security-and-privacy.md).
+{% hint style="warning" %}
+Using any tool next to an online game can get an account banned. See [Security and privacy](../reference/security-and-privacy.md).
 {% endhint %}
 
 ## What you need

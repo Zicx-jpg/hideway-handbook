@@ -28,7 +28,7 @@ The wall check reads the **level's static geometry**. It does not know about **w
 
 **Submit-time visibility** judges from three render timestamps of each mesh (submitted, rendered, rendered on screen): submitted recently but not drawn = culled. It is checked against the world clock on every tick and ignored when the numbers do not look like times. Off by default.
 
-In recorded matches on 43.00 the timestamps did read as times and the result agreed with the render-time rule in roughly nine of ten comparisons; whether it is *better* than the render-time rule has not been settled. The Aimbot page's **Submit-time reading** line says whether it works on your build, and **Debug > DATA HEALTH** shows its agreement.
+In recorded matches the timestamps did read as times and the result agreed with the render-time rule in roughly nine of ten comparisons; whether it is *better* than the render-time rule has not been settled. The Aimbot page's **Submit-time reading** line says whether it works on your build, and **Debug > DATA HEALTH** shows its agreement.
 
 ## Which should I use?
 

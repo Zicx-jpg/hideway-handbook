@@ -2,7 +2,7 @@
 
 System settings: the overlay, motion smoothing, keys, input device, debug switches and engine tuning.
 
-<figure><img src="../.gitbook/assets/menu-misc-advanced.png" alt="Misc page, Advanced mode"><figcaption><p>Misc page in Advanced mode.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-misc.png" alt="Misc page"><figcaption><p>The Misc page: game data, overlay settings, notifications and the INPUT DEVICE card.</p></figcaption></figure>
 
 ## GENERAL
 
@@ -31,7 +31,7 @@ Menu key, Panic key, Master toggle key, Exit key, Next / Previous config key. Se
 
 Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. Full guide: [Connect an input device](../guides/input-device.md).
 
-<figure><img src="../.gitbook/assets/menu-misc-advanced-2.png" alt="Misc page, input device cards"><figcaption><p>INPUT DEVICE, DETECTED DEVICES and the KEYS card.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-misc-2.png" alt="Misc page, input device cards"><figcaption><p>INPUT DEVICE buttons, DETECTED DEVICES, KEYS and DEBUG.</p></figcaption></figure>
 
 ## DEBUG
 
@@ -42,7 +42,7 @@ Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. Full
 | **Advanced debug** | Raw addresses and discovered offsets on the Debug page |
 | **Player list** | The players Hideway currently reads, on the Debug page |
 
-## ENGINE (ADVANCED)
+## ENGINE
 
 | Option | What it does |
 |---|---|

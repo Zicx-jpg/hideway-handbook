@@ -1,60 +1,45 @@
-# Menu overview: Simple and Advanced
+# The menu
 
-Press **Insert** (default) to open or close the menu. It has a left side bar with the pages, a top bar with search, the config dropdown and the **Mode** button, and a bottom bar with the license state and frame rate.
+Press **Insert** to open or close it. There is a side bar with the pages, a search box and the config dropdown on top, and the license state and frame rate at the bottom.
 
-<figure><img src="../.gitbook/assets/menu-aimbot-simple.png" alt="The Hideway menu in Simple mode, Aimbot page"><figcaption><p>Simple mode, Aimbot page. Side bar on the left; search, config dropdown and Mode button on top.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot.png" alt="The Hideway menu, Aimbot page"><figcaption><p>The Aimbot page in demo mode.</p></figcaption></figure>
 
 ## The pages
 
 | Page | What is on it |
 |---|---|
-| [**Aimbot**](aimbot.md) | Aim key, bone, field of view, smoothing, visibility rules, humanizing, calibration |
-| [**Weapons**](weapons.md) | Per-class overrides (rifle, pistol, SMG, shotgun, sniper) and weapon detection |
-| [**Assist**](assist.md) | Triggerbot, close aim, sticky aim, prediction, ballistics per weapon |
-| [**Visuals**](visuals.md) | Everything drawn on players, loot, reboot cards, spectators, audio alerts, colours |
-| [**Radar**](radar.md) | On-screen radar and the web radar |
-| [**Misc**](misc.md) | Overlay settings, notifications, keys, input device, debug switches, engine |
-| [**Config**](config.md) | Configs, presets, backups, keybinds, files, sharing, license, updates, about |
-| [**Debug**](debug.md) | Hidden by default. Ready check, data health, performance, log. Turn it on in Misc |
+| [Aimbot](aimbot.md) | Aim key, bone, field of view, smoothing, visibility, humanizing, calibration, close aim, sticky aim, prediction |
+| [Weapons](weapons.md) | Settings per weapon class (rifle, pistol, SMG, shotgun, sniper) and weapon detection |
+| [Triggerbot](triggerbot.md) | When and how it fires |
+| [Visuals](visuals.md) | Everything drawn on players, loot, reboot cards, spectators, audio alerts, colours |
+| [Radar](radar.md) | The on-screen radar and the web radar |
+| [Misc](misc.md) | Overlay, notifications, keys, input device, smoothing and engine switches |
+| [Config](config.md) | Configs, presets, backups, keybinds, sharing, license, updates |
+| [Debug](debug.md) | Hidden until you turn it on in Misc. Ready check, data health, performance |
 
-## Simple and Advanced mode
+## One menu, no modes
 
-The **Mode** button in the top bar switches between two views of the same settings:
+There is no Simple / Advanced switch. Every setting you might want is on its page. Things that should simply work are automatic and are not shown: the gun-in-hand rule, aiming between bones, the visibility rule, the counts-per-degree calibration, per-weapon ballistics, the trigger source, smooth ESP and the engine switches.
 
-* **Simple**: the essentials of every page.
-* **Advanced**: every setting (274 options).
+## Search, tooltips and the config dropdown
 
-<figure><img src="../.gitbook/assets/menu-mode-button.png" alt="Advanced mode, Aimbot page"><figcaption><p>Advanced mode shows more rows on the same page.</p></figcaption></figure>
-
-{% hint style="success" %}
-**Nothing is switched off by Simple.** Hidden settings keep the value they have. The search box finds every option in both modes. The mode itself is the option **Menu mode** and is saved with your config.
-{% endhint %}
-
-## Search
-
-Click the magnifier in the top bar and type. It lists matching options from every page; choosing one takes you there.
-
-## The config dropdown
-
-The folder icon and name next to the search box is the **active config**. Pick another config to switch to it. The one you leave is saved first when Auto-save is on. See [Configs](../guides/configs.md).
-
-## Tooltips
-
-Rest the cursor on a row for about half a second: a short explanation appears. Every option has one; the same texts are in the [Options reference](../reference/options.md).
+* Click the magnifier and type. Matching options from every page are listed, and picking one takes you there.
+* Hold the cursor on a row for half a second and a short explanation appears. Every option has one, and the same texts are in the [options reference](../reference/options.md).
+* The folder icon and name next to the search box is your active config. Choosing another one switches to it, and the one you leave is saved first when Auto-save is on. See [Configs](../guides/configs.md).
 
 ## Menu style
 
-**Config > Menu style** has 8 themes, an accent colour for the Custom theme, and **Menu animations** (slow aurora, floating lights, shimmer). Turn animations off for a slightly lighter GPU load.
+**Config > Menu style** has 8 themes, an accent colour for the Custom theme and a switch for the menu animations. Turn the animations off if you want a slightly lighter GPU load.
 
-## The overlay itself
+## The overlay and its keys
 
-The menu is drawn on top of a transparent overlay that covers one monitor (**Misc > Overlay monitor**). When the menu is closed you only see the ESP, radar and HUD pieces you enabled.
+The menu sits on a transparent overlay that covers one monitor (**Misc > Overlay monitor**). With the menu closed you only see what you turned on: ESP, radar and HUD pieces.
 
-| Key | Action |
+| Key | What it does |
 |---|---|
-| **Insert** | Open / close the menu |
-| **End** | Exit Hideway |
-| **Panic key** (not set by default) | Hide everything and stop reading the game until pressed again |
-| **Master toggle key** (not set by default) | Turn all cheat features on / off without closing the menu |
+| Insert | Open or close the menu |
+| End | Close Hideway |
+| Panic key (not set by default) | Hide everything and stop reading the game until you press it again |
+| Master toggle key (not set by default) | Switch every feature on or off without closing the menu |
 
-All keys are rebindable; see [Hotkeys](../guides/hotkeys.md).
+All keys can be changed. See [Hotkeys](../guides/hotkeys.md).

@@ -1,36 +1,32 @@
-# READY CHECK: is everything connected?
+# Is everything connected?
 
-The **READY CHECK** card sits at the top of the **Debug** page. The same card also shows on the **Aimbot** page until everything is ready. It lists each part in **green**, **orange** or **red**, and one **Next:** line names the first thing to fix.
+The READY CHECK card is at the top of the **Debug** page, and it also appears on the **Aimbot** page until everything is ready. Each part is green, orange or red, and the **Next:** line names the first thing to deal with.
 
-{% hint style="info" %}
-Debug is hidden by default to keep the menu small. Turn it on with **Misc > Debug > Show debug page**.
-{% endhint %}
+Debug is hidden to keep the menu short. Turn it on with **Misc > Debug > Show debug page**.
 
-| Row | Color | Meaning | What to do |
+| Row | Colour | What it means | What to do |
 |---|---|---|---|
-| **DMA card** | red | The card does not answer | Accept the administrator prompt; use a USB 3 port on the motherboard; power the game PC; close other programs that use the card (MemProcFS, other tools); check the FTDI driver in Device Manager. Hideway retries every 2 seconds by itself and reconnects if the cable drops later |
-| **Fortnite** | orange | The card works but the game is not running on the game PC yet | Start Fortnite there and wait for the lobby |
-| **Game data** | red | The game runs but its structures were not found 90 seconds after it started | This Fortnite build is newer than the offsets in `all\`. See [After a Fortnite update](../guides/after-a-fortnite-update.md) |
-| **Input** | red | Aim or trigger is on but the input device is off or not connected | Misc > Input device. See [Connect an input device](../guides/input-device.md) |
-| **Camera** | orange | Waiting for a view (lobby / loading screen) | Normal until a match starts |
+| DMA card | red | The card does not answer | Accept the administrator prompt, use a USB port on the motherboard, power the game PC, close other programs that talk to the card, check the FTDI driver in Device Manager. Hideway retries every 2 seconds and reconnects by itself if the cable drops later |
+| Fortnite | orange | The card works, the game is not running yet | Start Fortnite on the game PC and wait for the lobby |
+| Game data | red | The game runs but its structures were not found 90 seconds after start | This Fortnite build is newer than the data you have. See [After a Fortnite update](../guides/after-a-fortnite-update.md) |
+| Input | red | Aim or trigger is on but the input device is off or not connected | Misc > Input device. See [Connect an input device](../guides/input-device.md) |
+| Camera | orange | Waiting for a view | Normal in the lobby and on loading screens |
 
-## The top bar
+## The status in the top bar
 
-| Text | Meaning |
-|---|---|
-| **DMA OFFLINE** | The card is not detected |
-| **WAITING FOR FORTNITE** | Card OK, game not found |
-| **DMA ONLINE** | Connected and reading |
-| **demo** | Demo mode: synthetic data |
+* **DMA OFFLINE**: the card is not detected.
+* **WAITING FOR FORTNITE**: the card is fine, the game is not found.
+* **DMA ONLINE**: connected and reading.
+* **demo**: generated data.
 
-## OFFSET HEALTH
+## Offset health
 
-Below the READY CHECK, **OFFSET HEALTH** shows, line by line, which group of offsets was proven by real data (game process, world, game state, local player, camera, players, names, skeletons, health, visibility clock). After a patch the first red line points at what moved.
+Under the READY CHECK, **OFFSET HEALTH** goes line by line through what was proven with real data: game process, world, game state, local player, camera, players, names, skeletons, health and the visibility clock. After a patch, the first red line shows what moved.
 
-## DATA HEALTH
+## Data health
 
-The **DATA HEALTH** card goes one step further: for every data source it says how many players actually have it right now. See [Debug and Data health](../the-menu/debug.md#data-health).
+**DATA HEALTH** goes one step further and shows, for every kind of information, how many of the players in the match have it right now. See [Debug](../the-menu/debug.md).
 
-## Black screen when you start?
+## A black screen at start
 
-**Visuals > HUD > Fuser mode** puts a pure-black window under the overlay for capture-card setups. Switch it off if you do not use a capture card.
+**Visuals > Fuser mode** puts a pure black window under the overlay. It is meant for capture-card setups. If you do not use a capture card, turn it off.

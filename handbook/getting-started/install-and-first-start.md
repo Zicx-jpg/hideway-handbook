@@ -1,78 +1,61 @@
-# Install and first start
+# Install and first launch
 
-Allow about ten minutes the first time.
+Plan on about ten minutes.
 
-## 1. Put the folder somewhere you own
+## 1. Unzip it somewhere you own
 
-Unzip the package into its own folder, for example `D:\Hideway`. **Do not run it from inside the zip.**
+Extract the package to its own folder, for example `D:\Hideway`. Do not run it from inside the zip.
 
 ```
 Hideway\
-  HidewayLauncher.exe     <- the only program you run
-  core\                   <- everything else (signed files, DLLs, offsets, configs)
+  HidewayLauncher.exe     the only program you start
+  core\                   everything else: game module, DLLs, game data, configs
 ```
 
-Keep `HidewayLauncher.exe` and the `core` folder together. You never start anything inside `core\` by hand; the launcher starts the game module for you.
+Keep `HidewayLauncher.exe` and the `core` folder together. You never start anything inside `core` by hand. The DMA files in there (`vmm.dll`, `leechcore.dll`, `FTD3XX.dll`, `dbghelp.dll`, `symsrv.dll`) are checked on every start, so do not move or replace them.
 
-{% hint style="info" %}
-The DMA runtime files (`vmm.dll`, `leechcore.dll`, `FTD3XX.dll`, `dbghelp.dll`, `symsrv.dll`) must stay next to `Hideway.exe` inside `core\`. They are hash-checked on every start; a missing or changed file is refused.
-{% endhint %}
-
-## 2. (Recommended) verify the download
+## 2. Check the download (optional but quick)
 
 Open PowerShell in the `core` folder and run:
 
 ```bash
-powershell -ExecutionPolicy Bypass -File .\verify_package.ps1 -ExpectedFingerprint <fingerprint from the download page>
+powershell -ExecutionPolicy Bypass -File .\verify_package.ps1 -ExpectedFingerprint <fingerprint shown on the download page>
 ```
 
-It checks the publisher's signature on `release.json` and the SHA-256 of every file. Windows SmartScreen may warn about the programs because they are not Authenticode-signed yet: verify first, then choose "Run anyway". Do not turn off Windows protections.
+It checks the seller's signature and the hash of every file. Windows SmartScreen may warn about the programs because they are not code-signed yet. If the check passes, choose "Run anyway". Do not switch Windows protection off.
 
-## 3. Power up the hardware
+## 3. Power up
 
-1. Start the **game PC** with the DMA card installed.
-2. Plug the card's USB cable into the **overlay PC**.
-3. Optional: plug in your input device.
+1. Start the game PC with the DMA card in it.
+2. Plug the card's USB cable into the overlay PC.
+3. Plug in your input device if you have one.
 
 ## 4. Start the launcher
 
-Double-click `HidewayLauncher.exe` and accept the Windows administrator prompt. The launcher is the front door for every Hideway game. See [The launcher](the-launcher.md).
-
-Click **Launch** on the Fortnite card. The launcher first checks the module's files against the publisher's signed manifest, then starts it.
+Double-click `HidewayLauncher.exe` and accept the administrator prompt. Press **Launch** on the Fortnite card. The launcher checks the module's files against the signed list first, then starts it. More on the launcher: [The launcher](the-launcher.md).
 
 ## 5. Sign in
 
-Use **one** of these:
+Pick one:
 
-{% tabs %}
-{% tab title="License key" %}
-Type or paste your key and press **Activate**. Tick **Remember on this device** to store it encrypted for your Windows account only.
-{% endtab %}
-
-{% tab title="Website button (Web Loader)" %}
-Sign in on the Hideway website / customer panel and press the **Web Loader** button. The app must already be open on its sign-in screen. The loader listens on `127.0.0.1` port `1337` only. If another program uses that port, the sign-in screen tells you; the license key still works.
-{% endtab %}
-{% endtabs %}
+* **License key.** Paste it and press **Activate**. Tick **Remember on this device** if you want it stored, encrypted, for your Windows account only.
+* **Website button.** Sign in on the customer panel and press the Web Loader button while the sign-in screen is open. It talks to Hideway through `127.0.0.1` port 1337 and nowhere else. If another program already uses that port, the sign-in screen says so and the key still works.
 
 ## 6. Start Fortnite on the game PC
 
-After signing in the overlay starts. **Insert** opens the menu, **End** exits (both can be changed in Misc > Keys). Wait for the game's lobby, then join a match.
+After sign-in the overlay appears. **Insert** opens the menu and **End** closes Hideway. Both can be changed under Misc. Go to the lobby and join a match: the lobby has no other players to draw.
 
-## 7. Check that everything is connected
+## 7. Check the connection
 
-Open **Debug**. If you do not see a Debug page, turn on **Misc > Debug > Show debug page**. The **READY CHECK** card at the top lists each part in green, orange or red. See [READY CHECK](ready-check.md).
+Turn on **Misc > Debug > Show debug page**, then open **Debug**. The READY CHECK card at the top lists each part in green, orange or red and tells you what to fix first. See [Is everything connected?](ready-check.md).
 
-{% hint style="success" %}
-In the lobby, rows like "waiting (lobby / loading)" are normal. Players only appear once a match has started.
-{% endhint %}
+In the lobby, "waiting" rows are normal.
 
-## First minutes in a match
+## Your first match
 
-1. Open **Config** and pick a starting point under **Presets** (ESP only, Clean visuals, Full visuals, Subtle aim assist). A preset only changes the options it lists.
-2. Fine-tune on **Visuals** and **Radar**. Rest the cursor on any option for a short explanation.
-3. If boxes sit slightly ahead of or behind the players, adjust **ESP time offset** (Misc) by a few milliseconds.
-4. Your changes save by themselves (Auto-save). See [Configs](../guides/configs.md).
+1. Open **Config** and pick a preset under **Presets**: ESP only, Clean visuals, Full visuals or Subtle aim assist. A preset only changes the options it lists.
+2. Adjust **Visuals** and **Radar** to taste. Hold the cursor on any option for a one-line explanation.
+3. If the boxes sit a little behind or ahead of the players, change **ESP time offset** on Misc by a few milliseconds.
+4. Your changes are saved by themselves. See [Configs](../guides/configs.md).
 
-## Something did not work?
-
-Go to the [Quick checklist](../troubleshooting/quick-checklist.md).
+If something is not right, go to the [quick checklist](../troubleshooting/quick-checklist.md).

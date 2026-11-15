@@ -1,48 +1,43 @@
-# Known limits and what is verified
+# What to expect
 
-Honest status of version **2.10.2**. *Seen live* means it was observed working in a real match on Fortnite 43.00. *Offline only* means it passes tests on synthetic or recorded data but nobody has watched it work in a real match yet.
+What works, what the game does not allow, and what has not been proven in a real match yet. Last checked against version 3.2.6 and a 15-minute match on Fortnite 43.10.
 
-## Seen live
+## Works in real matches
 
-| Feature | Notes |
+* Players, names, teams, bots, camera and the fast reads (about 5 ms per read cycle).
+* Skeletons, checked against recordings.
+* Smooth ESP, measured on real recordings.
+* Visibility from the game's render time, which agreed with the line-of-sight check in about 9 of 10 comparisons.
+* Loot ESP: pickup layout, ammo and item names read correctly.
+* The match summary in the log.
+
+## Limits of the game
+
+| What | Why |
 |---|---|
-| Player names, bots, teams, camera, scatter reads | On 43.00 |
-| Loot ESP | The pickup layout is proven live: ammo and item names read correctly |
-| Skeletons | Bones verified correct against a recording |
-| Smooth ESP | Measured on real recordings |
-| Visibility timestamps (render / submit) | Read as times on 43.00; submit-time agreed with the render-time rule in about 9 of 10 comparisons |
-| Match counters in the log | The per-match summary line is written |
+| No health or shield bars on enemies | Fortnite only sends them for you and your squad. See [Health and shield bars](../troubleshooting/health-and-data.md) |
+| Frozen skeletons on hidden and far players | The game barely animates what it does not draw, and far players are read less often |
+| Players in the air move in small steps | Their position snaps back about 12 cm every 33 ms in the game's own movement code, and the ESP follows it |
+| Walls that players build are not known to the wall check | It reads the level's fixed geometry only, so a target behind a built wall can still count as visible |
+| Some weapon classes read as *Other* | Only some animation ids are confirmed |
+| A patch breaks the ESP for a while | The offsets belong to one Fortnite build. See [After a Fortnite update](../guides/after-a-fortnite-update.md) |
+| The game's own log is not readable | It lives on the game PC |
 
-## Limits you will run into
+## Not proven in a real match yet
 
-| Limit | Why |
-|---|---|
-| **No enemy health / shield bars** | The game does not appear to send enemy health: read directly for about 1 % of enemies and about three quarters of teammates. No bar is drawn instead of an invented one |
-| **Hidden and far players' skeletons look static** | The game itself barely animates what it does not draw; distant players are also read less often |
-| **Built walls are invisible to the wall check** | It reads the level's static geometry only. A target behind a player-built wall can still count as visible |
-| **Weapon classes are only partly known** | Only some core animation ids are confirmed on 43.00. Others read as `Other` |
-| **Offsets follow the game build** | After a Fortnite patch there can be a gap without ESP until new offsets are released |
-| **The game's log is not readable** | Fortnite's own log and crash report live on the game PC |
+These pass their tests, but nobody has watched them work live:
 
-## Offline only (not yet watched in a real match)
-
-* Reboot cards
-* Spectator list (the layout comes from a community post and is checked on every read)
-* Audio alerts
-* Facing direction
-* Fade-in and label placement
-* Squad list, match info panel, low health outline, enemy ammo (the data they need is mostly not sent; they appear only when real values exist)
-* Skeleton joint filter (2.10.0)
-* The "Only with a gun in hand" rule in 2.10.2: derived from a recording (pickaxe ammo 0, build tool ammo 0 about 95 % of the time), not yet seen in a match with a wall placed
-* Recovery after the DMA card drops mid-session
+* Aim delay compensation (3.2.5): measured on a recording and proven in a simulation.
+* The smoothed aim lead (3.2.4).
+* Reboot cards, the spectator list, audio alerts and facing direction.
+* Squad list, match info panel, low health outline and enemy ammo. They need data the game mostly does not send, so they only appear when real values exist.
+* Recovery after the DMA card drops in the middle of a session.
 
 ## Other open items
 
-* Programs are not Authenticode-signed.
-* The install folder is writable by your user while the launcher and overlay run elevated.
-* Ferrum: follows the vendor documentation but is the least proven of the three devices.
-* The web radar has not been penetration-tested from another machine.
+* The programs are not code-signed.
+* The install folder is writable by your Windows user while the launcher and overlay run as administrator.
+* Ferrum follows the vendor documentation and is the least tested of the three input devices.
+* The web radar has not been tested from another machine on an untrusted network.
 
-{% hint style="info" %}
-When something here changes, it is in the [Release notes](release-notes.md) and this page is updated.
-{% endhint %}
+When any of this changes it is in the [release notes](release-notes.md) and on this page.

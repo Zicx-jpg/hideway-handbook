@@ -4,7 +4,7 @@ A good report gets a quick answer. Send **all** of the following; it takes two m
 
 ## 1. The version
 
-Config > ABOUT, the bottom of the menu, or the launcher's About page. Example: `2.10.2`.
+Config > ABOUT, the bottom of the menu, or the launcher's About page. Example: `3.2.6`.
 
 ## 2. Copy diagnostics
 

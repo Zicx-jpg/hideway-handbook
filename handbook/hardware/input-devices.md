@@ -20,15 +20,7 @@ With **pass-through** the device forwards your real mouse to the game PC and onl
 
 ## MAKCU: wiring
 
-```
-                 +--------------------+
-   Game PC  <----| LEFT   MIDDLE RIGHT|
-                 |   |      |      |  |
-                 +---|------|------|--+
-                     |      |      |
-                 game PC  overlay  your
-                 (USB)     PC      mouse
-```
+<figure><img src="../.gitbook/assets/hardware-makcu-keyboard.png" alt="MAKCU board with its three USB ports labelled Main PC, 2nd PC and Mouse" width="520"><figcaption><p>MAKCU for keyboard-and-mouse players. Left port: the <strong>main (game) PC</strong>. Middle port: the <strong>2nd (overlay) PC</strong>. Right port: your <strong>mouse</strong>.</p></figcaption></figure>
 
 | Cable | Goes to |
 |---|---|
@@ -66,6 +58,8 @@ If you play with a gamepad and want the game to see mouse input, a **XIM Matrix*
 2. On the game PC install the XIM manager software, connect the XIM Matrix and create a new config: pick the game and PC, input **Gamepad**, output **Mouse and keyboard**.
 3. Connect the MAKCU as in the wiring above, with the XIM Matrix on the cable your seller's diagram shows.
 4. In the game set the input to mouse and keyboard.
+
+<figure><img src="../.gitbook/assets/hardware-makcu-controller.png" alt="MAKCU board with the first port used for the XIM, the middle for the 2nd PC and the right for the mouse" width="520"><figcaption><p>MAKCU for controller players: the first port goes to the <strong>XIM</strong> instead of the main PC, the middle port to the <strong>2nd (overlay) PC</strong>, the right port to the <strong>mouse</strong>.</p></figcaption></figure>
 
 Follow the wiring picture from the XIM Matrix and MAKCU vendors for your exact revision; the Hideway side stays the same (Misc > INPUT DEVICE).
 

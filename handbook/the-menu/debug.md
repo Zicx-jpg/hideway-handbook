@@ -19,11 +19,11 @@ The Debug page shows what Hideway is really getting from the game. It is **hidde
 | **LATENCY** | Measure the mouse-to-camera delay and use it as Prediction / Trigger lead |
 | **RECORDING** | A flight recorder for sharing a session with support |
 | **LIVE LOG** | Real events with timestamps, with **Copy log** |
-| **ADDRESSES**, **PLAYERS** | Raw addresses and the player list (Advanced debug / Player list) |
+| **ADDRESSES**, **PLAYERS** | Raw addresses and the player list (Advanced debug and Player list on Misc) |
 
 ## DATA HEALTH
 
-Added in 2.10.1. One table, one row per data source, with a state and the share of players that have it right now.
+One table, one row per data source, with a state and the share of players that have it right now.
 
 | State | Meaning |
 |---|---|

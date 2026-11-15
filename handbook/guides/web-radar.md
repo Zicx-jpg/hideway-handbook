@@ -40,5 +40,5 @@ Hideway sends **20 updates per second** by default (**Web radar rate** = 50 ms).
 
 ## Safety notes
 
-* LAN access is **off by default** since 2.10.0, and the web radar settings are never imported from shared configs.
+* LAN access is **off by default**, and the web radar settings are never imported from shared configs.
 * Only enable LAN on a network you trust.

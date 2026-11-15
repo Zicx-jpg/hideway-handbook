@@ -1,59 +1,68 @@
 # Set up the ESP
 
-A good ESP is clear, steady and in the right place. This guide walks the options in the order that matters.
+A good ESP is easy to read, steady, and in the right place on the screen. Go through this once and you will rarely need to touch it again.
 
 ## 1. Start from a preset
 
-**Config > PRESETS** gives four starting points. A preset only changes what it lists, so your other settings stay.
+**Config > Presets** has four starting points. A preset only changes the options it lists, so everything else stays as you had it.
 
-| Preset | What it gives you |
+| Preset | What you get |
 |---|---|
-| **ESP only** | Boxes, skeletons, names, health, radar. Aim is off |
-| **Clean visuals** | Corner boxes, name, distance and health bars only |
-| **Full visuals** | Everything on: gradients, glow, all text, lines, radar |
-| **Subtle aim assist** | Narrow field of view, slow random smoothing, visible only |
+| ESP only | Boxes, skeletons, names, health, radar. Aim off |
+| Clean visuals | Corner boxes, name, distance and health bars |
+| Full visuals | Everything on: gradients, glow, all text, lines, radar |
+| Subtle aim assist | Narrow field of view, slow random smoothing, visible targets only |
 
-Save your own config first if you do not want to lose what you have (Auto-save keeps backups, see [Configs](configs.md)).
+If you already have settings you like, save them as a config first. Auto-save keeps backups too, see [Configs](configs.md).
 
 ## 2. Choose what to draw
 
-On **Visuals**, rest the cursor on any row for a one-line explanation.
+All of this is on **Visuals**. Hold the cursor on a row for its explanation.
 
-* **Box style**: *Box*, *Corners* (cleaner in crowds) or *3D box*.
-* **Skeleton**: thin lines are readable at distance. **Distance-scaled lines** keep far players from cluttering.
-* **Health + shield bars**: see [Health and shield bars](../troubleshooting/health-and-data.md). If the game sends no value, no bar is drawn.
-* **Team ID**: the game's own team number before the name. Turn on **Team ID colours** to tell squads apart in a crowd.
-* **Squad list** and **Match info**: a panel of other squads, and players / teams left at the top.
-* **Max ESP players** and **Render distance** cap the load in big lobbies.
+* **Box style**: Box, Corners (cleaner in a crowd) or 3D box.
+* **Skeleton**: thin lines read well at distance. **Distance-scaled lines** keep far players from cluttering the screen.
+* **Health + shield bars**: you will only see them where the game sends the value, which in practice means you and your squad. See [Health and shield bars](../troubleshooting/health-and-data.md).
+* **Team ID**: the game's own team number in front of the name. **Team ID colours** gives each team a colour, which helps in a crowd.
+* **Squad list** and **Match info**: a panel with the other squads, and the players and teams left.
+* **Max ESP players** and **Render distance** limit the load in big lobbies.
+* **Show bots** and **Show teammates** are separate switches. Bots get the same colours as other players (pink hidden, green visible) plus a small BOT tag next to the name.
 
-{% hint style="success" %}
-In a crowded match, turn on **Distance detail (LOD)** (Visuals > TARGET + DETAIL): far players are drawn with thinner lines and fewer extras. It is cleaner and cheaper to draw.
-{% endhint %}
+In a crowded match, turn on **Distance detail (LOD)**: far players get thinner lines and fewer extras.
 
-## 3. Make it smooth
+## 3. Colours: what you are looking at
+
+* Pink: the player is not visible to you.
+* Green: the player is visible.
+* Blue: a teammate.
+* Grey: a knocked player.
+* Yellow: the player your aim or trigger has picked (**Highlight target**).
+
+All of these can be changed under **Visuals > Colors**.
+
+## 4. Smoothness
 
 On **Misc**:
 
-| Option | Use |
+| Option | What it does |
 |---|---|
-| **Smooth ESP** (default on) | Boxes glide between data updates instead of stepping |
-| **ESP smoothness** | *Responsive* / *Balanced* (default) / *Silky*. Silky absorbs corrections slowly: about a third less jitter in measured recordings, boxes a few cm from raw readings |
-| **Smooth skeleton** | Limbs stop jittering when the root position steps with network updates |
-| **Motion estimator** | One motion model per player shared by ESP and aim lead; follows strafes and stops closely |
-| **VSync** | Match your display's refresh rate |
+| Smooth ESP | Boxes glide between data updates instead of stepping. On by default |
+| ESP smoothness | *Responsive*, *Balanced* (default) or *Silky*. Silky smooths the most; the boxes sit a few centimetres from the raw readings |
+| Smooth skeleton | Stops limbs from shaking when the root position steps with network updates |
+| Motion estimator | One motion model per player, shared by the ESP and the aim lead |
+| VSync | Match it to your display |
 
-## 4. Put it in the right place
+## 5. Put it in the right place
 
-If boxes **trail** the players, raise **ESP time offset** (Misc) by a few milliseconds. If they **lead**, lower it. The default is 0. Make sure the game runs **borderless or full-screen** on the same monitor you capture.
+If the boxes trail the players, raise **ESP time offset** on Misc by a few milliseconds. If they run ahead, lower it. The default is 0. Run the game borderless or full screen on the monitor you actually capture.
 
-## 5. Keep it readable
+## 6. Keep it readable
 
-* **Fade in players**: a player entering view fades in over a moment instead of popping.
-* **Avoid overlapping labels**: names and team numbers of close players are lifted apart.
-* **Hide knocked players** if downed players clutter the screen.
+* **Fade in players**: a player entering view fades in instead of popping.
+* **Avoid overlapping labels**: names and team numbers of nearby players are moved apart.
+* **Hide knocked players**, if downed players clutter the screen.
 
-<figure><img src="../.gitbook/assets/overlay-esp-radar.png" alt="Demo ESP"><figcaption><p>Demo: Team ID badges, segmented bars, skeletons, bot in orange.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/overlay-esp-radar.png" alt="Demo ESP"><figcaption><p>Demo: Team ID badges, bars, skeletons, a bot with its BOT tag.</p></figcaption></figure>
 
-## 6. Check the load
+## 7. Check the load
 
-Open **Debug > PERFORMANCE** (turn Debug on in Misc). *Tick* should be well below 10 ms and *Data age* below about 20 ms. High values point at the DMA link (cable, USB port, other USB traffic) more than the overlay. See [ESP quality](../troubleshooting/esp-quality.md).
+Open **Debug > Performance**. *Tick* should be well under 10 ms and *Data age* under about 20 ms. High numbers usually point at the DMA link (cable, USB port, other USB traffic) rather than the overlay. See [ESP looks wrong](../troubleshooting/esp-quality.md).

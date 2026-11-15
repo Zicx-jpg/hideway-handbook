@@ -1,45 +1,37 @@
 # The launcher
 
-`HidewayLauncher.exe` is the multi-game hub. It checks your files, starts the game module and keeps it updated. It runs with administrator rights.
+`HidewayLauncher.exe` is the front door. It checks your files, starts the game module and keeps everything up to date. It runs as administrator.
 
 ## Library
 
-One card per game ("Fortnite" today, more later).
+Each game has a card (Fortnite and Wardogs at the moment).
 
-| Button | What it does |
-|---|---|
-| **Launch** | Checks the module's files against the publisher's signed manifest, then starts it. The check and the start are the same file: a file swapped after the check is refused |
-| **Verify files** | Re-checks the files on demand |
-| **Restore the files** | Appears when something was changed or deleted. It sends you to **Updates** to put the files back |
+* **Launch** checks the module's files against the signed list and starts it. A file that changed after the check is refused.
+* **Verify files** repeats the check on demand.
+* **Restore the files** shows up when something was changed or deleted. It takes you to **Updates**, which puts the files back.
 
 ## System
 
-Real checks of this PC, each green / orange / red, with one **Next:** line for the first thing that is not green:
+A set of real checks on this PC, each green, orange or red, with one **Next:** line naming the first thing to fix:
 
 * Windows version and administrator rights
-* DMA runtime files
-* The DMA card's USB bridge
-* Input device
-* Updates
+* the DMA runtime files
+* the DMA card's USB bridge
+* the input device
+* updates
 
-**Copy diagnostics** copies a report for support. It contains no license key and no user name.
+**Copy diagnostics** puts a report on the clipboard for support. It has no license key and no user name in it.
 
 ## Updates
 
-Signed releases only. A new version is downloaded in the background and checked against the publisher's signature and SHA-256 hashes. **Nothing is installed until you click.** If the new version does not start, the previous one is restored automatically. See [Updates](../guides/updates.md).
-
-The Updates page also shows **What's new** for the installed version.
-
-## Settings and About
-
-Launcher settings and the version information.
+Only releases signed by the seller are accepted. A new version downloads in the background and is checked against its signature and file hashes. Nothing is installed until you click. If the new version does not start, the previous one is put back automatically. The page also shows what changed in the version you have. See [Updates](../guides/updates.md).
 
 ## Good to know
 
-* Only **one** launcher can run at a time. A second copy waits with an "already running" box.
-* The overlay of the game module covers the launcher after you press **Launch**; use the module's menu key (Insert by default) to open the menu.
+* Only one launcher runs at a time. A second copy shows an "already running" box.
+* After **Launch**, the game module's overlay covers the launcher. Press **Insert** to open the module's menu.
 * Command-line options: `--demo`, `--no-update`, `--page <name>`.
 
 {% hint style="info" %}
-If the launcher says a file is "not the signed one", do not run the program. Use **Restore the files** or download the package again and verify it.
+If the launcher says a file is "not the signed one", do not run it. Use **Restore the files**, or download the package again and verify it.
 {% endhint %}

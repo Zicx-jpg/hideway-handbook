@@ -1,53 +1,49 @@
 # Health and shield bars
 
-## The short answer
+## Short answer
 
-**Enemy health and shield are usually not available.** In recorded matches on Fortnite 43.00, Hideway read health directly for about **three quarters of teammates** and for **about 1 % of enemies**. The game appears to send health only for you and your own squad. When the game gives no value, Hideway shows **no bar** rather than an invented one.
+Enemy health and shield are not available. Fortnite only sends them to your own client for you and your squad. In the last full 15-minute recording (build 43.10) Hideway read health for 100 % of the teammate samples and for 0.3 % of the enemy samples. The three places a health value can live were all empty for enemies, so there is nothing more to read. This is a limit of the game, not a setting.
 
-{% hint style="info" %}
-This is an observation from real logs, not a rule Hideway can prove: the three places a health value can live (the pawn's health set, its base value, and the copy kept in the player's state) were all empty for enemies, so there is nothing more to read.
-{% endhint %}
+When there is no value, Hideway draws no bar. It does not draw a full or empty bar that it made up.
 
 ## What you will see
 
 | Situation | On screen |
 |---|---|
-| Teammate whose health was read | Health and shield bars |
-| Enemy whose health was not sent | **No bar** (never a full or empty bar made up) |
-| Knocked player | Treated as known (a knocked player has a meaning even at 0) |
+| A teammate whose health was read | Health and shield bars |
+| An enemy | No bar, apart from the rare moment the game does send a value |
+| A knocked player | Shown as knocked, whatever the number is |
 
-The **Health numbers** option follows the same rule: nothing is drawn when the game gives no value. **Low health highlight** (a pulsing red outline) only appears when a real health value was read.
+**Health numbers** follows the same rule, and **Low health highlight** (a pulsing red outline) only appears when a real value was read.
 
 ## Check it yourself
 
-**Debug > DATA HEALTH > Health / shield** says exactly what you have:
+**Debug > Data health > Health / shield** says what you have right now:
 
-| Row says | Meaning |
+| The row says | It means |
 |---|---|
-| `LIVE` | Nearly every enemy's health is read |
-| `PARTIAL ... teammates only; no enemy value is sent` | You get your squad, not enemies |
-| `PARTIAL ... enemies N of M` | Some enemies, not all |
-| `MISSING ... none readable` | Nothing readable at all: check OFFSET HEALTH > Health |
-| `WAITING` | No players or no health counters yet (lobby, first tick) |
+| LIVE | Almost every enemy's health is read |
+| PARTIAL, teammates only | You get your squad, not the enemies |
+| PARTIAL, enemies N of M | Some enemies, not all |
+| MISSING | Nothing is readable: check Offset health > Health |
+| WAITING | No players yet, or the first tick |
 
-The log line has the same split: `health: 2 direct (2 mates, 0 enemies) ... 10 unknown (0 mates, 10 enemies)`. And `HEALTH probe:` lines print, for a few players every 30 s, what each of the three sources holds (all zeros means the game sent nothing).
+The log has the same split, for example `health: 2 direct (2 mates, 0 enemies) ... 10 unknown (0 mates, 10 enemies)`. The `HEALTH probe` lines show what each of the three sources holds for a few players; all zeros means the game sent nothing.
 
-## What Hideway tries before giving up
+## What Hideway tries before it gives up
 
-1. The pawn's health set, read directly.
-2. The pawn's health set again, re-resolved if the first read was stale.
+1. The player's health set, read directly.
+2. The same set, found again if the first read was out of date.
 3. The base value of that set.
-4. The copy kept in the player's state.
+4. The copy that Fortnite keeps in the player's state.
 
-Only if none gives a plausible number is the player marked *unknown*, and nothing is drawn.
+If none gives a believable number the player is marked unknown and nothing is drawn.
 
-## Other things that show on the bar
+## Related options
 
-* **Bar style**: Classic or Segmented (split in four).
+* **Bar style**: Classic, or Segmented (split in four so 25, 50 and 75 % are easy to see).
 * **Bar side**: which side of the box.
-* **Damage trail**: the lost part drains down slowly.
-* **Team ID**, **Weapon class** and **Enemy ammo** are separate data sources. Enemy ammo is shown only when the weapon was read.
+* **Damage trail**: the lost part of a bar drains down slowly.
+* **Enemy ammo** and **Weapon class** are separate data and only show when the weapon was read.
 
-## What about damage?
-
-Because enemy health is not available, a damage readout for enemies is not either. A different signal (such as "this enemy was just hit") may exist and is being researched; do not expect it in the current version.
+Because enemy health is not available, a damage readout for enemies is not either.

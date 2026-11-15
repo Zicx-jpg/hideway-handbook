@@ -2,7 +2,9 @@
 
 Two radars: a small one drawn on the overlay, and a **web radar** you can open on a phone, tablet or second monitor.
 
-<figure><img src="../.gitbook/assets/menu-radar-advanced.png" alt="Radar page, Advanced mode"><figcaption><p>Radar page in Advanced mode.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-radar.png" alt="Radar page"><figcaption><p>The Radar page: the on-screen radar, filters and readability on the right.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/menu-radar-2.png" alt="Radar page, scrolled down"><figcaption><p>Scrolled down: the radar keys and the WEB RADAR card.</p></figcaption></figure>
 
 ## RADAR card
 

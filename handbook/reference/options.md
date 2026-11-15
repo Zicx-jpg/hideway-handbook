@@ -1,10 +1,8 @@
 # Options reference
 
-Every option of Hideway 2.10.2, taken from the program's own option list (274 options). The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
+Every option of Hideway 3.2.5, taken from the program's own option list (284 options). The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
 
-{% hint style="info" %}
-Not every option is on screen in **Simple** mode. Press the **Mode** button at the top of the menu to see everything, or type in the search box: it finds every option in both modes.
-{% endhint %}
+There is one menu (no Simple / Advanced mode since 3.1.0): every option is on its page, and the search box in the top bar finds any of them. A few settings are automatic (for example the gun-in-hand rule and the counts-per-degree calibration) and are not shown in the menu.
 
 ## Aimbot
 
@@ -206,7 +204,6 @@ Not every option is on screen in **Simple** mode. Press the **Mode** button at t
 | **Auto-save config** | on / off | on |  | Writes the active config 2.5 seconds after your last change, and when the program closes. The old file is kept as a backup first (CONFIG > BACKUPS). Off = only Save config writes it. |
 | **Next config key** | key | not set |  | Switches to the next config in the list (the one you leave is saved first when Auto-save is on). A small message shows the name. |
 | **Previous config key** | key | not set |  | Switches to the previous config in the list. |
-| **Menu mode** | choice | Simple | Simple / Advanced | Simple shows the essentials of every page. Advanced shows every setting. Nothing is switched off by Simple: hidden settings keep the value they have. Also on the Mode button at the top of the menu. |
 | **Snaplines** | choice | Off | Off / Bottom / Middle / Top | Lines from the screen edge or centre to every player. |
 | **Snapline thickness** | number | 1. | 0.5 to 4. | Thickness of the snaplines in pixels. |
 | **Off-screen arrows** | on / off | off |  | Arrows at the edge of the screen pointing to players you cannot see. |
@@ -225,7 +222,7 @@ Not every option is on screen in **Simple** mode. Press the **Mode** button at t
 | **Snapline color** | colour | (see menu) |  | Snapline colour for players you cannot see. |
 | **Snapline color (visible)** | colour | (see menu) |  | Snapline colour for players the game says are visible. |
 | **Arrow color** | colour | (see menu) |  | Colour of the off-screen arrows. |
-| **Bot color** | colour | (see menu) |  | Colour used for bots (AI players) in the ESP. |
+| **Bot color** | colour | (see menu) |  | Colour of the small BOT tag next to the name of a bot (AI player). The box of a bot uses the normal hidden / visible colours like every other player. |
 | **Knocked color** | colour | (see menu) |  | Colour used for knocked (downed) players. |
 | **Teammate color** | colour | (see menu) |  | Colour used for teammates in the ESP. |
 | **Highlight target** | on / off | on |  | Draw the player the aimbot is locked on (or the trigger is about to shoot) in its own colour, so you can see which player the assists picked. |
@@ -234,6 +231,7 @@ Not every option is on screen in **Simple** mode. Press the **Mode** button at t
 | **Facing direction** | on / off | off |  | Draws a short line from each player's head along the direction the character looks, taken from the rotation of its mesh. Off by default: the mesh's forward axis is the Unreal convention and has not been measured on this game. |
 | **Submit-time visibility** | on / off | off |  | Decides visible / hidden from the three render timestamps of each mesh (submitted, rendered, rendered on screen) instead of the world-clock rule: submitted recently but not drawn on screen = culled by the game's renderer. Checked against the world clock on every tick and ignored when the numbers do not look like times. Off by default. On the first live session (2.4.0) the guessed offsets did not read as times, so it had no effect; the line below it on the AIMBOT page says whether it works on your build. |
 | **LOD start distance** | number | 120. | 30. to 500. | Distance in metres beyond which a player is drawn with reduced detail. |
+| **Team panel** | on / off | on |  | A small panel on the left with your squadmates: name, health and shield bars, the weapon they hold and their distance, and DOWN when they are knocked. The game only sends health for you and your teammates, so this is the one place health is always real. Hidden when you play solo. |
 
 ## Radar
 
@@ -270,11 +268,21 @@ Not every option is on screen in **Simple** mode. Press the **Mode** button at t
 | **Web radar names** | on / off | on |  | Off: player names are not sent to the radar page at all. |
 | **Radar toggle key** | key | not set |  | Shows / hides the radar. |
 | **Radar enlarge key** | key | not set |  | Makes the radar bigger while toggled. |
+| **Radar view cone** | on / off | on |  | Radar: shade the part of the world your camera sees (your field of view), so you know what is in front of you and what is behind. |
+| **Radar height arrows** | on / off | on |  | Radar: a small arrow above a dot means that player is higher than you, below means lower (builds, hills, floors). Set how much higher under Radar height difference. |
+| **Radar height difference** | number | 6. | 2. to 40. |  How many metres higher or lower than you a player must be before the radar shows a height arrow. |
+| **Radar movement direction** | on / off | on |  | Radar: a short tick on a dot showing which way that player is running. Not drawn for a player who stands still. |
+| **Radar north marker** | on / off | on |  | Radar: an N on the rim where north is, so you can read a direction off the radar while it turns with your view. Only when Rotate with view is on. |
+| **Radar squad colours** | on / off | on |  | Radar: a coloured ring around the dots of players who are in a squad; every squad has its own colour (the same colour as its Team ID on the ESP). Players alone get no ring. |
+| **Radar team number** | on / off | off |  | Radar: write the squad's Team ID number next to the dots of players in a squad. |
+| **Radar auto range** | on / off | off |  | The radar range follows the situation: it zooms in while enemies are close and out when nobody is near, so the dots that matter stay readable. Off: the fixed Radar range slider is used. |
+| **Share radar online** | on / off | off |  | Lets a friend on ANOTHER network watch your radar. Hideway sends the radar snapshots (positions, team, health, and names only if Web radar names is on) over HTTPS to the Hideway radar relay, and you send your friend the link (it contains a secret key). Off by default; nothing is sent while it is off. New link makes a new address and the old link stops working. Without this, the web radar only works on your own network. |
 
 ## Misc: system, keys, input device, DMA
 
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|
+| **Auto-update game data** | on / off | on |  | After a Fortnite patch your offsets can stop matching the game. When this is on and Hideway finds no game world for 30 seconds, it installs the newest game-data pack signed by Hideway, checks that the game is found with it, and goes back to your previous files if not. Off = it only downloads and tells you. |
 | **Notifications** | on / off | on |  | Show pop-up notices (connections, toggles, warnings). |
 | **Notify feature toggles** | on / off | on |  | Show a notification when a feature is switched on or off with its key. |
 | **Notify DMA state** | on / off | on |  | Show a notification when the DMA link connects, drops or recovers. |

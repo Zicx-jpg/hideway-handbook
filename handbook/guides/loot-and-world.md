@@ -21,7 +21,7 @@ Loot ESP needs the **Wall check** on (Misc > ENGINE), because it uses the level 
 | **Show vehicles** | Vehicles by display name, refreshed every 0.7 s |
 | **Show other named actors** | Everything else with a display name (usually noise, for checking what the reader sees) |
 
-**Debug > LOOT READER** shows what it found: layout state (searching / verified), counts, rejects, rarity. The log has `LOOT` lines. On 43.00 the loot reader has been seen working in real matches.
+**Debug > LOOT READER** shows what it found: layout state (searching / verified), counts, rejects, rarity. The log has `LOOT` lines. The loot reader has been seen working in real matches.
 
 ## Reboot cards
 

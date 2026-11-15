@@ -1,69 +1,39 @@
 ---
-description: The complete handbook for Hideway - install, every feature, every fix.
+description: Install, set up and fix Hideway, the Fortnite DMA overlay.
 cover: .gitbook/assets/cover.png
 coverY: 0
 ---
 
-# Hideway handbook
+# Hideway
 
 <figure><img src=".gitbook/assets/logo.png" alt="Hideway logo" width="160"><figcaption></figcaption></figure>
 
-**Hideway** is a Fortnite overlay for DMA setups. It runs on a second PC (the **overlay PC**), reads the game from the **game PC** through your DMA card (read-only), and draws ESP, radar and optional aim assist on a transparent window. Nothing runs inside the game PC.
+Hideway draws ESP and a radar on top of Fortnite, and can move your mouse for aim assist and fire for you. It runs on a second PC and reads the game through a DMA card, so nothing is installed or started on the PC that runs Fortnite.
 
-This handbook is the one place for everything: how to install and start it, what every page of the menu does, how to set things up well, and how to fix the problems people actually run into.
+This handbook is written for people who bought it and want it working. It tells you what to plug in, what to click, what each setting does, and what to do when something looks wrong.
 
-{% hint style="success" %}
-**New here?** Read [What you need](getting-started/requirements.md), then [Install and first start](getting-started/install-and-first-start.md). You will be up in about ten minutes. If something is red, go to [Quick checklist](troubleshooting/quick-checklist.md).
-{% endhint %}
+<figure><img src=".gitbook/assets/overlay-esp-radar.png" alt="The overlay in demo mode: boxes, skeletons, Team ID badges, health bars and the radar"><figcaption><p>The overlay in demo mode. The players are generated, so you can look at every option without a game.</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/overlay-esp-radar.png" alt="The overlay in demo mode: boxes, skeletons, Team ID badges, health bars and the radar"><figcaption><p>The overlay in demo mode: boxes, skeletons, Team ID badges, health bars, radar. (Synthetic players, not a real match.)</p></figcaption></figure>
+## Start here
 
-## Where to go
+1. [Before you start](getting-started/requirements.md): the two PCs, the card, the license.
+2. [Install and first launch](getting-started/install-and-first-start.md): about ten minutes.
+3. [Is everything connected?](getting-started/ready-check.md): the green / orange / red check.
+4. [Set up the ESP](guides/esp-setup.md) and, if you use it, [aim assist](guides/aim-and-trigger.md).
 
-{% tabs %}
-{% tab title="I want to start" %}
-1. [What you need](getting-started/requirements.md)
-2. [Install and first start](getting-started/install-and-first-start.md)
-3. [The launcher](getting-started/the-launcher.md)
-4. [READY CHECK: is everything connected?](getting-started/ready-check.md)
-5. [Try it without hardware: demo mode](getting-started/demo-mode.md)
-{% endtab %}
+If something is already wrong, open the [quick checklist](troubleshooting/quick-checklist.md).
 
-{% tab title="I want to set it up" %}
-1. [Menu overview: Simple and Advanced](the-menu/overview.md)
-2. [Set up the ESP](guides/esp-setup.md)
-3. [Connect an input device](guides/input-device.md)
-4. [Tune aim and trigger](guides/aim-and-trigger.md)
-5. [Configs: presets, auto-save, backups](guides/configs.md)
-6. [Web radar on your phone](guides/web-radar.md)
-{% endtab %}
-
-{% tab title="Something is wrong" %}
-1. [Quick checklist](troubleshooting/quick-checklist.md)
-2. [No ESP](troubleshooting/no-esp.md)
-3. [Aim or trigger problems](troubleshooting/aim-and-trigger.md)
-4. [The game closes or crashes](troubleshooting/game-closes-or-crashes.md)
-5. [Collect diagnostics for support](troubleshooting/collecting-diagnostics.md)
-6. [FAQ](faq.md)
-{% endtab %}
-{% endtabs %}
-
-## At a glance
+## The short version
 
 | | |
 |---|---|
-| **Game** | Fortnite (offsets in this release are for build 43.00) |
-| **Hardware** | A DMA card in the game PC, a second PC to run Hideway. Optional input device (MAKCU, Ferrum or KMBox NET) for aim and trigger |
-| **System** | Windows 10 / 11, 64-bit, administrator rights on the overlay PC |
-| **Menu key** | **Insert** (change it in Misc). **End** exits |
-| **Modes** | **Simple** shows the essentials of every page. **Advanced** shows all 274 options |
-| **Updates** | Signed releases through the launcher. A bad update rolls back by itself |
-| **Support** | Copy diagnostics (Debug page) and the log file; see [Collect diagnostics](troubleshooting/collecting-diagnostics.md) |
-
-## What is verified and what is not
-
-This handbook says plainly what has been seen working in real matches and what has only been tested offline. The short version is on one page: [Known limits and what is verified](reference/known-limits.md). When a feature is marked *unverified*, treat it as a test, not a promise.
+| Game | Fortnite. This release carries the data for build 43.10 |
+| Hardware | A DMA card in the game PC, a second PC for Hideway. Optional: a MAKCU, Ferrum or KMBox NET for aim and trigger |
+| Windows | 10 or 11, 64-bit, administrator rights on the overlay PC |
+| Open the menu | **Insert**. **End** closes Hideway |
+| Updates | Through the launcher. A version that fails to start is rolled back for you |
+| Help | [Collect diagnostics](troubleshooting/collecting-diagnostics.md) and send them with a short description |
 
 {% hint style="warning" %}
-Hideway is a third-party tool. Using any tool alongside an online game can lead to action by the game's publisher, including account bans. Nothing in this handbook is a guarantee of safety. You are responsible for how you use it.
+Hideway is a third-party tool. Using a tool next to an online game can get an account banned, and nothing in this handbook changes that. What you run is your decision.
 {% endhint %}

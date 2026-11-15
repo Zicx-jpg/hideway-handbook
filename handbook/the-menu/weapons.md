@@ -2,7 +2,7 @@
 
 The Weapons page lets each class of weapon use its own aim settings, and shows how Hideway recognises the weapon you hold.
 
-<figure><img src="../.gitbook/assets/menu-weapons-advanced.png" alt="Weapons page in Advanced mode"><figcaption><p>Per-class overrides on the left, DETECTION on the right (Advanced mode).</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-weapons.png" alt="Weapons page"><figcaption><p>One override card per weapon class: Rifle, Pistol, SMG, Shotgun, Sniper.</p></figcaption></figure>
 
 ## Per-class overrides
 
@@ -20,7 +20,7 @@ Hideway reads the held weapon's **animation id** from the game and maps it to a 
 | **Rifle / Pistol / SMG / Shotgun / Sniper anim id** | The id that means that class |
 
 {% hint style="warning" %}
-The id table is only partly known on Fortnite 43.00. Recorded matches confirmed pistol, shotgun and rifle ids; the rest are defaults. If the card shows `Other` for a weapon you hold, note the id it shows and set the matching class id here. See [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
+The id table is only partly known. Recorded matches confirmed pistol, shotgun and rifle ids; the rest are defaults. If the card shows `Other` for a weapon you hold, note the id it shows and set the matching class id here. See [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
 {% endhint %}
 
 ## Per-weapon ballistics
