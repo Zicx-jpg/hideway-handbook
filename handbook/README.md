@@ -34,6 +34,3 @@ If something is already wrong, open the [quick checklist](troubleshooting/quick-
 | Updates | Through the launcher. A version that fails to start is rolled back for you |
 | Help | [Collect diagnostics](troubleshooting/collecting-diagnostics.md) and send them with a short description |
 
-{% hint style="warning" %}
-Hideway is a third-party tool. Using a tool next to an online game can get an account banned, and nothing in this handbook changes that. What you run is your decision.
-{% endhint %}

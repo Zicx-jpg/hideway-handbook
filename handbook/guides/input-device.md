@@ -8,7 +8,7 @@ Aim and trigger move and click the mouse **through a hardware input device**. No
 |---|---|---|
 | **KMBox NET** | Network (UDP): IP, port and an 8-character UUID shown on the device screen | The overlay PC must be on the same subnet. A device is "connected" only when it echoes the handshake |
 | **MAKCU** | USB serial (CH343 driver), 4 Mbaud first | Appears as a COM port. If Windows shows an extra "virtual COM port" that does not answer, pick the other one |
-| **Ferrum** | USB serial | Follows the vendor's documented command set. Treat it as less proven than the other two |
+| **Ferrum** | USB serial | Follows the manufacturer's documented command set. Treat it as less proven than the other two |
 
 ## Connect it
 
@@ -31,7 +31,7 @@ Lists the serial ports Hideway found and which ones look like input devices. Onl
 
 ## Missing driver (MAKCU)
 
-A MAKCU needs the WCH **CH343** driver. If it is missing, Windows shows a device problem code (for example 28 = no driver) and the connect error says so. Open the WCH download page from Hideway's setup buttons, download `CH343SER` yourself, then Hideway checks that the installer is signed by "Nanjing Qinheng Microelectronics" before offering to run it. Replug the device afterwards.
+A MAKCU needs the WCH **CH343** driver: [Download the CH343 driver (official WCH page)](https://www.wch-ic.com/downloads/CH343SER_EXE.html). If it is missing, Windows shows a device problem code (for example 28 = no driver) and the connect error says so. Open the WCH download page from Hideway's setup buttons, download `CH343SER` yourself, then Hideway checks that the installer is signed by "Nanjing Qinheng Microelectronics" before offering to run it. Replug the device afterwards.
 
 ## Read game-PC mouse buttons
 

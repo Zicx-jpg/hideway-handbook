@@ -31,7 +31,7 @@ No. It only lets you see the overlay on your main monitor. Without one, use a se
 Only `HidewayLauncher.exe`. Everything else is in `core\`. See [The launcher](getting-started/the-launcher.md).
 
 **Windows shows a SmartScreen warning.**
-The programs are not code-signed yet. Verify the download with `verify_package.ps1` ([Install](getting-started/install-and-first-start.md)), then choose "Run anyway". Leave Windows protection on.
+The programs are not code-signed yet, so Windows warns the first time. Choose **More info > Run anyway** and leave Windows protection on.
 
 **How do I sign in?**
 With your license key, or with the Web Loader button on the customer panel while the sign-in screen is open. "Remember on this device" stores the key encrypted for your Windows account.

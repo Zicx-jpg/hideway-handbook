@@ -1,8 +1,10 @@
 # Options reference
 
-Every option of Hideway 3.2.5, taken from the program's own option list (284 options). The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
+Every option of Hideway, taken from the program's own option list. The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
 
-There is one menu (no Simple / Advanced mode since 3.1.0): every option is on its page, and the search box in the top bar finds any of them. A few settings are automatic (for example the gun-in-hand rule and the counts-per-degree calibration) and are not shown in the menu.
+{% hint style="info" %}
+The menu is all-in-one: every option below is on its page. Type in the search box at the top of the menu to jump to one.
+{% endhint %}
 
 ## Aimbot
 
@@ -16,8 +18,7 @@ There is one menu (no Simple / Advanced mode since 3.1.0): every option is on it
 | **Smoothing** | number | 10. | 1. to 100. | How slowly the aim closes the gap. 1 = instant, higher = slower and less obvious. |
 | **Max aim distance** | number | 150. | 5. to 500. | Targets further away than this are ignored. |
 | **Team check** | on / off | on |  | Never aim at teammates. |
-| **Visible only** | on / off | on |  | Only aim at targets the game is currently drawing on screen (not behind walls). When the wall check is not ready (its geometry could not be read yet or on this build) aim keeps working on the render-time test alone; the Visibility line below says which of the two is in use. |
-| **Wait for wall check** | on / off | on |  | With Visible only on and a ray-cast wall check style, aim does nothing until the wall check has read the level (a few seconds after a match starts), instead of trusting the render-time flag alone - which can call a player behind a wall visible. A target the game itself is aiming at (its own crosshair trace) is always allowed. Off = old behaviour: aim falls back to the render-time flag while the wall check is not ready. Has no effect with the style "UE5 render time only". |
+| **Visible only** | on / off | on |  | Only aim at targets that are visible (not behind walls). Visibility is judged by Raycast VisCheck against the level geometry; until the geometry has been read (a few seconds after a match starts) aim waits. |
 | **Ignore knocked** | on / off | off |  | Skip downed players. |
 | **Only with a gun in hand** | on / off | on |  | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon. This is what lets you place a wall with Mouse 1 as the aim key without the aim locking onto someone through it. Judged from the held item's ammo count; if the game's weapon cannot be read, aim keeps working. |
 | **Prefer standing targets** | on / off | on |  | Standing players are chosen before downed ones. |
@@ -53,7 +54,7 @@ There is one menu (no Simple / Advanced mode since 3.1.0): every option is on it
 | **SMG anim id** | whole number | 5 | 0 to 40 | Raw weapon animation id the game reports for SMGs. Only change it if the Debug page shows another id for the weapon you hold. |
 | **Sniper anim id** | whole number | 6 | 0 to 40 | Raw weapon animation id the game reports for sniper rifles. Only change it if the Debug page shows another id for the weapon you hold. |
 
-## Assist: trigger, close aim, sticky aim, prediction
+## Triggerbot, close aim, sticky aim, prediction
 
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|
@@ -67,7 +68,7 @@ There is one menu (no Simple / Advanced mode since 3.1.0): every option is on it
 | **Trigger team check** | on / off | on |  | Never fire at teammates. |
 | **Trigger ignore knocked** | on / off | on |  | Do not fire at downed players. |
 | **Trigger ignore bots** | on / off | off |  | Do not fire at AI-controlled players. |
-| **Trigger visible only** | on / off | on |  | Unreal Engine 5 visibility: the triggerbot only fires at a player the game drew within the tolerance window and, when the wall check is ready, whose exact hitbox point under the crosshair has nothing solid in front of it. Off = fires at anyone under the crosshair, even through a wall. |
+| **Trigger visible only** | on / off | on |  | The triggerbot only fires at a visible player: the exact hitbox point under the crosshair must have nothing solid in front of it (Raycast VisCheck). Off = fires at anyone under the crosshair, even through a wall. |
 | **Trigger source** | choice | Both (strictest) | Game target (UE5) / Crosshair geometry / Both (strictest) | Game target (UE5): fire when the game's own crosshair trace (TargetedFortPawn) says a player is under it - the engine already accounts for walls. Crosshair geometry: our own hitbox test on the predicted skeleton. Both: the game target AND the hitbox must agree (strictest, default). If the game target cannot be read it falls back to geometry and the Assist page says so. |
 | **Trigger lead** | number | 0. | 0. to 150. | Advance the target by its velocity x this many ms before the hitbox test (geometry modes), to hit moving players despite the click delay. |
 | **Trigger confirm frames** | whole number | 1 | 1 to 6 | The same player must be a valid target for this many consecutive checks before the shot is armed. 1 = instant. |
@@ -229,9 +230,7 @@ There is one menu (no Simple / Advanced mode since 3.1.0): every option is on it
 | **Target color** | colour | (see menu) |  | Colour of the highlighted target. It replaces the box, skeleton, text and snapline colours of that one player. |
 | **Distance detail (LOD)** | on / off | on |  | Players farther than the LOD start distance are drawn with thinner lines and without joint dots, glow, weapon, platform and kill lines. Cleaner in a crowded lobby and cheaper to draw. |
 | **Facing direction** | on / off | off |  | Draws a short line from each player's head along the direction the character looks, taken from the rotation of its mesh. Off by default: the mesh's forward axis is the Unreal convention and has not been measured on this game. |
-| **Submit-time visibility** | on / off | off |  | Decides visible / hidden from the three render timestamps of each mesh (submitted, rendered, rendered on screen) instead of the world-clock rule: submitted recently but not drawn on screen = culled by the game's renderer. Checked against the world clock on every tick and ignored when the numbers do not look like times. Off by default. On the first live session (2.4.0) the guessed offsets did not read as times, so it had no effect; the line below it on the AIMBOT page says whether it works on your build. |
 | **LOD start distance** | number | 120. | 30. to 500. | Distance in metres beyond which a player is drawn with reduced detail. |
-| **Team panel** | on / off | on |  | A small panel on the left with your squadmates: name, health and shield bars, the weapon they hold and their distance, and DOWN when they are knocked. The game only sends health for you and your teammates, so this is the one place health is always real. Hidden when you play solo. |
 
 ## Radar
 
@@ -268,21 +267,11 @@ There is one menu (no Simple / Advanced mode since 3.1.0): every option is on it
 | **Web radar names** | on / off | on |  | Off: player names are not sent to the radar page at all. |
 | **Radar toggle key** | key | not set |  | Shows / hides the radar. |
 | **Radar enlarge key** | key | not set |  | Makes the radar bigger while toggled. |
-| **Radar view cone** | on / off | on |  | Radar: shade the part of the world your camera sees (your field of view), so you know what is in front of you and what is behind. |
-| **Radar height arrows** | on / off | on |  | Radar: a small arrow above a dot means that player is higher than you, below means lower (builds, hills, floors). Set how much higher under Radar height difference. |
-| **Radar height difference** | number | 6. | 2. to 40. |  How many metres higher or lower than you a player must be before the radar shows a height arrow. |
-| **Radar movement direction** | on / off | on |  | Radar: a short tick on a dot showing which way that player is running. Not drawn for a player who stands still. |
-| **Radar north marker** | on / off | on |  | Radar: an N on the rim where north is, so you can read a direction off the radar while it turns with your view. Only when Rotate with view is on. |
-| **Radar squad colours** | on / off | on |  | Radar: a coloured ring around the dots of players who are in a squad; every squad has its own colour (the same colour as its Team ID on the ESP). Players alone get no ring. |
-| **Radar team number** | on / off | off |  | Radar: write the squad's Team ID number next to the dots of players in a squad. |
-| **Radar auto range** | on / off | off |  | The radar range follows the situation: it zooms in while enemies are close and out when nobody is near, so the dots that matter stay readable. Off: the fixed Radar range slider is used. |
-| **Share radar online** | on / off | off |  | Lets a friend on ANOTHER network watch your radar. Hideway sends the radar snapshots (positions, team, health, and names only if Web radar names is on) over HTTPS to the Hideway radar relay, and you send your friend the link (it contains a secret key). Off by default; nothing is sent while it is off. New link makes a new address and the old link stops working. Without this, the web radar only works on your own network. |
 
 ## Misc: system, keys, input device, DMA
 
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|
-| **Auto-update game data** | on / off | on |  | After a Fortnite patch your offsets can stop matching the game. When this is on and Hideway finds no game world for 30 seconds, it installs the newest game-data pack signed by Hideway, checks that the game is found with it, and goes back to your previous files if not. Off = it only downloads and tells you. |
 | **Notifications** | on / off | on |  | Show pop-up notices (connections, toggles, warnings). |
 | **Notify feature toggles** | on / off | on |  | Show a notification when a feature is switched on or off with its key. |
 | **Notify DMA state** | on / off | on |  | Show a notification when the DMA link connects, drops or recovers. |
@@ -315,10 +304,8 @@ There is one menu (no Simple / Advanced mode since 3.1.0): every option is on it
 | **Kmbox UUID** | text | 1234ABCD |  | 8-character code shown on the KMBox NET screen. |
 | **Fast DMA reads (scatter)** | on / off | on |  | Reads many values from the game in one round trip. Hideway checks it against normal reads on live data and switches itself off if they disagree. |
 | **Thin skeleton reads** | on / off | on |  | In crowded matches the card link is the bottleneck. Off-screen and distant players do not get a skeleton read every tick, and mid-range ones refresh their pose every 2nd-4th tick (the box keeps updating every tick). Turn off only to compare. |
-| **Visibility tolerance** | whole number | 200 | 50 to 600 | A player counts as visible if the game drew them within this many milliseconds (default 200). Lower = stricter and quicker to turn red behind cover, higher = steadier green. |
 | **Fast position refresh** | on / off | on |  | In a crowded match one full read of every player takes 15-20 ms. With this on, between two full reads Hideway re-reads only where everybody is (a few ms for 100 players), so boxes and skeletons move with data that is about half as old. Does nothing when the full read is already fast (small lobbies). Needs the high-rate camera lane. |
-| **Wall check (ray-cast)** | on / off | on |  | Reads the level's collision geometry (needed by the two wall-trace Visibility check styles and by the loot reader). With the UE5 render-time check and loot ESP off it is not run, whatever this says. |
-| **Visibility check** | choice | UE5 render time only | Bones (head, chest, knee) / Unreal line of sight / UE5 render time only | How a player is judged visible. UE5 render time only (default): the engine's own check - visible when the mesh was drawn within the tolerance window of the world clock; no geometry is read, so it works from the first second of a match, but a player drawn behind thin cover can count as visible. Unreal line of sight: the engine's LineOfSightTo (one ray to the middle, one to the head, two to the capsule sides) against the level's collision; hidden only if all are blocked. Bones: rays to the head, chest and one knee. The two wall-trace styles need the level to be read first (a few seconds into a match). Aim always checks the bone it wants to shoot at. |
+| **Wall check (ray-cast)** | on / off | on |  | Reads the level's collision geometry (used by Raycast VisCheck and by the loot reader). |
 | **DMA stall guard** | on / off | on |  | MemProcFS refreshes its process list in the background and every read waits for it: on this setup a 105 ms freeze every ~10 s, which shows up as a box lag blip. With the guard on that refresh is paused and done by hand only when the game has to be found again. Turn off only to compare. |
 | **High-rate camera lane** | on / off | on |  | A dedicated thread reads the camera hundreds of times a second so boxes stay locked while you turn. |
 | **ESP time offset** | whole number | 0 | -30 to 60 | Shifts the moment the overlay predicts for. Raise it if boxes trail behind the game image, lower it if they lead. Default 0. |

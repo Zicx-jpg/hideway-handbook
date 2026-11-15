@@ -8,7 +8,7 @@
 | *DMA runtime files missing / modified* | One of the DLLs next to the exe is missing or not the shipped version. Re-extract the release, or use **Restore the files** on the launcher |
 | *all\ folder missing* | The offset dump must sit next to the exe (`all\classes`, `all\offsets`) |
 | UAC prompt declined | Hideway needs administrator rights for the DMA driver. Accept the prompt |
-| Windows SmartScreen warning | The programs are not Authenticode-signed yet. Verify the download with `verify_package.ps1`, then choose "Run anyway". Do not disable Windows protections |
+| Windows SmartScreen warning | The programs are not code-signed yet. Choose **More info > Run anyway**. Do not disable Windows protections |
 | An "already running" box that never goes away | Another Hideway or launcher is open (maybe hidden). Close it from Task Manager and start again |
 | *Could not start* screen | Read the line shown and press **Retry**. Most causes: no internet, a wrong system clock (it must be within about 25 seconds), missing DMA hardware |
 

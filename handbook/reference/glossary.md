@@ -4,7 +4,7 @@
 |---|---|
 | **DMA** | Direct Memory Access. A PCIe card in the game PC that lets another PC read the game's memory over USB, without running code on the game PC |
 | **JTAG port** | The card's second USB-C port, used only to flash firmware. The other one is the DATA port |
-| **VT-d / IOMMU** | The BIOS feature (Intel / AMD) that restricts what PCIe devices may read; DMA setups usually need it off |
+| **VT-d / IOMMU** | The BIOS feature (Intel / AMD) that restricts what PCIe devices may read. Hideway's firmware supports it, so it can stay on |
 | **FT601** | The FTDI USB 3 chip on most DMA cards; its driver shows in Device Manager |
 | **Page file** | Windows' overflow area on the drive. The card cannot read it, so low RAM makes data vanish |
 | **Pass-through** | An input device that forwards your real mouse and only adds its own movement |
@@ -22,8 +22,7 @@
 | **Camera lane** | A dedicated thread that reads the camera hundreds of times a second |
 | **Governor** | The load control that thins skeleton reads when the card link is the bottleneck |
 | **Wall check** | Reading the level's collision geometry so rays can be traced to see if a player is behind something |
-| **Render time** | The time the game last drew a player's mesh; the basis of the default visibility check |
-| **Submit time** | The time a mesh was last submitted to the renderer; used by the experimental visibility mode |
+| **Raycast VisCheck** | The visibility method: rays against the level's collision geometry decide whether a player is visible |
 | **Core animation id** | The raw number the game reports for the type of the held weapon |
 | **Input device** | A hardware device (MAKCU, Ferrum, KMBox NET) that moves and clicks the mouse for aim and trigger |
 | **MAKCU / Ferrum / KMBox NET** | The three supported input devices |

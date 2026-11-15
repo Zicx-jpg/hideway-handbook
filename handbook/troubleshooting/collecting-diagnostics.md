@@ -51,7 +51,7 @@ The **System** page has **Copy diagnostics** and a **support bundle** zip. Neith
 
 ## Where to send it
 
-Discord: <https://discord.gg/xE5aA6FaU>. Include everything above in one message or one zip.
+Discord: <https://discord.gg/hidewaydma>. Include everything above in one message or one zip.
 
 {% hint style="warning" %}
 Never post your license key, the web radar link, or the contents of `webradar.key`.

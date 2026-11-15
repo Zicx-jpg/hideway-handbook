@@ -25,4 +25,4 @@ Check the effect on **Debug > PERFORMANCE**: *Tick* should stay well below 10 ms
 
 ## About stripped-down Windows builds
 
-Some vendors recommend custom, trimmed Windows builds to save CPU. Hideway has **not been tested** on them. The publisher's own tests ran on Windows 10 22H2. A trimmed build can remove services or components other tools rely on, and its source and updates are your responsibility. If you try one, do it on the overlay PC first and keep a restore point. If something stops working, test again on a normal Windows before reporting a problem.
+Custom, trimmed Windows builds exist to save CPU, but Hideway has **not been tested** on them. Our own tests ran on Windows 10 22H2. A trimmed build can remove services or components other tools rely on, and its source and updates are your responsibility. If you try one, do it on the overlay PC first and keep a restore point. If something stops working, test again on a normal Windows before reporting a problem.

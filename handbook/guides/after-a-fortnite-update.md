@@ -25,6 +25,3 @@ Expect a **short period without ESP** after a patch, until a new dump has been m
 The offsets in `all\` must match the **exact** Fortnite build you run. Hideway also checks the game's executable fingerprint on attach and warns in the log when the build is not the one the offsets were made for.
 {% endhint %}
 
-## Developer mode
-
-A developer build (`Hideway.exe --dev`) has an optional offset updater and an **OFFSET UPDATES** card. It is not part of the customer product: a normal start has none of it and makes no network call to an offsets site.
