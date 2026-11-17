@@ -62,3 +62,20 @@ Below that the cause is almost always the **USB cable, USB port or card seating*
 3. Open the Debug page and read [READY CHECK](../getting-started/ready-check.md). **DMA** should be green; **Game data** turns green once the game's structures are found.
 
 Hideway retries the card every 2 seconds, so the order in which you plug things in does not matter.
+
+## Remote DMA (RDMA) and your own leechcore.dll
+
+Hideway checks every runtime DLL against the signed release. If your hardware needs its **own leechcore.dll** (RDMA / remote DMA builds, or a newer LeechCore), that check would normally stop the program. It is one file you can trust yourself:
+
+1. Close Hideway. Copy your leechcore.dll into the Hideway folder (replace the one there) and, if your setup uses one, your leechcore.ini next to it. A typical RDMA file holds one line: device=rma://127.0.0.1:19058.
+2. Open HidewayLauncher.exe. The Fortnite card says **leechcore.dll: does not match the signed release** and its button reads **Use my leechcore.dll**. Click it **only if you put that file there yourself**.
+   Without the launcher run Hideway.exe --trust-leechcore once instead.
+3. The card turns green ("your own leechcore.dll (pinned) is in use"). Start Hideway as usual.
+
+What this does and does not do:
+
+* Hideway stores the **hash of exactly that file** in custom_runtime.txt. If the DLL is changed or swapped later, it is refused again until you trust it again.
+* **Only leechcore.dll** can be trusted this way. A changed vmm.dll, FTD3XX.dll or Hideway.exe is still refused.
+* Updates leave your trusted leechcore.dll alone and update everything else.
+* With your DLL trusted, the device= line of leechcore.ini is used for the connection (the log says custom leechcore.dll: device ...). If that device does not start, the normal pga device is tried.
+* To go back to the signed file: delete custom_runtime.txt and copy leechcore.dll from the Hideway package (the zip you downloaded) over yours.

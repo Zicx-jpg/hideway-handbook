@@ -10,6 +10,8 @@ Hideway\
     Hideway.exe                the Fortnite module
     HidewayUpdater.exe         the installer for updates
     vmm.dll, leechcore.dll, FTD3XX.dll      DMA runtime (MemProcFS / LeechCore / FTDI), hash-checked at every start
+    custom_runtime.txt                      only if you use your own leechcore.dll (RDMA): the hash of the one file you trusted
+    leechcore.ini                           only for your own leechcore.dll: its device= line is used
     dbghelp.dll, symsrv.dll    Microsoft debugging runtime used by MemProcFS for symbols
     VCRUNTIME140*.dll, MSVCP140.dll         Visual C++ runtime, application-local (no separate install)
     all\                       game structure data (offsets): classes\classes.txt, offsets\offsets.txt

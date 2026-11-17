@@ -3,6 +3,9 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.4 - 2026-11-17
+
+* Own leechcore.dll (RDMA / remote DMA, or a newer LeechCore): when the launcher card says leechcore.dll does not match the signed release, **Use my leechcore.dll** trusts exactly that file. Hideway.exe --trust-leechcore does the same without the launcher. The file is then kept by updates, and the device line of your leechcore.ini (for example rma://127.0.0.1:19058) is used for the connection. Any other change to the DLL is refused again.
 ## 3.3.3 - 2026-11-17
 
 * DMA: reads no longer wait on memory that Windows has paged out, and vmm's background refresh is replaced by a light manual refresh every 4 seconds. This is aimed at the short periodic freezes of the ESP.
