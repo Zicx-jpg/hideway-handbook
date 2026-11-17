@@ -37,7 +37,7 @@ Players that are falling or gliding move in small steps of about 12 cm every 33 
 
 Two different things can cause it:
 
-1. **The game barely animates what it does not draw.** Hidden and far players change pose in only a small part of the frames, and Hideway cannot invent motion the game does not send.
+1. **The game barely animates what it does not draw.** Hidden and far players change pose in only a small part of the frames. Since 3.2.7 **Animate frozen limbs** (Visuals > Skeleton, on by default) gives a running player with a frozen pose a running cycle on the arms and legs. It is only drawn, never used for aim.
 2. **Reads are thinned in crowded matches.** Far players are read less often (**Thin skeleton reads**, on by default). Visible mid-range players are still refreshed several times a second. Turn **Thin skeleton reads** off only to compare, and expect more load.
 
 A bone array with a joint more than 2.5 m from the pelvis is rejected and the last good pose is kept, so a stray limb should not show.

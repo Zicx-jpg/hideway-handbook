@@ -3,6 +3,49 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.2 - 2026-11-17
+
+* Team ID colours: every squad on screen now gets its own clearly different colour from a fixed palette (no more same or look-alike colours).
+* Aim and trigger hold during a short read stall and ramp back in smoothly when fresh data returns, instead of overshooting. 3.3.1 wall and build fix, live weapon ballistics, per-tick health bars and aim ease-in included.
+
+## 3.3.1 - 2026-11-16
+
+* Walls and builds: aim and trigger now stop when the game own crosshair trace ends in front of the target (a wall or a build placed by a player), used only once that trace has proven reliable.
+* Trigger also accepts the game hit point on the chosen hitbox.
+* Live weapon ballistics, per-tick health bars within 60 m and aim ease-in from 3.2.8 to 3.3.0 included.
+* Not yet confirmed on a real match: look for RETICLE and BALLISTICS lines in the log.
+
+## 3.3.0 - 2026-11-16
+
+* Prediction: the aim now reads the real projectile speed and drop of the weapon in your hand from the game (found automatically, confirmed on two different weapons, class numbers kept as fallback; hit-scan weapons get no travel-time lead).
+* Health and shield bars update every tick within 60 m.
+* Aim ease-in on new targets.
+* Not yet confirmed on a real match: look for BALLISTICS lines in the log.
+
+## 3.2.9 - 2026-11-16
+
+* Health and shield bars: players within 60 m now have their health and shield read on every tick instead of every 150 ms, so bars follow a fight without stepping.
+* Aim ease-in from 3.2.8 kept.
+* Enemy health is still only shown when the game sends it (it usually does not for enemies).
+
+## 3.2.8 - 2026-11-16
+
+* Aimbot: the aim now eases in on a new target (starts gently instead of with its biggest step at once, about 30 percent less peak acceleration, no overshoot, arrives roughly 40 ms later).
+* Input delay compensation from 3.2.5 unchanged.
+* Checked against a real recording: leading the target by the input delay did not improve tracking, so prediction is unchanged.
+
+## 3.2.7 - 2026-11-15
+
+* Skeleton: the arms and legs of far and hidden players are shown interpolated through the real poses, so they swing continuously instead of holding one pose and jumping to the next. Poses of mid-range and far players are read more often (every 10 and 18 ms instead of 14 and 28)
+* New option Animate frozen limbs (Visuals, Skeleton; on by default): Fortnite only animates the players it draws, so a hidden player that runs keeps one pose. Its arms and legs now swing in a running cycle for as long as the game's own pose is frozen. Drawing only: aim and trigger always use the real pose
+* Fortnite 43.10 game data unchanged
+
+## 3.2.6 - 2026-11-15
+
+* Fix: the program no longer locks itself about an hour into a session. When KeyAuth stops knowing the session it answers the license check without a signature, and that answer used to end the session (locked: sig_missing in the log). Hideway now opens a fresh session with your license, and an answer that cannot be verified gets the same grace period as a lost connection
+* Demo mode: the Team ID badges show again
+* Fortnite 43.10 game data unchanged
+
 ## 3.2.5 - 2026-11-14
 
 * Aimbot: no more jolts. The camera answers a mouse move about 50 ms late (measured on a real match) and the aim loop kept re-correcting an error it had already corrected; it now subtracts the motion still in flight. In a simulation the old loop overshot a 10 degree target by 1.1 to 3.9 degrees depending on the smoothing, the new one by 0

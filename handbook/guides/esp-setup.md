@@ -48,6 +48,7 @@ On **Misc**:
 | Smooth ESP | Boxes glide between data updates instead of stepping. On by default |
 | ESP smoothness | *Responsive*, *Balanced* (default) or *Silky*. Silky smooths the most; the boxes sit a few centimetres from the raw readings |
 | Smooth skeleton | Stops limbs from shaking when the root position steps with network updates |
+| Animate frozen limbs (Visuals > Skeleton) | Fortnite only animates the players it draws. A hidden player that runs keeps one pose, so its skeleton glides along stiff. With this on, the arms and legs of a running player whose pose has stopped moving swing in a running cycle. It is drawing only: the aimbot and the trigger use the real pose |
 | Motion estimator | One motion model per player, shared by the ESP and the aim lead |
 | VSync | Match it to your display |
 

@@ -10,7 +10,7 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 |---|---|
 | **PREVIEW** | Your style on sample players. Always marked DEMO: synthetic, not a real match |
 | **ESP** | **Enable ESP** (master), Show bots, Show teammates, Hide knocked players, Render distance, Max ESP players, Box style (Off / Box / Corners / 3D box), thickness, rounding, fill, gradient |
-| **SKELETON** | Skeleton, thickness, distance-scaled lines, joint dots, glow, **Smooth skeleton** |
+| **SKELETON** | Skeleton, thickness, distance-scaled lines, joint dots, glow, **Smooth skeleton**, **Animate frozen limbs** |
 | **HEAD & BARS** | Head circle; **Health + shield bars**, Health numbers, Bar style (Classic / Segmented), Bar side, Damage trail |
 | **INFO TEXT** | Name, **Team ID**, Distance, Weapon class, Platform, Kill score, Enemy ammo, Squad list |
 | **TRACERS** | Snaplines, off-screen arrows |

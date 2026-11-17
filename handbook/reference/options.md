@@ -169,6 +169,7 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Gradient top** | colour | (see menu) |  | Top colour of the box gradient. |
 | **Gradient bottom** | colour | (see menu) |  | Bottom colour of the box gradient. |
 | **Skeleton** | on / off | on |  | Draw the player's bones. |
+| **Animate frozen limbs** | on / off | on |  | Fortnite only animates the players it draws, so a hidden player keeps one pose while it runs across the map. With this on, the arms and legs of a running player whose real pose has stopped moving swing in a running cycle, in the drawing only. It switches itself off the moment the game's own pose moves again, and the aimbot and trigger never see it. |
 | **Smooth skeleton** | on / off | on |  | Anchors the skeleton on the pelvis and glides pose changes over a few milliseconds, so limbs stop jittering when the game's root position steps with network updates. Off = the raw skeleton, shifted rigidly with the player. |
 | **Skeleton thickness** | number | 1.2 | 0.5 to 5. | Line width of the bones. |
 | **Distance-scaled lines** | on / off | on |  | Bones get thinner with distance so far players are not cluttered. |
