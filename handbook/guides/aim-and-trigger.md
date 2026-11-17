@@ -35,7 +35,7 @@ To measure that delay, stand still in a match with your hands off the mouse and 
 
 ## 6. Per-weapon settings
 
-* **Weapons** page: give a weapon class its own field of view, smoothing and bone with **Override**.
+* **Weapons** page: give a weapon class its own field of view, smoothing, bone, trigger on/off and trigger delay with **Override**.
 * **Close aim** (Aimbot page): different field of view, smoothing and bone for enemies up close.
 * **Sticky aim**: once the crosshair is near a target the aim stays on it. Turn it off against groups.
 

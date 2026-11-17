@@ -10,7 +10,7 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 |---|---|
 | **PREVIEW** | Your style on sample players. Always marked DEMO: synthetic, not a real match |
 | **ESP** | **Enable ESP** (master), Show bots, Show teammates, Hide knocked players, Render distance, Max ESP players, Box style (Off / Box / Corners / 3D box), thickness, rounding, fill, gradient |
-| **SKELETON** | Skeleton, thickness, distance-scaled lines, joint dots, glow, **Smooth skeleton**, **Animate frozen limbs** |
+| **SKELETON** | Skeleton, thickness, distance-scaled lines, joint dots, glow (the smooth pose and the running cycle on frozen limbs are automatic) |
 | **HEAD & BARS** | Head circle; **Health + shield bars**, Health numbers, Bar style (Classic / Segmented), Bar side, Damage trail |
 | **INFO TEXT** | Name, **Team ID**, Distance, Weapon class, Platform, Kill score, Enemy ammo, Squad list |
 | **TRACERS** | Snaplines, off-screen arrows |
@@ -43,6 +43,6 @@ Bars next to the box, read from the game. Read the rules on [Health and shield b
 
 ## Smooth ESP lives on Misc
 
-How smooth the boxes move is set on the **Misc** page (Smooth ESP, ESP smoothness, Smooth skeleton, Motion estimator). See [Set up the ESP](../guides/esp-setup.md).
+How smooth the boxes move is set on the **Misc** page (Smooth ESP, ESP smoothness, Motion estimator). See [Set up the ESP](../guides/esp-setup.md).
 
 <figure><img src="../.gitbook/assets/menu-visuals-3.png" alt="Visuals page, lower half"><figcaption><p>Lower half: head and bars, reboot cards, spectators, audio alerts and colours.</p></figcaption></figure>

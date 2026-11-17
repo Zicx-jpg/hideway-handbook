@@ -12,6 +12,7 @@ This page controls aim assist, close aim, sticky aim and prediction. Aim assist 
 |---|---|
 | Enable aimbot | Master switch. Needs a connected input device |
 | Aim key | Hold it to aim. Click the box and press a key or mouse button; click it again to pick Mouse 1; right-click to clear. Default Mouse 2 |
+| Read keys from the game PC | Also reads the keyboard and mouse of the game PC through the DMA card, so the aim key (and the trigger key) can be any key of the game PC's own keyboard. Off by default. The log (KEYS) says whether the key table of the game PC's Windows was found; if it reports many keys held at once it switches itself off for 5 minutes |
 | Aim bone | Head, Neck, Chest, Pelvis or Closest bone |
 | Field of view | Only targets inside this cone around the crosshair count. Smaller is more selective |
 | Smoothing | How slowly the aim closes the gap. 1 is instant. Each step adds about 8 ms to the time it takes to get there |

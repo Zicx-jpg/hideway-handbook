@@ -3,6 +3,14 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.3 - 2026-11-17
+
+* DMA: reads no longer wait on memory that Windows has paged out, and vmm's background refresh is replaced by a light manual refresh every 4 seconds. This is aimed at the short periodic freezes of the ESP.
+* If the game's image cannot be found, the other directory table bases are tried before giving up.
+* The physical memory map of the game PC is saved once (memmap.txt next to the exe) and used from the next start.
+* New option Read keys from the game PC (Aimbot page, off by default): the aim key and the trigger key can be any key of the game PC's own keyboard. The log says whether the key table was found.
+* Weapons page: each class can switch the triggerbot on or off and use its own trigger delay (with Override on).
+* Smooth skeleton and Animate frozen limbs are no longer in the menu; both stay on.
 ## 3.3.2 - 2026-11-17
 
 * Team ID colours: every squad on screen now gets its own clearly different colour from a fixed palette (no more same or look-alike colours).

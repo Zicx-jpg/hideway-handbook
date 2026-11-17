@@ -15,7 +15,6 @@ System settings: the overlay, motion smoothing, keys, input device, debug switch
 | **Watermark** | The small Hideway status badge |
 | **Smooth ESP** | Boxes and the camera glide between data updates instead of stepping |
 | **ESP smoothness** | *Responsive* follows every reading at once; *Balanced* (default); *Silky* absorbs corrections more slowly (about a third less jitter in measured recordings, boxes sit a few cm further from raw readings). Needs Smooth ESP |
-| **Smooth skeleton** | Anchors the skeleton on the pelvis and glides pose changes so limbs stop jittering |
 | **Motion estimator** | One motion estimate per player shared by ESP, aim lead and trigger lead |
 | **ESP time offset** | Raise it if boxes trail behind the game image, lower it if they lead. Default 0 |
 
