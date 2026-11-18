@@ -119,7 +119,7 @@ It contains an access key. Do not post it. **New access key** cancels old links.
 ## Updates and privacy
 
 **How do updates work?**
-Signed releases download in the background and install only when you click. If the new version does not start, the old one comes back. See [Updates](guides/updates.md). Configs are never touched.
+Signed releases download in the background and, since 3.3.6, the launcher installs a newer one by itself when it starts (Settings can turn that off). If the new version does not start, the old one comes back. See [Updates](guides/updates.md). Configs are never touched.
 
 **What does Hideway send over the internet?**
 Your license key and a hardware identifier (your Windows account SID) to the license service, which locks a license to one PC, and the update check to the release host. Nothing else. Settings stay on your PC. See [Security and privacy](reference/security-and-privacy.md).

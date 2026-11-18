@@ -3,6 +3,12 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.6 - 2026-11-18
+
+* **Automatic updates.** When the launcher starts it installs a newer signed version by itself: an Updating Hideway screen with the download, then the launcher restarts on the new version. A version that does not start is rolled back. Settings > Install updates automatically turns it off.
+* A release found later in a long session waits for the next start, a running game is never interrupted, and a failed install is not retried in a loop (6 hours).
+* The installer now waits a few seconds for the health report when the new version hands over to an elevated copy of itself.
+
 ## 3.3.5 - 2026-11-18
 
 * New sign-in screen in the launcher: **Sign in** with a username and password, **Create account** with a license key (one key makes one account), or the old **License key** tab. Clear messages (wrong password, username taken, key already used), an inline show/hide for secrets, and a short wait after 5 refused attempts in a minute.

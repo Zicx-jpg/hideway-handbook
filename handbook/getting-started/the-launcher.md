@@ -24,7 +24,7 @@ A set of real checks on this PC, each green, orange or red, with one **Next:** l
 
 ## Updates
 
-Only releases signed by the seller are accepted. A new version downloads in the background and is checked against its signature and file hashes. Nothing is installed until you click. If the new version does not start, the previous one is put back automatically. The page also shows what changed in the version you have. See [Updates](../guides/updates.md).
+Only releases signed by the seller are accepted. A new version downloads in the background and is checked against its signature and file hashes. Since 3.3.6 the launcher installs a new version by itself when it starts (turn it off in Settings); before that, nothing is installed until you click. If the new version does not start, the previous one is put back automatically. The page also shows what changed in the version you have. See [Updates](../guides/updates.md).
 
 ## Good to know
 
