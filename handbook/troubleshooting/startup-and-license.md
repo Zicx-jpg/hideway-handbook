@@ -20,6 +20,10 @@
 
 | Message | What to do |
 |---|---|
+| *Wrong username or password.* | Check both. The same sentence is shown for an unknown username on purpose. After 5 refused attempts in a minute the launcher makes you wait before the next one (the screen shows the countdown) |
+| *That username is taken.* | Pick another username on the **Create account** tab |
+| *That license key has already been used.* | A key makes one account. Sign in with the account that used it, or ask support |
+| *That license key is not valid.* | Check the key for typos. Keys are shown once and cannot be recovered: ask support to reset |
 | *Invalid / not found* | Check the key for typos. Keys are shown once and cannot be recovered: ask support to reset |
 | *Device limit reached* | Ask support to deactivate an old device. Reinstalling Windows changes your device fingerprint |
 | *Cannot reach license server* | The app keeps working for up to **15 minutes** offline, then locks. Check your internet connection and the **system clock** (a wrong clock fails the signed answer check) |
@@ -35,7 +39,7 @@ The website's **Web Loader** button talks to Hideway on `127.0.0.1` port `1337`.
 
 ## Sign-out and remember
 
-**Remember on this device** stores the key encrypted for your Windows account only. **Sign out** returns to the sign-in screen. If you do not tick Remember, closing and reopening asks again.
+**Keep me signed in** (**Remember on this device** in the Hideway window) stores your account, or your key, encrypted for your Windows account only. The password is never shown again, never written to the log, and is wiped from memory once you are signed in. **Sign out** returns to the sign-in screen. If you do not tick Remember, closing and reopening asks again.
 
 ## Still stuck?
 

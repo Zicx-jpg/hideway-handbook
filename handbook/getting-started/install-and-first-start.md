@@ -26,9 +26,14 @@ Double-click `HidewayLauncher.exe` and accept the administrator prompt. Windows 
 
 ## 4. Sign in
 
-Pick one:
+The sign-in screen has three tabs:
 
-* **License key.** Paste it and press **Activate**. Tick **Remember on this device** if you want it stored, encrypted, for your Windows account only.
+* **Create account** (first time). Choose a username and a password (8 characters or more), paste the license key you bought, and press **Create account**. The key is redeemed by the account and you are signed in. One key makes one account.
+* **Sign in** (every time after that). Username and password, then **Sign in**. Tick **Keep me signed in** to store the account, encrypted, for your Windows account only; Hideway then signs in by itself at the next start.
+* **License key.** The old way still works: paste the key and press **Activate**, no account needed.
+
+Also possible:
+
 * **Website button.** Sign in on the customer panel and press the Web Loader button while the sign-in screen is open. It talks to Hideway through `127.0.0.1` port 1337 and nowhere else. If another program already uses that port, the sign-in screen says so and the key still works.
 
 ## 5. Start Fortnite on the game PC

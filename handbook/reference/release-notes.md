@@ -3,6 +3,12 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.5 - 2026-11-18
+
+* New sign-in screen in the launcher: **Sign in** with a username and password, **Create account** with a license key (one key makes one account), or the old **License key** tab. Clear messages (wrong password, username taken, key already used), an inline show/hide for secrets, and a short wait after 5 refused attempts in a minute.
+* The launcher shows who is signed in (rail and Settings), and Hideway.exe has the same account sign-in on its own start-up window.
+* Footer links (Website, Discord, Customer panel) on the sign-in screen. A remembered account is stored encrypted like a key and renewed silently when the session ends.
+
 ## 3.3.4 - 2026-11-17
 
 * Own leechcore.dll (RDMA / remote DMA, or a newer LeechCore): when the launcher card says leechcore.dll does not match the signed release, **Use my leechcore.dll** trusts exactly that file. Hideway.exe --trust-leechcore does the same without the launcher. The file is then kept by updates, and the device line of your leechcore.ini (for example rma://127.0.0.1:19058) is used for the connection. Any other change to the DLL is refused again.

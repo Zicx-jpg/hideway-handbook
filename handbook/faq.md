@@ -34,7 +34,7 @@ Only `HidewayLauncher.exe`. Everything else is in `core\`. See [The launcher](ge
 The programs are not code-signed yet, so Windows warns the first time. Choose **More info > Run anyway** and leave Windows protection on.
 
 **How do I sign in?**
-With your license key, or with the Web Loader button on the customer panel while the sign-in screen is open. "Remember on this device" stores the key encrypted for your Windows account.
+Create an account once (username, password and your license key), then sign in with the username and password. You can also still use just the license key, or the Web Loader button on the customer panel while the sign-in screen is open. "Keep me signed in" stores the account encrypted for your Windows account.
 
 **Where is the Debug page?**
 Hidden until you turn on **Misc > Debug > Show debug page**.
