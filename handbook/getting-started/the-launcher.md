@@ -35,3 +35,12 @@ Only releases signed by the seller are accepted. A new version downloads in the 
 {% hint style="info" %}
 If the launcher says a file is "not the signed one", do not run it. Use **Restore the files**, or download the package again and verify it.
 {% endhint %}
+
+## Your account
+
+The box at the bottom of the left column shows who is signed in and when the license ends. Click it to open the account panel:
+
+* **Add a key** adds the time of another license key to your account. Use it to renew before the end date or to stack more days. It needs an account (a plain license-key sign-in has none: sign out and use **Create account** once).
+* **Buy or renew a key** opens the shop. **Sign out** signs you out.
+* From 7 days before the end date a banner at the top reminds you, with **Renew** and **Add a key** buttons.
+* Forgot your password? Press **Forgot password?** on the sign-in screen and open a ticket on Discord with your username.

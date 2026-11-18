@@ -3,6 +3,13 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.7 - 2026-11-18
+
+* **Account panel.** Click the license row at the bottom of the launcher: it shows your account, plan and end date, and **Add a key** adds another license key to your account (renew early or stack time). **Buy or renew a key** opens the shop and **Sign out** is there too.
+* **Expiry warning.** When your license ends within 7 days the launcher shows a banner with **Renew** and **Add a key**, and the end date turns orange (red under 3 days).
+* **Forgot password?** on the sign-in screen opens the Discord support so you can get it reset.
+* **Pause switch for updates.** If a release has a problem the publisher can put it on hold: launchers that have not installed it yet stop installing it by themselves and the Updates page says why. A fixed version (a new number) lifts it by itself.
+
 ## 3.3.6 - 2026-11-18
 
 * **Automatic updates.** When the launcher starts it installs a newer signed version by itself: an Updating Hideway screen with the download, then the launcher restarts on the new version. A version that does not start is rolled back. Settings > Install updates automatically turns it off.

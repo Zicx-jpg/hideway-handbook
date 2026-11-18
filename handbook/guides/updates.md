@@ -9,6 +9,7 @@ Hideway updates through **signed releases**. Since 3.3.6 the launcher installs a
 3. **At start-up the launcher installs it by itself**: an **Updating Hideway** screen shows the download, then the launcher restarts on the new version. No click needed. (Turn this off in **Settings > Install updates automatically**; then you press **Restart to install** on the **Updates** page as before.)
    * A release found later in a long session is downloaded and waits: it installs the next time the launcher starts, never in the middle of what you are doing.
    * A game that is running is never interrupted.
+   * If a release turns out to have a problem, the publisher can put it **on hold** with a signed pause switch: launchers that have not installed it yet stop installing it by themselves, and the Updates page says it is on hold. A fixed version lifts it by itself.
    * If an automatic install fails and rolls back, the launcher does not try the same version again for 6 hours; **Restart to install** on the Updates page still works.
    * Copies older than 3.3.6 do not have this yet: update them once by hand (or download the new package), after that it is automatic.
 4. The installer (`HidewayUpdater.exe`) backs up the current files, writes a journal, swaps the files, starts the new version and waits for it to report **healthy**.

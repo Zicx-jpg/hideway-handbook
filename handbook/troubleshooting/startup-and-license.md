@@ -20,6 +20,7 @@
 
 | Message | What to do |
 |---|---|
+| *Add a key* says it needs an account | You signed in with just a license key. Sign out, choose **Create account**, and the account keeps every key you add |
 | *Wrong username or password.* | Check both. The same sentence is shown for an unknown username on purpose. After 5 refused attempts in a minute the launcher makes you wait before the next one (the screen shows the countdown) |
 | *That username is taken.* | Pick another username on the **Create account** tab |
 | *That license key has already been used.* | A key makes one account. Sign in with the account that used it, or ask support |
