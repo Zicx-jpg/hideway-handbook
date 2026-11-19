@@ -3,6 +3,11 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.3.8 - 2026-11-18
+
+* **Controller buttons as aim and trigger keys.** Click the **Aim key** or **Trigger key** box and press a controller button (A, B, X, Y, LB, RB, LT, RT, the stick clicks, Back, Start or the D-pad). It works with an Xbox pad, or any pad Windows shows as one, connected to the **overlay PC**. A pad that is only plugged into the game PC cannot be read from here.
+* **RDMA and other custom devices start the plain way.** With your own leechcore.dll and a device= line, Hideway no longer uses the FPGA shortcuts (no refresh shortcut, no memory map): vmm refreshes the way it always did, so players stop disappearing now and then. The FPGA card keeps the fast start.
+
 ## 3.3.7 - 2026-11-18
 
 * **Account panel.** Click the license row at the bottom of the launcher: it shows your account, plan and end date, and **Add a key** adds another license key to your account (renew early or stack time). **Buy or renew a key** opens the shop and **Sign out** is there too.

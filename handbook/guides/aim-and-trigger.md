@@ -14,7 +14,7 @@ Press **Test move (+/-60)** on Misc, under Input device. The crosshair should ju
 
 | Setting | Advice |
 |---|---|
-| Aim key | Default is Mouse 2. Mouse 1 works too, **Only with a gun in hand** stops it from locking on while you place a wall |
+| Aim key | Default is Mouse 2. It can also be a **controller button** (see below). Mouse 1 works too, **Only with a gun in hand** stops it from locking on while you place a wall |
 | Field of view | Smaller is more selective: only targets near the crosshair count |
 | Smoothing | 1 is instant. Each step adds about 8 ms to the time the aim needs to get on target. Start high and lower it until it feels right |
 | Aim bone | Head, Neck, Chest, Pelvis, or Closest bone |
@@ -58,3 +58,11 @@ To measure that delay, stand still in a match with your hands off the mouse and 
 * **Debug > Telemetry** counts ticks with the key held, ticks with a target and shots.
 
 If something is off, go to [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
+
+## Use a controller button
+
+The **Aim key** and the **Trigger key** can be a controller button: click the box, then press the button (the box says *key or pad*). LT / RT are good hold keys; a trigger counts as pressed once it is pulled a little.
+
+* It works with an **Xbox pad, or any pad Windows shows as an Xbox pad** (DualShock / DualSense through DS4Windows or Steam Input, an adapter that appears as an Xbox pad), connected to the **overlay PC**.
+* A pad that is only plugged into the **game PC** cannot be read: nothing in the DMA link sees it. Use a mouse button there, or an adapter that also shows up on the overlay PC.
+* The aim itself still moves through your input device ([Connect an input device](input-device.md)).

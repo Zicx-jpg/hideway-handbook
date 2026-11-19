@@ -79,3 +79,4 @@ What this does and does not do:
 * Updates leave your trusted leechcore.dll alone and update everything else.
 * With your DLL trusted, the device= line of leechcore.ini is used for the connection (the log says custom leechcore.dll: device ...). If that device does not start, the normal pga device is tried.
 * To go back to the signed file: delete custom_runtime.txt and copy leechcore.dll from the Hideway package (the zip you downloaded) over yours.
+* With your own leechcore.dll and a device= line, Hideway starts vmm the **plain way** (vmm's own refresh, no memory map, since 3.3.8). If players still disappear now and then, send **hideway.log** and the newest file in the **blackbox** folder to the support: they show whether the link stalled.
