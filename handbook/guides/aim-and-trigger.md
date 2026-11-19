@@ -68,3 +68,18 @@ The **CONTROLLER** card on the Aimbot page shows what Hideway sees: how many pad
 * It works with an **Xbox pad, or any pad Windows shows as an Xbox pad** (DualShock / DualSense through DS4Windows or Steam Input, an adapter that appears as an Xbox pad), connected to the **overlay PC**.
 * A pad that is only plugged into the **game PC** cannot be read: nothing in the DMA link sees it. Use a mouse button there, or an adapter that also shows up on the overlay PC.
 * The aim itself still moves through your input device ([Connect an input device](input-device.md)).
+
+### Controller on the game PC (Ferrum or MAKCU, no XIM)
+
+If your controller is only plugged into the game PC, Hideway still sees it: it reads the game's own input table through the DMA card, nothing runs on the game PC and no adapter is needed.
+
+1. Open the **Aimbot** page. The **CONTROLLER** card should say **Game PC pad: readable** once you are in a match (it needs the game running and the DMA card connected).
+2. Click the **Aim key** box (or **Trigger key**) and press the button on your controller, for example **RT**. The box shows *Game pad RT*.
+3. **Held in game** on the card lists the keys the game says are held: press the button and check it appears.
+
+If **Game PC pad** stays *not found yet*, press a button on the controller once in the game (the game only lists a button after its first press) and give it a few seconds. If it still says so, send **hideway.log** to the support: the lines starting with *game controller input* say which step did not work.
+
+**Another way, without any key:** set **Aim activation** to **Aiming down sights** (or **Key or aiming down sights**). The aim then follows what the game says: it is on while you aim down sights (LT on a controller) and off when you let go. The CONTROLLER card shows **Game says: aiming down sights / not aiming** live.
+
+* The movement still goes out through your input device (Ferrum, MAKCU or KMBox NET), exactly as with a mouse.
+

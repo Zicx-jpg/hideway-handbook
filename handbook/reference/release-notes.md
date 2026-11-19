@@ -3,6 +3,11 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.5.0 - 2026-11-19
+
+* **A controller that is only plugged into the game PC now works.** Hideway reads the game's own input table through the DMA card, so the **Aim key** and **Trigger key** can be a button of a controller that only the game PC sees (Ferrum or MAKCU, no XIM, no adapter): click the box, then press the button on the controller (the box says *key or pad*). The CONTROLLER card on the Aimbot page shows **Game PC pad: readable** and, live, the keys held in the game (**Held in game**).
+* **Aim activation.** New option: **Aim key**, **Aiming down sights** or **Key or aiming down sights**. With the second one the aim follows what the game says (you hold LT / right mouse), whatever the controller is.
+
 ## 3.4.0 - 2026-11-19
 
 * **CONTROLLER card (Aimbot page).** Shows the pads Windows sees on the overlay PC and the buttons held right now, and has the **Trigger pull** slider for LT / RT when a trigger is your Aim key or Trigger key.
