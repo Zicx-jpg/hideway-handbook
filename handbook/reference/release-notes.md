@@ -3,6 +3,10 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.4.0 - 2026-11-19
+
+* **CONTROLLER card (Aimbot page).** Shows the pads Windows sees on the overlay PC and the buttons held right now, and has the **Trigger pull** slider for LT / RT when a trigger is your Aim key or Trigger key.
+
 ## 3.3.8 - 2026-11-18
 
 * **Controller buttons as aim and trigger keys.** Click the **Aim key** or **Trigger key** box and press a controller button (A, B, X, Y, LB, RB, LT, RT, the stick clicks, Back, Start or the D-pad). It works with an Xbox pad, or any pad Windows shows as one, connected to the **overlay PC**. A pad that is only plugged into the game PC cannot be read from here.

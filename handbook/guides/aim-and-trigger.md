@@ -61,7 +61,9 @@ If something is off, go to [Aim or trigger problems](../troubleshooting/aim-and-
 
 ## Use a controller button
 
-The **Aim key** and the **Trigger key** can be a controller button: click the box, then press the button (the box says *key or pad*). LT / RT are good hold keys; a trigger counts as pressed once it is pulled a little.
+The **Aim key** and the **Trigger key** can be a controller button: click the box, then press the button (the box says *key or pad*). LT / RT are good hold keys.
+
+The **CONTROLLER** card on the Aimbot page shows what Hideway sees: how many pads are connected and which buttons are held right now, so you can check a pad before binding it. **Trigger pull** sets how far LT or RT must be pulled (0-255, default 30) before it counts as pressed; raise it if a light touch fires it.
 
 * It works with an **Xbox pad, or any pad Windows shows as an Xbox pad** (DualShock / DualSense through DS4Windows or Steam Input, an adapter that appears as an Xbox pad), connected to the **overlay PC**.
 * A pad that is only plugged into the **game PC** cannot be read: nothing in the DMA link sees it. Use a mouse button there, or an adapter that also shows up on the overlay PC.
