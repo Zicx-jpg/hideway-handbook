@@ -30,6 +30,7 @@
 * [Hotkeys](guides/hotkeys.md)
 * [Web radar on your phone](guides/web-radar.md)
 * [Loot, containers and reboot cards](guides/loot-and-world.md)
+* [Link your account to Discord](guides/discord-link.md)
 
 ## The menu, page by page
 

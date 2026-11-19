@@ -44,3 +44,4 @@ The box at the bottom of the left column shows who is signed in and when the lic
 * **Buy or renew a key** opens the shop. **Sign out** signs you out.
 * From 7 days before the end date a banner at the top reminds you, with **Renew** and **Add a key** buttons.
 * Forgot your password? Press **Forgot password?** on the sign-in screen and open a ticket on Discord with your username.
+* Link your account to Discord for the time left, PC changes and the Hideway Client role: see [Link your account to Discord](../guides/discord-link.md).
