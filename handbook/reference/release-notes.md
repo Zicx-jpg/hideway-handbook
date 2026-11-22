@@ -3,6 +3,11 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.6.2 - 2026-11-22
+
+* **The Aim bone choice works again.** Since the one-menu release (3.1.0) *Aim between bones* was forced on and it overrode the choice for every player with a readable skeleton: whatever the dropdown said (also the per-weapon ones and Close aim bone), the aim went to the point of the body nearest to the crosshair and never to the head. Now **Head, Neck, Chest and Pelvis** aim at that part (the head a little above its joint, where the game counts a head hit) and **Closest bone** keeps the old behaviour (the nearest point of the body, between the joints). A chosen part that is behind a wall falls back to the nearest exposed part of the body, so a player peeking with only an arm showing is still followed.
+* **Things to know.** The Field of view is measured to the chosen part: at close range the head sits far above the chest, so a small field of view may not engage there; use Close aim, a bigger field of view or Closest bone. If you liked the old feel, pick **Closest bone**; the factory choice stays Head.
+
 ## 3.6.1 - 2026-11-21
 
 * **Boxes no longer flash between the hidden and the visible colour.** The game's *drawn recently* flag blinks (about 1000 flips for the players in view in a recorded 30-minute match, half of the hidden stretches shorter than 250 ms), and every blink turned the box, skeleton and text white and green again. A player that was visible a moment ago now keeps the visible colour for 150 ms after the flag drops; hidden to visible is never delayed. Only the colour changes: the aim and the triggerbot read the flag themselves.

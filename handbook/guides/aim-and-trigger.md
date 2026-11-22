@@ -17,9 +17,11 @@ Press **Test move (+/-60)** on Misc, under Input device. The crosshair should ju
 | Aim key | Default is Mouse 2. It can also be a **controller button** (see below). Mouse 1 works too, **Only with a gun in hand** stops it from locking on while you place a wall |
 | Field of view | Smaller is more selective: only targets near the crosshair count |
 | Smoothing | 1 is instant. Each step adds about 8 ms to the time the aim needs to get on target. Start high and lower it until it feels right |
-| Aim bone | Head, Neck, Chest, Pelvis, or Closest bone. While a player's skeleton can be read the aim goes to the point of the body nearest to your crosshair (including up to 14 cm above the head joint), whatever is picked here; the choice applies to players whose skeleton could not be read. The triggerbot's head area is a 13 cm sphere 3 cm above the head joint, because the game's own hit trace counts a head hit up to about 16 cm above the joint |
+| Aim bone | Head, Neck, Chest, Pelvis, or Closest bone. **Head** aims about 3 cm above the head joint, where the game's own hit trace lands (it counts a head hit up to about 16 cm above the joint); the triggerbot's head area is a 13 cm sphere around that point. **Closest bone** aims at the point of the body nearest to your crosshair, between the joints. A chosen part that is behind a wall falls back to the nearest exposed part |
 | Max aim distance | Targets further away are ignored |
 | Team check | Leave it on |
+
+The **Field of view** is measured to the part you chose: at close range the head sits far above the chest, so a small field of view may not engage there. Use **Close aim** (its own field of view and bone for enemies up close), a bigger field of view, or **Closest bone**.
 
 Smoothing means what it says. The aim moves in a straight, even approach to the target, and a higher number is slower but never jerky. Hideway also knows the game reacts to a mouse move about 50 ms late and allows for the movement that is still on its way, so it does not overshoot and swing back. If you have measured your own delay (step 5), it uses that instead.
 
