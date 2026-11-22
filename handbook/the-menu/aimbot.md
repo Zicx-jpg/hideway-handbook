@@ -4,7 +4,7 @@ This page controls aim assist, close aim, sticky aim and prediction. Aim assist 
 
 <figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, top"><figcaption><p>The AIMBOT card on the left, close aim, sticky aim and prediction on the right.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/menu-aimbot-2.png" alt="Aimbot page, scrolled down"><figcaption><p>Scrolled down: the rest of the AIMBOT card, the FOV circle and humanizing.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot-2.png" alt="Aimbot page, scrolled down"><figcaption><p>Scrolled down: the CONTROLLER card, the FOV circle and humanizing.</p></figcaption></figure>
 
 ## AIMBOT
 

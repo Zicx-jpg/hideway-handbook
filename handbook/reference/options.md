@@ -95,6 +95,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Show vehicles** | on / off | on |  | Vehicles recognised by their display name; positions are refreshed every 0.7 s. |
 | **Show other named actors** | on / off | off |  | Every other actor that has a display name (usually noise): for checking what the reader sees. |
 | **Hide opened containers** | on / off | on |  | Hide containers that were already searched. The game's flag is not in the dump: the reader learns it by watching which bit flips on several containers when they are opened, so it only works after a few have been opened. |
+| **Group identical loot** | on / off | on |  | Identical items on one spot (the same name, the same place on the screen and about the same distance) are drawn as ONE label with a count, for example Shield Potion x3, instead of three labels on top of each other. The nearest one carries the label. |
 
 ## Reboot cards
 

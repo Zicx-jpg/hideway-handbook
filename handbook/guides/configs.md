@@ -29,7 +29,7 @@ Before a config file is overwritten, a copy is stored (**Config > BACKUPS**, at 
 
 ## Presets
 
-**Config > PRESETS** applies a short list of options on top of your current settings (ESP only, Clean visuals, Full visuals, Subtle aim assist). It does not touch the options it does not list.
+**Config > PRESETS** applies a short list of options on top of your current settings (ESP only, Clean visuals, Full visuals, Radar only, Subtle aim assist). It does not touch the options it does not list.
 
 ## Share a config
 

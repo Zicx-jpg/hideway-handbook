@@ -3,11 +3,21 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.2 - 2026-11-22
+
+* **Identical loot on one spot is one label.** Three Shield Potions on the same spot are drawn as **Shield Potion x3** instead of three labels on top of each other; the nearest one carries the label and the count only merges items with the same name, on the same place of the screen and at about the same distance. **Visuals > LOOT ESP > Group identical loot** (on by default).
+* **No more long frames from Windows power saving.** Windows 10 and 11 can run a process that is not the foreground window on efficiency cores, with lower clocks and coalesced timers; a topmost overlay never is the foreground window. Hideway now opts out at start and the log says so (**PERF**).
+* **The log names the settings that work against you.** The rules of **Config > ADVICE** now also write **ADVICE** lines to the log once when they apply and whenever the list changes, so a log tells at once that Render distance is 150 m with Far markers off. Four rules are new: an aimbot or triggerbot that is on but has **no key** (it never starts), an **ESP with every part off**, a **rolling recorder without a save key** and a reminder when **Share radar online** is on.
+* **A Radar only preset** (**Config > PRESETS**): radar on, ESP, aim and trigger off. The blurb of **Subtle aim assist** said random smoothing, which it never set; it now says what it does (narrow field of view, slow smoothing, Humanizing).
+* **The Save last minutes key is in Config > KEYBINDS**, so a clash with another key (the exit key, say) is reported.
+* **The long notes on the Debug page are no longer cut off with three dots** (the recorder, the support bundle, the black box, the data health legend, the aim calibration): they wrap over several lines.
+* **Saving the rolling recorder no longer freezes anything.** Taking the copy of a full ring (92 MB in a 100-player lobby) held the lane that feeds the recorder for about 75 ms; the ring now shares its buffers and the snapshot takes 0.4 ms. A second save asked while one is still being written is refused before any copy. In a crowded lobby the 96 MB cap holds about 30 seconds, with 15 players the full 2 minutes.
+
 ## 3.7.1 - 2026-11-22
 
 * **Rolling recorder (new, off by default).** **Debug > RECORDING > Rolling recorder** keeps the last 2 minutes of raw frames in memory (at most 96 MB; nothing is written to disk while it runs). When something odd has just happened, an enemy that vanished or an aim that jerked, press the **Save last minutes key** (or the **Save last minutes** button): the 2 minutes are written to `recordings\rolling_<date>_<time>.hwrec` on a background thread, so the overlay does not hitch. When the black box catches a **real** disappearance the same thing happens by itself, as `recordings\event_...hwrec` (at most 3 per run, 60 s apart). Only the newest 3 files of each kind are kept. A saved file replays like any recording, and the **support bundle** can carry it. A normal **Start recording** takes over from the rolling one, which starts again when you stop.
 * **Settings advice.** **Config > ADVICE** lists the settings that are probably working against you, each with what it is now and the one thing to change: a Render distance under 200 m without Far markers, a single aim bone with a small field of view, a very low Smoothing, a long Prediction lead, an FPS limit under 60, a Loot max distance over 300 m... Nothing is changed for you, and the factory settings show only the line about enemy health.
-* **Loot, chest and vehicle labels no longer pile on each other.** A pile of items on one spot now reads as a column: the nearest item keeps its place under its marker and each farther one moves under it. Containers and vehicles follow the same rule, and no loot label covers a player's name. It is automatic, like the rule that keeps player names apart.
+* **Loot, chest and vehicle labels no longer pile on each other.** A pile of items on one spot now reads as a column: the nearest item keeps its place under its marker and each farther one moves under it. Containers and vehicles follow the same rule, and no loot label covers a player's name. The stacking is automatic, like the rule that keeps player names apart.
 * **Tests.** The recorder's ring mode (time window, byte cap, switching with a file recording, snapshot = save), the advice rules and the label stacking are covered.
 
 ## 3.7.0 - 2026-11-22

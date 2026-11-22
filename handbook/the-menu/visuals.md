@@ -22,7 +22,7 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 | **AUDIO ALERTS** | Generated positional tones when an enemy comes in range |
 | **COLORS** | Every colour used above |
 
-<figure><img src="../.gitbook/assets/menu-visuals-2.png" alt="Visuals page, ESP and HUD"><figcaption><p>Scrolled down: the ESP card with the box and skeleton options, and the HUD card.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-2.png" alt="Visuals page, ESP and HUD"><figcaption><p>Scrolled down: the SKELETON and HEAD & BARS cards, and the LOOT ESP card with Group identical loot.</p></figcaption></figure>
 
 ## Team ID
 
@@ -46,4 +46,4 @@ Bars next to the box, read from the game. Read the rules on [Health and shield b
 
 How smoothly the boxes move (Smooth ESP, Balanced smoothness, the motion estimator) is always set to the best value and is not in the menu, and labels that would overlap (player names, loot, chests, vehicles) are moved apart by themselves. See [Set up the ESP](../guides/esp-setup.md) and [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
 
-<figure><img src="../.gitbook/assets/menu-visuals-3.png" alt="Visuals page, lower half"><figcaption><p>Lower half: head and bars, reboot cards, spectators, audio alerts and colours.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-3.png" alt="Visuals page, lower half"><figcaption><p>Lower half: the end of the LOOT ESP card, reboot cards, spectators and audio alerts (the colours follow).</p></figcaption></figure>

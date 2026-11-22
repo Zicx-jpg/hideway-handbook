@@ -4,13 +4,14 @@ A good ESP is easy to read, steady, and in the right place on the screen. Go thr
 
 ## 1. Start from a preset
 
-**Config > Presets** has four starting points. A preset only changes the options it lists, so everything else stays as you had it.
+**Config > Presets** has five starting points. A preset only changes the options it lists, so everything else stays as you had it.
 
 | Preset | What you get |
 |---|---|
 | ESP only | Boxes, skeletons, names, health, radar. Aim off |
 | Clean visuals | Corner boxes, name, distance and health bars |
 | Full visuals | Everything on: gradients, glow, all text, lines, radar |
+| Radar only | The radar on; ESP, loot, aim and trigger off |
 | Subtle aim assist | Aim on with a 35 deg field of view, slow smoothing (22), chest aim, Humanizing on, visible targets only |
 
 If you already have settings you like, save them as a config first. Auto-save keeps backups too, see [Configs](configs.md).

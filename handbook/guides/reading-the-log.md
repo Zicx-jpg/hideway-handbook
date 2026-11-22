@@ -28,6 +28,11 @@
 | `VISCHECK:` | The wall check: whether the level geometry was read (used by the loot reader; visibility itself follows the game's render time) |
 | `HEALTH:` | A probe of what each health source holds when none is readable |
 | `MATCH:` | One summary line when a match ends |
+| `BLACKBOX:` | The ESP went blank: why, and the file the last minute was saved to. A line starting with REAL is a true disappearance |
+| `OVERLAY:` | At least 5 overlay frames took over 20 ms: a hitch of the overlay, not of the data |
+| `RECORD:` | The flight recorder and the rolling recorder: started, closed, the file a save went to |
+| `ADVICE:` | A setting that probably works against you (the rules of Config > ADVICE), when it first applies and whenever the list changes |
+| `PERF:` | Start-up performance facts, for example that the process was opted out of Windows power throttling |
 | `FATAL` | A crash inside Hideway, with the module, address and call chain |
 
 ## The 10-second line

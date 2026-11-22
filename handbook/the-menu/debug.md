@@ -2,6 +2,10 @@
 
 The Debug page shows what Hideway is really getting from the game. It is **hidden by default**: turn it on with **Misc > Debug > Show debug page**.
 
+<figure><img src="../.gitbook/assets/menu-debug.png" alt="Debug page, top"><figcaption><p>The top of the Debug page in demo mode: READY CHECK, STATUS, DATA HEALTH and the LIVE LOG.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/menu-debug-2.png" alt="Debug page, recording and support"><figcaption><p>The bottom: RECORDING with the Rolling recorder, and SUPPORT.</p></figcaption></figure>
+
 ## Cards
 
 | Card | What it tells you |

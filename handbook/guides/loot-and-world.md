@@ -15,13 +15,14 @@ Loot ESP uses the level layout through the **wall check**, which Hideway switche
 | Loot weapons / ammo / heals / shields / grenades / materials / traps / other items | Groups of ground items |
 | **Loot minimum rarity** | Hide items below this rarity. Items whose rarity could not be read are drawn white |
 | **Loot max distance** | Do not draw items further away |
+| **Group identical loot** | Identical items on one spot (same name, same place on the screen, about the same distance) become one label with a count, for example *Shield Potion x3*. The nearest one carries it |
 | Marker, distance text, snaplines | Each item gets a small diamond in its rarity colour and its distance after the name; snaplines are off. These are automatic and not in the menu, like the container (150 m) and vehicle (300 m) ranges |
 | **Show containers** | Chests, ammo boxes, coolers, llamas and similar, recognised by their display name |
 | **Hide opened containers** | The reader learns the "opened" flag by watching containers get opened, so it only works after a few have been opened |
 | **Show vehicles** | Vehicles by display name, refreshed every 0.7 s |
 | **Show other named actors** | Everything else with a display name (usually noise, for checking what the reader sees) |
 
-Labels of items that lie on one spot are stacked under the marker, nearest first, instead of printed on top of each other; chests and vehicles follow the same rule and no label covers a player's name. This is automatic (the same rule that keeps player names apart), there is no switch for it.
+Identical items on one spot are one label with a count (**Group identical loot**); the labels of different items that still overlap are stacked under the marker, nearest first, instead of printed on top of each other; chests and vehicles follow the same rule and no label covers a player's name. The stacking is automatic (the same rule that keeps player names apart); only the grouping has a switch.
 
 **Debug > LOOT READER** shows what it found: layout state (searching / verified), counts, rejects, rarity. The log has `LOOT` lines. The loot reader has been seen working in real matches.
 
