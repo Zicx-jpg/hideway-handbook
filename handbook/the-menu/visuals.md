@@ -2,13 +2,15 @@
 
 Everything Hideway draws on players and in the world. The page opens on a **PREVIEW** card that shows your current style on sample players.
 
-<figure><img src="../.gitbook/assets/menu-visuals.png" alt="Visuals page with the preview card"><figcaption><p>The Visuals page. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it change the outfit.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals.png" alt="Visuals page with the preview card"><figcaption><p>The Visuals page. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it switch the outfit of the sample players. The first two look like Fortnite characters, the other four are sci-fi.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/esp-preview.png" alt="The PREVIEW card close up" width="480"><figcaption><p>The PREVIEW card close up: the box, skeleton, bars and name on two sample players.</p></figcaption></figure>
 
 ## Cards
 
 | Card | What is in it |
 |---|---|
-| **PREVIEW** | Your style on sample players. Always marked DEMO: synthetic, not a real match |
+| **PREVIEW** | Your style on sample players. Always marked DEMO: synthetic, not a real match. Six drawn outfits, the arrows under the card switch them |
 | **ESP** | **Enable ESP** (master), Show bots, Show teammates, Hide knocked players, Render distance, Far markers, Max ESP players, Box style (Off / Box / Corners / 3D box), thickness, rounding, fill, gradient |
 | **SKELETON** | Skeleton, thickness, distance-scaled lines, joint dots, glow (the smooth pose and the running cycle on frozen limbs are automatic) |
 | **HEAD & BARS** | Head circle (filled, size, offset); **Health + shield bars**, Low health highlight and threshold, Health numbers, Bar style (Classic / Segmented), Bar side, Damage trail |

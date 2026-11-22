@@ -14,6 +14,8 @@ This handbook is written for people who bought it and want it working. It tells 
 
 <figure><img src=".gitbook/assets/overlay-esp-radar.png" alt="The overlay in demo mode: boxes, skeletons, Team ID badges, health bars and the radar"><figcaption><p>The overlay in demo mode. The players are generated, so you can look at every option without a game.</p></figcaption></figure>
 
+<figure><img src=".gitbook/assets/esp-preview.png" alt="The ESP preview on the Visuals page" width="480"><figcaption><p>The ESP preview on the Visuals page: your current style on two sample players. The arrows under it switch the outfit.</p></figcaption></figure>
+
 ## Start here
 
 1. [Before you start](getting-started/requirements.md): the two PCs, the card, the license.

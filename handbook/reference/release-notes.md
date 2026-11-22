@@ -3,6 +3,11 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.7 - 2026-11-22
+
+* Two new Fortnite-style skins in the ESP preview on the Visuals page: Squad Leader and Skull Raider.
+* They're the first two now, the old outfits are still there. Use the arrows under the preview to switch.
+
 ## 3.7.6 - 2026-11-22
 
 * Fixed a line at the bottom of the Config > ADVICE card that was cut off.
