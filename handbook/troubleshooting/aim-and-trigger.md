@@ -21,7 +21,7 @@ The game answers a mouse move about 50 ms late. Since version 3.2.5 Hideway allo
 * Lower **Smoothing** step by step, or raise it if it feels too sharp.
 * On Debug, run **Latency > Measure latency** once. The measured value is then used instead of the 50 ms default.
 * Make sure you run 3.2.5 or later (Config > About, or the launcher).
-* Still wrong? Send the log and a recording: turn on **Debug > RECORDING > Rolling recorder**, and press the **Save last minutes key** right after the jerk (see [Collect diagnostics](collecting-diagnostics.md)).
+* Still wrong? Send the log and a recording: press the **Save last minutes key** (**Debug > RECORDING**, the Rolling recorder is on by default) right after the jerk (see [Collect diagnostics](collecting-diagnostics.md)).
 
 ## Aim locks on while I place a wall
 

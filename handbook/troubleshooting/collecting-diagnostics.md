@@ -52,7 +52,7 @@ Plain text; no keys or tokens. Do **not** delete them before sending: a restart 
 
 ### The rolling recorder: record it after it happened
 
-A glitch that happens once an hour is hard to catch with **Start recording**. Turn on **Debug > RECORDING > Rolling recorder** once (Debug on in Misc first) and Hideway keeps the **last 2 minutes** in memory, at most 96 MB, writing nothing to disk. When an enemy vanishes or the aim jerks:
+A glitch that happens once an hour is hard to catch with **Start recording**. Since 3.7.4 the **Rolling recorder** (Debug > RECORDING; Debug on in Misc first) is on by default: Hideway keeps the **last 2 minutes** in memory, at most 96 MB, writing nothing to disk. When an enemy vanishes or the aim jerks:
 
 1. Press the **Save last minutes key** (set it in the same card) or click **Save last minutes**. A notice names the file.
 2. Find it in `recordings\`: `rolling_<date>_<time>.hwrec`. Send it with the log.

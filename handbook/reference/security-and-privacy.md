@@ -41,6 +41,10 @@ Your license key is never part of a report, a log or a support bundle, and neith
 * **Share radar online** is off by default and sends the radar to the Hideway radar relay so a friend anywhere can open it. The online link contains its own key, anyone who has it can watch, and **New online link** makes a new room and new keys so the old link stops working. Nothing is sent while the option is off.
 * **Web radar names** (on by default, not in the menu: set `B|Web radar names|0` in your config file) off sends no names, to the local page or to the relay.
 
+## Recordings
+
+The **Rolling recorder** (on by default) keeps the last 2 minutes of the match, with the names and positions of the players, in memory only. It writes a file to the `recordings\` folder next to the program when you press the Save last minutes key or when the ESP really goes blank (at most 3 files per run, the newest 3 of each kind are kept). Those files stay on your PC; they leave it only if you send them to support or choose **Create it with the newest recording** in the support bundle. Untick **Debug > RECORDING > Rolling recorder** if you do not want them.
+
 ## Input device safety
 
 A held mouse button is released on disconnect, link loss, shutdown and if Hideway crashes. The trigger never fires while the menu is open or panic is active.

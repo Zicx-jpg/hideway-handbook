@@ -68,7 +68,7 @@ There is nobody to draw. Players appear when the match starts. See [No ESP](trou
 The boxes are drawn for the moment the frame is shown (the time offset is automatic). On a fuser the capture card puts the game image a little behind, so the boxes seem to run ahead of it: use the capture card's low-latency mode. See [Boxes lag or run ahead](troubleshooting/esp-quality.md).
 
 **An enemy vanishes for a few seconds.**
-Most often it is **Render distance** (a low value leaves out every enemy farther away; the default is 500 m, and **Far markers** keep a small marker with the distance on anybody beyond it). **Config > ADVICE** points out a setting like that. If it still happens, turn on **Debug > RECORDING > Rolling recorder** and press the **Save last minutes key** right after it, then send the file. See [An enemy vanishes for a few seconds](troubleshooting/esp-quality.md#an-enemy-vanishes-for-a-few-seconds).
+Most often it is **Render distance** (a low value leaves out every enemy farther away; the default is 500 m, and **Far markers** keep a small marker with the distance on anybody beyond it). **Config > ADVICE** points out a setting like that. If it still happens, press the **Save last minutes key** (Debug > RECORDING, the Rolling recorder is on by default) right after it, then send the file. See [An enemy vanishes for a few seconds](troubleshooting/esp-quality.md#an-enemy-vanishes-for-a-few-seconds).
 
 **What is the number before the name?**
 The Team ID, the game's own team number. Everyone in the same duo, trio or squad has the same one. See [Visuals](the-menu/visuals.md#team-id).
@@ -151,4 +151,4 @@ Use a motherboard USB port, power the game PC, close other tools that use the ca
 Turn off **Visuals > Fuser mode** unless you use a capture card.
 
 **What should I send to support?**
-The easiest: **Debug > SUPPORT > Create support bundle** (or **System > Support bundle** in the launcher): one zip with the logs, the black box, your settings and the controller report, without your Windows user name or any key. Add what you were doing. For a glitch that already happened, turn on the **Rolling recorder** and press its **Save last minutes key**. See [Collect diagnostics](troubleshooting/collecting-diagnostics.md).
+The easiest: **Debug > SUPPORT > Create support bundle** (or **System > Support bundle** in the launcher): one zip with the logs, the black box, your settings and the controller report, without your Windows user name or any key. Add what you were doing. For a glitch that already happened, press the **Save last minutes key** of the **Rolling recorder** (on by default). See [Collect diagnostics](troubleshooting/collecting-diagnostics.md).

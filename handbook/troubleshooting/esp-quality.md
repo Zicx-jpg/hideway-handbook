@@ -16,7 +16,7 @@ Hideway reads names with the layout of the current build and, if that gives noth
 2. The fast paths (**Fast DMA reads**, the **High-rate camera lane**, **Fast position refresh**, **Thin skeleton reads**, **DMA stall guard**) and the smoothing (**Smooth ESP**, **ESP smoothness**, **Motion estimator**) are automatic: always on, not in the menu. The fast reads check themselves against live data when the game is attached and switch back on their own if something is wrong.
 3. Reduce the load: fewer skeletons, no glow, a lower FPS limit, **Distance detail (LOD)**.
 4. A black Fuser window on the same GPU as the game competes for GPU time. Run it on the overlay PC only.
-5. Still choppy? Turn on **Debug > RECORDING > Rolling recorder**, play, and press the **Save last minutes key** right after it happens; send the file (see [Collect diagnostics](collecting-diagnostics.md)). The black box's **frame(ms)** column tells an overlay hitch from slow data.
+5. Still choppy? Press the **Save last minutes key** (**Debug > RECORDING**, the Rolling recorder is on by default) right after it happens; send the file (see [Collect diagnostics](collecting-diagnostics.md)). The black box's **frame(ms)** column tells an overlay hitch from slow data.
 
 If **Tick** sits at 100 ms or more for a long time, send the log. In the log, the line "scatter reads DISAGREE with single reads" means Hideway switched to the slow way of reading; it tries the fast way again after a few seconds.
 

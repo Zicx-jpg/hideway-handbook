@@ -33,7 +33,7 @@
 | `RECORD:` | The flight recorder and the rolling recorder: started, closed, the file a save went to |
 | `ADVICE:` | A setting that probably works against you (the rules of Config > ADVICE), when it first applies and whenever the list changes |
 | `PERF:` | Start-up performance facts, for example that the process was opted out of Windows power throttling |
-| `FATAL` | A crash inside Hideway, with the module, address and call chain |
+| `FATAL` | A crash inside Hideway: the module and address, whether the faulting write was inside the thread's own stack, the call chain (`FATAL stack`) and what the DMA link was doing (`FATAL context: dma: users=.. closing=..`). Send the log with it |
 
 ## The 10-second line
 

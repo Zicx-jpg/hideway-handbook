@@ -3,6 +3,13 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.4 - 2026-11-22
+
+* **A rare crash is fixed.** Real logs of several sessions (2.10.7, 3.3.1, 3.3.7) ended in `FATAL exception 0xC0000005 ... < leechcore.dll < VMM.dll`, always a few seconds after slow card ticks (90 to 160 ms). Cause: Hideway closed the DMA link ("DMA card stopped answering", or Debug > Disconnect) while another lane was still reading through it, and that read touched memory vmm.dll had just freed. Closing now waits (up to 3 s) for the reads that are in flight, a read that starts during the close fails cleanly, and the game-PC key reader got the same protection. A new test reproduces the old behaviour (with 6 readers every one of 40 closes happened with a read still inside the card) and checks the new one (none).
+* **Crash lines say more.** A FATAL line is now followed by `FATAL context: dma: users=.. closing=.. cancelled=.. vmm=..` (what the DMA link was doing) and says when the faulting write was inside the thread's own stack, so a crash inside vmm.dll or leechcore.dll can be told from a bug in Hideway itself.
+* **The Rolling recorder is on by default.** About 1 % of one CPU core and at most 96 MB of memory; nothing is written to disk unless you press the Save last minutes key or the ESP really goes blank (then at most 3 files per run in `recordings\`, 96 MB each at most). **Debug > RECORDING > Rolling recorder** turns it off. Configs saved by 3.7.1 to 3.7.3 get it switched on once; from then on an unticked box stays unticked. The Config > ADVICE line about its key is gone.
+* A config file now starts with `# Hideway config v4`.
+
 ## 3.7.3 - 2026-11-22
 
 * **The PREVIEW card of the Visuals page no longer draws over the top bar.** When the card was scrolled half out of view its figures were still painted over the search box and the config box; they are now cut at the edge of the page like everything else.
