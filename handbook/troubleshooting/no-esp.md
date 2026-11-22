@@ -28,7 +28,7 @@ Either the server is empty or the player offsets are out of date. **DATA HEALTH 
 
 * **Visuals > ESP > Enable ESP** must be on.
 * **Show bots** and **Show teammates** are separate. A lobby full of bots shows nothing if bots are hidden (they are shown by default).
-* **Render distance** and **Max ESP players** limit what is drawn.
+* **Render distance** and **Max ESP players** limit what is drawn. A low **Render distance** (150 m for example) hides every enemy farther away: they come back as soon as they get closer. Raise it, and keep **Far markers** on so players beyond it still show a marker with their distance.
 * Did you press the **Master toggle key** or the **Panic key**? Everything is hidden until you press it again.
 
 ## 7. A black screen

@@ -42,6 +42,15 @@ Two different things can cause it:
 
 A bone array with a joint more than 2.5 m from the pelvis is rejected and the last good pose is kept, so a stray limb should not show.
 
+## An enemy vanishes for a few seconds
+
+Check these in order:
+
+1. **Visuals > ESP > Render distance.** Anything beyond it gets no full ESP. This was the cause of most reports (150 m with players read at 200-380 m). The default is 500 m. With **Far markers** on, a player beyond the range still shows a small marker with its distance.
+2. **Is the player really in front of you?** The ESP draws players on screen. Behind you or outside the view they are not drawn; **Off-screen arrows** points at them.
+3. **Hide knocked players**, **Show bots**, **Show teammates** also filter.
+4. Still wrong? Open **Debug** and save the black box, or send `hideway.log` and the newest file in the `blackbox` folder. The columns say what happened: *far* (markers drawn), *seen* (enemies the game itself rendered on screen). A line starting with **REAL** means the game rendered enemies on screen while the ESP drew none: that is a true disappearance and the file says when.
+
 ## Other small things
 
 * **Labels overlap**: Visuals > Avoid overlapping labels.

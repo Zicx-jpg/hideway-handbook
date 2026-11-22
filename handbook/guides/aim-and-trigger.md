@@ -17,11 +17,13 @@ Press **Test move (+/-60)** on Misc, under Input device. The crosshair should ju
 | Aim key | Default is Mouse 2. It can also be a **controller button** (see below). Mouse 1 works too, **Only with a gun in hand** stops it from locking on while you place a wall |
 | Field of view | Smaller is more selective: only targets near the crosshair count |
 | Smoothing | 1 is instant. Each step adds about 8 ms to the time the aim needs to get on target. Start high and lower it until it feels right |
-| Aim bone | Head, Neck, Chest, Pelvis, or Closest bone |
+| Aim bone | Head, Neck, Chest, Pelvis, or Closest bone. **Head** aims about 3 cm above the head joint, where the game's own hit trace lands (it counts a head hit up to about 16 cm above the joint); the triggerbot's head area is a 13 cm sphere around that point |
 | Max aim distance | Targets further away are ignored |
 | Team check | Leave it on |
 
 Smoothing means what it says. The aim moves in a straight, even approach to the target, and a higher number is slower but never jerky. Hideway also knows the game reacts to a mouse move about 50 ms late and allows for the movement that is still on its way, so it does not overshoot and swing back. If you have measured your own delay (step 5), it uses that instead.
+
+The lock is kept through short interruptions: if the game stops drawing the locked player for a moment (the edge of the view, a thin occluder), the aim keeps it for 200 ms, and when nobody qualifies for a moment the lock and the ease-in progress are kept for 300 ms, so the aim does not start again from zero every time. A wall that really stands in the way still stops it (the wall check and the game's own crosshair trace decide).
 
 ## 4. Visibility
 
@@ -77,7 +79,9 @@ If your controller is only plugged into the game PC, Hideway still sees it: it r
 2. Click the **Aim key** box (or **Trigger key**) and press the button on your controller, for example **RT**. The box shows *Game pad RT*.
 3. **Held in game** on the card lists the keys the game says are held: press the button and check it appears.
 
-If **Game PC pad** stays *not found yet*, press a button on the controller once in the game (the game only lists a button after its first press) and give it a few seconds. If it still says so, send **hideway.log** to the support: the lines starting with *game controller input* say which step did not work.
+If **Game PC pad** stays *not found yet*, press a button on the controller once in the game (the game only lists a button after its first press) and give it a few seconds. Hideway finds the game's key table by what is in it (an array of keys whose names it can read, such as *Gamepad Right Trigger* or *Left Mouse Button*), so it does not depend on the game version, and it learns which byte means *pressed* from the buttons you press while the CONTROLLER card is open: press a few buttons, one at a time, with the card visible.
+
+If it still says *not found yet*, send the support the file **gameinput_debug.txt** (next to Hideway.exe, up to 6 reports per run) and **hideway.log**. The report lists every array of the game's input object that was examined, the raw bytes of its first keys, what was learned and why each candidate was accepted or refused.
 
 **Another way, without any key:** set **Aim activation** to **Aiming down sights** (or **Key or aiming down sights**). The aim then follows what the game says: it is on while you aim down sights (LT on a controller) and off when you let go. The CONTROLLER card shows **Game says: aiming down sights / not aiming** live.
 

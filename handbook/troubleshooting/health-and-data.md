@@ -11,6 +11,7 @@ When there is no value, Hideway draws no bar. It does not draw a full or empty b
 | Situation | On screen |
 |---|---|
 | A teammate whose health was read | Health and shield bars |
+| A player whose numbers stopped arriving after a real read | The last real value, dimmed, with a ~ in front of the number: 12 s for a teammate, 10 s for an enemy, then no bar |
 | An enemy | No bar, apart from the rare moment the game does send a value |
 | A knocked player | Shown as knocked, whatever the number is |
 
@@ -37,7 +38,9 @@ The log has the same split, for example `health: 2 direct (2 mates, 0 enemies) .
 3. The base value of that set.
 4. The copy that Fortnite keeps in the player's state.
 
-If none gives a believable number the player is marked unknown and nothing is drawn.
+If none gives a believable number the last real value of that player is shown dimmed for a while (never for a knocked or dying player); a player that was never read is marked unknown and nothing is drawn.
+
+The `HEALTH probe` log lines also print the pawn damage counters, the health-bar object and the damage you dealt. Nothing uses them yet: they are there to find out whether the game keeps anything else about an enemy's health.
 
 ## Related options
 

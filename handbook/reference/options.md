@@ -158,7 +158,8 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Show bots** | on / off | on |  | Also draw AI-controlled players. |
 | **Show teammates** | on / off | off |  | Also draw your own team. |
 | **Hide knocked players** | on / off | off |  | Do not draw players who are knocked down (off: they are drawn with the knocked colour). |
-| **Render distance** | number | 300. | 10. to 1000. | Players further away than this are not drawn. |
+| **Render distance** | number | 500. | 10. to 1000. | Players further away than this get no full ESP (box, skeleton, bars). With **Far markers** on they still show a small marker with their distance. A low value is the usual reason an enemy seems to vanish for a few seconds. |
+| **Far markers** | on / off | on |  | A small marker with the distance on players beyond Render distance (up to 1500 m), so nobody simply disappears when walking out of range. |
 | **Max ESP players** | whole number | 100 | 1 to 200 | Upper limit of players drawn at once (nearest first). |
 | **Box style** | choice | Box | Off / Box / Corner box / 3D box | Off, a full box, or a box drawn only at the corners. |
 | **Box thickness** | number | 1.5 | 0.5 to 5. | Line width of the box. |
