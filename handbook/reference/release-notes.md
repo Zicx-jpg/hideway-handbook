@@ -3,6 +3,10 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.6.1 - 2026-11-21
+
+* **Boxes no longer flash between the hidden and the visible colour.** The game's *drawn recently* flag blinks (about 1000 flips for the players in view in a recorded 30-minute match, half of the hidden stretches shorter than 250 ms), and every blink turned the box, skeleton and text white and green again. A player that was visible a moment ago now keeps the visible colour for 150 ms after the flag drops; hidden to visible is never delayed. Only the colour changes: the aim and the triggerbot read the flag themselves.
+
 ## 3.6.0 - 2026-11-21
 
 * **No more ESP that vanishes because of the distance.** The usual cause of an enemy disappearing for a few seconds was **Render distance**: a saved value of 150 m left out every enemy farther away, even though Hideway was reading them. The default is now **500 m**, a config saved with a value under 250 m is raised **once** to 400 m (the log says so), and the new **Far markers** option (on by default) draws a small marker with the distance on any player beyond Render distance, up to 1500 m, so nobody simply vanishes.

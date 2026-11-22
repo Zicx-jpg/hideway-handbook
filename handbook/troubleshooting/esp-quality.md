@@ -21,6 +21,10 @@ Hideway reads names with the layout of the current build and, if that gives noth
 
 If **Tick** sits at 100 ms or more for a long time, send the log. In the log, the line "scatter reads DISAGREE with single reads" means Hideway switched to the slow way of reading; it tries the fast way again after a few seconds.
 
+## Boxes flash between two colours
+
+ The colour follows the game's own *drawn recently* flag, which blinks when a player is at the edge of the view or behind a thin object. Since 3.6.1 a player that was visible a moment ago keeps the visible colour for 150 ms, so most of the flashing is gone. A box that is white for a long time is really hidden from the game's renderer: behind a wall, a hill or a build.
+
 ## Boxes lag or run ahead
 
 Boxes behind the players: raise **ESP time offset**. Boxes ahead: lower it. Move it a few milliseconds at a time. The default is 0.
