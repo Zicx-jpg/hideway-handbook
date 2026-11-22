@@ -50,6 +50,15 @@ Plain text; no keys or tokens. Do **not** delete them before sending: a restart 
 
 **Debug > RECORDING > Start recording** writes a `.hwrec` flight recording of raw frames and presentations. Stop it with **Stop recording**. It is about 0.5 MB per second with 15 players and capped at 1.5 GB. Share the file only with support.
 
+### The rolling recorder: record it after it happened
+
+A glitch that happens once an hour is hard to catch with **Start recording**. Turn on **Debug > RECORDING > Rolling recorder** once (Debug on in Misc first) and Hideway keeps the **last 2 minutes** in memory, at most 96 MB, writing nothing to disk. When an enemy vanishes or the aim jerks:
+
+1. Press the **Save last minutes key** (set it in the same card) or click **Save last minutes**. A notice names the file.
+2. Find it in `recordings\`: `rolling_<date>_<time>.hwrec`. Send it with the log.
+
+If the ESP really goes blank while the game still draws enemies (a **REAL** line in the log), the last 2 minutes are saved by themselves as `event_<date>_<time>.hwrec`, at most 3 per run. Only the newest 3 files of each kind are kept. **Create it with the newest recording** in the support bundle takes the newest of them. Starting a normal recording pauses the rolling one; it resumes when you stop.
+
 ## 6. A screenshot
 
 Say what the screenshot is of. **Do not show your license key** or the radar link (it contains an access key).

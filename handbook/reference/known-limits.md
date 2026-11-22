@@ -18,7 +18,7 @@ What works, what the game does not allow, and what has not been proven in a real
 | No health or shield bars on enemies | Fortnite only sends them for you and your squad. See [Health and shield bars](../troubleshooting/health-and-data.md) |
 | Frozen skeletons on hidden and far players | The game barely animates what it does not draw, and far players are read less often |
 | Players in the air move in small steps | Their position snaps back about 12 cm every 33 ms in the game's own movement code, and the ESP follows it |
-| Walls that players build are not known to the wall check | It reads the level's fixed geometry only, so a target behind a built wall can still count as visible |
+| Visibility is the game's own render flag | It can call a player behind thin cover or a window visible and it blinks at the edge of the view (a box keeps its colour for 150 ms). The wall check reads the level's fixed geometry only, which does not contain the walls players build |
 | Some weapon classes read as *Other* | Only some animation ids are confirmed |
 | A patch breaks the ESP for a while | The offsets belong to one Fortnite build. See [After a Fortnite update](../guides/after-a-fortnite-update.md) |
 | The game's own log is not readable | It lives on the game PC |

@@ -35,7 +35,7 @@ A MAKCU needs the WCH **CH343** driver: [Download the CH343 driver (official WCH
 
 ## Read game-PC mouse buttons
 
-With **Read game-PC mouse buttons** (Misc > ENGINE) the input device reports the mouse buttons of the **game PC**, so the aim and trigger keys work from the mouse you are actually holding, not only from the overlay PC. Hideway's own clicks are ignored.
+With **Read game-PC mouse buttons** (Misc > INPUT DEVICE, on by default) the input device reports the mouse buttons of the **game PC**, so the aim and trigger keys work from the mouse you are actually holding, not only from the overlay PC. Hideway's own clicks are ignored.
 
 ## Safety behaviour
 
@@ -48,7 +48,7 @@ With **Read game-PC mouse buttons** (Misc > ENGINE) the input device reports the
 |---|---|
 | Not found | Replug; check Device Manager for a COM port; install the CH343 driver |
 | "busy - another program has it open" | Close other tools that hold the port |
-| Connected but aim does nothing | Press **Test move**; tune **Counts per degree X / Y** on the Aimbot page ([Tune aim and trigger](aim-and-trigger.md)) |
+| Connected but aim does nothing | Press **Test move**; the aim also needs a match and a target ([Tune aim and trigger](aim-and-trigger.md)) |
 | Link keeps dropping | Use a different cable / port; keep **Auto reconnect** on |
 
 More in [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).

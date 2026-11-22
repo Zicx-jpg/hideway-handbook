@@ -50,7 +50,7 @@ In the lobby, "waiting" rows are normal.
 
 1. Open **Config** and pick a preset under **Presets**: ESP only, Clean visuals, Full visuals or Subtle aim assist. A preset only changes the options it lists.
 2. Adjust **Visuals** and **Radar** to taste. Hold the cursor on any option for a one-line explanation.
-3. If the boxes sit a little behind or ahead of the players, change **ESP time offset** on Misc by a few milliseconds.
+3. Run the game borderless or full screen on the monitor you capture. If the boxes seem a little ahead of the game image on a fuser, that is the capture card's delay, see [Boxes lag or run ahead](../troubleshooting/esp-quality.md).
 4. Your changes are saved by themselves. See [Configs](../guides/configs.md).
 
 If something is not right, go to the [quick checklist](../troubleshooting/quick-checklist.md).

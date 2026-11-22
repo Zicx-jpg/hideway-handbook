@@ -1,8 +1,12 @@
 # Misc
 
-System settings: the overlay, motion smoothing, keys, input device, debug switches and engine tuning.
+System settings: game data, the overlay, notifications, keys, the input device and the debug switches.
 
 <figure><img src="../.gitbook/assets/menu-misc.png" alt="Misc page"><figcaption><p>The Misc page: game data, overlay settings, notifications and the INPUT DEVICE card.</p></figcaption></figure>
+
+## GAME DATA
+
+**Auto-update game data**, the update status, the pack in use, **Check now**, **Install the update** and **Restore previous**. Only packs signed by Hideway are accepted; a new pack is installed automatically only if the game is not found with your files, and is undone by itself if the game still is not found with it. See [After a Fortnite update](../guides/after-a-fortnite-update.md).
 
 ## GENERAL
 
@@ -10,13 +14,9 @@ System settings: the overlay, motion smoothing, keys, input device, debug switch
 |---|---|
 | **Always on top** | Keep the overlay above other windows |
 | **VSync** | Match the overlay to your display refresh rate |
-| **FPS limit / value** | Cap the overlay frame rate (use with VSync off) |
 | **Overlay monitor** | Which screen the overlay (and the fuser window) covers |
+| **FPS limit / value** | Cap the overlay frame rate (use with VSync off) |
 | **Watermark** | The small Hideway status badge |
-| **Smooth ESP** | Boxes and the camera glide between data updates instead of stepping |
-| **ESP smoothness** | *Responsive* follows every reading at once; *Balanced* (default); *Silky* absorbs corrections more slowly (about a third less jitter in measured recordings, boxes sit a few cm further from raw readings). Needs Smooth ESP |
-| **Motion estimator** | One motion estimate per player shared by ESP, aim lead and trigger lead |
-| **ESP time offset** | Raise it if boxes trail behind the game image, lower it if they lead. Default 0 |
 
 ## NOTIFICATIONS
 
@@ -28,7 +28,7 @@ Menu key, Panic key, Master toggle key, Exit key, Next / Previous config key. Se
 
 ## INPUT DEVICE and DETECTED DEVICES
 
-Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. Full guide: [Connect an input device](../guides/input-device.md).
+Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. **Read game-PC mouse buttons** lets the device report the game PC's mouse buttons, so aim and trigger keys work from the mouse in your hand. Full guide: [Connect an input device](../guides/input-device.md).
 
 <figure><img src="../.gitbook/assets/menu-misc-2.png" alt="Misc page, input device cards"><figcaption><p>INPUT DEVICE buttons, DETECTED DEVICES, KEYS and DEBUG.</p></figcaption></figure>
 
@@ -39,21 +39,10 @@ Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. Full
 | **Show debug page** | Adds the Debug page to the side bar. Not needed for normal play |
 | **Statistics** | Timing and counters on the Debug page |
 | **Advanced debug** | Raw addresses and discovered offsets on the Debug page |
-| **Player list** | The players Hideway currently reads, on the Debug page |
+| **Player list** | The players Hideway currently reads, on the Debug page (shown once Advanced debug is on) |
 
-## ENGINE
+## What is not here
 
-| Option | What it does |
-|---|---|
-| **Fast DMA reads (scatter)** | Reads many values in one round trip. Hideway checks it against normal reads on live data and switches itself off if they disagree |
-| **High-rate camera lane** | A dedicated thread reads the camera hundreds of times a second so boxes stay locked while you turn |
-| **Fast position refresh** | In crowded matches, re-reads only where everybody is between two full reads |
-| **Thin skeleton reads** | In crowded matches, distant and off-screen players do not get a skeleton read every tick |
-| **DMA stall guard** | Pauses MemProcFS's background process refresh (a ~105 ms freeze every ~10 s on some setups) |
-| **Read game-PC mouse buttons** | The input device reports the game PC's mouse buttons, so aim and trigger keys work from the mouse in your hand |
-| **Wall check (ray-cast)** | Reads the level's collision geometry; needed by the wall-trace visibility styles and by loot |
-| **Telemetry CSV** | One row per second of measured numbers to `telemetry.csv` |
+The smoothing of the boxes (**Smooth ESP**, **ESP smoothness**, **Motion estimator**, **ESP time offset**) and the engine switches (**Fast DMA reads**, **High-rate camera lane**, **Thin skeleton reads**, **Fast position refresh**, **DMA stall guard**, **Wall check**) are decided by Hideway and are not in the menu: they are always set to the best value, and each one checks itself against live data. See [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
 
-{% hint style="info" %}
-These engine options are on by default where it matters and have self-checks. Turn one off only to compare, or if the Debug page tells you to.
-{% endhint %}
+If the boxes still trail, lead or jitter, see [ESP looks wrong](../troubleshooting/esp-quality.md).

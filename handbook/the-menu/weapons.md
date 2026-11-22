@@ -1,28 +1,19 @@
 # Weapons
 
-The Weapons page lets each class of weapon use its own aim settings, and shows how Hideway recognises the weapon you hold.
+The Weapons page lets each class of weapon use its own aim settings.
 
 <figure><img src="../.gitbook/assets/menu-weapons.png" alt="Weapons page"><figcaption><p>One override card per weapon class: Rifle, Pistol, SMG, Shotgun, Sniper.</p></figcaption></figure>
 
 ## Per-class overrides
 
-Cards: **RIFLE**, **PISTOL**, **SMG**, **SHOTGUN**, **SNIPER**. Each has an **Override** switch. When it is on, that class uses its own field of view, smoothing, bone, visibility rule, **Trigger on** (the triggerbot fires with this class or stays quiet) and **Trigger delay** instead of the general Aimbot and Triggerbot values. When it is off, the class follows the Aimbot page.
+Cards: **RIFLE**, **PISTOL**, **SMG**, **SHOTGUN**, **SNIPER**. Each has an **Override** switch. When it is on, that class uses its own **Field of view**, **Smoothing**, **Aim bone**, **Visible only**, **Trigger on** (the triggerbot fires with this class or stays quiet) and **Trigger delay** instead of the general Aimbot and Triggerbot values. When it is off, the class follows the Aimbot page.
 
 Use it, for example, to give shotguns a wide, fast aim at short range and snipers a narrow, slow one.
 
-## DETECTION card
+## How the class is found
 
-Hideway reads the held weapon's **animation id** from the game and maps it to a class.
+Hideway reads the held weapon's **animation id** from the game and maps it to a class (the ids are not in the menu: they are automatic). On the Debug page, **LOCAL PLAYER** shows the class and the raw id of the weapon you hold right now, for example `Rifle (id 4)`. Recorded matches confirmed the pistol, shotgun and rifle ids; the others are defaults. If it says `Other` for a weapon you hold, send the id it shows to support, see [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
 
-| Row | Meaning |
-|---|---|
-| **Holding** | The class and raw id of the weapon you hold right now, for example `Rifle (id 4)` |
-| **Rifle / Pistol / SMG / Shotgun / Sniper anim id** | The id that means that class |
+## Ballistics
 
-{% hint style="warning" %}
-The id table is only partly known. Recorded matches confirmed pistol, shotgun and rifle ids; the rest are defaults. If the card shows `Other` for a weapon you hold, note the id it shows and set the matching class id here. See [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
-{% endhint %}
-
-## Per-weapon ballistics
-
-Projectile speed and gravity per class (used by prediction) are on the **Assist** page under **BALLISTICS PER WEAPON**.
+Projectile speed and gravity are not in the menu either: prediction takes them live from the weapon in your hand, with a tuned value per weapon class as the fallback. See [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).

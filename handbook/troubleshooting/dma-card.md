@@ -35,10 +35,10 @@ The card works and the game is found, but its structures were not located within
 
 ## Slow reads, choppy data
 
-**Debug > PERFORMANCE**: *Tick* should be well below 10 ms and *Data age* below about 20 ms. High values point at the link: cable, USB port, other USB traffic. Keep **Fast DMA reads** and **High-rate camera lane** on (default); they self-verify and fall back by themselves.
+**Debug > PERFORMANCE**: *Tick* should be well below 10 ms and *Data age* below about 20 ms. High values point at the link: cable, USB port, other USB traffic. The fast paths (**Fast DMA reads** and the **High-rate camera lane**) are automatic and always on; they self-verify and fall back by themselves.
 
 A black **Fuser** window on the same GPU as the game can compete for GPU time: run it on the overlay PC only.
 
 ## Freezes about every 10 seconds
 
-MemProcFS refreshes its process list in the background and every read waits for it: a ~105 ms freeze every ~10 s on some setups. **DMA stall guard** (Misc > ENGINE, on by default) pauses that refresh.
+MemProcFS refreshes its process list in the background and every read waits for it: a ~105 ms freeze every ~10 s on some setups. The **DMA stall guard** (automatic, always on) pauses that refresh.

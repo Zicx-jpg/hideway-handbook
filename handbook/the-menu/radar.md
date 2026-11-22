@@ -14,17 +14,15 @@ Two radars: a small one drawn on the overlay, and a **web radar** you can open o
 | **Radar shape** | Square or circle |
 | **Radar size** | Size in pixels |
 | **Radar range** | How far (metres) the radar reaches |
-| **Radar zoom** | Zoom multiplier |
+| **Radar auto range** | The range follows the nearest enemies |
 | **Rotate with view** | The radar turns with your camera so "up" is forward. Off: north stays up and your arrow turns |
-| **Clamp to edge** | Players beyond the range are pinned to the edge instead of disappearing |
 | Radar X / Y | Position on the screen |
-| Radar min distance | Hide players closer than this (they are already on screen) |
-| Show local arrow | The arrow that shows where you look |
-| Radar dividers | A cross and three range rings (1/3, 2/3, full) with their distances |
 
-## FILTERS and STYLE
+The look of the radar is automatic and not in the menu: players beyond the range are pinned to the edge instead of disappearing, a cross and three range rings (1/3, 2/3, full) with their distances, the arrow that shows where you look, the dark panel and border, the colours, a short tick on a dot showing which way that player runs and an N where north is. See [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
 
-Choose who is shown (bots, knocked players, teammates, distance text) and the colours: background, border, dividers, enemy, team, bot.
+## FILTERS and READABILITY
+
+Choose who is shown (teammates, bots, knocked players) and whether the distance is written next to each dot. **Radar view cone** draws your field of view, **Radar height arrows** put a small arrow above a dot when that player is higher than you (below it when lower), and **Radar squad colours** colour the dots by Team ID.
 
 ## KEYS
 
@@ -38,12 +36,12 @@ Your radar in a browser. Full guide: [Web radar on your phone](../guides/web-rad
 |---|---|
 | **Web radar** | Starts a small web server inside Hideway. Off by default |
 | **Allow other devices (LAN)** | On: phones and other PCs on your network can open it. Off (default): only this PC |
-| **Web radar port** | TCP port of the page |
-| **Web radar rate** | Update interval. 50 ms = 20 updates per second |
-| **Web radar names** | Off: names are not sent to the page at all |
-| **Copy radar link** | Copies the link, which contains your access key |
-| **New access key** | Old links stop working |
+| **Share radar online** | Off by default. On: the radar is also pushed to the Hideway radar relay so a friend on any network can open it with the online link |
+| **Copy local link** / **Copy online link** | Copy the link, which contains an access key |
+| **New access key** / **New online link** | Old links stop working |
+
+The port (8765), the update rate (20 per second) and whether names are sent are automatic and not in the menu.
 
 {% hint style="info" %}
-Nothing goes to the internet. There is no cloud and no account; the page is served from your PC.
+The local web radar is served from your PC: no cloud, no account. Nothing goes to the internet unless you turn on **Share radar online**, see [Web radar](../guides/web-radar.md) and [Security and privacy](../reference/security-and-privacy.md).
 {% endhint %}

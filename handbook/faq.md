@@ -65,7 +65,10 @@ Yes: **Config > Share > Copy config**. Settings that belong to your machine (inp
 There is nobody to draw. Players appear when the match starts. See [No ESP](troubleshooting/no-esp.md).
 
 **The boxes are a bit behind or ahead.**
-Change **ESP time offset** (Misc) by a few milliseconds: up if they trail, down if they lead.
+The boxes are drawn for the moment the frame is shown (the time offset is automatic). On a fuser the capture card puts the game image a little behind, so the boxes seem to run ahead of it: use the capture card's low-latency mode. See [Boxes lag or run ahead](troubleshooting/esp-quality.md).
+
+**An enemy vanishes for a few seconds.**
+Most often it is **Render distance** (a low value leaves out every enemy farther away; the default is 500 m, and **Far markers** keep a small marker with the distance on anybody beyond it). **Config > ADVICE** points out a setting like that. If it still happens, turn on **Debug > RECORDING > Rolling recorder** and press the **Save last minutes key** right after it, then send the file. See [An enemy vanishes for a few seconds](troubleshooting/esp-quality.md#an-enemy-vanishes-for-a-few-seconds).
 
 **What is the number before the name?**
 The Team ID, the game's own team number. Everyone in the same duo, trio or squad has the same one. See [Visuals](the-menu/visuals.md#team-id).
@@ -88,13 +91,13 @@ Yes, under **Visuals > Loot ESP**. See [Loot, containers and reboot cards](guide
 No. They move the mouse through an input device. Without one you still get ESP, radar and the HUD. See [Connect an input device](guides/input-device.md).
 
 **Why did the aim lock on while I placed a wall?**
-Aim and trigger now stay off while you hold something without ammo (**Only with a gun in hand**, on by default). See [Aim or trigger problems](troubleshooting/aim-and-trigger.md#aim-locks-on-while-i-place-a-wall).
+Aim and trigger now stay off while you hold something without ammo (**Only with a gun in hand**, automatic). See [Aim or trigger problems](troubleshooting/aim-and-trigger.md#aim-locks-on-while-i-place-a-wall).
 
 **The aim locks onto someone behind a wall.**
-The wall check knows the level's fixed geometry, not walls that players build. Also check **Visible only** and the **Visibility check** style, see [Visibility](guides/visibility.md).
+Visibility follows what the game's renderer drew (and the game's own crosshair trace), which can call a player behind thin cover visible. If it happens in the same place again, send a recording, see [Visibility](guides/visibility.md) and [Collect diagnostics](troubleshooting/collecting-diagnostics.md).
 
 **The aim overshoots or falls short.**
-Adjust **Counts per degree X / Y** (Aimbot > Calibration) and test with **Test move (+/-60)** on Misc. See [Tune aim and trigger](guides/aim-and-trigger.md).
+Hideway measures the mouse counts per degree itself once per match, so test the device first with **Test move (+/-60)** on Misc, then lower or raise **Smoothing**. If it stays wrong, send the log. See [Tune aim and trigger](guides/aim-and-trigger.md).
 
 **The aim feels slower than before.**
 In 3.2.5 the smoothing value means what it says: each step adds about 8 ms to the time the aim needs to get on target, and the aim no longer overshoots and swings back. Lower **Smoothing** if you want it quicker.
@@ -108,7 +111,7 @@ Only the triggerbot, and only when it is on, armed, a valid target is under the 
 ## Web radar
 
 **What is it?**
-Your radar in a browser (phone, tablet, second monitor), served by Hideway itself. Nothing goes to the internet. See [Web radar](guides/web-radar.md).
+Your radar in a browser (phone, tablet, second monitor), served by Hideway itself. Nothing goes to the internet unless you turn on **Share radar online** (off by default). See [Web radar](guides/web-radar.md).
 
 **My phone cannot open it.**
 Same network, **Allow other devices (LAN)** on, Windows Firewall allowing Hideway on private networks, and the right port. See [Phone cannot connect](guides/web-radar.md#phone-cannot-connect).
@@ -122,7 +125,7 @@ It contains an access key. Do not post it. **New access key** cancels old links.
 Signed releases download in the background and, since 3.3.6, the launcher installs a newer one by itself when it starts (Settings can turn that off). If the new version does not start, the old one comes back. See [Updates](guides/updates.md). Configs are never touched.
 
 **What does Hideway send over the internet?**
-Your license key and a hardware identifier (your Windows account SID) to the license service, which locks a license to one PC, and the update check to the release host. Nothing else. Settings stay on your PC. See [Security and privacy](reference/security-and-privacy.md).
+Your license key and a hardware identifier (your Windows account SID) to the license service, which locks a license to one PC; the update check and the signed game-data packs from the release host; an announcement request to the support service (no data in it); a support report only when you press **Send report to support**; and the radar only when you turn on **Share radar online**. Nothing else. Settings stay on your PC. See [Security and privacy](reference/security-and-privacy.md).
 
 **Is my license key in the log?**
 No. Neither `hideway.log` nor Copy diagnostics ever contain keys or tokens.
@@ -148,4 +151,4 @@ Use a motherboard USB port, power the game PC, close other tools that use the ca
 Turn off **Visuals > Fuser mode** unless you use a capture card.
 
 **What should I send to support?**
-Your version, **Copy diagnostics**, both `hideway.log` and `hideway.log.1`, and what you were doing. See [Collect diagnostics](troubleshooting/collecting-diagnostics.md).
+The easiest: **Debug > SUPPORT > Create support bundle** (or **System > Support bundle** in the launcher): one zip with the logs, the black box, your settings and the controller report, without your Windows user name or any key. Add what you were doing. For a glitch that already happened, turn on the **Rolling recorder** and press its **Save last minutes key**. See [Collect diagnostics](troubleshooting/collecting-diagnostics.md).

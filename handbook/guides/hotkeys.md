@@ -15,9 +15,10 @@ Every key can be rebound. Click the box next to a key option, then press the key
 | **Radar toggle key** | not set | Show / hide the radar | Radar |
 | **Radar enlarge key** | not set | Make the radar bigger while toggled | Radar |
 | **Fuser toggle key** | not set | Open / close the fuser window | Visuals > HUD |
+| **Save last minutes key** | not set | Save the last 2 minutes of the rolling recorder to a recording file (the Rolling recorder must be on) | Debug > RECORDING |
 
 {% hint style="info" %}
-With **Read game-PC mouse buttons** on (Misc > ENGINE), mouse keys are read from the **game PC's** mouse through your input device. Hideway's own clicks are ignored.
+With **Read game-PC mouse buttons** on (Misc > INPUT DEVICE, on by default), mouse keys are read from the **game PC's** mouse through your input device. Hideway's own clicks are ignored.
 {% endhint %}
 
 ## Tips

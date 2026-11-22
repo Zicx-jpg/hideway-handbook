@@ -3,6 +3,13 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.1 - 2026-11-22
+
+* **Rolling recorder (new, off by default).** **Debug > RECORDING > Rolling recorder** keeps the last 2 minutes of raw frames in memory (at most 96 MB; nothing is written to disk while it runs). When something odd has just happened, an enemy that vanished or an aim that jerked, press the **Save last minutes key** (or the **Save last minutes** button): the 2 minutes are written to `recordings\rolling_<date>_<time>.hwrec` on a background thread, so the overlay does not hitch. When the black box catches a **real** disappearance the same thing happens by itself, as `recordings\event_...hwrec` (at most 3 per run, 60 s apart). Only the newest 3 files of each kind are kept. A saved file replays like any recording, and the **support bundle** can carry it. A normal **Start recording** takes over from the rolling one, which starts again when you stop.
+* **Settings advice.** **Config > ADVICE** lists the settings that are probably working against you, each with what it is now and the one thing to change: a Render distance under 200 m without Far markers, a single aim bone with a small field of view, a very low Smoothing, a long Prediction lead, an FPS limit under 60, a Loot max distance over 300 m... Nothing is changed for you, and the factory settings show only the line about enemy health.
+* **Loot, chest and vehicle labels no longer pile on each other.** A pile of items on one spot now reads as a column: the nearest item keeps its place under its marker and each farther one moves under it. Containers and vehicles follow the same rule, and no loot label covers a player's name. It is automatic, like the rule that keeps player names apart.
+* **Tests.** The recorder's ring mode (time window, byte cap, switching with a file recording, snapshot = save), the advice rules and the label stacking are covered.
+
 ## 3.7.0 - 2026-11-22
 
 * **One-click support bundle.** **Debug > SUPPORT > Create support bundle** (and the launcher's **System > Support bundle**, which now uses the same code) writes one zip on your Desktop: system facts, your settings without COM port or IP, the last 2 MB of the logs, this session's log, the black box of the last minute and your newest saved dumps, the controller report and the memory map. **Create it with the newest recording** adds the newest recording. The Windows user name and profile folder are removed from every text and no key is ever in these files.

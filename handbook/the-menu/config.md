@@ -10,6 +10,7 @@ Everything about saving, sharing and housekeeping: configs, presets, backups, ke
 |---|---|
 | **CONFIGS** | The list of configs; pick one to load. The active one is also in the top-bar dropdown |
 | **CHANGES** | What differs from the saved file, for example `Auto-save config: on > off` |
+| **ADVICE** | The settings that are probably working against you, each with what it is now and the one thing to change (for example a Render distance under 200 m without Far markers, a single aim bone with a small field of view, a very low Smoothing). It only looks; nothing is changed for you. With sensible settings it says *nothing to flag* |
 | **PRESETS** | Four starting points: **ESP only**, **Clean visuals**, **Full visuals**, **Subtle aim assist**. A preset changes only the options it lists |
 | **MANAGE** | Create from current settings, duplicate, rename, delete (goes to a trash), reset to defaults, open the config folder |
 | **BACKUPS** | A copy of the config file is taken before every overwrite. Restore one here |

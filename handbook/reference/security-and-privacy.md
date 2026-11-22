@@ -7,10 +7,12 @@ This page is about **your PC** and **your data**: what Hideway checks, what it s
 | To | What | Why |
 |---|---|---|
 | The license service (KeyAuth) | Your license key and a hardware identifier (your Windows account SID) | Check the license and lock it to one PC |
-| The release host in `update_source.txt` | An update check | Find new signed releases |
+| The release host in `update_source.txt` | An update check, and the signed game-data packs (**Auto-update game data**) | Find new signed releases and the offsets for the current game build |
+| The Hideway support service (a Cloudflare Worker) | By itself, every 10 minutes: a request for the announcement, with no data in it. Only when you press **Send report to support** (Debug) or send one from the launcher's Help page: your text, the category, the contact you typed, the program version and, if you leave it on, diagnostics (system checks, the tail of the logs and the black box, with your Windows user name and profile path removed) | Support tickets and announcements |
+| The Hideway radar relay (a Cloudflare Worker) | **Only if you turn on Share radar online** (off by default): the radar snapshot (positions, teams, health, and names unless **Web radar names** is switched off in the config file, see below) over HTTPS, with a push key that only your PC knows and the key that is in the link | A friend on another network can open your radar |
 | Nothing else | | Settings, configs, logs and positions stay on your PC |
 
-The **web radar** serves a page from your PC; nothing goes to the internet. It is **off by default**, and LAN access is off by default too.
+Your license key is never part of a report, a log or a support bundle, and neither are player names or positions (except in the radar relay, as above). The **local web radar** serves a page from your PC to this PC or your own network; it is **off by default**, and LAN access and **Share radar online** are off by default too.
 
 ## What Hideway does not do
 
@@ -36,7 +38,8 @@ The **web radar** serves a page from your PC; nothing goes to the internet. It i
 
 * The link contains an access key; without it every request is refused, and 12 wrong keys shut an address out for a minute.
 * **Allow other devices (LAN)** is off by default. Turn it on only on a network you trust.
-* **Web radar names** off sends no names.
+* **Share radar online** is off by default and sends the radar to the Hideway radar relay so a friend anywhere can open it. The online link contains its own key, anyone who has it can watch, and **New online link** makes a new room and new keys so the old link stops working. Nothing is sent while the option is off.
+* **Web radar names** (on by default, not in the menu: set `B|Web radar names|0` in your config file) off sends no names, to the local page or to the relay.
 
 ## Input device safety
 

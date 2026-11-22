@@ -10,15 +10,16 @@ The Debug page shows what Hideway is really getting from the game. It is **hidde
 | **STATUS** | DMA state, overlay FPS, offsets in use, last error |
 | **DATA HEALTH** | One row per data source, with the share of players that have it. See below |
 | **DMA LINK** | Disconnect / reconnect the card without closing Hideway (so you can re-plug it) |
-| **OFFSET HEALTH** | Which offset group was proven by real data |
+| **OFFSET HEALTH** | Which offset group was proven by real data. **Copy diagnostics** copies a report; **Send report to support** sends it (with the black box) to the support service, and the answer shows in the launcher's Help page |
 | **PERFORMANCE** | Frame time, spread, hitches, render thread cost, player-lane rate, card traffic, data age on screen |
 | **LOCAL PLAYER** | Your held weapon (class and raw id), ammo, team, position |
 | **LOOT READER** | What the loot reader found about the game's item layout |
 | **REBOOT CARDS** | State of the reboot card reader |
 | **TELEMETRY** | Measured prediction error, data age, visibility flips, aim and trigger counters |
+| **AIM CALIBRATION** | Read-only: the mouse counts per degree the program measured itself (there is no setting for it) |
 | **LATENCY** | Measure the mouse-to-camera delay and use it as Prediction / Trigger lead |
 | **BLACK BOX** | The last minute of what the overlay had and drew, with the longest overlay frame of every half second (**frame(ms)**). Copy it or save it |
-| **RECORDING** | A flight recorder for sharing a session with support |
+| **RECORDING** | A flight recorder for sharing a session with support. **Rolling recorder** keeps the last 2 minutes in memory and saves them afterwards (a key, a button, or by itself when the ESP really went blank) |
 | **SUPPORT** | **Create support bundle**: one zip on your Desktop with the logs, the black box, your settings and the controller report. See [Collect diagnostics](../troubleshooting/collecting-diagnostics.md) |
 | **LIVE LOG** | Real events with timestamps, with **Copy log** |
 | **ADDRESSES**, **PLAYERS** | Raw addresses and the player list (Advanced debug and Player list on Misc) |

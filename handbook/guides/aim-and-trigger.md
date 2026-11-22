@@ -8,13 +8,13 @@ Press **Test move (+/-60)** on Misc, under Input device. The crosshair should ju
 
 ## 2. Calibration
 
-**Counts per degree X / Y** (Aimbot > Calibration) say how many mouse counts turn your view by one degree. Hideway measures them for you at start. If the aim overshoots, the number is too high; if it falls short, it is too low. Changed your in-game sensitivity? Calibrate again or adjust the numbers.
+**Counts per degree X / Y** say how many mouse counts turn your view by one degree. They are not in the menu: Hideway measures them itself once per match, at a calm moment (aim on, device connected, nobody close), with a few tiny moves that cancel out, and the Debug page shows the result. Changed your in-game sensitivity or your mouse DPI? The next match measures it again. If the aim still overshoots or falls short after that, send the log.
 
 ## 3. The basics
 
 | Setting | Advice |
 |---|---|
-| Aim key | Default is Mouse 2. It can also be a **controller button** (see below). Mouse 1 works too, **Only with a gun in hand** stops it from locking on while you place a wall |
+| Aim key | Default is Mouse 2. It can also be a **controller button** (see below). Mouse 1 works too: the automatic gun-in-hand rule stops it from locking on while you place a wall |
 | Field of view | Smaller is more selective: only targets near the crosshair count |
 | Smoothing | 1 is instant. Each step adds about 8 ms to the time the aim needs to get on target. Start high and lower it until it feels right |
 | Aim bone | Head, Neck, Chest, Pelvis, or Closest bone. **Head** aims about 3 cm above the head joint, where the game's own hit trace lands (it counts a head hit up to about 16 cm above the joint); the triggerbot's head area is a 13 cm sphere around that point. **Closest bone** aims at the point of the body nearest to your crosshair, between the joints. A chosen part that is behind a wall falls back to the nearest exposed part |
@@ -29,11 +29,11 @@ The lock is kept through short interruptions: if the game stops drawing the lock
 
 ## 4. Visibility
 
-**Visible only** (Aimbot > Visibility) makes the aim ignore players the game is not drawing. How "visible" is judged is a separate choice, explained in [Visibility](visibility.md). If the aim seems to reach through a wall, read that page and [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
+The aim only goes for players the game is drawing on screen, and it never aims through a wall that the game's own crosshair trace shows (**Visible only** and the rest of the visibility rule are automatic, not in the menu). How "visible" is judged is explained in [Visibility](visibility.md). If the aim seems to reach through a wall, read that page and [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
 
 ## 5. Prediction
 
-For moving targets use the Prediction card on the Aimbot page: set the projectile speed and gravity, or switch on **Per-weapon ballistics**, and use **Prediction lead** for the delay between your input and what you see.
+For moving targets use the Prediction card on the Aimbot page: switch on **Prediction** and use **Prediction lead** for the delay between your input and what you see. The projectile speed and the bullet drop come from the weapon in your hand (read live from the game, with a tuned value per weapon class as the fallback), so there is nothing to type.
 
 To measure that delay, stand still in a match with your hands off the mouse and press **Debug > Latency > Measure latency**. It measures the time from a mouse move to the camera moving and offers **Use as Prediction lead** and **Use as Trigger lead**.
 
@@ -49,8 +49,7 @@ To measure that delay, stand still in a match with your hands off the mouse and 
 |---|---|
 | Trigger mode | *Hold key*, *Always on* or *Toggle key* |
 | Trigger delay and reaction spread | How soon it fires once an enemy is under the crosshair, and how much that varies |
-| Trigger source | *Both* needs the game's own crosshair trace and Hideway's hitbox test to agree |
-| Trigger visible only | Off means it fires at anyone under the crosshair, walls or not |
+| Trigger visible only | Off means it fires at anyone under the crosshair, walls or not. The trigger always asks the game's own crosshair trace and Hideway's hitbox test to agree (automatic) |
 | Trigger confirm frames | Higher means fewer one-frame flickers and a slightly later shot |
 | Trigger hold on target | Full-auto: keep the button down while the target stays valid |
 | Trigger indicator | A ring at the crosshair so you can see it working |

@@ -3,7 +3,7 @@
 Every option of Hideway, taken from the program's own option list. The text in the last column is the same text you see when you rest the cursor on a row in the menu. Colours are picked in the menu, so they show "(see menu)" instead of a default.
 
 {% hint style="info" %}
-The menu is all-in-one: every option below is on its page. Type in the search box at the top of the menu to jump to one.
+Every option in the sections below is on its page of the menu: type in the search box at the top of the menu to jump to one. The last section, **Automatic settings**, lists the ones Hideway decides itself; they are not in the menu.
 {% endhint %}
 
 ## Aimbot
@@ -11,16 +11,13 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|
 | **Enable aimbot** | on / off | off |  | Master switch for aim assist. It moves the mouse through your input device, so a connected and verified device is required (Misc > Input device). |
-| **Aim key** | key | Mouse 2 |  | Hold this key to aim. Click the box, then press a key or mouse button; click the box a second time to use Mouse 1 (left button). Right-click the box to clear it. |
-| **Aim bone** | choice | Head | Head / Neck / Chest / Pelvis / Closest bone | Which part of the target to aim at. Head, Neck, Chest and Pelvis aim at that part (the head a little above its joint); Closest bone aims at the point of the body nearest to your crosshair. If the chosen part is behind a wall the aim uses the nearest exposed part instead. |
-| **Aim between bones** | automatic | on |  | Not in the menu: makes Closest bone aim at the point on the skeleton (any bone segment) nearest to the crosshair instead of one joint, and lets a chosen part that is behind a wall fall back to the nearest exposed one. Skips segments behind a wall when Visible only is on. |
+| **Aim key** | key | Mouse 2 |  | Hold this key to aim. Click the box, then press a key, a mouse button or a controller button (Xbox pad on this PC); click the box a second time to use Mouse 1 (left button). Right-click the box to clear it. |
+| **Aim bone** | choice | Head | Head / Neck / Chest / Pelvis / Closest bone | Which part of the target to aim at: Head (a little above the head joint, where the game counts a head hit), Neck, Chest or Pelvis aim at that point. 'Closest bone' aims at the point of the body nearest to your crosshair, between the joints. If the chosen part is behind a wall the aim uses the nearest exposed part instead. |
 | **Field of view** | whole number | 60 | 1 to 180 | Only targets inside this cone around your crosshair are considered. Smaller = more selective. |
 | **Smoothing** | number | 10. | 1. to 100. | How slowly the aim closes the gap. 1 = instant, higher = slower and less obvious. |
 | **Max aim distance** | number | 150. | 5. to 500. | Targets further away than this are ignored. |
 | **Team check** | on / off | on |  | Never aim at teammates. |
-| **Visible only** | on / off | on |  | Only aim at targets that are visible (not behind walls). Visibility is judged by Raycast VisCheck against the level geometry; until the geometry has been read (a few seconds after a match starts) aim waits. |
 | **Ignore knocked** | on / off | off |  | Skip downed players. |
-| **Only with a gun in hand** | on / off | on |  | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon. This is what lets you place a wall with Mouse 1 as the aim key without the aim locking onto someone through it. Judged from the held item's ammo count; if the game's weapon cannot be read, aim keeps working. |
 | **Prefer standing targets** | on / off | on |  | Standing players are chosen before downed ones. |
 | **Target priority** | choice | Closest to crosshair | Closest to crosshair / Closest distance | How the best target is chosen: closest to the crosshair, or closest in distance. |
 | **Lock until key release** | on / off | off |  | Stay on the first target until you let go of the aim key, even if another one gets closer. |
@@ -29,30 +26,15 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Ignore bots** | on / off | off |  | Skip AI-controlled players. |
 | **Draw aim FOV** | on / off | on |  | Draw the aim cone as a circle on screen. |
 | **FOV circle color** | colour | (see menu) |  | Colour of the aim circle. |
-| **Reaction delay** | number | 0. | 0. to 1000. | Wait this long after a target appears before starting to aim. |
-| **Target switch delay** | number | 0. | 0. to 1000. | Minimum time on a target before the aim may switch to a better one. |
-| **Humanizing** | on / off | off |  | Adds small natural variation to the speed of the aim movement. |
-| **Jitter** | number | 0. | 0. to 10. | Adds a little random shake to each mouse step. |
-| **Miss chance** | number | 0. | 0. to 100. | Percentage of the time the aim deliberately lands slightly off target. |
-| **Deceleration** | number | 0. | 0. to 10. | Slows the aim down as it approaches the target. Higher = softer landing. |
-| **Step limit** | whole number | 0 | 0 to 100 | Maximum mouse counts sent per step (0 = no limit). |
-| **Random smoothing** | on / off | off |  | Re-rolls the smoothing between the min and max values every quarter second. |
-| **Random smooth min** | number | 4. | 1. to 100. | Lowest smoothing value used by random smoothing. |
-| **Random smooth max** | number | 12. | 1. to 100. | Highest smoothing value used by random smoothing. |
-| **Dynamic smoothing** | on / off | off |  | Close targets are followed a little slower than distant ones. |
-| **Dynamic max distance** | number | 100. | 10. to 500. | Distance at which dynamic smoothing stops having an effect. |
-| **Counts per degree X** | number | 10. | 1. to 60. | Mouse counts that turn the view by one degree horizontally. Tune until the aim lands exactly on target. |
-| **Counts per degree Y** | number | 10. | 1. to 60. | Mouse counts that turn the view by one degree vertically. |
+| **Humanizing** | on / off | off |  | Makes the aim move like a hand: a short reaction time (45 ms) on a new target, a pause (150 ms) before switching targets, a small shake, a rare small miss, a soft landing, a cap on each step, a slower follow on close targets and a gentle speed wobble. One switch: the values behind it are fixed. |
+| **Trigger pull** | whole number | 30 | 5 to 250 | How far LT or RT must be pulled (0-255) before it counts as pressed when a trigger is your Aim key or Trigger key. 30 is the Windows default; raise it if a light touch fires it. |
+| **Aim activation** | choice | Aim key | Aim key / Aiming down sights / Key or aiming down sights | What switches the aim on. 'Aim key' = the key box above. 'Aiming down sights' = the game itself says you are aiming (LT on a controller, right mouse on keyboard): works with a controller that is only plugged into the game PC, nothing to read from it. 'Key or aiming down sights' = either. The CONTROLLER card shows what the game says right now. |
+| **Read keys from the game PC** | on / off | off |  | Also read the keyboard and mouse state of the GAME PC through the DMA card, so the aim key and the trigger key can be any key of the game PC's own keyboard. Off by default: it only turns on if the key table of the game PC's Windows is found and answers sensibly (the log says so). |
 
 ## Weapons (per-class overrides)
 
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|
-| **Pistol anim id** | whole number | 1 | 0 to 40 | Raw weapon animation id the game reports for pistols. Only change it if the Debug page shows another id for the weapon you hold. |
-| **Shotgun anim id** | whole number | 2 | 0 to 40 | Raw weapon animation id the game reports for shotguns. Only change it if the Debug page shows another id for the weapon you hold. |
-| **Rifle anim id** | whole number | 4 | 0 to 40 | Raw weapon animation id the game reports for rifles. Only change it if the Debug page shows another id for the weapon you hold. |
-| **SMG anim id** | whole number | 5 | 0 to 40 | Raw weapon animation id the game reports for SMGs. Only change it if the Debug page shows another id for the weapon you hold. |
-| **Sniper anim id** | whole number | 6 | 0 to 40 | Raw weapon animation id the game reports for sniper rifles. Only change it if the Debug page shows another id for the weapon you hold. |
 
 ## Triggerbot, close aim, sticky aim, prediction
 
@@ -68,8 +50,7 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Trigger team check** | on / off | on |  | Never fire at teammates. |
 | **Trigger ignore knocked** | on / off | on |  | Do not fire at downed players. |
 | **Trigger ignore bots** | on / off | off |  | Do not fire at AI-controlled players. |
-| **Trigger visible only** | on / off | on |  | The triggerbot only fires at a visible player: the exact hitbox point under the crosshair must have nothing solid in front of it (Raycast VisCheck). Off = fires at anyone under the crosshair, even through a wall. |
-| **Trigger source** | choice | Both (strictest) | Game target (UE5) / Crosshair geometry / Both (strictest) | Game target (UE5): fire when the game's own crosshair trace (TargetedFortPawn) says a player is under it - the engine already accounts for walls. Crosshair geometry: our own hitbox test on the predicted skeleton. Both: the game target AND the hitbox must agree (strictest, default). If the game target cannot be read it falls back to geometry and the Assist page says so. |
+| **Trigger visible only** | on / off | on |  | Unreal Engine 5 visibility: the triggerbot only fires at a player the game drew within the tolerance window and, when the wall check is ready, whose exact hitbox point under the crosshair has nothing solid in front of it. Off = fires at anyone under the crosshair, even through a wall. |
 | **Trigger lead** | number | 0. | 0. to 150. | Advance the target by its velocity x this many ms before the hitbox test (geometry modes), to hit moving players despite the click delay. |
 | **Trigger confirm frames** | whole number | 1 | 1 to 6 | The same player must be a valid target for this many consecutive checks before the shot is armed. 1 = instant. |
 | **Trigger hold on target** | on / off | off |  | Keep the button held while the target stays valid (full-auto weapons) instead of one timed click. Safety stop after 1.5 s. |
@@ -81,7 +62,7 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Close aim range** | number | 12. | 2. to 50. | Distance under which the close-aim settings apply. |
 | **Close aim FOV** | whole number | 30 | 1 to 180 | Aim cone used inside the close range. |
 | **Close aim smoothing** | number | 6. | 1. to 50. | Smoothing used inside the close range. |
-| **Close aim bone** | choice | Chest | Head / Neck / Chest / Pelvis / Closest bone | Aim bone used inside the close range. |
+| **Close aim bone** | choice | Chest | Head / Neck / Chest / Pelvis / Closest bone | Aim bone used inside the close range (same choices as Aim bone: a part of the body, or the point nearest to your crosshair). |
 | **Sticky aim** | on / off | off |  | Once the crosshair is near a target the aim stays attached to it. |
 | **Sticky activation radius** | number | 8. | 1. to 40. | How close (in degrees) the crosshair must be before sticky aim engages. |
 | **Sticky max distance** | number | 40. | 5. to 200. | Sticky aim only works on targets closer than this. |
@@ -92,19 +73,6 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Prediction** | on / off | off |  | Leads moving targets for projectile weapons using their velocity. |
 | **Hitscan weapon** | on / off | off |  | The equipped weapon has no bullet travel time: prediction then only applies the Prediction lead, no projectile intercept or drop. |
 | **Prediction lead** | number | 0. | 0. to 150. | Move the aim point along the target's velocity by this many ms, on top of the projectile intercept. Covers input + display latency; works for hitscan weapons too. Only active while Prediction is switched on. |
-| **Per-weapon ballistics** | on / off | on |  | Use a separate projectile speed and gravity for the class of the weapon you hold (pistol, rifle, SMG, shotgun, sniper) instead of the single Projectile speed / gravity. The defaults are tuned starting values. Unknown weapon class = the single values. |
-| **Pistol projectile speed** | number | 24000. | 5000. to 90000. | Bullet speed used for prediction while a pistol is held (Per-weapon ballistics on). |
-| **Pistol projectile gravity** | number | 1.0 | 0. to 5. | Gravity factor (bullet drop) used for prediction while a pistol is held. |
-| **Rifle projectile speed** | number | 28000. | 5000. to 90000. | Bullet speed used for prediction while a rifle is held (Per-weapon ballistics on). |
-| **Rifle projectile gravity** | number | 1.2 | 0. to 5. | Gravity factor (bullet drop) used for prediction while a rifle is held. |
-| **SMG projectile speed** | number | 28000. | 5000. to 90000. | Bullet speed used for prediction while an SMG is held (Per-weapon ballistics on). |
-| **SMG projectile gravity** | number | 1.2 | 0. to 5. | Gravity factor (bullet drop) used for prediction while an SMG is held. |
-| **Shotgun projectile speed** | number | 36000. | 5000. to 90000. | Bullet speed used for prediction while a shotgun is held (Per-weapon ballistics on). |
-| **Shotgun projectile gravity** | number | 2.0 | 0. to 5. | Gravity factor (bullet drop) used for prediction while a shotgun is held. |
-| **Sniper projectile speed** | number | 62000. | 5000. to 90000. | Bullet speed used for prediction while a sniper rifle is held (Per-weapon ballistics on). |
-| **Sniper projectile gravity** | number | 3.5 | 0. to 5. | Gravity factor (bullet drop) used for prediction while a sniper rifle is held. |
-| **Projectile speed** | number | 28000. | 5000. to 90000. | Speed of the projectile in cm/s, used to work out the lead. |
-| **Projectile gravity** | number | 1.2 | 0. to 5. | Gravity scale of the projectile (0 = flies straight). |
 | **Prediction dot** | on / off | off |  | Draw a dot where the prediction expects the target to be. |
 | **Prediction dot size** | number | 3. | 1. to 10. | Size of that dot. |
 
@@ -127,11 +95,6 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Show vehicles** | on / off | on |  | Vehicles recognised by their display name; positions are refreshed every 0.7 s. |
 | **Show other named actors** | on / off | off |  | Every other actor that has a display name (usually noise): for checking what the reader sees. |
 | **Hide opened containers** | on / off | on |  | Hide containers that were already searched. The game's flag is not in the dump: the reader learns it by watching which bit flips on several containers when they are opened, so it only works after a few have been opened. |
-| **Container max distance** | number | 150. | 10. to 600. | Do not draw containers further away than this. |
-| **Vehicle max distance** | number | 300. | 30. to 1500. | Do not draw vehicles (and, when shown, other named actors) further away than this. Before this option existed they silently used three times the loot max distance; the default of 300 m is that value for the default loot distance of 100 m. |
-| **Loot distance text** | on / off | on |  | Append the distance in metres to the item name. |
-| **Loot marker** | on / off | on |  | A small diamond in the rarity colour at the item. |
-| **Loot snaplines** | on / off | off |  | A line from the bottom of the screen to each item. |
 
 ## Reboot cards
 
@@ -158,8 +121,8 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Show bots** | on / off | on |  | Also draw AI-controlled players. |
 | **Show teammates** | on / off | off |  | Also draw your own team. |
 | **Hide knocked players** | on / off | off |  | Do not draw players who are knocked down (off: they are drawn with the knocked colour). |
-| **Render distance** | number | 500. | 10. to 1000. | Players further away than this get no full ESP (box, skeleton, bars). With **Far markers** on they still show a small marker with their distance. A low value is the usual reason an enemy seems to vanish for a few seconds. |
-| **Far markers** | on / off | on |  | A small marker with the distance on players beyond Render distance (up to 1500 m), so nobody simply disappears when walking out of range. |
+| **Render distance** | number | 500. | 10. to 1000. | Players further away than this get no full ESP (box, skeleton, bars). With Far markers on they still show a small marker with their distance up to 1500 m. A low value here is the usual reason an enemy seems to vanish for a few seconds. |
+| **Far markers** | on / off | on |  | A small marker with the distance on players that are beyond Render distance, so nobody simply disappears when walking out of range. |
 | **Max ESP players** | whole number | 100 | 1 to 200 | Upper limit of players drawn at once (nearest first). |
 | **Box style** | choice | Box | Off / Box / Corner box / 3D box | Off, a full box, or a box drawn only at the corners. |
 | **Box thickness** | number | 1.5 | 0.5 to 5. | Line width of the box. |
@@ -192,13 +155,10 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Bar side** | choice | Left | Left / Right | Which side of the box the health and shield bars sit on. |
 | **Damage trail** | on / off | on |  | The part of a bar that was just lost drains down slowly, so you can see how much damage a hit did. |
 | **Team ID** | on / off | on |  | A small number before the name: the game's own team number. Everyone in the same duo / trio / squad carries the same number. |
-| **Team ID only for squads** | on / off | on |  | Hide the number when nobody else has it (solo play), so it only shows on real teams. |
-| **Team ID colours** | on / off | on |  | Give every team number its own colour, so a squad is easy to pick out in a crowd. |
 | **Squad list** | on / off | off |  | A small panel at the top right: every other squad in range with its team number, members alive (and down) and the distance of the nearest one. |
 | **Fade in players** | on / off | on |  | A player who comes into view fades in over a moment instead of popping onto the screen. |
-| **Avoid overlapping labels** | on / off | on |  | Names and team numbers of players close together are lifted above each other so each stays readable. |
 | **Match info** | on / off | on |  | Players left and teams left at the top of the screen, as the game counts them. Hidden when the game gives no sensible numbers (lobby). |
-| **Enemy counter** | on / off | off |  | A small bar at the top of the screen: how many enemies are within 50, 150 and 300 m, how many are down, and how far the nearest one is. Teammates are not counted; bots only when Show bots is on. |
+| **Enemy counter** | on / off | off |  | A small bar at the top of the screen with how many enemies are within 50, 150 and 300 m, how many are down, and how far the nearest one is. Teammates are not counted; bots only when Show bots is on. Off by default. |
 | **Low health highlight** | on / off | on |  | A pulsing red outline around an enemy whose health is below the threshold (only when a real health value was read). |
 | **Low health threshold** | whole number | 35 | 10 to 80 | Health points under which the outline appears. |
 | **Enemy ammo** | on / off | off |  | Rounds left in the weapon an enemy holds (read from the game; shown only when the weapon was read). |
@@ -232,6 +192,7 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Distance detail (LOD)** | on / off | on |  | Players farther than the LOD start distance are drawn with thinner lines and without joint dots, glow, weapon, platform and kill lines. Cleaner in a crowded lobby and cheaper to draw. |
 | **Facing direction** | on / off | off |  | Draws a short line from each player's head along the direction the character looks, taken from the rotation of its mesh. Off by default: the mesh's forward axis is the Unreal convention and has not been measured on this game. |
 | **LOD start distance** | number | 120. | 30. to 500. | Distance in metres beyond which a player is drawn with reduced detail. |
+| **Team panel** | on / off | on |  | A small panel on the left with your squadmates: name, health and shield bars, the weapon they hold and their distance, and DOWN when they are knocked. The game only sends health for you and your teammates, so this is the one place health is always real. Hidden when you play solo. |
 
 ## Radar
 
@@ -243,31 +204,20 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Radar Y** | whole number | 64 | 0 to 2160 | Vertical position of the radar on the screen, in pixels from the top. |
 | **Radar size** | whole number | 220 | 120 to 600 | Size of the radar in pixels. |
 | **Radar range** | number | 120. | 20. to 600. | How far (in metres) the radar reaches. |
-| **Radar min distance** | number | 0. | 0. to 100. | Radar: hide players closer than this (they are already on screen). |
-| **Radar zoom** | number | 1. | 0.4 to 4. | Zoom multiplier for the radar. |
 | **Rotate with view** | on / off | on |  | The radar turns with your camera so 'up' is always forward. Off: north stays up and your arrow turns with the camera. |
-| **Draw center dot** | on / off | on |  | Radar: draw a dot at the centre (your position). |
-| **Show local arrow** | on / off | on |  | Radar: draw the arrow that shows where you are looking. |
-| **Radar dividers** | on / off | on |  | Radar: draw the cross and three range rings (1/3, 2/3 and full range), each labelled with its distance. |
-| **Radar background** | on / off | on |  | Radar: draw the dark panel behind the dots. |
-| **Radar border** | on / off | on |  | Radar: draw an outline around the radar. |
 | **Radar distance text** | on / off | off |  | Radar: write the distance next to each dot. |
-| **Clamp to edge** | on / off | on |  | Players beyond the radar range are pinned to its edge instead of disappearing. |
 | **Radar teammates** | on / off | off |  | Radar: show teammates. |
 | **Radar bots** | on / off | on |  | Radar: show bots. |
 | **Radar knocked** | on / off | on |  | Radar: show knocked players. |
-| **Radar background color** | colour | (see menu) |  | Colour (and transparency) of the radar panel. |
-| **Radar divider color** | colour | (see menu) |  | Radar: colour of the cross and range-ring lines. |
-| **Radar enemy color** | colour | (see menu) |  | Radar: colour of enemy players. |
-| **Radar team color** | colour | (see menu) |  | Radar: colour of teammates. |
-| **Radar bot color** | colour | (see menu) |  | Radar: colour of bots. |
-| **Web radar** | on / off | off |  | Starts a small web server inside Hideway and shows the players on a radar in any browser: your phone, a tablet, a second monitor. Nothing goes to the internet (no cloud, no account): the page is served from this PC. Open the link from the Radar page (it contains your access key). Off by default. |
+| **Web radar** | on / off | off |  | Starts a small web server inside Hideway and shows the players on a radar in any browser: your phone, a tablet, a second monitor. The page is served from this PC and only reachable on your network (Allow other devices (LAN) opens it to the other devices of your network). Nothing goes to the internet unless you switch on Share radar online. Open the link from the Radar page (it contains your access key). Off by default. |
 | **Allow other devices (LAN)** | on / off | off |  | On: phones and other PCs on your network can open the radar (Windows Firewall may ask to allow Hideway on private networks). Off: only this PC (127.0.0.1). |
-| **Web radar port** | whole number | 8765 | 1024 to 65535 | TCP port of the radar page. Change it if another program already uses it (the Radar page tells you). |
-| **Web radar rate** | whole number | 50 | 20 to 500 | How often the radar page gets new data. 50 ms = 20 updates per second; the page smooths the motion between updates by itself. |
-| **Web radar names** | on / off | on |  | Off: player names are not sent to the radar page at all. |
 | **Radar toggle key** | key | not set |  | Shows / hides the radar. |
 | **Radar enlarge key** | key | not set |  | Makes the radar bigger while toggled. |
+| **Radar auto range** | on / off | off |  | The radar range follows the situation: it zooms in while enemies are close and out when nobody is near, so the dots that matter stay readable. Off: the fixed Radar range slider is used. |
+| **Radar view cone** | on / off | on |  | Radar: shade the part of the world your camera sees (your field of view), so you know what is in front of you and what is behind. |
+| **Radar height arrows** | on / off | on |  | Radar: a small arrow above a dot means that player is higher than you, below means lower (builds, hills, floors). Set how much higher under Radar height difference. |
+| **Radar squad colours** | on / off | on |  | Radar: a coloured ring around the dots of players who are in a squad; every squad has its own colour (the same colour as its Team ID on the ESP). Players alone get no ring. |
+| **Share radar online** | on / off | off |  | Lets a friend on ANOTHER network watch your radar. Hideway sends the radar snapshots (positions, team, health, and names only if Web radar names is on) over HTTPS to the Hideway radar relay, and you send your friend the link (it contains a secret key). Off by default; nothing is sent while it is off. New link makes a new address and the old link stops working. Without this, the web radar only works on your own network. |
 
 ## Misc: system, keys, input device, DMA
 
@@ -282,9 +232,6 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **FPS limit** | on / off | off |  | Cap the overlay frame rate (use with VSync off). |
 | **FPS limit value** | whole number | 120 | 30 to 500 | The cap, in frames per second. |
 | **VSync** | on / off | on |  | Match the overlay to your display refresh rate for smooth drawing. |
-| **Smooth ESP** | on / off | on |  | Moves players and the camera between data updates so boxes glide instead of stepping. Stale data is removed automatically. |
-| **ESP smoothness** | choice | Balanced | Responsive / Balanced / Silky | Responsive = boxes follow every new reading at once (more visible steps). Balanced = default. Silky = corrections are absorbed more slowly: about a third less jitter in measured recordings, but the boxes sit a little further from the raw readings (a few cm). Needs Smooth ESP. |
-| **Motion estimator** | on / off | on |  | One motion estimate per player (velocity, acceleration, confidence) shared by the ESP, aim lead and trigger lead. Follows strafes, stops and direction changes much more closely. Off = the previous constant-velocity model. |
 | **Overlay monitor** | whole number | 1 | 1 to 8 | Which screen the overlay (and the fuser window) covers. |
 | **Always on top** | on / off | on |  | Keep the overlay above other windows. |
 | **Menu theme** | choice | Nebula | Nebula / Sakura / Glacier / Toxic / Ember / Mono / Chroma (cycles) / Custom | Colours of the whole menu. Chroma drifts through the colours; Custom uses the colour picker of the corner popup (the gear in the bottom-left). |
@@ -303,16 +250,143 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Kmbox IP** | text | 192.168.2.188 |  | IP address shown on the KMBox NET screen. |
 | **Kmbox port** | text | 1234 |  | UDP port shown on the KMBox NET screen. |
 | **Kmbox UUID** | text | 1234ABCD |  | 8-character code shown on the KMBox NET screen. |
-| **Fast DMA reads (scatter)** | on / off | on |  | Reads many values from the game in one round trip. Hideway checks it against normal reads on live data and switches itself off if they disagree. |
-| **Thin skeleton reads** | on / off | on |  | In crowded matches the card link is the bottleneck. Off-screen and distant players do not get a skeleton read every tick, and mid-range ones refresh their pose every 2nd-4th tick (the box keeps updating every tick). Turn off only to compare. |
-| **Fast position refresh** | on / off | on |  | In a crowded match one full read of every player takes 15-20 ms. With this on, between two full reads Hideway re-reads only where everybody is (a few ms for 100 players), so boxes and skeletons move with data that is about half as old. Does nothing when the full read is already fast (small lobbies). Needs the high-rate camera lane. |
-| **Wall check (ray-cast)** | on / off | on |  | Reads the level's collision geometry (used by Raycast VisCheck and by the loot reader). |
-| **DMA stall guard** | on / off | on |  | MemProcFS refreshes its process list in the background and every read waits for it: on this setup a 105 ms freeze every ~10 s, which shows up as a box lag blip. With the guard on that refresh is paused and done by hand only when the game has to be found again. Turn off only to compare. |
-| **High-rate camera lane** | on / off | on |  | A dedicated thread reads the camera hundreds of times a second so boxes stay locked while you turn. |
-| **ESP time offset** | whole number | 0 | -30 to 60 | Shifts the moment the overlay predicts for. Raise it if boxes trail behind the game image, lower it if they lead. Default 0. |
 | **Measured input latency** | whole number | 0 | 0 to 300 | Time from a mouse move leaving Hideway until the game camera turns (Debug -> LATENCY -> Measure). 0 = not measured. Use it as the Prediction / Trigger lead. |
 | **Advanced debug** | on / off | off |  | Show raw addresses and discovered offsets on the Debug page. |
 | **Player list** | on / off | off |  | Show the players Hideway currently reads on the Debug page. |
 | **Statistics** | on / off | on |  | Show timing and counters on the Debug page. |
+| **Rolling recorder** | on / off | off |  | Keeps the last two minutes of raw data in memory (at most 96 MB) so you can save it AFTER something went wrong: press the Save last minutes key or the button on the Debug page. Hideway also saves it by itself when the black box catches a real disappearance (at most 3 files, the newest kept). The files are normal recordings in the recordings folder. Off by default: it uses a little CPU and memory. |
+| **Save last minutes key** | key | not set |  | Saves the rolling recorder's last two minutes to a recording file. Press it right after something odd happened. Needs Rolling recorder on. |
 | **Telemetry CSV** | on / off | off |  | Write one row per second of measured numbers (prediction error, data age, visibility flips, aim / trigger counters) to telemetry.csv next to the exe. Bounded: about 5.5 hours, then it restarts. |
+| **Auto-update game data** | on / off | on |  | After a Fortnite patch your offsets can stop matching the game. When this is on and Hideway finds no game world for 30 seconds, it installs the newest game-data pack signed by Hideway, checks that the game is found with it, and goes back to your previous files if not. Off = it only downloads and tells you. |
+
+## Automatic settings (not in the menu)
+
+The menu has one mode, and the settings below are decided by Hideway, so a saved or shared config can never leave one of them stuck in a bad state. There is no control for any of them in the menu.
+
+* **Forced**: set to the value shown every time Hideway starts or a config is loaded, whatever a saved, imported or hand-edited config says.
+* **Factory default**: keeps the default shown and is not in the menu (the aim calibration writes *Counts per degree*; the loot, radar and radar-link details keep their defaults). The value in the config file is used as it is, so it can be changed by editing that text file by hand.
+* **From Humanizing**: the eleven values behind the single **Humanizing** switch on the Aimbot page (off = all of them 0 / off).
+
+The descriptions say what each one does; where one says it can be turned off or tuned, that is what it would do, not a control you have.
+
+
+### Aimbot
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Aim between bones** | on / off | Forced on | Automatic. Makes 'Closest bone' aim at the point on the skeleton (any bone segment) nearest to the crosshair instead of one joint, and lets a chosen bone that is behind a wall fall back to the nearest exposed part. Skips segments behind a wall when Visible only is on. |
+| **Only with a gun in hand** | on / off | Forced on | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon. This is what lets you place a wall with Mouse 1 as the aim key without the aim locking onto someone through it. Judged from the held item's ammo count; if the game's weapon cannot be read, aim keeps working. |
+| **Visible only** | on / off | Forced on | Only aim at targets the game is currently drawing on screen (not behind walls). When the wall check is not ready (its geometry could not be read yet or on this build) aim keeps working on the render-time test alone; the Visibility line below says which of the two is in use. |
+| **Wait for wall check** | on / off | Forced on | With Visible only on and a ray-cast wall check style, aim does nothing until the wall check has read the level (a few seconds after a match starts), instead of trusting the render-time flag alone - which can call a player behind a wall visible. A target the game itself is aiming at (its own crosshair trace) is always allowed. Off = old behaviour: aim falls back to the render-time flag while the wall check is not ready. Has no effect with the style "UE5 render time only". |
+| **Submit-time visibility** | on / off | Forced off | Decides visible / hidden from the three render timestamps of each mesh (submitted, rendered, rendered on screen) instead of the world-clock rule: submitted recently but not drawn on screen = culled by the game's renderer. Checked against the world clock on every tick and ignored when the numbers do not look like times. Off by default. On the first live session (2.4.0) the guessed offsets did not read as times, so it had no effect; the line below it on the AIMBOT page says whether it works on your build. |
+| **Visibility check** | choice | Forced to UE5 render time only | How a player is judged visible. UE5 render time only (default): the engine's own check - visible when the mesh was drawn within the tolerance window of the world clock; no geometry is read, so it works from the first second of a match, but a player drawn behind thin cover can count as visible. Unreal line of sight: the engine's LineOfSightTo (one ray to the middle, one to the head, two to the capsule sides) against the level's collision; hidden only if all are blocked. Bones: rays to the head, chest and one knee. The two wall-trace styles need the level to be read first (a few seconds into a match). Aim always checks the bone it wants to shoot at. |
+| **Aim ease-in** | whole number | Forced to 80 ms | The aim starts gently on a new target instead of with its biggest step at once. Higher = softer start, slightly later arrival. |
+| **Visibility tolerance** | whole number | Forced to 200 ms | A player counts as visible if the game drew them within this many milliseconds (default 200). Lower = stricter and quicker to turn red behind cover, higher = steadier green. |
+| **Counts per degree X** | number | Factory default: 10 | Mouse counts that turn the view by one degree horizontally. Not in the menu: the program measures it itself once per match, at a calm moment (aim on, device connected, nobody close), with a few tiny moves that cancel out. The Debug page shows the result. |
+| **Counts per degree Y** | number | Factory default: 10 | Mouse counts that turn the view by one degree vertically. |
+
+### Humanizing profile
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Reaction delay** | number | From Humanizing | Wait this long after a target appears before starting to aim. |
+| **Target switch delay** | number | From Humanizing | Minimum time on a target before the aim may switch to a better one. |
+| **Jitter** | number | From Humanizing | Adds a little random shake to each mouse step. |
+| **Miss chance** | number | From Humanizing | Percentage of the time the aim deliberately lands slightly off target. |
+| **Deceleration** | number | From Humanizing | Slows the aim down as it approaches the target. Higher = softer landing. |
+| **Step limit** | whole number | From Humanizing | Maximum mouse counts sent per step (0 = no limit). |
+| **Random smoothing** | on / off | From Humanizing | Re-rolls the smoothing between the min and max values every quarter second. |
+| **Random smooth min** | number | From Humanizing | Lowest smoothing value used by random smoothing. |
+| **Random smooth max** | number | From Humanizing | Highest smoothing value used by random smoothing. |
+| **Dynamic smoothing** | on / off | From Humanizing | Close targets are followed a little slower than distant ones. |
+| **Dynamic max distance** | number | From Humanizing | Distance at which dynamic smoothing stops having an effect. |
+
+### Weapon classes
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Pistol anim id** | whole number | Factory default: 1 | Raw weapon animation id the game reports for pistols. Only change it if the Debug page shows another id for the weapon you hold. |
+| **Shotgun anim id** | whole number | Factory default: 2 | Raw weapon animation id the game reports for shotguns. Only change it if the Debug page shows another id for the weapon you hold. |
+| **Rifle anim id** | whole number | Factory default: 4 | Raw weapon animation id the game reports for rifles. Only change it if the Debug page shows another id for the weapon you hold. |
+| **SMG anim id** | whole number | Factory default: 5 | Raw weapon animation id the game reports for SMGs. Only change it if the Debug page shows another id for the weapon you hold. |
+| **Sniper anim id** | whole number | Factory default: 6 | Raw weapon animation id the game reports for sniper rifles. Only change it if the Debug page shows another id for the weapon you hold. |
+
+### Triggerbot and prediction
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Trigger source** | choice | Forced to Both (strictest) | Game target (UE5): fire when the game's own crosshair trace (TargetedFortPawn) says a player is under it - the engine already accounts for walls. Crosshair geometry: our own hitbox test on the predicted skeleton. Both: the game target AND the hitbox must agree (strictest, default). If the game target cannot be read it falls back to geometry and the Triggerbot page says so. |
+| **Per-weapon ballistics** | on / off | Forced on | Use a separate projectile speed and gravity for the class of the weapon you hold (pistol, rifle, SMG, shotgun, sniper) instead of the single Projectile speed / gravity. The defaults are tuned starting values. Unknown weapon class = the single values. |
+| **Live weapon ballistics** | on / off | Forced on | Prediction uses the real projectile speed and drop of the weapon in your hand (read from the game) instead of the typed numbers for its class. Falls back to the typed numbers when the game does not give them. |
+| **DMA manual refresh** | on / off | Forced on | vmm.dll's own background refresh thread is switched off and its memory / page-table caches are refreshed by hand every 4 s: removes the periodic read stalls that show up as a short freeze of the ESP. Used with the DMA stall guard; read when Hideway starts. |
+| **DMA memory map** | on / off | Forced on | Hands vmm.dll the physical memory map of the game PC (written once to memmap.txt next to the exe) so it never asks the card for memory that does not exist. Read when Hideway starts; delete memmap.txt to make a new one. |
+| **Smooth skeleton** | on / off | Forced on | Anchors the skeleton on the pelvis and glides pose changes over a few milliseconds, so limbs stop jittering when the game's root position steps with network updates. Off = the raw skeleton, shifted rigidly with the player. |
+| **Animate frozen limbs** | on / off | Forced on | Fortnite only animates the players it draws, so a hidden player keeps one pose while it runs across the map. With this on, the arms and legs of a RUNNING player whose real pose has stopped moving swing in a running cycle, in the drawing only. It switches itself off the moment the game's own pose moves again, and the aimbot and trigger never see it. |
+| **Trigger: game hit point** | on / off | Forced on | The triggerbot also accepts the spot where the game's own crosshair trace hits the player (head, body or legs) as proof the crosshair is on the chosen hitbox, in addition to Hideway's own hitbox test. It never blocks a shot Hideway's test allows. |
+| **Walls: game trace** | on / off | Forced on | Aim and trigger stop when the game's own crosshair trace ends in front of the player (a wall or a build someone placed), even if the visibility rule still says visible. Only used once the game's trace has proven it works. |
+| **Projectile speed** | number | Factory default: 28000 | Speed of the projectile in cm/s, used to work out the lead. |
+| **Projectile gravity** | number | Factory default: 1.2 | Gravity scale of the projectile (0 = flies straight). |
+| **Pistol projectile speed** | number | Factory default: 24000 | Bullet speed used for prediction while a pistol is held (Per-weapon ballistics on). |
+| **Pistol projectile gravity** | number | Factory default: 1 | Gravity factor (bullet drop) used for prediction while a pistol is held. |
+| **Rifle projectile speed** | number | Factory default: 28000 | Bullet speed used for prediction while a rifle is held (Per-weapon ballistics on). |
+| **Rifle projectile gravity** | number | Factory default: 1.2 | Gravity factor (bullet drop) used for prediction while a rifle is held. |
+| **SMG projectile speed** | number | Factory default: 28000 | Bullet speed used for prediction while an SMG is held (Per-weapon ballistics on). |
+| **SMG projectile gravity** | number | Factory default: 1.2 | Gravity factor (bullet drop) used for prediction while an SMG is held. |
+| **Shotgun projectile speed** | number | Factory default: 36000 | Bullet speed used for prediction while a shotgun is held (Per-weapon ballistics on). |
+| **Shotgun projectile gravity** | number | Factory default: 2 | Gravity factor (bullet drop) used for prediction while a shotgun is held. |
+| **Sniper projectile speed** | number | Factory default: 62000 | Bullet speed used for prediction while a sniper rifle is held (Per-weapon ballistics on). |
+| **Sniper projectile gravity** | number | Factory default: 3.5 | Gravity factor (bullet drop) used for prediction while a sniper rifle is held. |
+
+### Visuals
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Avoid overlapping labels** | on / off | Forced on | Names and team numbers of players close together are lifted above each other so each stays readable. |
+| **Team ID only for squads** | on / off | Forced on | Hide the number when nobody else has it (solo play), so it only shows on real teams. |
+| **Team ID colours** | on / off | Forced on | Give every team number its own colour, so a squad is easy to pick out in a crowd. |
+| **Container max distance** | number | Factory default: 150 | Do not draw containers further away than this. |
+| **Vehicle max distance** | number | Factory default: 300 | Do not draw vehicles (and, when shown, other named actors) further away than this. Before this option existed they silently used three times the loot max distance; the default of 300 m is that value for the default loot distance of 100 m. |
+| **Loot distance text** | on / off | Factory default: on | Append the distance in metres to the item name. |
+| **Loot marker** | on / off | Factory default: on | A small diamond in the rarity colour at the item. |
+| **Loot snaplines** | on / off | Factory default: off | A line from the bottom of the screen to each item. |
+
+### Radar
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Radar min distance** | number | Factory default: 0 | Radar: hide players closer than this (they are already on screen). |
+| **Radar zoom** | number | Factory default: 1 | Zoom multiplier for the radar. |
+| **Clamp to edge** | on / off | Factory default: on | Players beyond the radar range are pinned to its edge instead of disappearing. |
+| **Radar height difference** | number | Factory default: 6 | How many metres higher or lower than you a player must be before the radar shows a height arrow. |
+| **Radar movement direction** | on / off | Factory default: on | Radar: a short tick on a dot showing which way that player is running. Not drawn for a player who stands still. |
+| **Radar north marker** | on / off | Factory default: on | Radar: an N on the rim where north is, so you can read a direction off the radar while it turns with your view. Only when Rotate with view is on. |
+| **Radar team number** | on / off | Factory default: off | Radar: write the squad's Team ID number next to the dots of players in a squad. |
+| **Radar background** | on / off | Factory default: on | Radar: draw the dark panel behind the dots. |
+| **Radar dividers** | on / off | Factory default: on | Radar: draw the cross and three range rings (1/3, 2/3 and full range), each labelled with its distance. |
+| **Radar border** | on / off | Factory default: on | Radar: draw an outline around the radar. |
+| **Draw center dot** | on / off | Factory default: on | Radar: draw a dot at the centre (your position). |
+| **Show local arrow** | on / off | Factory default: on | Radar: draw the arrow that shows where you are looking. |
+| **Radar background color** | colour | Factory default: (see menu) | Colour (and transparency) of the radar panel. |
+| **Radar divider color** | colour | Factory default: (see menu) | Radar: colour of the cross and range-ring lines. |
+| **Radar enemy color** | colour | Factory default: (see menu) | Radar: colour of enemy players. |
+| **Radar team color** | colour | Factory default: (see menu) | Radar: colour of teammates. |
+| **Radar bot color** | colour | Factory default: (see menu) | Radar: colour of bots. |
+| **Web radar port** | whole number | Factory default: 8765 | TCP port of the radar page. Change it if another program already uses it (the Radar page tells you). |
+| **Web radar rate** | whole number | Factory default: 50 | How often the radar page gets new data. 50 ms = 20 updates per second; the page smooths the motion between updates by itself. |
+| **Web radar names** | on / off | Factory default: on | Off: player names are not sent to the radar page at all. |
+
+### Engine and smoothing
+
+| Option | Type | How it is set | What it does |
+|---|---|---|---|
+| **Smooth ESP** | on / off | Forced on | Moves players and the camera between data updates so boxes glide instead of stepping. Stale data is removed automatically. |
+| **ESP smoothness** | choice | Forced to Balanced | Responsive = boxes follow every new reading at once (more visible steps). Balanced = default. Silky = corrections are absorbed more slowly: about a third less jitter in measured recordings, but the boxes sit a little further from the raw readings (a few cm). Needs Smooth ESP. |
+| **ESP time offset** | whole number | Forced to 0 ms | Shifts the moment the overlay predicts for. Raise it if boxes trail behind the game image, lower it if they lead. Default 0. |
+| **Fast DMA reads (scatter)** | on / off | Forced on | Reads many values from the game in one round trip. Hideway checks it against normal reads on live data and switches itself off if they disagree. |
+| **High-rate camera lane** | on / off | Forced on | A dedicated thread reads the camera hundreds of times a second so boxes stay locked while you turn. |
+| **Thin skeleton reads** | on / off | Forced on | In crowded matches the card link is the bottleneck. Off-screen and distant players do not get a skeleton read every tick, and mid-range ones refresh their pose every 2nd-4th tick (the box keeps updating every tick). Turn off only to compare. |
+| **Fast position refresh** | on / off | Forced on | In a crowded match one full read of every player takes 15-20 ms. With this on, between two full reads Hideway re-reads only where everybody is (a few ms for 100 players), so boxes and skeletons move with data that is about half as old. Does nothing when the full read is already fast (small lobbies). Needs the high-rate camera lane. |
+| **DMA stall guard** | on / off | Forced on | MemProcFS refreshes its process list in the background and every read waits for it: on this setup a 105 ms freeze every ~10 s, which shows up as a box lag blip. With the guard on that refresh is paused and done by hand only when the game has to be found again. Turn off only to compare. |
+| **Motion estimator** | on / off | Forced on | One motion estimate per player (velocity, acceleration, confidence) shared by the ESP, aim lead and trigger lead. Follows strafes, stops and direction changes much more closely. Off = the previous constant-velocity model. |
+| **Wall check (ray-cast)** | on / off | Forced on | Reads the level's collision geometry (needed by the two wall-trace Visibility check styles and by the loot reader). With the UE5 render-time check and loot ESP off it is not run, whatever this says. |
 

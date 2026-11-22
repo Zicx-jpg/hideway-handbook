@@ -1,16 +1,20 @@
 # Web radar on your phone
 
-The web radar shows your radar in a browser: a phone, a tablet, a second monitor. Hideway serves the page itself. **Nothing goes to the internet**: no cloud, no account.
+The web radar shows your radar in a browser: a phone, a tablet, a second monitor. Hideway serves the page itself from your PC: no cloud, no account, and **nothing goes to the internet** unless you turn on **Share radar online** (below).
 
 ## Turn it on
 
 1. **Radar > WEB RADAR**: tick **Web radar**.
 2. To open it from another device, tick **Allow other devices (LAN)**. Off (the default) means this PC only (`127.0.0.1`).
-3. Press **Copy radar link** and open it in the other device's browser (same network).
+3. Press **Copy local link** and open it in the other device's browser (same network).
 
 {% hint style="warning" %}
 **The link contains an access key** (saved in `webradar.key` next to the exe). Without it every request is refused, and after 12 wrong keys an address is shut out for a minute. **New access key** makes old links stop working. The key is never shown on screen, only inside the copied link. Do not post the link.
 {% endhint %}
+
+## Share it with a friend on another network
+
+**Radar > WEB RADAR > Share radar online** (off by default) pushes the same radar to the Hideway radar relay over HTTPS, so a friend anywhere can open it. Press **Copy online link** and send it. Anyone who has the link can watch, so send it only to people you trust; **New online link** makes a new room and new keys and cuts everybody off. While nobody watches, your PC sends one update every 3 seconds, and a relay that is down never costs the game anything. No names are sent when **Web radar names** is off (not in the menu, see Names below). See [Security and privacy](../reference/security-and-privacy.md).
 
 ## On the page
 
@@ -18,11 +22,11 @@ Rotate with your view or north-up · zoom (wheel, pinch, + / −) · names · di
 
 ## Smoothness
 
-Hideway sends **20 updates per second** by default (**Web radar rate** = 50 ms). The page extrapolates positions from the velocities, so motion stays smooth at your screen's refresh rate.
+Hideway sends **20 updates per second** (the web radar rate is automatic and not in the menu). The page extrapolates positions from the velocities, so motion stays smooth at your screen's refresh rate.
 
 ## Names
 
-**Web radar names** off = names are **not sent at all**.
+Player names are part of what the radar shows, on the page and, when you share online, at the relay. **Web radar names** is on by default and is not in the menu. To send no names at all, close Hideway, open the config folder (Config > CONFIGS > Open config folder), open your config file in a text editor and set the line `B|Web radar names|1` to `B|Web radar names|0`.
 
 ## Phone cannot connect?
 
@@ -36,7 +40,7 @@ Hideway sends **20 updates per second** by default (**Web radar rate** = 50 ms).
    `LocalSubnet` keeps it to devices on your own network. `-Profile Any` is needed when Windows calls your Wi-Fi "Public", which is the default on many home networks.
 3. Quick test: open `http://<PC address>:8765/` on the phone **without** the key. "Access key needed" means the network path works.
 4. **Allow other devices (LAN)** must be on.
-5. If the page says the **port is in use**, change **Web radar port**.
+5. If the page says the **port is in use**, another program holds port 8765 (the port is not in the menu). Close that program, or close Hideway and set the line `I|Web radar port|8765` in your config file (Config > CONFIGS > Open config folder) to a free port such as 8800.
 
 ## Safety notes
 

@@ -11,7 +11,7 @@ A good ESP is easy to read, steady, and in the right place on the screen. Go thr
 | ESP only | Boxes, skeletons, names, health, radar. Aim off |
 | Clean visuals | Corner boxes, name, distance and health bars |
 | Full visuals | Everything on: gradients, glow, all text, lines, radar |
-| Subtle aim assist | Narrow field of view, slow random smoothing, visible targets only |
+| Subtle aim assist | Aim on with a 35 deg field of view, slow smoothing (22), chest aim, Humanizing on, visible targets only |
 
 If you already have settings you like, save them as a config first. Auto-save keeps backups too, see [Configs](configs.md).
 
@@ -22,7 +22,7 @@ All of this is on **Visuals**. Hold the cursor on a row for its explanation.
 * **Box style**: Box, Corners (cleaner in a crowd) or 3D box.
 * **Skeleton**: thin lines read well at distance. **Distance-scaled lines** keep far players from cluttering the screen.
 * **Health + shield bars**: you will only see them where the game sends the value, which in practice means you and your squad. See [Health and shield bars](../troubleshooting/health-and-data.md).
-* **Team ID**: the game's own team number in front of the name. **Team ID colours** gives each team a colour, which helps in a crowd.
+* **Team ID**: the game's own team number in front of the name. Each team number gets its own colour (automatic), which helps in a crowd, and the number only shows on real teams.
 * **Squad list** and **Match info**: a panel with the other squads, and the players and teams left.
 * **Max ESP players** and **Render distance** limit the load in big lobbies.
 * **Show bots** and **Show teammates** are separate switches. Bots get the same colours as other players (pink hidden, green visible) plus a small BOT tag next to the name.
@@ -41,23 +41,16 @@ All of these can be changed under **Visuals > Colors**.
 
 ## 4. Smoothness
 
-On **Misc**:
-
-| Option | What it does |
-|---|---|
-| Smooth ESP | Boxes glide between data updates instead of stepping. On by default |
-| ESP smoothness | *Responsive*, *Balanced* (default) or *Silky*. Silky smooths the most; the boxes sit a few centimetres from the raw readings |
-| Motion estimator | One motion model per player, shared by the ESP and the aim lead |
-| VSync | Match it to your display |
+The smoothing is automatic, there is nothing to set: **Smooth ESP** (boxes glide between data updates instead of stepping), **ESP smoothness** *Balanced* and the **Motion estimator** (one motion model per player, shared by the ESP and the aim lead) are always on and not in the menu. See [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu). The one choice that is yours is **VSync** on **Misc**: match it to your display.
 
 ## 5. Put it in the right place
 
-If the boxes trail the players, raise **ESP time offset** on Misc by a few milliseconds. If they run ahead, lower it. The default is 0. Run the game borderless or full screen on the monitor you actually capture.
+The boxes are drawn for the moment the frame is shown (the time offset is automatic and fixed at 0). Run the game borderless or full screen on the monitor you actually capture. If the boxes seem to run ahead of the image on a fuser, that is the capture card's delay: see [Boxes lag or run ahead](../troubleshooting/esp-quality.md).
 
 ## 6. Keep it readable
 
 * **Fade in players**: a player entering view fades in instead of popping.
-* **Avoid overlapping labels**: names and team numbers of nearby players are moved apart.
+* Names and team numbers of nearby players, and the labels of loot, chests and vehicles, are moved apart automatically.
 * **Hide knocked players**, if downed players clutter the screen.
 
 <figure><img src="../.gitbook/assets/overlay-esp-radar.png" alt="Demo ESP"><figcaption><p>Demo: Team ID badges, bars, skeletons, a bot with its BOT tag.</p></figcaption></figure>

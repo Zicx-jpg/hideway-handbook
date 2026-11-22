@@ -25,7 +25,7 @@
 | `OFFSET:` | An offset was discovered at runtime |
 | `DEVICE:` | Input device connecting / connected / lost |
 | `LOOT:` / `REBOOT:` | Loot and reboot card readers |
-| `VISCHECK:` | The visibility check (Raycast VisCheck): whether the level geometry was read |
+| `VISCHECK:` | The wall check: whether the level geometry was read (used by the loot reader; visibility itself follows the game's render time) |
 | `HEALTH:` | A probe of what each health source holds when none is readable |
 | `MATCH:` | One summary line when a match ends |
 | `FATAL` | A crash inside Hideway, with the module, address and call chain |

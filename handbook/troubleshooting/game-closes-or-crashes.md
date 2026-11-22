@@ -39,10 +39,11 @@ A folder there with the time of your crash holds the game's own reason. Send its
 
 If you suspect that heavy reading at match transitions is a factor, you can test, one change at a time:
 
-1. **Misc > ENGINE > Thin skeleton reads** on (default).
-2. Turn off **Loot ESP**, **Reboot cards** and **Spectators** for a few matches.
-3. Keep the **DMA stall guard** on.
-4. Note whether the game still closes at the end of a match.
+1. Turn off **Loot ESP**, **Reboot cards** and **Spectators** for a few matches.
+2. Lower **Max ESP players** and **Render distance** so fewer players are read.
+3. Note whether the game still closes at the end of a match.
+
+(The thinned skeleton reads and the DMA stall guard are automatic and always on.)
 
 Hideway is read-only toward the game: it does not write to game memory. Whether heavy read traffic over the card has any effect on the game PC is **not established**, so do not treat these steps as a fix; treat them as a way to narrow down the cause.
 

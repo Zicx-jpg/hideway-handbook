@@ -22,7 +22,7 @@
 | **Camera lane** | A dedicated thread that reads the camera hundreds of times a second |
 | **Governor** | The load control that thins skeleton reads when the card link is the bottleneck |
 | **Wall check** | Reading the level's collision geometry so rays can be traced to see if a player is behind something |
-| **Raycast VisCheck** | The visibility method: rays against the level's collision geometry decide whether a player is visible |
+| **Render-time visibility** | The visibility method: a player is visible when the game's renderer drew their mesh on screen within the last 200 ms (the game's own *last rendered on screen* time) |
 | **Core animation id** | The raw number the game reports for the type of the held weapon |
 | **Input device** | A hardware device (MAKCU, Ferrum, KMBox NET) that moves and clicks the mouse for aim and trigger |
 | **MAKCU / Ferrum / KMBox NET** | The three supported input devices |

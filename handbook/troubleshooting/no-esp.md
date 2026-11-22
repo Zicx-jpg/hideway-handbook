@@ -20,7 +20,7 @@ Either the server is empty or the player offsets are out of date. **DATA HEALTH 
 
 ## 5. Boxes are drawn but not on the players
 
-* Change **ESP time offset** (Misc) by a few milliseconds.
+* Boxes that seem ahead of the image on a fuser are the capture card's delay: see [Boxes lag or run ahead](esp-quality.md).
 * The game must run borderless or full screen on the same monitor you capture.
 * Check **Overlay monitor** on Misc.
 

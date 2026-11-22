@@ -8,18 +8,18 @@ Press **Insert** to open or close it. There is a side bar with the pages, a sear
 
 | Page | What is on it |
 |---|---|
-| [Aimbot](aimbot.md) | Aim key, bone, field of view, smoothing, visibility, humanizing, calibration, close aim, sticky aim, prediction |
-| [Weapons](weapons.md) | Settings per weapon class (rifle, pistol, SMG, shotgun, sniper) and weapon detection |
+| [Aimbot](aimbot.md) | Aim key, bone, field of view, smoothing, controller, humanizing, close aim, sticky aim, prediction |
+| [Weapons](weapons.md) | Settings per weapon class (rifle, pistol, SMG, shotgun, sniper) |
 | [Triggerbot](triggerbot.md) | When and how it fires |
 | [Visuals](visuals.md) | Everything drawn on players, loot, reboot cards, spectators, audio alerts, colours |
 | [Radar](radar.md) | The on-screen radar and the web radar |
-| [Misc](misc.md) | Overlay, notifications, keys, input device, smoothing and engine switches |
+| [Misc](misc.md) | Game data updates, overlay, notifications, keys, input device, debug switches |
 | [Config](config.md) | Configs, presets, backups, keybinds, sharing, license, updates |
-| [Debug](debug.md) | Hidden until you turn it on in Misc. Ready check, data health, performance |
+| [Debug](debug.md) | Hidden until you turn it on in Misc. Ready check, data health, performance, black box, recorder, support bundle |
 
 ## One menu, no modes
 
-There is no Simple / Advanced switch. Every setting you might want is on its page. Things that should simply work are automatic and are not shown: the gun-in-hand rule, aiming between bones, the visibility rule, the counts-per-degree calibration, per-weapon ballistics, the trigger source, smooth ESP and the engine switches.
+There is no Simple / Advanced switch. Every setting you might want is on its page. Things that should simply work are automatic and are not shown: the gun-in-hand rule, aiming between bones, the visibility rule, the counts-per-degree calibration, the humanizing values, per-weapon ballistics, the trigger source, smooth ESP and the engine switches, label spacing, and the look of the radar. They are all listed under [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
 
 ## Search, tooltips and the config dropdown
 

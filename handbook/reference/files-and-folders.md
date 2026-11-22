@@ -46,7 +46,7 @@ Your license and "remember" data are stored encrypted for your Windows account o
 | File | What it is |
 |---|---|
 | `telemetry.csv` | Written when **Telemetry CSV** is on: one row per second of measured numbers, about 5.5 hours then it restarts |
-| `recordings\*.hwrec` | Flight recordings from **Debug > RECORDING**. Share only with support |
+| `recordings\*.hwrec` | Flight recordings from **Debug > RECORDING**. Share only with support. `rolling_*.hwrec` and `event_*.hwrec` are the last 2 minutes saved by the **Rolling recorder** (the newest 3 of each kind are kept) |
 | `portable.txt` | Create it beside `Hideway.exe` to keep configs next to the program instead of in your profile |
 
 ## Size limits
