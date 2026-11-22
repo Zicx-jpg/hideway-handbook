@@ -12,7 +12,7 @@ Hideway reads names with the layout of the current build and, if that gives noth
 
 ## The ESP is choppy
 
-1. Open **Debug > Performance**. *Tick* should be well under 10 ms and *Data age* under about 20 ms. Higher values point at the DMA link (cable, USB port, other USB traffic) before the overlay.
+1. Open **Debug > Performance**. *Tick* should be well under 10 ms and *Data age* under about 20 ms. Higher values point at the DMA link (cable, USB port, other USB traffic) before the overlay. **Config > ADVICE** says **Card link stalls** when the link keeps stalling in the middle of matches (see [DMA card](dma-card.md)).
 2. The fast paths (**Fast DMA reads**, the **High-rate camera lane**, **Fast position refresh**, **Thin skeleton reads**, **DMA stall guard**) and the smoothing (**Smooth ESP**, **ESP smoothness**, **Motion estimator**) are automatic: always on, not in the menu. The fast reads check themselves against live data when the game is attached and switch back on their own if something is wrong.
 3. Reduce the load: fewer skeletons, no glow, a lower FPS limit, **Distance detail (LOD)**.
 4. A black Fuser window on the same GPU as the game competes for GPU time. Run it on the overlay PC only.

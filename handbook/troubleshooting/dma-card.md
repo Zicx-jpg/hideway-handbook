@@ -39,6 +39,17 @@ The card works and the game is found, but its structures were not located within
 
 A black **Fuser** window on the same GPU as the game can compete for GPU time: run it on the overlay PC only.
 
+### Hideway tells you when the link stalls
+
+Since 3.7.5, **Config > ADVICE** shows **Card link stalls** when, during steady play, at least one ten-second window in five had a read tick of 100 ms or more (and at least three windows did). A healthy link stays under about 40 ms, so you should never see this line on a good setup. Ticks of 100 ms to a second right around a loading screen (lobby to match, match to lobby) are normal and are **not counted**: only windows that began at least 30 seconds after the last loading screen count, and the verdict needs at least two minutes of them. When it shows:
+
+1. Plug the card's USB cable **straight into a USB 3 port on the motherboard**: no hub, no extension cable, no front-panel port.
+2. Try another cable and another port; a cable that is a little too long or too thin is the usual cause.
+3. Switch off USB power saving: Device Manager > *Universal Serial Bus controllers* > each *USB Root Hub* and the card's own entry (the FTDI one) > Properties > Power Management > untick *Allow the computer to turn off this device to save power*; Windows power plan > Change advanced power settings > USB settings > *USB selective suspend* > Disabled.
+4. An overloaded or throttling **game PC** stalls the reads the same way: close other programs there and check its temperatures.
+
+The same line is written to the log (`ADVICE: Card link stalls ...`), so a log tells at once whether the link was the problem.
+
 ## Freezes about every 10 seconds
 
 MemProcFS refreshes its process list in the background and every read waits for it: a ~105 ms freeze every ~10 s on some setups. The **DMA stall guard** (automatic, always on) pauses that refresh.

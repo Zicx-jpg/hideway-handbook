@@ -3,6 +3,12 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.5 - 2026-11-22
+
+* **Config > ADVICE tells you when the card link stalls.** If, in the middle of matches, at least one ten-second window in five (and at least three) had a read tick of 100 ms or more, the page shows **Card link stalls** with the one thing to try (plug the card in directly, another port or cable) and the log gets the same line. Loading screens are left out on purpose: in 1963 windows of real logs every slow window was within 25 seconds of a loading screen and none was in the middle of a match, so only windows that began at least 30 seconds after the last one count, and the verdict needs two minutes of them. A healthy link never shows it.
+* **A message when the recording saves itself.** When the ESP really goes blank and the Rolling recorder writes the last minutes to `recordings\`, a notice on screen says so: there is a file to send.
+* No other behaviour changed. Recorded sessions were re-checked for two suspicions and both are fine: the camera is invalid in 7 of 199,386 frames of a 30-minute match recording, and the local player flickers invalid only 3 times in that half hour (all under a second); no hold-over was needed.
+
 ## 3.7.4 - 2026-11-22
 
 * **A rare crash is fixed.** Real logs of several sessions (2.10.7, 3.3.1, 3.3.7) ended in `FATAL exception 0xC0000005 ... < leechcore.dll < VMM.dll`, always a few seconds after slow card ticks (90 to 160 ms). Cause: Hideway closed the DMA link ("DMA card stopped answering", or Debug > Disconnect) while another lane was still reading through it, and that read touched memory vmm.dll had just freed. Closing now waits (up to 3 s) for the reads that are in flight, a read that starts during the close fails cleanly, and the game-PC key reader got the same protection. A new test reproduces the old behaviour (with 6 readers every one of 40 closes happened with a read still inside the card) and checks the new one (none).
