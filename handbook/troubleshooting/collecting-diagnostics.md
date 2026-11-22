@@ -2,6 +2,15 @@
 
 A good report gets a quick answer. Send **all** of the following; it takes two minutes.
 
+## The short way: one zip
+
+**Debug > SUPPORT > Create support bundle** (Turn Debug on in Misc first), or **System > Support bundle** in the launcher. One zip appears on your Desktop with:
+
+* `system.txt` (Windows build, CPU, memory, displays, administrator or not), `config.txt` (your settings, without COM port or IP), the last 2 MB of `hideway.log` and `hideway.log.1`, this session's log, the **black box** of the last minute and your newest saved black box files, `gameinput_debug.txt` (the controller report) and `memmap.txt`,
+* optionally the newest **recording** (**Create it with the newest recording**; stop a running recording first; it can be hundreds of MB).
+
+Your Windows user name and profile folder are removed from every text, and no license key, token or password is ever written into any of these files. Send that single zip and skip steps 2 and 3. The steps below are the manual way and still work.
+
 ## 1. The version
 
 Config > ABOUT, the bottom of the menu, or the launcher's About page. Example: `3.2.6`.
@@ -47,7 +56,7 @@ Say what the screenshot is of. **Do not show your license key** or the radar lin
 
 ## From the launcher
 
-The **System** page has **Copy diagnostics** and a **support bundle** zip. Neither includes your key or your user name.
+The **System** page has **Copy diagnostics** and a **Support bundle** zip (the same bundle as above, plus the updater log and the signed manifest). Neither includes your key or your user name.
 
 ## Where to send it
 

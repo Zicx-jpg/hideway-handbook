@@ -17,7 +17,9 @@ The Debug page shows what Hideway is really getting from the game. It is **hidde
 | **REBOOT CARDS** | State of the reboot card reader |
 | **TELEMETRY** | Measured prediction error, data age, visibility flips, aim and trigger counters |
 | **LATENCY** | Measure the mouse-to-camera delay and use it as Prediction / Trigger lead |
+| **BLACK BOX** | The last minute of what the overlay had and drew, with the longest overlay frame of every half second (**frame(ms)**). Copy it or save it |
 | **RECORDING** | A flight recorder for sharing a session with support |
+| **SUPPORT** | **Create support bundle**: one zip on your Desktop with the logs, the black box, your settings and the controller report. See [Collect diagnostics](../troubleshooting/collecting-diagnostics.md) |
 | **LIVE LOG** | Real events with timestamps, with **Copy log** |
 | **ADDRESSES**, **PLAYERS** | Raw addresses and the player list (Advanced debug and Player list on Misc) |
 

@@ -198,6 +198,7 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 | **Fade in players** | on / off | on |  | A player who comes into view fades in over a moment instead of popping onto the screen. |
 | **Avoid overlapping labels** | on / off | on |  | Names and team numbers of players close together are lifted above each other so each stays readable. |
 | **Match info** | on / off | on |  | Players left and teams left at the top of the screen, as the game counts them. Hidden when the game gives no sensible numbers (lobby). |
+| **Enemy counter** | on / off | off |  | A small bar at the top of the screen: how many enemies are within 50, 150 and 300 m, how many are down, and how far the nearest one is. Teammates are not counted; bots only when Show bots is on. |
 | **Low health highlight** | on / off | on |  | A pulsing red outline around an enemy whose health is below the threshold (only when a real health value was read). |
 | **Low health threshold** | whole number | 35 | 10 to 80 | Health points under which the outline appears. |
 | **Enemy ammo** | on / off | off |  | Rounds left in the weapon an enemy holds (read from the game; shown only when the weapon was read). |

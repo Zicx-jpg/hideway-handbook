@@ -15,7 +15,7 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 | **INFO TEXT** | Name, **Team ID**, Distance, Weapon class, Platform, Kill score, Enemy ammo, Squad list |
 | **TRACERS** | Snaplines, off-screen arrows |
 | **TARGET + DETAIL** | Highlight target (the player the aim or trigger picked), Distance detail (LOD) |
-| **MORE / HUD** | Crosshair, **Match info**, Fuser mode, Facing direction, Fade in players, Avoid overlapping labels |
+| **MORE / HUD** | Crosshair, **Match info**, **Enemy counter**, Fuser mode, Facing direction, Fade in players, Avoid overlapping labels |
 | **LOOT ESP** | Items on the ground. See [Loot, containers and reboot cards](../guides/loot-and-world.md) |
 | **REBOOT CARDS** | Marks reboot cards of dead players |
 | **SPECTATORS** | Who is spectating you |
@@ -40,6 +40,7 @@ Bars next to the box, read from the game. Read the rules on [Health and shield b
 
 * **Squad list**: a panel at the top right with every other squad in range: team number, members alive (and down), distance of the nearest one.
 * **Match info**: players left and teams left at the top of the screen, as the game counts them. Hidden when the game gives no sensible numbers (lobby).
+* **Enemy counter**: a bar under it with the enemies within 50, 150 and 300 m, the ones that are down, and the nearest one (red when someone is inside 50 m). Off by default.
 
 ## Smooth ESP lives on Misc
 

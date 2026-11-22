@@ -3,6 +3,13 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.0 - 2026-11-22
+
+* **One-click support bundle.** **Debug > SUPPORT > Create support bundle** (and the launcher's **System > Support bundle**, which now uses the same code) writes one zip on your Desktop: system facts, your settings without COM port or IP, the last 2 MB of the logs, this session's log, the black box of the last minute and your newest saved dumps, the controller report and the memory map. **Create it with the newest recording** adds the newest recording. The Windows user name and profile folder are removed from every text and no key is ever in these files.
+* **The black box sees overlay hitches.** A new **frame(ms)** column holds the longest overlay frame of every half second, and a log line (**OVERLAY**, at most once a minute) says when at least 5 frames took over 20 ms and over 2.5 times the usual. A box that freezes for 30 ms is a hitch of the overlay, not of the data, and until now nothing told the two apart.
+* **Enemy counter (new, off by default).** A bar at the top of the screen: enemies within 50, 150 and 300 m, how many are down, and how far the nearest one is. Visuals > HUD.
+* **Tests.** New zip writer, checked by an independent reader and by .NET's own ZipFile; support bundle, redaction and black box frame pacing are covered.
+
 ## 3.6.2 - 2026-11-22
 
 * **The Aim bone choice works again.** Since the one-menu release (3.1.0) *Aim between bones* was forced on and it overrode the choice for every player with a readable skeleton: whatever the dropdown said (also the per-weapon ones and Close aim bone), the aim went to the point of the body nearest to the crosshair and never to the head. Now **Head, Neck, Chest and Pelvis** aim at that part (the head a little above its joint, where the game counts a head hit) and **Closest bone** keeps the old behaviour (the nearest point of the body, between the joints). A chosen part that is behind a wall falls back to the nearest exposed part of the body, so a player peeking with only an arm showing is still followed.
