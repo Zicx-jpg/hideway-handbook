@@ -3,6 +3,12 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.3 - 2026-11-22
+
+* **The PREVIEW card of the Visuals page no longer draws over the top bar.** When the card was scrolled half out of view its figures were still painted over the search box and the config box; they are now cut at the edge of the page like everything else.
+* **Explanations are no longer cut off with three dots.** Nine notes on the Aimbot, Config, Debug, Misc, Radar and Visuals pages wrap over several lines now, among them the controller help (Game PC pad), the MAKCU driver warning and the instructions for the local and the online web radar link.
+* The information lines of **Config > ADVICE** are no longer green (green looked like "all good"), and the Rolling recorder note on the Debug page is shorter.
+
 ## 3.7.2 - 2026-11-22
 
 * **Identical loot on one spot is one label.** Three Shield Potions on the same spot are drawn as **Shield Potion x3** instead of three labels on top of each other; the nearest one carries the label and the count only merges items with the same name, on the same place of the screen and at about the same distance. **Visuals > LOOT ESP > Group identical loot** (on by default).
