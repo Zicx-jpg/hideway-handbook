@@ -3,191 +3,196 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.6 - 2026-11-22
+
+* Fixed a line at the bottom of the Config > ADVICE card that was cut off.
+* Small fix, nothing else changed.
+
 ## 3.7.5 - 2026-11-22
 
-* **Config > ADVICE tells you when the card link stalls.** If, in the middle of matches, at least one ten-second window in five (and at least three) had a read tick of 100 ms or more, the page shows **Card link stalls** with the one thing to try (plug the card in directly, another port or cable) and the log gets the same line. Loading screens are left out on purpose: in 1963 windows of real logs every slow window was within 25 seconds of a loading screen and none was in the middle of a match, so only windows that began at least 30 seconds after the last one count, and the verdict needs two minutes of them. A healthy link never shows it.
-* **A message when the recording saves itself.** When the ESP really goes blank and the Rolling recorder writes the last minutes to `recordings\`, a notice on screen says so: there is a file to send.
-* No other behaviour changed. Recorded sessions were re-checked for two suspicions and both are fine: the camera is invalid in 7 of 199,386 frames of a 30-minute match recording, and the local player flickers invalid only 3 times in that half hour (all under a second); no hold-over was needed.
+* Config > ADVICE now warns you when the link to your DMA card keeps stalling during matches, and says what to try: plug it straight into a USB 3 port, swap the cable.
+* Loading screens are ignored, so a healthy setup should never see it.
+* When the recorder saves the last minutes on its own because the ESP really went blank, you get a message on screen, so you know there's a file to send.
 
 ## 3.7.4 - 2026-11-22
 
-* **A rare crash is fixed.** Real logs of several sessions (2.10.7, 3.3.1, 3.3.7) ended in `FATAL exception 0xC0000005 ... < leechcore.dll < VMM.dll`, always a few seconds after slow card ticks (90 to 160 ms). Cause: Hideway closed the DMA link ("DMA card stopped answering", or Debug > Disconnect) while another lane was still reading through it, and that read touched memory vmm.dll had just freed. Closing now waits (up to 3 s) for the reads that are in flight, a read that starts during the close fails cleanly, and the game-PC key reader got the same protection. A new test reproduces the old behaviour (with 6 readers every one of 40 closes happened with a read still inside the card) and checks the new one (none).
-* **Crash lines say more.** A FATAL line is now followed by `FATAL context: dma: users=.. closing=.. cancelled=.. vmm=..` (what the DMA link was doing) and says when the faulting write was inside the thread's own stack, so a crash inside vmm.dll or leechcore.dll can be told from a bug in Hideway itself.
-* **The Rolling recorder is on by default.** About 1 % of one CPU core and at most 96 MB of memory; nothing is written to disk unless you press the Save last minutes key or the ESP really goes blank (then at most 3 files per run in `recordings\`, 96 MB each at most). **Debug > RECORDING > Rolling recorder** turns it off. Configs saved by 3.7.1 to 3.7.3 get it switched on once; from then on an unticked box stays unticked. The Config > ADVICE line about its key is gone.
-* A config file now starts with `# Hideway config v4`.
+* Fixed a rare crash that could happen when the DMA card dropped out, or when you hit Disconnect, while Hideway was still reading.
+* The Rolling recorder is on by default now. It only keeps the last 2 minutes in memory and doesn't write anything unless you press the save key or the ESP really goes blank. Debug > RECORDING turns it off.
+* Crash lines in the log say a bit more about what the DMA link was doing.
 
 ## 3.7.3 - 2026-11-22
 
-* **The PREVIEW card of the Visuals page no longer draws over the top bar.** When the card was scrolled half out of view its figures were still painted over the search box and the config box; they are now cut at the edge of the page like everything else.
-* **Explanations are no longer cut off with three dots.** Nine notes on the Aimbot, Config, Debug, Misc, Radar and Visuals pages wrap over several lines now, among them the controller help (Game PC pad), the MAKCU driver warning and the instructions for the local and the online web radar link.
-* The information lines of **Config > ADVICE** are no longer green (green looked like "all good"), and the Rolling recorder note on the Debug page is shorter.
+* The Visuals preview doesn't draw over the top bar anymore when you scroll.
+* Long help notes (controller, MAKCU driver, web radar links) wrap onto a few lines instead of ending in dots.
+* The info lines in Config > ADVICE aren't green anymore. Green looked like 'all good'.
 
 ## 3.7.2 - 2026-11-22
 
-* **Identical loot on one spot is one label.** Three Shield Potions on the same spot are drawn as **Shield Potion x3** instead of three labels on top of each other; the nearest one carries the label and the count only merges items with the same name, on the same place of the screen and at about the same distance. **Visuals > LOOT ESP > Group identical loot** (on by default).
-* **No more long frames from Windows power saving.** Windows 10 and 11 can run a process that is not the foreground window on efficiency cores, with lower clocks and coalesced timers; a topmost overlay never is the foreground window. Hideway now opts out at start and the log says so (**PERF**).
-* **The log names the settings that work against you.** The rules of **Config > ADVICE** now also write **ADVICE** lines to the log once when they apply and whenever the list changes, so a log tells at once that Render distance is 150 m with Far markers off. Four rules are new: an aimbot or triggerbot that is on but has **no key** (it never starts), an **ESP with every part off**, a **rolling recorder without a save key** and a reminder when **Share radar online** is on.
-* **A Radar only preset** (**Config > PRESETS**): radar on, ESP, aim and trigger off. The blurb of **Subtle aim assist** said random smoothing, which it never set; it now says what it does (narrow field of view, slow smoothing, Humanizing).
-* **The Save last minutes key is in Config > KEYBINDS**, so a clash with another key (the exit key, say) is reported.
-* **The long notes on the Debug page are no longer cut off with three dots** (the recorder, the support bundle, the black box, the data health legend, the aim calibration): they wrap over several lines.
-* **Saving the rolling recorder no longer freezes anything.** Taking the copy of a full ring (92 MB in a 100-player lobby) held the lane that feeds the recorder for about 75 ms; the ring now shares its buffers and the snapshot takes 0.4 ms. A second save asked while one is still being written is refused before any copy. In a crowded lobby the 96 MB cap holds about 30 seconds, with 15 players the full 2 minutes.
+* Identical loot on the same spot is one label now, like Shield Potion x3. Visuals > LOOT ESP > Group identical loot, on by default.
+* The overlay opts out of Windows power throttling, which could cause random long frames.
+* ADVICE warnings go to the log too, and there are new ones for an aimbot or triggerbot with no key set, an ESP with everything turned off, and Share radar online being on.
+* New Radar only preset.
+* The Subtle aim assist preset described the wrong settings. Fixed.
+* The Save last minutes key shows up in Config > KEYBINDS, so clashes get caught.
+* Long notes on the Debug page wrap instead of being cut off.
+* Saving the rolling recorder doesn't make the overlay hitch anymore.
 
 ## 3.7.1 - 2026-11-22
 
-* **Rolling recorder (new, off by default).** **Debug > RECORDING > Rolling recorder** keeps the last 2 minutes of raw frames in memory (at most 96 MB; nothing is written to disk while it runs). When something odd has just happened, an enemy that vanished or an aim that jerked, press the **Save last minutes key** (or the **Save last minutes** button): the 2 minutes are written to `recordings\rolling_<date>_<time>.hwrec` on a background thread, so the overlay does not hitch. When the black box catches a **real** disappearance the same thing happens by itself, as `recordings\event_...hwrec` (at most 3 per run, 60 s apart). Only the newest 3 files of each kind are kept. A saved file replays like any recording, and the **support bundle** can carry it. A normal **Start recording** takes over from the rolling one, which starts again when you stop.
-* **Settings advice.** **Config > ADVICE** lists the settings that are probably working against you, each with what it is now and the one thing to change: a Render distance under 200 m without Far markers, a single aim bone with a small field of view, a very low Smoothing, a long Prediction lead, an FPS limit under 60, a Loot max distance over 300 m... Nothing is changed for you, and the factory settings show only the line about enemy health.
-* **Loot, chest and vehicle labels no longer pile on each other.** A pile of items on one spot now reads as a column: the nearest item keeps its place under its marker and each farther one moves under it. Containers and vehicles follow the same rule, and no loot label covers a player's name. The stacking is automatic, like the rule that keeps player names apart.
-* **Tests.** The recorder's ring mode (time window, byte cap, switching with a file recording, snapshot = save), the advice rules and the label stacking are covered.
+* New: Rolling recorder. It keeps the last 2 minutes in memory. When something odd just happened (an enemy vanished, the aim jerked), press the Save last minutes key or the button in Debug > RECORDING and it writes a file you can send. It also saves by itself when the ESP really goes blank.
+* New: Config > ADVICE points out settings that probably work against you, like a low Render distance or a tiny aim field of view. It only tells you, it never changes anything.
+* Loot, chest and vehicle labels stack under each other instead of piling up, and they stay off player names.
 
 ## 3.7.0 - 2026-11-22
 
-* **One-click support bundle.** **Debug > SUPPORT > Create support bundle** (and the launcher's **System > Support bundle**, which now uses the same code) writes one zip on your Desktop: system facts, your settings without COM port or IP, the last 2 MB of the logs, this session's log, the black box of the last minute and your newest saved dumps, the controller report and the memory map. **Create it with the newest recording** adds the newest recording. The Windows user name and profile folder are removed from every text and no key is ever in these files.
-* **The black box sees overlay hitches.** A new **frame(ms)** column holds the longest overlay frame of every half second, and a log line (**OVERLAY**, at most once a minute) says when at least 5 frames took over 20 ms and over 2.5 times the usual. A box that freezes for 30 ms is a hitch of the overlay, not of the data, and until now nothing told the two apart.
-* **Enemy counter (new, off by default).** A bar at the top of the screen: enemies within 50, 150 and 300 m, how many are down, and how far the nearest one is. Visuals > HUD.
-* **Tests.** New zip writer, checked by an independent reader and by .NET's own ZipFile; support bundle, redaction and black box frame pacing are covered.
+* New: Debug > SUPPORT > Create support bundle. One zip on your Desktop with the logs, your settings (no COM port or IP), the black box and the reports, to send to support. Your Windows user name is removed and there's no key in it. The launcher's System page uses the same thing.
+* The black box has a frame(ms) column and the log warns when the overlay itself hitches, so you can tell that apart from slow data.
+* New: Enemy counter, off by default. A bar at the top with the enemies within 50, 150 and 300 m, how many are down and how far the nearest one is. Visuals > HUD.
 
 ## 3.6.2 - 2026-11-22
 
-* **The Aim bone choice works again.** Since the one-menu release (3.1.0) *Aim between bones* was forced on and it overrode the choice for every player with a readable skeleton: whatever the dropdown said (also the per-weapon ones and Close aim bone), the aim went to the point of the body nearest to the crosshair and never to the head. Now **Head, Neck, Chest and Pelvis** aim at that part (the head a little above its joint, where the game counts a head hit) and **Closest bone** keeps the old behaviour (the nearest point of the body, between the joints). A chosen part that is behind a wall falls back to the nearest exposed part of the body, so a player peeking with only an arm showing is still followed.
-* **Things to know.** The Field of view is measured to the chosen part: at close range the head sits far above the chest, so a small field of view may not engage there; use Close aim, a bigger field of view or Closest bone. If you liked the old feel, pick **Closest bone**; the factory choice stays Head.
+* Fixed the Aim bone setting. It hadn't done anything since 3.1.0. Head, Neck, Chest and Pelvis really aim at that part now, and Closest bone keeps the old behaviour.
+* Heads up: the field of view is measured to the part you pick, so at close range a small one can miss a head. Use Closest bone, Close aim or a wider field of view.
 
 ## 3.6.1 - 2026-11-21
 
-* **Boxes no longer flash between the hidden and the visible colour.** The game's *drawn recently* flag blinks (about 1000 flips for the players in view in a recorded 30-minute match, half of the hidden stretches shorter than 250 ms), and every blink turned the box, skeleton and text white and green again. A player that was visible a moment ago now keeps the visible colour for 150 ms after the flag drops; hidden to visible is never delayed. Only the colour changes: the aim and the triggerbot read the flag themselves.
+* Boxes don't flash between the hidden and the visible colour anymore. A player who was visible a moment ago keeps the visible colour for a split second. Aim and triggerbot aren't affected.
 
 ## 3.6.0 - 2026-11-21
 
-* **No more ESP that vanishes because of the distance.** The usual cause of an enemy disappearing for a few seconds was **Render distance**: a saved value of 150 m left out every enemy farther away, even though Hideway was reading them. The default is now **500 m**, a config saved with a value under 250 m is raised **once** to 400 m (the log says so), and the new **Far markers** option (on by default) draws a small marker with the distance on any player beyond Render distance, up to 1500 m, so nobody simply vanishes.
-* **Health bars: steadier, and honest about what the game sends.** On a 30-minute recording of a real match (282 players) the game never updated an enemy's health: the only enemies with numbers were knocked players (0 to 1 hp), teammates that were flagged as enemies for a moment when a match changed, and a few values frozen at first sight (30 hp for the whole match, for instance). That is why enemy bars show up about once in ten: there is nothing to read for the other nine. When the game stops sending a player's health after a real read, the bar now keeps the **last real value, dimmed** (a ~ in front of the number) for 12 s for a teammate and 10 s for an enemy, instead of blinking in and out. A knocked or dying player never keeps one, and nothing is invented: no real value, no bar.
-* **Head volume.** The game's own trace hits a head up to about 16 cm above the head joint, so a head area centred on the joint sat too low. The aim's skeleton now reaches 14 cm above the head joint (the aim goes to the point of the body nearest to your crosshair, so it follows the crosshair up the head), a single-bone Head point sits 3 cm above the joint, and the triggerbot's head area is a 13 cm sphere around that point.
-* **Aim: the lock survives a blink.** In a recorded 30-minute match the game's "drawn recently" flag of an enemy right next to the crosshair flipped about 210 times, and half of its visible stretches lasted under 250 ms. With **Visible only** each blink dropped the lock (no movement while it lasted) and the ease-in started again from zero when the enemy was back, so the aim stuttered. The locked enemy now stays eligible for 200 ms after the flag was last true (the wall check and the game's own crosshair trace still veto a real wall), and when nobody qualifies for a moment the lock and the ease-in progress are kept for 300 ms. On that recording this removes about a third of the lock restarts.
-* **Controller on the game PC: the key table is found by what is in it.** The first live report showed the search by surroundings missing the table and accepting an empty one of another object. Hideway now accepts an array only if its elements are keys whose names it can read (*Gamepad Right Trigger*, *Left Mouse Button*...), checks every array of the object, and learns which byte means *pressed* from the keys you press while the card is open. The report gameinput_debug.txt lists every array it looked at, the raw bytes of the first keys and what was learned.
-* **Black box.** Two new columns, **far** (far markers drawn) and **seen** (enemies the game itself rendered on screen), and a new log line when the game renders enemies on screen while the ESP draws none for a second (*REAL*): that is a true disappearance, not an enemy out of view. Normal blank spells (everybody listed is behind you or outside the view, the lobby, the end of a match) are no longer written to the log one by one - a live log had 170 of them in 50 minutes - and no longer use up the 3 automatic saves per run: only a real disappearance is saved to the **blackbox** folder.
-* The HEALTH probe lines now also print the pawn damage counters, the health-bar object and the local damage dealt, read-only, to look for any other source of enemy health.
+* Fixed enemies disappearing because of Render distance. The default is 500 m now, a saved value under 250 m gets raised to 400 m once, and the new Far markers option (on by default) puts a small marker with the distance on anyone beyond it.
+* Health bars: the game doesn't send enemy health, so enemy bars mostly show up for teammates and knocked players only. When a real value stops coming, the bar keeps the last one, dimmed, for 10 to 12 seconds instead of blinking.
+* The aim keeps its lock when the game's drawn-recently flag blinks, so it stutters less.
+* The head hit area sits a bit higher, where the game really counts a headshot.
+* Controller on the game PC: the key table is found more reliably.
+* Black box: new far and seen columns, and normal blank spells don't flood the log anymore.
 
 ## 3.5.0 - 2026-11-19
 
-* **A controller that is only plugged into the game PC now works.** Hideway reads the game's own input table through the DMA card, so the **Aim key** and **Trigger key** can be a button of a controller that only the game PC sees (Ferrum or MAKCU, no XIM, no adapter): click the box, then press the button on the controller (the box says *key or pad*). The CONTROLLER card on the Aimbot page shows **Game PC pad: readable** and, live, the keys held in the game (**Held in game**).
-* **Aim activation.** New option: **Aim key**, **Aiming down sights** or **Key or aiming down sights**. With the second one the aim follows what the game says (you hold LT / right mouse), whatever the controller is.
+* A controller that's only plugged into the game PC works now (Ferrum or MAKCU, no XIM, no adapter). Click the Aim key or Trigger key box and press the button on the controller. The Aimbot page shows Game PC pad: readable, and what's held.
+* New Aim activation option: Aim key, Aiming down sights, or both.
 
 ## 3.4.0 - 2026-11-19
 
-* **CONTROLLER card (Aimbot page).** Shows the pads Windows sees on the overlay PC and the buttons held right now, and has the **Trigger pull** slider for LT / RT when a trigger is your Aim key or Trigger key.
+* New CONTROLLER card on the Aimbot page. It shows the pads Windows sees and what's pressed, plus a Trigger pull slider for LT and RT.
 
 ## 3.3.8 - 2026-11-18
 
-* **Controller buttons as aim and trigger keys.** Click the **Aim key** or **Trigger key** box and press a controller button (A, B, X, Y, LB, RB, LT, RT, the stick clicks, Back, Start or the D-pad). It works with an Xbox pad, or any pad Windows shows as one, connected to the **overlay PC**. A pad that is only plugged into the game PC cannot be read from here.
-* **RDMA and other custom devices start the plain way.** With your own leechcore.dll and a device= line, Hideway no longer uses the FPGA shortcuts (no refresh shortcut, no memory map): vmm refreshes the way it always did, so players stop disappearing now and then. The FPGA card keeps the fast start.
+* Controller buttons can be the Aim key or Trigger key: A, B, X, Y, bumpers, triggers, stick clicks, Back, Start and the D-pad. Works with an Xbox pad, or anything Windows shows as one, plugged into the overlay PC.
+* RDMA and other custom devices start the plain way now, so players stop disappearing every now and then. FPGA cards keep the fast start.
 
 ## 3.3.7 - 2026-11-18
 
-* **Account panel.** Click the license row at the bottom of the launcher: it shows your account, plan and end date, and **Add a key** adds another license key to your account (renew early or stack time). **Buy or renew a key** opens the shop and **Sign out** is there too.
-* **Expiry warning.** When your license ends within 7 days the launcher shows a banner with **Renew** and **Add a key**, and the end date turns orange (red under 3 days).
-* **Forgot password?** on the sign-in screen opens the Discord support so you can get it reset.
-* **Pause switch for updates.** If a release has a problem the publisher can put it on hold: launchers that have not installed it yet stop installing it by themselves and the Updates page says why. A fixed version (a new number) lifts it by itself.
+* New account panel: click the license row at the bottom of the launcher to see your plan and end date, add another key, buy or renew, or sign out.
+* A banner warns you when your license ends within 7 days.
+* Forgot password? on the sign-in screen opens Discord support.
+* A release can be put on hold if it turns out bad, so launchers that haven't installed it yet stop installing it.
 
 ## 3.3.6 - 2026-11-18
 
-* **Automatic updates.** When the launcher starts it installs a newer signed version by itself: an Updating Hideway screen with the download, then the launcher restarts on the new version. A version that does not start is rolled back. Settings > Install updates automatically turns it off.
-* A release found later in a long session waits for the next start, a running game is never interrupted, and a failed install is not retried in a loop (6 hours).
-* The installer now waits a few seconds for the health report when the new version hands over to an elevated copy of itself.
+* The launcher installs a newer version by itself when it starts. You'll see an Updating Hideway screen with the download, then it restarts on the new version. If the new version doesn't start, it goes back to the old one. Settings > Install updates automatically turns it off.
+* A release found later in a long session waits for the next start, a running game is never interrupted, and a failed install isn't retried in a loop (it waits 6 hours).
+* The installer waits a few more seconds for the new version to report in.
 
 ## 3.3.5 - 2026-11-18
 
-* New sign-in screen in the launcher: **Sign in** with a username and password, **Create account** with a license key (one key makes one account), or the old **License key** tab. Clear messages (wrong password, username taken, key already used), an inline show/hide for secrets, and a short wait after 5 refused attempts in a minute.
-* The launcher shows who is signed in (rail and Settings), and Hideway.exe has the same account sign-in on its own start-up window.
-* Footer links (Website, Discord, Customer panel) on the sign-in screen. A remembered account is stored encrypted like a key and renewed silently when the session ends.
+* New sign-in screen in the launcher: sign in with a username and password, create an account with a license key (one key, one account), or use the old License key tab. Error messages are clearer (wrong password, username taken, key already used), and after 5 refused attempts in a minute there's a short wait.
+* The launcher shows who's signed in, and Hideway.exe has the same account sign-in in its start window.
+* Website, Discord and Customer panel links on the sign-in screen. A remembered account is stored encrypted like a key and renewed quietly when the session ends.
 
 ## 3.3.4 - 2026-11-17
 
-* Own leechcore.dll (RDMA / remote DMA, or a newer LeechCore): when the launcher card says leechcore.dll does not match the signed release, **Use my leechcore.dll** trusts exactly that file. Hideway.exe --trust-leechcore does the same without the launcher. The file is then kept by updates, and the device line of your leechcore.ini (for example rma://127.0.0.1:19058) is used for the connection. Any other change to the DLL is refused again.
+* Own leechcore.dll (RDMA / remote DMA, or a newer LeechCore): when the launcher says your leechcore.dll doesn't match the signed release, Use my leechcore.dll trusts exactly that file. Updates keep it, and the device line of your leechcore.ini (for example rma://127.0.0.1:19058) is used to connect. Any other change to the DLL is refused again. Hideway.exe --trust-leechcore does the same without the launcher.
+
 ## 3.3.3 - 2026-11-17
 
-* DMA: reads no longer wait on memory that Windows has paged out, and vmm's background refresh is replaced by a light manual refresh every 4 seconds. This is aimed at the short periodic freezes of the ESP.
-* If the game's image cannot be found, the other directory table bases are tried before giving up.
-* The physical memory map of the game PC is saved once (memmap.txt next to the exe) and used from the next start.
-* New option Read keys from the game PC (Aimbot page, off by default): the aim key and the trigger key can be any key of the game PC's own keyboard. The log says whether the key table was found.
-* Weapons page: each class can switch the triggerbot on or off and use its own trigger delay (with Override on).
-* Smooth skeleton and Animate frozen limbs are no longer in the menu; both stay on.
+* DMA: reads don't wait on memory Windows has paged out anymore, and vmm's background refresh is replaced by a light refresh every 4 seconds. This is aimed at the short periodic freezes of the ESP.
+* If the game's image can't be found, the other directory table bases are tried before giving up.
+* The game PC's physical memory map is saved once (memmap.txt next to the exe) and used from the next start.
+* New option: Read keys from the game PC (Aimbot page, off by default). The aim key and trigger key can be any key of the game PC's own keyboard. The log says whether the key table was found.
+* Weapons page: each class can turn the triggerbot on or off and use its own trigger delay (with Override on).
+* Smooth skeleton and Animate frozen limbs left the menu. Both stay on.
+
 ## 3.3.2 - 2026-11-17
 
-* Team ID colours: every squad on screen now gets its own clearly different colour from a fixed palette (no more same or look-alike colours).
-* Aim and trigger hold during a short read stall and ramp back in smoothly when fresh data returns, instead of overshooting. 3.3.1 wall and build fix, live weapon ballistics, per-tick health bars and aim ease-in included.
+* Team ID colours: every squad on screen gets its own clearly different colour from a fixed palette, no more same or look-alike colours.
+* Aim and trigger hold during a short read stall and ramp back in smoothly when fresh data returns, instead of overshooting.
+* Includes everything from 3.3.1: the wall and build fix, live weapon ballistics, per-tick health bars and the aim ease-in.
 
 ## 3.3.1 - 2026-11-16
 
-* Walls and builds: aim and trigger now stop when the game own crosshair trace ends in front of the target (a wall or a build placed by a player), used only once that trace has proven reliable.
-* Trigger also accepts the game hit point on the chosen hitbox.
-* Live weapon ballistics, per-tick health bars within 60 m and aim ease-in from 3.2.8 to 3.3.0 included.
-* Not yet confirmed on a real match: look for RETICLE and BALLISTICS lines in the log.
+* Walls and builds: aim and trigger stop when the game's own crosshair trace ends in front of the target (a wall or a build a player placed). It's only used once that trace has proven reliable.
+* The trigger also accepts the game's hit point on the hitbox you chose.
+* Includes live weapon ballistics, per-tick health bars within 60 m and the aim ease-in from 3.2.8 to 3.3.0.
+* Not confirmed on a real match yet. Look for RETICLE and BALLISTICS lines in the log.
 
 ## 3.3.0 - 2026-11-16
 
-* Prediction: the aim now reads the real projectile speed and drop of the weapon in your hand from the game (found automatically, confirmed on two different weapons, class numbers kept as fallback; hit-scan weapons get no travel-time lead).
+* Prediction: the aim reads the real projectile speed and drop of the weapon in your hand from the game. It's found automatically and was confirmed on two different weapons. The class numbers stay as a fallback, and hit-scan weapons get no travel-time lead.
 * Health and shield bars update every tick within 60 m.
-* Aim ease-in on new targets.
-* Not yet confirmed on a real match: look for BALLISTICS lines in the log.
+* The aim eases in on new targets.
+* Not confirmed on a real match yet. Look for BALLISTICS lines in the log.
 
 ## 3.2.9 - 2026-11-16
 
-* Health and shield bars: players within 60 m now have their health and shield read on every tick instead of every 150 ms, so bars follow a fight without stepping.
-* Aim ease-in from 3.2.8 kept.
-* Enemy health is still only shown when the game sends it (it usually does not for enemies).
+* Health and shield bars: players within 60 m are read on every tick instead of every 150 ms, so bars follow a fight without stepping.
+* The aim ease-in from 3.2.8 stays.
+* Enemy health is still only shown when the game sends it, which it usually doesn't for enemies.
 
 ## 3.2.8 - 2026-11-16
 
-* Aimbot: the aim now eases in on a new target (starts gently instead of with its biggest step at once, about 30 percent less peak acceleration, no overshoot, arrives roughly 40 ms later).
-* Input delay compensation from 3.2.5 unchanged.
-* Checked against a real recording: leading the target by the input delay did not improve tracking, so prediction is unchanged.
+* Aimbot: it eases in on a new target now. It starts gently instead of taking its biggest step at once, with about 30% less peak acceleration and no overshoot. It arrives roughly 40 ms later.
+* The input delay compensation from 3.2.5 is unchanged.
+* Checked on a real recording: leading the target by the input delay didn't improve tracking, so prediction is unchanged.
 
 ## 3.2.7 - 2026-11-15
 
-* Skeleton: the arms and legs of far and hidden players are shown interpolated through the real poses, so they swing continuously instead of holding one pose and jumping to the next. Poses of mid-range and far players are read more often (every 10 and 18 ms instead of 14 and 28)
-* New option Animate frozen limbs (Visuals, Skeleton; on by default): Fortnite only animates the players it draws, so a hidden player that runs keeps one pose. Its arms and legs now swing in a running cycle for as long as the game's own pose is frozen. Drawing only: aim and trigger always use the real pose
-* Fortnite 43.10 game data unchanged
+* Skeleton: the arms and legs of far and hidden players are interpolated through the real poses, so they swing continuously instead of holding one pose and jumping to the next. Mid-range and far players get their pose read more often (every 10 and 18 ms instead of 14 and 28).
+* New option: Animate frozen limbs (Visuals, Skeleton, on by default). Fortnite only animates the players it draws, so a hidden player who runs keeps one pose. Their arms and legs now swing in a running cycle while the game's pose is frozen. Drawing only, aim and trigger always use the real pose.
+* Fortnite 43.10 game data unchanged.
 
 ## 3.2.6 - 2026-11-15
 
-* Fix: the program no longer locks itself about an hour into a session. When KeyAuth stops knowing the session it answers the license check without a signature, and that answer used to end the session (locked: sig_missing in the log). Hideway now opens a fresh session with your license, and an answer that cannot be verified gets the same grace period as a lost connection
-* Demo mode: the Team ID badges show again
-* Fortnite 43.10 game data unchanged
+* Fixed: Hideway no longer locks itself about an hour into a session. When KeyAuth stopped knowing the session it answered the license check without a signature, and that ended the session (locked: sig_missing in the log). Now Hideway opens a fresh session with your license, and an answer it can't verify gets the same grace period as a lost connection.
+* Demo mode: the Team ID badges show again.
+* Fortnite 43.10 game data unchanged.
 
 ## 3.2.5 - 2026-11-14
 
-* Aimbot: no more jolts. The camera answers a mouse move about 50 ms late (measured on a real match) and the aim loop kept re-correcting an error it had already corrected; it now subtracts the motion still in flight. In a simulation the old loop overshot a 10 degree target by 1.1 to 3.9 degrees depending on the smoothing, the new one by 0
-* ESP: bots use the normal hidden (pink) / visible (green) colours like everybody else and carry a small BOT tag, so the visibility check can be read on them (a hidden bot used to be orange-yellow)
-* Fortnite 43.10 game data unchanged
+* Aimbot: no more jolts. The camera answers a mouse move about 50 ms late (measured on a real match) and the aim loop kept correcting an error it had already corrected. It now subtracts the movement still in flight. In a simulation the old loop overshot a 10 degree target by 1.1 to 3.9 degrees depending on the smoothing, the new one by 0.
+* ESP: bots use the normal hidden (pink) and visible (green) colours like everyone else, plus a small BOT tag, so you can read the visibility check on them. A hidden bot used to be orange-yellow.
+* Fortnite 43.10 game data unchanged.
 
 ## 3.2.4 - 2026-11-13
 
-* Aim and trigger lead: the velocity used to aim ahead of a moving player is smoothed (40 ms), so the aim point no longer jumps with every network update - about 8x less jolt in the air and on the ground in a measured 15-minute match, with the same prediction accuracy
-* ESP smoothness is Balanced by default again (it was forced to Responsive)
-* Fortnite 43.10 game data unchanged
+* Aim and trigger lead: the velocity used to aim ahead of a moving player is smoothed (40 ms), so the aim point doesn't jump with every network update. About 8 times less jolt in the air and on the ground in a measured 15-minute match, with the same prediction accuracy.
+* ESP smoothness is Balanced by default again (it had been forced to Responsive).
+* Fortnite 43.10 game data unchanged.
 
 ## 3.2.3 - 2026-11-13
 
-* ESP lag fix: the reader no longer drops to slow one-by-one reads (300+ ms per tick) at match start when the bus, a skydive or a teleport moves players; it keeps the fast path and re-checks after 3 s instead of 20-120 s
-* ESP no longer blanks when one player-list read fails: it is re-read at once and the players stay on screen for up to 1.5 s
-* ESP no longer drops a player standing close in front of you (the head is checked as well as the waist)
-* On a slow link the ESP keeps players on screen between reads (age and extrapolation limits follow the measured read interval)
-* Fortnite 43.10 game data unchanged
+* ESP lag fix: at match start (bus, skydive, teleport) the reader doesn't drop to slow one-by-one reads (300+ ms per tick) anymore. It keeps the fast path and re-checks after 3 seconds instead of 20 to 120.
+* The ESP doesn't blank when one player-list read fails. It re-reads at once and keeps the players on screen for up to 1.5 seconds.
+* A player standing close in front of you isn't dropped anymore (the head is checked as well as the waist).
+* On a slow link the ESP keeps players on screen between reads (the age and extrapolation limits follow the measured read interval).
+* Fortnite 43.10 game data unchanged.
 
 ## 3.2.2 - 2026-11-12
 
-* Fix: bots now show the 'visible' colour when you can see them (they were always the bot colour, so the visibility check looked dead in bot lobbies)
-* Fortnite 43.10 game data unchanged from 3.2.1
+* Fixed: bots show the visible colour when you can see them. They were always the bot colour, so the visibility check looked dead in bot lobbies.
+* Fortnite 43.10 game data unchanged from 3.2.1.
 
 ## 3.2.1 - 2026-11-12
 
-* Fortnite 43.10 (CL-60118918): new game data (classes and offsets) - not verified in a live match yet; Auto-update game data can still replace it with a signed pack
-* Wardogs v1.00 module in the launcher (ESP, radar, nearby-enemy warning, black fuser window, web radar, aim assist through MAKCU / Ferrum / KMBox NET)
-* Download site moved to download.hideway.cc
+* Fortnite 43.10 (CL-60118918): new game data (classes and offsets), not verified in a live match yet. Auto-update game data can still replace it with a signed pack.
+* Wardogs v1.00 module in the launcher (ESP, radar, nearby-enemy warning, black fuser window, web radar, aim assist through MAKCU / Ferrum / KMBox NET).
+* The download site moved to download.hideway.cc.
 
 ## 3.2.0 - 2026-11-12
 
-* New game: Wardogs (v1.00) in the launcher - ESP with boxes, skeleton, names, distance, off-screen arrows, radar, nearby-enemy warning
-* Wardogs: black fuser window, web radar / tactical map for a phone or second screen, aim assist through MAKCU / Ferrum / KMBox NET
-* Hideway menu, logo and KeyAuth sign-in shared with the Fortnite build
+* New game: Wardogs (v1.00) in the launcher. ESP with boxes, skeleton, names, distance, off-screen arrows, radar and a nearby-enemy warning.
+* Wardogs also has a black fuser window, a web radar / tactical map for a phone or second screen, and aim assist through MAKCU / Ferrum / KMBox NET.
+* The menu, logo and KeyAuth sign-in are shared with the Fortnite build.
 
 ## 3.1.0 - 2026-11-09
 
