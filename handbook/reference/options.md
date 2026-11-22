@@ -12,8 +12,8 @@ The menu is all-in-one: every option below is on its page. Type in the search bo
 |---|---|---|---|---|
 | **Enable aimbot** | on / off | off |  | Master switch for aim assist. It moves the mouse through your input device, so a connected and verified device is required (Misc > Input device). |
 | **Aim key** | key | Mouse 2 |  | Hold this key to aim. Click the box, then press a key or mouse button; click the box a second time to use Mouse 1 (left button). Right-click the box to clear it. |
-| **Aim bone** | choice | Head | Head / Neck / Chest / Pelvis / Closest bone | Which part of the target to aim at. 'Closest bone' picks whichever joint is nearest to your crosshair. |
-| **Aim between bones** | on / off | off |  | Aim at the point on the skeleton (any bone segment) that is closest to the crosshair instead of one joint. Skips segments behind a wall when Visible only is on. |
+| **Aim bone** | choice | Head | Head / Neck / Chest / Pelvis / Closest bone | Which part of the target to aim at when its skeleton could not be read. With a readable skeleton the aim always goes to the point of the body nearest to your crosshair (Aim between bones is automatic). |
+| **Aim between bones** | automatic | on |  | Not in the menu: the aim goes to the point on the skeleton (any bone segment) that is closest to the crosshair instead of one joint. Skips segments behind a wall when Visible only is on. |
 | **Field of view** | whole number | 60 | 1 to 180 | Only targets inside this cone around your crosshair are considered. Smaller = more selective. |
 | **Smoothing** | number | 10. | 1. to 100. | How slowly the aim closes the gap. 1 = instant, higher = slower and less obvious. |
 | **Max aim distance** | number | 150. | 5. to 500. | Targets further away than this are ignored. |

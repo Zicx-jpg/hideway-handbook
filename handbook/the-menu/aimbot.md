@@ -13,14 +13,14 @@ This page controls aim assist, close aim, sticky aim and prediction. Aim assist 
 | Enable aimbot | Master switch. Needs a connected input device |
 | Aim key | Hold it to aim. Click the box and press a key or mouse button; click it again to pick Mouse 1; right-click to clear. Default Mouse 2 |
 | Read keys from the game PC | Also reads the keyboard and mouse of the game PC through the DMA card, so the aim key (and the trigger key) can be any key of the game PC's own keyboard. Off by default. The log (KEYS) says whether the key table of the game PC's Windows was found; if it reports many keys held at once it switches itself off for 5 minutes |
-| Aim bone | Head, Neck, Chest, Pelvis or Closest bone. Head aims 3 cm above the head joint, where the game's own trace lands |
+| Aim bone | Head, Neck, Chest, Pelvis or Closest bone. While the skeleton of a player can be read, the aim goes to the point of the body nearest to your crosshair (Aim between bones is automatic), whatever is picked here; the choice applies to players whose skeleton could not be read (a box is aimed at instead) |
 | Field of view | Only targets inside this cone around the crosshair count. Smaller is more selective |
 | Smoothing | How slowly the aim closes the gap. 1 is instant. Each step adds about 8 ms to the time it takes to get there |
 | Max aim distance | Targets further than this are ignored |
 | Team check | Never aim at teammates |
 | Ignore knocked | Skip downed players |
 | Only with a gun in hand | Aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon |
-| Aim between bones | Aim at the closest point on the skeleton instead of a single joint. On the head it follows the crosshair up the head volume (up to 14 cm above the joint) |
+| Aim between bones | Automatic (always on, not in the menu): the aim goes to the closest point of the skeleton to your crosshair, any bone segment. On the head it follows the crosshair up the head volume (up to 14 cm above the joint) |
 | Ignore bots | Skip bots |
 | Prefer standing targets | Standing players are picked before downed ones |
 | Target priority | Closest to the crosshair, or closest in distance |
