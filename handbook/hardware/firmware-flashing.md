@@ -1,6 +1,6 @@
 # Flash the card firmware
 
-Everything here is done with **Hideway Tool** on the **overlay (second) PC**. Hideway Tool reads your card's DNA, flashes the firmware and runs the speed test in one window. The same five steps are on the site: [hideway.cc/guide.html](https://hideway.cc/guide.html).
+Everything here is done with **Hideway Tool** on the **overlay (second) PC**. Hideway Tool reads your card's DNA, flashes the firmware and runs the speed test in one window. The same five steps are on the site: [hideway.cc/guide.html](https://hideway.cc/guide.html). **Hideway Tool is sent to you in a ticket** on our Discord: it is not a public download.
 
 Hideway's **Basic** and **Advanced** firmware packages are built for **your card's DNA** and delivered by the team in a ticket on our Discord, either as a **firmware file** (`.bin`) or as a **cloud key**.
 
