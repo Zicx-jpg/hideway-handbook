@@ -45,7 +45,7 @@ The card is running in a slow mode. This is nearly always a **bad USB connection
 
 ## The speed test fails or is low
 
-A test failure usually means **too low a speed**: under about 4000 reads per second, or under about 125 MB/s.
+The speed test runs in **Hideway Tool** (*Speed Test* page). A test failure usually means **too low a speed**: under about 4000 reads per second, or under about 125 MB/s. 5000+ / 150 MB/s is good, 6000+ / 200 MB/s is excellent.
 
 * Use a real **USB 3** data cable, seated firmly at both ends. A bracket can stop the plug sitting fully.
 * Try other ports and cables.

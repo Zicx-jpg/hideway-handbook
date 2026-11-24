@@ -46,14 +46,22 @@ Nothing to change here either. Leave **Core isolation / Memory integrity** and t
 
 ## Step 6: Test the link
 
-Run the **DMA speed test** you received with the card on the overlay PC and keep its whole folder together. A healthy link is above both of these:
+With the game PC on, open **Hideway Tool** on the overlay PC → **Speed Test** → **Start speed test**. Let it run; a long run (about 6 minutes) shows whether the link stays stable.
 
-| Measure | Healthy |
+| Result | Reads per second | Throughput |
+|---|---|---|
+| Fail | under 4,000 | under 125 MB/s |
+| Acceptable | 4,000+ | 125+ MB/s |
+| Good | 5,000+ | 150+ MB/s |
+| Excellent | 6,000+ | 200+ MB/s |
+
+| Message | Try |
 |---|---|
-| Reads per second | about **4000 per second** or more |
-| Throughput | about **125 MB/s** or more |
+| `FT601 not found` | Cable on the DATA port? FTD3XX driver installed (Step 4b)? Use a motherboard USB 3 port. |
+| `VMM init failed` | Cold boot the game PC (power supply off ~10 s), then test again |
+| `Tiny PCIe TLP` / DTB errors | Cold boot and test again; still failing → ticket with a screenshot |
 
-Below that the cause is almost always the **USB cable, USB port or card seating**; see [DMA troubleshooting](dma-troubleshooting.md#the-speed-test-fails-or-is-low).
+Below Acceptable the cause is almost always the **USB cable, USB port or card seating**; see [DMA troubleshooting](dma-troubleshooting.md#the-speed-test-fails-or-is-low).
 
 ## Step 7: Start Hideway
 

@@ -1,69 +1,95 @@
 # Flash the card firmware
 
-Hideway's **Basic** and **Advanced** firmware packages are prepared for your card and delivered by the team in a ticket on our Discord, usually within 24 hours. You flash when you receive a new firmware, a fix, or if your card arrives blank. This page describes the general procedure for the common **Xilinx 35T / 75T cards flashed through a CH347 USB-JTAG adapter**; the team guides you through it in your ticket.
+Everything here is done with **Hideway Tool** on the **overlay (second) PC**. Hideway Tool reads your card's DNA, flashes the firmware and runs the speed test in one window. The same five steps are on the site: [hideway.cc/guide.html](https://hideway.cc/guide.html).
+
+Hideway's **Basic** and **Advanced** firmware packages are built for **your card's DNA** and delivered by the team in a ticket on our Discord, either as a **firmware file** (`.bin`) or as a **cloud key**.
 
 {% hint style="warning" %}
-Use only the flashing tool, the driver and the firmware file that Hideway gives you in your ticket. Do not run files from random links. A wrong firmware or an interrupted flash can leave the card unusable. If you are not sure, open a ticket **before** you flash.
+Use only Hideway Tool and the firmware file or cloud key the team gives you in your ticket. A wrong firmware or an interrupted flash can leave the card unusable. If you are not sure, open a ticket **before** you flash.
 {% endhint %}
 
 {% hint style="info" %}
-Flash from the **overlay PC**, never from the game PC.
+Your game PC stays clean: nothing in its BIOS or Windows needs to be turned off for flashing.
 {% endhint %}
 
-## Before you start
+## What you need
 
-* Power both PCs off **completely** before you move any cable. Power supply switch off, then press the case power button a few times to drain the board.
-* **Never plug or unplug the JTAG cable while the card or PC is powered.** That is how cards and firmware get damaged.
-* Know your chip: **35T** or **75T**. The card or its sticker says so. Picking the wrong one is the most common mistake.
-* Put the tool and firmware in a short folder **without spaces** (for example `C:\flash\`).
+| | |
+|---|---|
+| Card | 35T, 75T or 100T. Hideway Tool detects the model by itself. |
+| JTAG cable | **CH347** or **RS232** (FT2232-based). 100T cards and cloud keys need **CH347**. |
+| JTAG driver | CH347: run `CH341PAR\SETUP.EXE` from the Hideway Tool package. RS232: open **Zadig** → *Options* → *List All Devices* → pick **Quad RS232-HS (Interface 0)** or **Single RS232-HS** → *Replace / Install driver*. |
 
-## Steps
+**Never plug or unplug the JTAG cable while the game PC is on.** Connect it with the PC fully off, then power on: the card needs power to be read and flashed.
+
+## Step 1: Read the DNA
+
+The DNA is the card's unique ID. Firmware is built for it, so the team needs it first.
 
 {% stepper %}
 {% step %}
-### Use the JTAG port
+### Connect JTAG
 
-Connect the cable to the card's **JTAG** port. On the common layout this is the USB-C port **closest to the motherboard**; the data port is the one by the status lights. Check your manual.
+With the game PC off, connect the JTAG cable from the overlay PC to the card's **JTAG** port (Hideway Tool shows the wiring under *JTAG wiring guide*). Power the game PC on.
 {% endstep %}
 
 {% step %}
-### Install the JTAG driver
+### Read
 
-On the overlay PC run the setup of the CH34x / CH347 driver **as administrator** and click Install. In Device Manager the adapter should appear without a warning icon.
+In Hideway Tool open **Firmware & DNA**, choose **CH347** or **RS232**, then **Read DNA**. The tool auto-detects the FPGA model and prints a line like `DNA = ... (0x0123abcdef456789)`.
 {% endstep %}
 
 {% step %}
-### Start the flashing tool
+### Send it
 
-Run the FPGA download tool you received as administrator.
-{% endstep %}
-
-{% step %}
-### Pick the chip and the file
-
-Set the chip dropdowns to match your card (`xc7a35t` for a 35T, `xc7a75t` for a 75T), then select the firmware file. The path must contain **no spaces**.
-{% endstep %}
-
-{% step %}
-### Flash and wait
-
-Click the download button. **Do not disconnect or power off**, even when the bar reaches 100 %. Wait for the tool's final message (the CH347 tools print `Info: Close the CH347`).
-{% endstep %}
-
-{% step %}
-### Power-cycle and switch to data
-
-Shut both PCs down, switch the power supply off, press the power button a few times, then move the cable from **JTAG** to **DATA**. Power the game PC first, then the overlay PC.
+Click **Copy DNA** and paste it in your ticket. The team sends back your firmware file or cloud key.
 {% endstep %}
 {% endstepper %}
 
-## If flashing fails
+## Step 2a: Flash a firmware file
+
+{% stepper %}
+{% step %}
+### Choose the file
+
+In **Firmware & DNA**, keep the source on the local file and select the `.bin` you received. Check that the detected model matches your card.
+{% endstep %}
+
+{% step %}
+### Flash
+
+Click **Start flashing**. The tool writes the firmware, then reads it back to verify. **Do not unplug anything or turn the game PC off** until it reports that flashing and verification completed.
+{% endstep %}
+
+{% step %}
+### Cold boot
+
+Shut the game PC down, switch the power supply off for about 10 seconds, then power on. A simple restart does not reload the card.
+{% endstep %}
+{% endstepper %}
+
+## Step 2b: Install with a cloud key
+
+If you received a **cloud key** instead of a file:
+
+1. Use a **CH347** cable (cloud install needs the CH347 read-back).
+2. In **Firmware & DNA**, switch the source to **Cloud firmware** and enter the key.
+3. The tool reads your card, gets the firmware made for it, flashes and verifies it.
+4. Cold boot the game PC.
+
+A cloud key is tied to your card. Keep it private: never post it in a Discord channel, only in your ticket.
+
+## After flashing
+
+Run the **Speed Test** in Hideway Tool (see [Install the DMA card](dma-card-setup.md#step-6-test-the-link)), then check [READY CHECK](../getting-started/ready-check.md).
+
+## If something fails
 
 | Message or symptom | Try |
 |---|---|
-| `jtagspi_init_chain_id proxy_bit` or a similar init error | Rename the firmware to `firmware.bin` and move it and the tool folder to the root of `C:` (for example `C:\flash\`), then retry |
-| Tool does not see the adapter | Reinstall the driver as administrator, try another USB port and cable |
-| Flash completes but the card is not detected afterwards | Cable still on JTAG instead of DATA; do the cold power cycle again |
-| Still failing | Open a ticket: we will send a known-good test firmware to rule out the file |
-
-After flashing, run the [speed test](dma-card-setup.md#step-6-test-the-link) and then check [READY CHECK](../getting-started/ready-check.md).
+| `DNA was not found` / `JTAG did not initialize` | Cable is on DATA instead of JTAG, the game PC is off, or the cable's driver is missing. Fix, then read again. |
+| Tool does not see the adapter | Reinstall the CH347 driver (or redo Zadig for RS232), try another USB port and cable |
+| `Cloud installation requires CH347 readback` | You are on an RS232 cable. Use a CH347 cable for cloud keys. |
+| `Cloud request failed` | Copy the *Cloud diagnostic* text the tool shows and send it in your ticket |
+| Flash completes but the card is not detected afterwards | Do the cold boot again and make sure the overlay PC is on the **DATA** port for normal use |
+| Still failing | Open a ticket: we send a known-good test firmware to rule out the file |
