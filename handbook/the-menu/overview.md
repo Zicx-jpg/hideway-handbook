@@ -6,16 +6,23 @@ Press **Insert** to open or close it. There is a side bar with the pages, a sear
 
 ## The pages
 
-| Page | What is on it |
-|---|---|
-| [Aimbot](aimbot.md) | Aim key, bone, field of view, smoothing, controller, humanizing, close aim, sticky aim, prediction |
-| [Weapons](weapons.md) | Settings per weapon class (rifle, pistol, SMG, shotgun, sniper) |
-| [Triggerbot](triggerbot.md) | When and how it fires |
-| [Visuals](visuals.md) | Everything drawn on players, loot, reboot cards, spectators, audio alerts, colours |
-| [Radar](radar.md) | The on-screen radar and the web radar |
-| [Misc](misc.md) | Game data updates, overlay, notifications, keys, input device, debug switches |
-| [Config](config.md) | Configs, presets, backups, keybinds, sharing, license, updates |
-| [Debug](debug.md) | Hidden until you turn it on in Misc. Ready check, data health, performance, black box, recorder, support bundle |
+Every page has two panels, left and right. The Aimbot and Triggerbot pages start with a row of weapon tabs.
+
+| Page | What is on it | Explained in |
+|---|---|---|
+| Aimbot | Aim key, bone, field of view, smoothing, controller, the targets, close aim, sticky aim, prediction; one tab per weapon class | [Aimbot](aimbot.md), [Weapons](weapons.md) |
+| Triggerbot | When and how it fires, who it fires at; one tab per weapon class | [Triggerbot](triggerbot.md) |
+| Humanize | The humanizing switch and the profile it uses | [Aimbot](aimbot.md) |
+| Players | The preview, what is drawn and for whom, the labels | [Visuals](visuals.md) |
+| Style | Text style, boxes, skeleton, head and bars, tracers, detail | [Visuals](visuals.md) |
+| Colours | Player colour mode, every colour, fills and glow | [Visuals](visuals.md) |
+| HUD | Crosshair, match info, counters, the on-screen radar | [Visuals](visuals.md), [Radar](radar.md) |
+| World | Loot and containers, reboot cards, spectators, audio alerts | [Visuals](visuals.md) |
+| Device | The input device, detected devices, game data updates | [Misc](misc.md) |
+| Settings | Overlay, notifications, keys, debug switches | [Misc](misc.md) |
+| Configs | Configs, presets, backups, keybinds, sharing, license, updates | [Config](config.md) |
+| Web radar | The web radar and the online link | [Radar](radar.md) |
+| Debug | Hidden until you turn it on in Settings. Ready check, data health, performance, black box, recorder, support bundle | [Debug](debug.md) |
 
 ## One menu, no modes
 
@@ -29,11 +36,11 @@ There is no Simple / Advanced switch. Every setting you might want is on its pag
 
 ## Menu style
 
-**Config > Menu style** has 8 themes, an accent colour for the Custom theme and a switch for the menu animations. Turn the animations off if you want a slightly lighter GPU load.
+**Configs > Menu style** has 8 themes, an accent colour for the Custom theme and a switch for the menu animations. Turn the animations off if you want a slightly lighter GPU load.
 
 ## The overlay and its keys
 
-The menu sits on a transparent overlay that covers one monitor (**Misc > Overlay monitor**). With the menu closed you only see what you turned on: ESP, radar and HUD pieces.
+The menu sits on a transparent overlay that covers one monitor (**Settings > Overlay monitor**). With the menu closed you only see what you turned on: ESP, radar and HUD pieces.
 
 | Key | What it does |
 |---|---|

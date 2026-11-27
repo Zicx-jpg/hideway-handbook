@@ -1,5 +1,7 @@
 # Aimbot
 
+*Since 3.8.0 the menu is laid out like this: the **Aimbot** page has the AIMBOT, FOV CIRCLE and CONTROLLER cards on the left and TARGETS, CLOSE AIM, STICKY AIM and PREDICTION on the right, under a row of weapon tabs (Global, Rifle, Pistol, SMG, Shotgun, Sniper). **Humanizing** has its own **Humanize** page.*
+
 This page controls aim assist, close aim, sticky aim and prediction. Aim assist moves your mouse through the **input device**, so it does nothing until a device is connected. See [Connect an input device](../guides/input-device.md). For a walk-through of the settings in a sensible order, read [Tune aim and trigger](../guides/aim-and-trigger.md).
 
 <figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, top"><figcaption><p>The AIMBOT card on the left, close aim, sticky aim and prediction on the right.</p></figcaption></figure>

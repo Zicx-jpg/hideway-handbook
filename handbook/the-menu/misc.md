@@ -1,5 +1,7 @@
 # Misc
 
+*Since 3.8.0 these cards are on two pages. **Device**: INPUT DEVICE, DETECTED DEVICES and GAME DATA. **Settings**: GENERAL, NOTIFICATIONS, KEYS and DEBUG.*
+
 System settings: game data, the overlay, notifications, keys, the input device and the debug switches.
 
 <figure><img src="../.gitbook/assets/menu-misc.png" alt="Misc page"><figcaption><p>The Misc page: game data, overlay settings, notifications and the INPUT DEVICE card.</p></figcaption></figure>

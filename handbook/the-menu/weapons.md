@@ -1,5 +1,7 @@
 # Weapons
 
+*Since 3.8.0 there is no Weapons page: each weapon class is a tab at the top of the **Aimbot** page (its aim override) and of the **Triggerbot** page (its trigger switch and delay). A dot on a tab means that class is in your hands right now and its override is on. The text below explains the settings.*
+
 The Weapons page lets each class of weapon use its own aim settings.
 
 <figure><img src="../.gitbook/assets/menu-weapons.png" alt="Weapons page"><figcaption><p>One override card per weapon class: Rifle, Pistol, SMG, Shotgun, Sniper.</p></figcaption></figure>

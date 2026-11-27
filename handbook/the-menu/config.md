@@ -1,5 +1,7 @@
 # Config
 
+*The page is called **Configs** in the side bar since 3.8.0.*
+
 Everything about saving, sharing and housekeeping: configs, advice, presets, backups, keybinds, files, license and about.
 
 <figure><img src="../.gitbook/assets/menu-config.png" alt="Config page"><figcaption><p>The Config page: configs, advice, menu style and keybinds.</p></figcaption></figure>

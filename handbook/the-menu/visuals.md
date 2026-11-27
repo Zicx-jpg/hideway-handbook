@@ -1,5 +1,7 @@
 # Visuals
 
+*Since 3.8.0 these cards are spread over five pages. **Players**: PREVIEW, PLAYER ESP, ELEMENTS (box style, skeleton, head circle, bars, snaplines, arrows, facing, target highlight) and LABELS. **Style**: TEXT, BOXES, SKELETON, HEAD & BARS, TRACERS and DETAIL. **Colours**: PLAYER COLOURS and FILLS & GLOW. **HUD**: HUD and the radar cards. **World**: LOOT ESP, REBOOT CARDS, SPECTATORS and AUDIO ALERTS.*
+
 Everything Hideway draws on players and in the world. The page opens on a **PREVIEW** card that shows your current style on sample players.
 
 <figure><img src="../.gitbook/assets/menu-visuals.png" alt="Visuals page with the preview card"><figcaption><p>The Visuals page. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it switch the outfit of the sample players. The first two look like Fortnite characters, the other four are sci-fi.</p></figcaption></figure>

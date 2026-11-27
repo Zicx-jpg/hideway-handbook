@@ -3,6 +3,13 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.8.0 - 2026-11-26
+
+* The menu is rearranged: Aimbot, Triggerbot, Humanize, Players, Style, Colours, HUD, World, Device, Settings, Configs, Web radar.
+* Weapon tabs on the Aimbot and Triggerbot pages take the place of the Weapons page.
+* Aimbot: the field of view now counts a player whose body reaches into it (FOV measured to the body).
+* Visuals: colour by distance or rainbow, dashed boxes and snaplines, box glow and padding, ESP opacity, round joints.
+
 ## 3.7.9 - 2026-11-26
 
 * Debug > LOCAL PLAYER shows how many players share your team number, to spot teammates drawn as enemies.

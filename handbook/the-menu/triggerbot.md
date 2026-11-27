@@ -1,5 +1,7 @@
 # Triggerbot
 
+*Since 3.8.0 the page has the TRIGGERBOT card (key, mode, timing) on the left and TRIGGER TARGETS (distance, hitbox and who it ignores) on the right, under the weapon tabs.*
+
 The triggerbot fires while an enemy is under your crosshair. It needs a connected input device. Close aim, sticky aim and prediction are on the [Aimbot page](aimbot.md).
 
 <figure><img src="../.gitbook/assets/menu-triggerbot.png" alt="Triggerbot page"><figcaption><p>Key, mode, delay, distance and the switches for who it ignores.</p></figcaption></figure>

@@ -1,5 +1,7 @@
 # Radar
 
+*Since 3.8.0 the on-screen radar cards (RADAR, KEYS, FILTERS, READABILITY) are on the **HUD** page, and the WEB RADAR card has its own **Web radar** page.*
+
 Two radars: a small one drawn on the overlay, and a **web radar** you can open on a phone, tablet or second monitor.
 
 <figure><img src="../.gitbook/assets/menu-radar.png" alt="Radar page"><figcaption><p>The Radar page: the on-screen radar, filters and readability on the right.</p></figcaption></figure>

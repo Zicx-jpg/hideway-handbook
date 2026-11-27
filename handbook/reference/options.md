@@ -21,6 +21,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Prefer standing targets** | on / off | on |  | Standing players are chosen before downed ones. |
 | **Target priority** | choice | Closest to crosshair | Closest to crosshair / Closest distance / Smart (close first) | How the best target is chosen: closest to the crosshair, closest in distance, or Smart: anybody inside 60 m comes first (the nearest to your crosshair of them), then the rest. |
 | **Third-person correction** | on / off | on |  | The camera swings round your player when you turn, so a target close to you needs a bigger turn than the angle it is seen at. This adds the difference (measured live, up to 1.4x at 5 m, none far away): close fights lock on faster. Off = plain angles. |
+| **FOV measured to the body** | on / off | on |  | The field-of-view circle counts a player when any part of the body reaches into it, not only the point you aim at. Up close the head sits far above your crosshair, so a small field of view used to miss a player right in front of you. The aim still goes to the part you chose. |
 | **Lock until key release** | on / off | off |  | Stay on the first target until you let go of the aim key, even if another one gets closer. |
 | **Dead zone** | number | 0.15 | 0. to 3. | Inside this angle the aim stops moving, so it does not shake when already on target. |
 | **Target line** | on / off | on |  | Draw a line from the crosshair to the current target. |
@@ -126,17 +127,25 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Render distance** | number | 500. | 10. to 1000. | Players further away than this get no full ESP (box, skeleton, bars). With Far markers on they still show a small marker with their distance up to 1500 m. A low value here is the usual reason an enemy seems to vanish for a few seconds. |
 | **Far markers** | on / off | on |  | A small marker with the distance on players that are beyond Render distance, so nobody simply disappears when walking out of range. |
 | **Max ESP players** | whole number | 100 | 1 to 200 | Upper limit of players drawn at once (nearest first). |
+| **Player colour mode** | choice | By visibility | By visibility / By distance / Rainbow | How enemies are coloured: by visibility (the colours on the Colors card), by distance (red near, green far) or rainbow. Teammates, knocked players and the aim target keep their own colours. |
+| **ESP opacity** | number | 1. | 0.1 to 1. | Everything the ESP draws for a player, multiplied by this. |
+| **Hidden player opacity** | number | 1. | 0.1 to 1. | How solid a player is that the game is not drawing (behind a wall). 1 = like a visible one. |
+| **Thinner with distance** | on / off | off |  | Box and skeleton lines get thinner with distance (down to 40 %), so far players do not turn into a thick tangle. |
 | **Box style** | choice | Box | Off / Box / Corner box / 3D box | Off, a full box, or a box drawn only at the corners. |
 | **Box thickness** | number | 1.5 | 0.5 to 5. | Line width of the box. |
 | **Box rounding** | number | 2. | 0. to 20. | Corner roundness of the box. |
 | **Box fill** | on / off | off |  | Fill the box with a transparent colour. |
 | **Box gradient** | on / off | off |  | Fill the box with a vertical gradient instead of a flat colour. |
+| **Dashed box** | on / off | off |  | Draw the 2D box with dashed lines. |
+| **Box glow** | number | 0. | 0. to 100. | A soft halo around the box in the player's colour. |
+| **Box padding** | number | 0. | -10. to 20. | Makes the box bigger (or smaller below 0) than the body; the text and the bars sit on the padded box. |
 | **Box fill color** | colour | (see menu) |  | Colour (and transparency) of the filled part of the box when Box fill is on. |
 | **Gradient top** | colour | (see menu) |  | Top colour of the box gradient. |
 | **Gradient bottom** | colour | (see menu) |  | Bottom colour of the box gradient. |
 | **Skeleton** | on / off | on |  | Draw the player's bones. |
 | **Skeleton thickness** | number | 1.2 | 0.5 to 5. | Line width of the bones. |
 | **Tapered limbs** | on / off | off |  | Draw the skeleton thicker at the trunk and thinner at the hands and feet. |
+| **Round joints** | on / off | off |  | Closes the notch at every elbow, knee and shoulder with a small disc (only visible on thick skeleton lines). |
 | **Distance-scaled lines** | on / off | on |  | Bones get thinner with distance so far players are not cluttered. |
 | **Joint dots** | on / off | off |  | Draw a dot on every joint. |
 | **Joint dot size** | number | 2.5 | 1. to 8. | Size of the dots drawn on the skeleton joints. |
@@ -174,6 +183,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Snaplines** | choice | Off | Off / Bottom / Middle / Top | Lines from the screen edge or centre to every player. |
 | **Snapline thickness** | number | 1. | 0.5 to 4. | Thickness of the snaplines in pixels. |
 | **Fade snaplines** | on / off | off |  | Snaplines start faint at the screen edge and are solid at the player, so a crowd of lines stays readable. |
+| **Dashed snaplines** | on / off | off |  | Draw the snaplines dashed. |
 | **Off-screen arrows** | on / off | off |  | Arrows at the edge of the screen pointing to players you cannot see. |
 | **Arrow radius** | whole number | 160 | 40 to 600 | Distance of the arrows from the screen centre. |
 | **Crosshair** | on / off | off |  | Draw a crosshair in the centre of the screen. |
