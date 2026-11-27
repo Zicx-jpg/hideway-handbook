@@ -12,10 +12,10 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 |---|---|
 | **PREVIEW** | Your style on sample players. Always marked DEMO: synthetic, not a real match. Six drawn outfits, the arrows under the card switch them |
 | **ESP** | **Enable ESP** (master), Show bots, Show teammates, Hide knocked players, Render distance, Far markers, Max ESP players, Box style (Off / Box / Corners / 3D box), thickness, rounding, fill, gradient |
-| **SKELETON** | Skeleton, thickness, distance-scaled lines, joint dots, glow (the smooth pose and the running cycle on frozen limbs are automatic) |
+| **SKELETON** | Skeleton, thickness, tapered limbs, distance-scaled lines, joint dots, glow (the smooth pose and the running cycle on frozen limbs are automatic) |
 | **HEAD & BARS** | Head circle (filled, size, offset); **Health + shield bars**, Low health highlight and threshold, Health numbers, Bar style (Classic / Segmented), Bar side, Damage trail |
-| **INFO TEXT** | Name, **Team ID**, Distance, Weapon class, Fade in players, Platform, Kill score, Enemy ammo |
-| **TRACERS** | Snaplines (with thickness), off-screen arrows (with radius) |
+| **INFO TEXT** | Name, **Team ID**, Distance (with its format), Weapon class, Fade in players, Platform, Kill score, Enemy ammo, **Text style** (Plain / Shadow / Outline / Glow) |
+| **TRACERS** | Snaplines (with thickness and fade), off-screen arrows (with radius) |
 | **TARGET + DETAIL** | Highlight target (the player the aim or trigger picked, with its colour), Facing direction, Distance detail (LOD) |
 | **HUD** | Crosshair, **Match info**, **Enemy counter**, Team panel, Squad list, Fuser mode and its toggle key |
 | **LOOT ESP** | Items on the ground. See [Loot, containers and reboot cards](../guides/loot-and-world.md) |

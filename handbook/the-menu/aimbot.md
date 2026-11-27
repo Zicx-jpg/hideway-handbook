@@ -21,7 +21,8 @@ This page controls aim assist, close aim, sticky aim and prediction. Aim assist 
 | Ignore knocked | Skip downed players |
 | Ignore bots | Skip bots |
 | Prefer standing targets | Standing players are picked before downed ones |
-| Target priority | Closest to the crosshair, or closest in distance |
+| Target priority | Closest to the crosshair, closest in distance, or **Smart**: anybody inside 60 m first, then the rest |
+| Third-person correction | On by default. The camera swings round your player, so a target near you needs a bigger turn than the angle it is seen at (about 1.4x at 5 m, 1.2x at 10 m, 1.07x at 30 m); this adds it, so close fights lock on faster. Hideway measures how rigidly your camera orbits and switches itself off in first person or scoped. Off = plain angles |
 | Lock until key release | Stay on the first target until you let go of the aim key |
 | Dead zone | Inside this angle the aim stops moving, so it does not shake |
 

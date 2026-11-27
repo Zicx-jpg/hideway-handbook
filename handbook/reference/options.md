@@ -19,7 +19,8 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Team check** | on / off | on |  | Never aim at teammates. |
 | **Ignore knocked** | on / off | off |  | Skip downed players. |
 | **Prefer standing targets** | on / off | on |  | Standing players are chosen before downed ones. |
-| **Target priority** | choice | Closest to crosshair | Closest to crosshair / Closest distance | How the best target is chosen: closest to the crosshair, or closest in distance. |
+| **Target priority** | choice | Closest to crosshair | Closest to crosshair / Closest distance / Smart (close first) | How the best target is chosen: closest to the crosshair, closest in distance, or Smart: anybody inside 60 m comes first (the nearest to your crosshair of them), then the rest. |
+| **Third-person correction** | on / off | on |  | The camera swings round your player when you turn, so a target close to you needs a bigger turn than the angle it is seen at. This adds the difference (measured live, up to 1.4x at 5 m, none far away): close fights lock on faster. Off = plain angles. |
 | **Lock until key release** | on / off | off |  | Stay on the first target until you let go of the aim key, even if another one gets closer. |
 | **Dead zone** | number | 0.15 | 0. to 3. | Inside this angle the aim stops moving, so it does not shake when already on target. |
 | **Target line** | on / off | on |  | Draw a line from the crosshair to the current target. |
@@ -135,6 +136,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Gradient bottom** | colour | (see menu) |  | Bottom colour of the box gradient. |
 | **Skeleton** | on / off | on |  | Draw the player's bones. |
 | **Skeleton thickness** | number | 1.2 | 0.5 to 5. | Line width of the bones. |
+| **Tapered limbs** | on / off | off |  | Draw the skeleton thicker at the trunk and thinner at the hands and feet. |
 | **Distance-scaled lines** | on / off | on |  | Bones get thinner with distance so far players are not cluttered. |
 | **Joint dots** | on / off | off |  | Draw a dot on every joint. |
 | **Joint dot size** | number | 2.5 | 1. to 8. | Size of the dots drawn on the skeleton joints. |
@@ -147,6 +149,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Head circle offset** | number | 0. | -30. to 30. | Moves the head circle up (+) or down (-) in pixels to line it up with the head. |
 | **Name** | on / off | on |  | Show the player's name. |
 | **Distance** | on / off | on |  | Show the distance in metres. |
+| **Distance format** | choice | 25 m | 25 m / 25m / [25m] / (25m) | How the distance reads: 25 m, 25m, [25m] or (25m). |
 | **Weapon class** | on / off | off |  | Show the class of the weapon the player holds (rifle, SMG, shotgun...). |
 | **Platform** | on / off | off |  | Show the player's platform (PC, Xbox, PlayStation...). |
 | **Kill score** | on / off | off |  | Show the player's kills. |
@@ -163,12 +166,14 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Low health highlight** | on / off | on |  | A pulsing red outline around an enemy whose health is below the threshold (only when a real health value was read). |
 | **Low health threshold** | whole number | 35 | 10 to 80 | Health points under which the outline appears. |
 | **Enemy ammo** | on / off | off |  | Rounds left in the weapon an enemy holds (read from the game; shown only when the weapon was read). |
+| **Text style** | choice | Shadow | Plain / Shadow / Outline / Glow | How ESP text is drawn: plain, with a shadow (the default), with an outline all round, or with a soft glow in its own colour. |
 | **Show debug page** | on / off | off |  | Adds the DEBUG page to the side bar. It shows raw readings and offsets; you do not need it for normal play. |
 | **Auto-save config** | on / off | on |  | Writes the active config 2.5 seconds after your last change, and when the program closes. The old file is kept as a backup first (CONFIG > BACKUPS). Off = only Save config writes it. |
 | **Next config key** | key | not set |  | Switches to the next config in the list (the one you leave is saved first when Auto-save is on). A small message shows the name. |
 | **Previous config key** | key | not set |  | Switches to the previous config in the list. |
 | **Snaplines** | choice | Off | Off / Bottom / Middle / Top | Lines from the screen edge or centre to every player. |
 | **Snapline thickness** | number | 1. | 0.5 to 4. | Thickness of the snaplines in pixels. |
+| **Fade snaplines** | on / off | off |  | Snaplines start faint at the screen edge and are solid at the player, so a crowd of lines stays readable. |
 | **Off-screen arrows** | on / off | off |  | Arrows at the edge of the screen pointing to players you cannot see. |
 | **Arrow radius** | whole number | 160 | 40 to 600 | Distance of the arrows from the screen centre. |
 | **Crosshair** | on / off | off |  | Draw a crosshair in the centre of the screen. |

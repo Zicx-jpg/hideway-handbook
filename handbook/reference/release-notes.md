@@ -3,6 +3,18 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.7.9 - 2026-11-26
+
+* Debug > LOCAL PLAYER shows how many players share your team number, to spot teammates drawn as enemies.
+* The log says once per match if the team number looks wrong (TEAM line).
+* Aimbot: close targets lock on faster (Third-person correction), and Target priority has a new Smart choice.
+* Visuals: new Text style, Distance format, Tapered limbs and Fade snaplines. The defaults look like before.
+
+## 3.7.8 - 2026-11-25
+
+* Game data for Fortnite 43.11 (CL-60803671).
+* If Hideway already pulled the 43.11 game data by itself, nothing changes for you.
+
 ## 3.7.7 - 2026-11-22
 
 * Two new Fortnite-style skins in the ESP preview on the Visuals page: Squad Leader and Skull Raider.

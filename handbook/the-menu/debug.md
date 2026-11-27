@@ -16,7 +16,7 @@ The Debug page shows what Hideway is really getting from the game. It is **hidde
 | **DMA LINK** | Disconnect / reconnect the card without closing Hideway (so you can re-plug it) |
 | **OFFSET HEALTH** | Which offset group was proven by real data. **Copy diagnostics** copies a report; **Send report to support** sends it (with the black box) to the support service, and the answer shows in the launcher's Help page |
 | **PERFORMANCE** | Frame time, spread, hitches, render thread cost, player-lane rate, card traffic, data age on screen |
-| **LOCAL PLAYER** | Your held weapon (class and raw id), ammo, team, position |
+| **LOCAL PLAYER** | Your held weapon (class and raw id), ammo, team, position, and **Teammates**: how many players share your team number and how many other squads are around. In a duo or squad, 0 with squads around (orange) means the team number is read wrong and teammates show as enemies |
 | **LOOT READER** | What the loot reader found about the game's item layout |
 | **REBOOT CARDS** | State of the reboot card reader |
 | **TELEMETRY** | Measured prediction error, data age, visibility flips, aim and trigger counters |
