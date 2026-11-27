@@ -3,6 +3,11 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.8.2 - 2026-11-27
+
+* Fewer pages: Humanizing is now a card on the Aimbot page, and Players, Style, Colours and World are four tabs of one Visuals page.
+* The HUD page stays as it was.
+
 ## 3.8.1 - 2026-11-26
 
 * Aimbot and triggerbot: a player whose skeleton looks wrong (an outfit on another skeleton) is aimed at from the body, not from a wrong bone.

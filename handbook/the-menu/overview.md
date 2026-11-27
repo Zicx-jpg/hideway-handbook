@@ -6,18 +6,14 @@ Press **Insert** to open or close it. There is a side bar with the pages, a sear
 
 ## The pages
 
-Every page has two panels, left and right. The Aimbot and Triggerbot pages start with a row of weapon tabs.
+Every page has two panels, left and right. The Aimbot and Triggerbot pages start with a row of weapon tabs, the Visuals page with a row of tabs (Players, Style, Colours, World).
 
 | Page | What is on it | Explained in |
 |---|---|---|
-| Aimbot | Aim key, bone, field of view, smoothing, controller, the targets, close aim, sticky aim, prediction; one tab per weapon class | [Aimbot](aimbot.md), [Weapons](weapons.md) |
+| Aimbot | Aim key, bone, field of view, smoothing, controller, humanizing, the targets, close aim, sticky aim, prediction; one tab per weapon class | [Aimbot](aimbot.md), [Weapons](weapons.md) |
 | Triggerbot | When and how it fires, who it fires at; one tab per weapon class | [Triggerbot](triggerbot.md) |
-| Humanize | The humanizing switch and the profile it uses | [Aimbot](aimbot.md) |
-| Players | The preview, what is drawn and for whom, the labels | [Visuals](visuals.md) |
-| Style | Text style, boxes, skeleton, head and bars, tracers, detail | [Visuals](visuals.md) |
-| Colours | Player colour mode, every colour, fills and glow | [Visuals](visuals.md) |
+| Visuals | Tabs: **Players** (the preview, what is drawn and for whom, the labels), **Style** (text, boxes, skeleton, head and bars, tracers, detail), **Colours** (player colour mode, every colour, fills and glow), **World** (loot and containers, reboot cards, spectators, audio alerts) | [Visuals](visuals.md) |
 | HUD | Crosshair, match info, counters, the on-screen radar | [Visuals](visuals.md), [Radar](radar.md) |
-| World | Loot and containers, reboot cards, spectators, audio alerts | [Visuals](visuals.md) |
 | Device | The input device, detected devices, game data updates | [Misc](misc.md) |
 | Settings | Overlay, notifications, keys, debug switches | [Misc](misc.md) |
 | Configs | Configs, presets, backups, keybinds, sharing, license, updates | [Config](config.md) |

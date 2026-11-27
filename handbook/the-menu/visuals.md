@@ -1,6 +1,6 @@
 # Visuals
 
-*Since 3.8.0 these cards are spread over five pages. **Players**: PREVIEW, PLAYER ESP, ELEMENTS (box style, skeleton, head circle, bars, snaplines, arrows, facing, target highlight) and LABELS. **Style**: TEXT, BOXES, SKELETON, HEAD & BARS, TRACERS and DETAIL. **Colours**: PLAYER COLOURS and FILLS & GLOW. **HUD**: HUD and the radar cards. **World**: LOOT ESP, REBOOT CARDS, SPECTATORS and AUDIO ALERTS.*
+*Since 3.8.2 the Visuals page has four tabs (the Players, Style, Colours and World pages of 3.8.0 and 3.8.1), and HUD is its own page. **Players**: PREVIEW, PLAYER ESP, ELEMENTS (box style, skeleton, head circle, bars, snaplines, arrows, facing, target highlight) and LABELS. **Style**: TEXT, BOXES, SKELETON, HEAD & BARS, TRACERS and DETAIL. **Colours**: PLAYER COLOURS and FILLS & GLOW. **World**: LOOT ESP, REBOOT CARDS, SPECTATORS and AUDIO ALERTS. The **HUD** page has the HUD card and the radar cards.*
 
 Everything Hideway draws on players and in the world. The page opens on a **PREVIEW** card that shows your current style on sample players.
 
