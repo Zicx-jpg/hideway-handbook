@@ -4,9 +4,9 @@
 
 Two radars: a small one drawn on the overlay, and a **web radar** you can open on a phone, tablet or second monitor.
 
-<figure><img src="../.gitbook/assets/menu-radar.png" alt="Radar page"><figcaption><p>The Radar page: the on-screen radar, filters and readability on the right.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-radar.png" alt="HUD page"><figcaption><p>The HUD page: the HUD card on the left, the radar FILTERS and READABILITY on the right.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/menu-radar-2.png" alt="Radar page, scrolled down"><figcaption><p>Scrolled down: the radar keys and the WEB RADAR card.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-radar-2.png" alt="HUD page, scrolled down"><figcaption><p>Scrolled down: the RADAR card and the radar KEYS.</p></figcaption></figure>
 
 ## RADAR card
 
@@ -29,6 +29,8 @@ Choose who is shown (teammates, bots, knocked players) and whether the distance 
 ## KEYS
 
 **Radar toggle key** shows / hides the radar. **Radar enlarge key** makes it bigger while toggled.
+
+<figure><img src="../.gitbook/assets/menu-radar-3.png" alt="Web radar page"><figcaption><p>The Web radar page: the switches, the two links and how it works.</p></figcaption></figure>
 
 ## WEB RADAR
 

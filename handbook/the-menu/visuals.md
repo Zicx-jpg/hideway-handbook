@@ -4,7 +4,7 @@
 
 Everything Hideway draws on players and in the world. The page opens on a **PREVIEW** card that shows your current style on sample players.
 
-<figure><img src="../.gitbook/assets/menu-visuals.png" alt="Visuals page with the preview card"><figcaption><p>The Visuals page. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it switch the outfit of the sample players. The first two look like Fortnite characters, the other four are sci-fi.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals.png" alt="Visuals page, Players tab"><figcaption><p>The Players tab of the Visuals page. The PREVIEW card shows demo data (labelled) so you can see what a toggle changes. The arrows under it switch the outfit of the sample players.</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/esp-preview.png" alt="The PREVIEW card close up" width="480"><figcaption><p>The PREVIEW card close up: the box, skeleton, bars and name on two sample players.</p></figcaption></figure>
 
@@ -26,7 +26,9 @@ Everything Hideway draws on players and in the world. The page opens on a **PREV
 | **AUDIO ALERTS** | Generated positional tones when an enemy comes in range |
 | **COLORS** | Every colour used above |
 
-<figure><img src="../.gitbook/assets/menu-visuals-2.png" alt="Visuals page, ESP and HUD"><figcaption><p>Scrolled down: the SKELETON and HEAD & BARS cards, and the LOOT ESP card with Group identical loot.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-2.png" alt="Visuals page, Style tab"><figcaption><p>The Style tab: text, boxes and tracers on the left, skeleton and head &amp; bars on the right.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/menu-visuals-4.png" alt="Visuals page, Colours tab"><figcaption><p>The Colours tab: one colour per element, hidden and visible, and the colours of fills and glow.</p></figcaption></figure>
 
 ## Team ID
 
@@ -50,4 +52,4 @@ Bars next to the box, read from the game. Read the rules on [Health and shield b
 
 How smoothly the boxes move (Smooth ESP, Balanced smoothness, the motion estimator) is always set to the best value and is not in the menu, and labels that would overlap (player names, loot, chests, vehicles) are moved apart by themselves. See [Set up the ESP](../guides/esp-setup.md) and [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
 
-<figure><img src="../.gitbook/assets/menu-visuals-3.png" alt="Visuals page, lower half"><figcaption><p>Lower half: the end of the LOOT ESP card, reboot cards, spectators and audio alerts (the colours follow).</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-visuals-3.png" alt="Visuals page, World tab"><figcaption><p>The World tab: loot ESP, reboot cards, spectators and audio alerts.</p></figcaption></figure>

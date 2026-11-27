@@ -4,9 +4,9 @@
 
 This page controls aim assist, close aim, sticky aim and prediction. Aim assist moves your mouse through the **input device**, so it does nothing until a device is connected. See [Connect an input device](../guides/input-device.md). For a walk-through of the settings in a sensible order, read [Tune aim and trigger](../guides/aim-and-trigger.md).
 
-<figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, top"><figcaption><p>The AIMBOT card on the left, close aim, sticky aim and prediction on the right.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, Global tab"><figcaption><p>The Global tab of the Aimbot page: the AIMBOT card on the left, TARGETS and CLOSE AIM on the right. The tabs on top are the weapon classes.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/menu-aimbot-2.png" alt="Aimbot page, scrolled down"><figcaption><p>Scrolled down: the CONTROLLER card, the FOV circle and humanizing.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot-2.png" alt="Aimbot page, scrolled down"><figcaption><p>Scrolled down: the CONTROLLER card and HUMANIZING at the bottom of the left column.</p></figcaption></figure>
 
 ## AIMBOT
 

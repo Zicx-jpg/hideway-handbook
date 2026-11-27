@@ -4,7 +4,7 @@
 
 Everything about saving, sharing and housekeeping: configs, advice, presets, backups, keybinds, files, license and about.
 
-<figure><img src="../.gitbook/assets/menu-config.png" alt="Config page"><figcaption><p>The Config page: configs, advice, menu style and keybinds.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-config.png" alt="Configs page"><figcaption><p>The Configs page: configs and the unsaved changes on the left, menu style and keybinds on the right.</p></figcaption></figure>
 
 ## Cards
 
@@ -26,7 +26,7 @@ Everything about saving, sharing and housekeeping: configs, advice, presets, bac
 
 Program updates are handled by the launcher (its Updates page), not here.
 
-<figure><img src="../.gitbook/assets/menu-config-2.png" alt="Config page, manage, files and share"><figcaption><p>Scrolled down: the end of PRESETS, MANAGE and BACKUPS on the left, SHARE, LICENSE and ABOUT on the right.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-config-2.png" alt="Configs page, scrolled down"><figcaption><p>Scrolled down: the end of PRESETS, MANAGE and BACKUPS on the left, the end of LICENSE, then DEVICES and ABOUT on the right.</p></figcaption></figure>
 
 ## Where configs live
 

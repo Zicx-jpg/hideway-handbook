@@ -4,7 +4,7 @@
 
 The Weapons page lets each class of weapon use its own aim settings.
 
-<figure><img src="../.gitbook/assets/menu-weapons.png" alt="Weapons page"><figcaption><p>One override card per weapon class: Rifle, Pistol, SMG, Shotgun, Sniper.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-weapons.png" alt="Rifle tab of the Aimbot page"><figcaption><p>The Rifle tab of the Aimbot page with its Override on: its own field of view, smoothing, aim bone and Visible only.</p></figcaption></figure>
 
 ## Per-class overrides
 

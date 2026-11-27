@@ -4,11 +4,13 @@
 
 System settings: game data, the overlay, notifications, keys, the input device and the debug switches.
 
-<figure><img src="../.gitbook/assets/menu-misc.png" alt="Misc page"><figcaption><p>The Misc page: game data, overlay settings, notifications and the INPUT DEVICE card.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-misc.png" alt="Device page"><figcaption><p>The Device page: the INPUT DEVICE card and GAME DATA.</p></figcaption></figure>
 
 ## GAME DATA
 
 **Auto-update game data**, the update status, the pack in use, **Check now**, **Install the update** and **Restore previous**. Only packs signed by Hideway are accepted; a new pack is installed automatically only if the game is not found with your files, and is undone by itself if the game still is not found with it. See [After a Fortnite update](../guides/after-a-fortnite-update.md).
+
+<figure><img src="../.gitbook/assets/menu-misc-3.png" alt="Settings page"><figcaption><p>The Settings page: GENERAL and NOTIFICATIONS on the left, KEYS and DEBUG on the right.</p></figcaption></figure>
 
 ## GENERAL
 
@@ -32,7 +34,7 @@ Menu key, Panic key, Master toggle key, Exit key, Next / Previous config key. Se
 
 Connect a MAKCU, Ferrum or KMBox NET so aim and trigger can move the mouse. **Read game-PC mouse buttons** lets the device report the game PC's mouse buttons, so aim and trigger keys work from the mouse in your hand. Full guide: [Connect an input device](../guides/input-device.md).
 
-<figure><img src="../.gitbook/assets/menu-misc-2.png" alt="Misc page, input device cards"><figcaption><p>INPUT DEVICE buttons, DETECTED DEVICES, KEYS and DEBUG.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-misc-2.png" alt="Device page, scrolled down"><figcaption><p>Scrolled down: the INPUT DEVICE buttons and DETECTED DEVICES.</p></figcaption></figure>
 
 ## DEBUG
 

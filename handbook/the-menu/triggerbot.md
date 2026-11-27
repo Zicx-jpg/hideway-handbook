@@ -4,9 +4,9 @@
 
 The triggerbot fires while an enemy is under your crosshair. It needs a connected input device. Close aim, sticky aim and prediction are on the [Aimbot page](aimbot.md).
 
-<figure><img src="../.gitbook/assets/menu-triggerbot.png" alt="Triggerbot page"><figcaption><p>Key, mode, delay, distance and the switches for who it ignores.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-triggerbot.png" alt="Triggerbot page"><figcaption><p>Key, mode, delay and timing on the left, distance, hitbox and who it ignores on the right.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/menu-triggerbot-2.png" alt="Triggerbot page, scrolled down"><figcaption><p>Scrolled down: hitbox, reaction spread, hold time and the rest.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-triggerbot-2.png" alt="Triggerbot page, scrolled down"><figcaption><p>Scrolled down: the rest of the TRIGGERBOT card.</p></figcaption></figure>
 
 | Option | What it does |
 |---|---|
