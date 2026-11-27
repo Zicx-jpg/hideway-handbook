@@ -1,6 +1,6 @@
 # The menu
 
-Press **Insert** to open or close it. There is a side bar with the pages, a search box and the config dropdown on top, and the license state and frame rate at the bottom.
+Press **Insert** to open or close it. The side bar lists the pages in three groups (Combat, Visuals, Utility) with your config and the license state at the bottom. The header has the search box, the connection state and the frame rate, and a gear for the menu colour.
 
 <figure><img src="../.gitbook/assets/menu-aimbot.png" alt="The Hideway menu, Aimbot page"><figcaption><p>The Aimbot page in demo mode.</p></figcaption></figure>
 

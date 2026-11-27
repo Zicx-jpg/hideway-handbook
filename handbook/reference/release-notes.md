@@ -3,6 +3,11 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.8.3 - 2026-11-27
+
+* New look for the menu: darker panels, a side bar in groups with icons, and a search box and status in the header.
+* The sign-in window follows the new look. Nothing moved: every setting is where it was in 3.8.2.
+
 ## 3.8.2 - 2026-11-27
 
 * Fewer pages: Humanizing is now a card on the Aimbot page, and Players, Style, Colours and World are four tabs of one Visuals page.
