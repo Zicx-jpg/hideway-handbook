@@ -10,7 +10,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 
 | Option | Type | Default | Range / choices | What it does |
 |---|---|---|---|---|
-| **Enable aimbot** | on / off | off |  | Master switch for aim assist. It moves the mouse through your input device, so a connected and verified device is required (Misc > Input device). |
+| **Enable aimbot** | on / off | off |  | Master switch for aim assist. It moves the mouse through your input device, so a connected and verified device is required (Device > Input device). |
 | **Aim key** | key | Mouse 2 |  | Hold this key to aim. Click the box, then press a key, a mouse button or a controller button (Xbox pad on this PC); click the box a second time to use Mouse 1 (left button). Right-click the box to clear it. |
 | **Aim bone** | choice | Head | Head / Neck / Chest / Pelvis / Closest bone | Which part of the target to aim at: Head (a little above the head joint, where the game counts a head hit), Neck, Chest or Pelvis aim at that point. 'Closest bone' aims at the point of the body nearest to your crosshair, between the joints. If the chosen part is behind a wall the aim uses the nearest exposed part instead. |
 | **Field of view** | whole number | 60 | 1 to 180 | Only targets inside this cone around your crosshair are considered. Smaller = more selective. |
@@ -32,6 +32,8 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Trigger pull** | whole number | 30 | 5 to 250 | How far LT or RT must be pulled (0-255) before it counts as pressed when a trigger is your Aim key or Trigger key. 30 is the Windows default; raise it if a light touch fires it. |
 | **Aim activation** | choice | Aim key | Aim key / Aiming down sights / Key or aiming down sights | What switches the aim on. 'Aim key' = the key box above. 'Aiming down sights' = the game itself says you are aiming (LT on a controller, right mouse on keyboard): works with a controller that is only plugged into the game PC, nothing to read from it. 'Key or aiming down sights' = either. The CONTROLLER card shows what the game says right now. |
 | **Read keys from the game PC** | on / off | off |  | Also read the keyboard and mouse state of the GAME PC through the DMA card, so the aim key and the trigger key can be any key of the game PC's own keyboard. Off by default: it only turns on if the key table of the game PC's Windows is found and answers sensibly (the log says so). |
+| **Even mouse stream** | on / off | off |  | The aim hands the wanted speed to a 1 kHz thread that sends it as one small mouse move every millisecond, like a real mouse, instead of one burst per rendered frame. Smoother when the overlay renders at 60 fps or hitches; it can only help the aim feel. Off = the old burst per frame. |
+| **Whitelist (names)** | text |  |  | Players whose name is on this list are never aimed at and never shot at by the triggerbot (friends, a duo partner on another team). Separate names with commas; case does not matter; the whole name has to match. The ESP still shows them. |
 
 ## Weapons (per-class overrides)
 
@@ -177,7 +179,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Enemy ammo** | on / off | off |  | Rounds left in the weapon an enemy holds (read from the game; shown only when the weapon was read). |
 | **Text style** | choice | Shadow | Plain / Shadow / Outline / Glow | How ESP text is drawn: plain, with a shadow (the default), with an outline all round, or with a soft glow in its own colour. |
 | **Show debug page** | on / off | off |  | Adds the DEBUG page to the side bar. It shows raw readings and offsets; you do not need it for normal play. |
-| **Auto-save config** | on / off | on |  | Writes the active config 2.5 seconds after your last change, and when the program closes. The old file is kept as a backup first (CONFIG > BACKUPS). Off = only Save config writes it. |
+| **Auto-save config** | on / off | on |  | Writes the active config 2.5 seconds after your last change, and when the program closes. The old file is kept as a backup first (Configs > BACKUPS). Off = only Save config writes it. |
 | **Next config key** | key | not set |  | Switches to the next config in the list (the one you leave is saved first when Auto-save is on). A small message shows the name. |
 | **Previous config key** | key | not set |  | Switches to the previous config in the list. |
 | **Snaplines** | choice | Off | Off / Bottom / Middle / Top | Lines from the screen edge or centre to every player. |
@@ -225,7 +227,7 @@ Every option in the sections below is on its page of the menu: type in the searc
 | **Radar teammates** | on / off | off |  | Radar: show teammates. |
 | **Radar bots** | on / off | on |  | Radar: show bots. |
 | **Radar knocked** | on / off | on |  | Radar: show knocked players. |
-| **Web radar** | on / off | off |  | Starts a small web server inside Hideway and shows the players on a radar in any browser: your phone, a tablet, a second monitor. The page is served from this PC and only reachable on your network (Allow other devices (LAN) opens it to the other devices of your network). Nothing goes to the internet unless you switch on Share radar online. Open the link from the Radar page (it contains your access key). Off by default. |
+| **Web radar** | on / off | off |  | Starts a small web server inside Hideway and shows the players on a radar in any browser: your phone, a tablet, a second monitor. The page is served from this PC and only reachable on your network (Allow other devices (LAN) opens it to the other devices of your network). Nothing goes to the internet unless you switch on Share radar online. Open the link from the Web radar page (it contains your access key). Off by default. |
 | **Allow other devices (LAN)** | on / off | off |  | On: phones and other PCs on your network can open the radar (Windows Firewall may ask to allow Hideway on private networks). Off: only this PC (127.0.0.1). |
 | **Radar toggle key** | key | not set |  | Shows / hides the radar. |
 | **Radar enlarge key** | key | not set |  | Makes the radar bigger while toggled. |

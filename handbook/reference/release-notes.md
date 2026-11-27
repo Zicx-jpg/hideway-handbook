@@ -3,6 +3,14 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.8.1 - 2026-11-26
+
+* Aimbot and triggerbot: a player whose skeleton looks wrong (an outfit on another skeleton) is aimed at from the body, not from a wrong bone.
+* Found by checking 1.2 million poses from your recordings: about 1 in 300 had a crooked bone.
+* Aimbot: new Whitelist (names). Players on it are never aimed at and never shot at by the triggerbot. The ESP still shows them.
+* Aimbot: new Even mouse stream (off by default). The aim is sent as one small mouse move every millisecond instead of one burst per frame.
+* Device: a Ferrum on a serial port is now recognised, like a MAKCU.
+
 ## 3.8.0 - 2026-11-26
 
 * The menu is rearranged: Aimbot, Triggerbot, Humanize, Players, Style, Colours, HUD, World, Device, Settings, Configs, Web radar.
