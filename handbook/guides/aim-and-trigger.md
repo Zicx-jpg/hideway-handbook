@@ -29,7 +29,7 @@ The lock is kept through short interruptions: if the game stops drawing the lock
 
 ## 4. Visibility
 
-The aim only goes for players the game is drawing on screen, and it never aims through a wall that the game's own crosshair trace shows (**Visible only** and the rest of the visibility rule are automatic, not in the menu). How "visible" is judged is explained in [Visibility](visibility.md). If the aim seems to reach through a wall, read that page and [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
+The aim only goes for players the game is drawing on screen, and it never aims through a wall that the game's own crosshair trace shows (**Visible only** and the rest of the visibility rule are on the Aimbot page, card **VISIBILITY CHECK**). How "visible" is judged is explained in [Visibility](visibility.md). If the aim seems to reach through a wall, read that page and [Aim or trigger problems](../troubleshooting/aim-and-trigger.md).
 
 ## 5. Prediction
 

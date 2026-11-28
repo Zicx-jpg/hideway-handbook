@@ -3,6 +3,15 @@
 Newest first. This is the same text the launcher shows under **Updates > What's new**.
 
 
+## 3.8.4 - 2026-11-28
+
+* The visibility check is back in the menu: Aimbot > VISIBILITY CHECK (Visible only, method, tolerance).
+* Weapon tabs: Visible only is now on by default, and switched on once for older configs.
+* Skeletons move smoother: each player's newest pose is read on every frame, not on every other one.
+* The aimbot gets that newer pose too, so it reacts a frame sooner when a player moves.
+* Weapon tab card titles are upper case like the others (RIFLE AIM).
+* The licence is checked more often while Hideway runs.
+
 ## 3.8.3 - 2026-11-27
 
 * New look for the menu: darker panels, a side bar in groups with icons, and a search box and status in the header.

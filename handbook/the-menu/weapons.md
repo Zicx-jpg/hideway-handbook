@@ -8,7 +8,7 @@ The Weapons page lets each class of weapon use its own aim settings.
 
 ## Per-class overrides
 
-Cards: **RIFLE**, **PISTOL**, **SMG**, **SHOTGUN**, **SNIPER**. Each has an **Override** switch. When it is on, that class uses its own **Field of view**, **Smoothing**, **Aim bone**, **Visible only**, **Trigger on** (the triggerbot fires with this class or stays quiet) and **Trigger delay** instead of the general Aimbot and Triggerbot values. When it is off, the class follows the Aimbot page.
+Cards: **RIFLE**, **PISTOL**, **SMG**, **SHOTGUN**, **SNIPER**. Each has an **Override** switch. When it is on, that class uses its own **Field of view**, **Smoothing**, **Aim bone**, **Visible only** (on by default since 3.8.4), **Trigger on** (the triggerbot fires with this class or stays quiet) and **Trigger delay** instead of the general Aimbot and Triggerbot values. When it is off, the class follows the Aimbot page.
 
 Use it, for example, to give shotguns a wide, fast aim at short range and snipers a narrow, slow one.
 

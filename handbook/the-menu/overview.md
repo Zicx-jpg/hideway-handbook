@@ -22,7 +22,7 @@ Every page has two panels, left and right. The Aimbot and Triggerbot pages start
 
 ## One menu, no modes
 
-There is no Simple / Advanced switch. Every setting you might want is on its page. Things that should simply work are automatic and are not shown: the gun-in-hand rule, aiming between bones, the visibility rule, the counts-per-degree calibration, the humanizing values, per-weapon ballistics, the trigger source, smooth ESP and the engine switches, label spacing, and the look of the radar. They are all listed under [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
+There is no Simple / Advanced switch. Every setting you might want is on its page. Things that should simply work are automatic and are not shown: the gun-in-hand rule, aiming between bones, the counts-per-degree calibration, the humanizing values, per-weapon ballistics, the trigger source, smooth ESP and the engine switches, label spacing, and the look of the radar. They are all listed under [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu).
 
 ## Search, tooltips and the config dropdown
 

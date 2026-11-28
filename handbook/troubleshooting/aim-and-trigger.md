@@ -42,7 +42,7 @@ From most to least likely:
 2. The game draws a player behind thin cover and calls them visible (the aim follows the game's own render time). See [Visibility](../guides/visibility.md).
 3. It is too early in the match. Until the wall check is ready the render-time flag is all that is used.
 
-The visibility rule (Visible only, the Visibility check style and its tolerance) is automatic and not in the menu.
+The visibility rule is on the Aimbot page, card **VISIBILITY CHECK** (since 3.8.4): **Visible only**, **Visibility check** (the method), **Visibility tolerance** and **Wait for wall check**. A weapon tab with **Override** on uses its own **Visible only**.
 
 ## Trigger fires through a wall
 

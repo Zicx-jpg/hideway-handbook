@@ -1,10 +1,10 @@
 # Aimbot
 
-*Since 3.8.0 the menu is laid out like this: the **Aimbot** page has the AIMBOT, FOV CIRCLE, CONTROLLER and HUMANIZING cards on the left and TARGETS, CLOSE AIM, STICKY AIM and PREDICTION on the right, under a row of weapon tabs (Global, Rifle, Pistol, SMG, Shotgun, Sniper). The **HUMANIZING** card is at the bottom of the left column (it had its own page in 3.8.0 and 3.8.1).*
+*Since 3.8.0 the menu is laid out like this: the **Aimbot** page has the AIMBOT, FOV CIRCLE, CONTROLLER and HUMANIZING cards on the left and TARGETS, VISIBILITY CHECK (since 3.8.4), CLOSE AIM, STICKY AIM and PREDICTION on the right, under a row of weapon tabs (Global, Rifle, Pistol, SMG, Shotgun, Sniper). The **HUMANIZING** card is at the bottom of the left column (it had its own page in 3.8.0 and 3.8.1).*
 
 This page controls aim assist, close aim, sticky aim and prediction. Aim assist moves your mouse through the **input device**, so it does nothing until a device is connected. See [Connect an input device](../guides/input-device.md). For a walk-through of the settings in a sensible order, read [Tune aim and trigger](../guides/aim-and-trigger.md).
 
-<figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, Global tab"><figcaption><p>The Global tab of the Aimbot page: the AIMBOT card on the left, TARGETS and CLOSE AIM on the right. The tabs on top are the weapon classes.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu-aimbot.png" alt="Aimbot page, Global tab"><figcaption><p>The Global tab of the Aimbot page: the AIMBOT card on the left, TARGETS and the start of VISIBILITY CHECK on the right. The tabs on top are the weapon classes.</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/menu-aimbot-2.png" alt="Aimbot page, scrolled down"><figcaption><p>Scrolled down: the CONTROLLER card and HUMANIZING at the bottom of the left column.</p></figcaption></figure>
 
@@ -27,6 +27,21 @@ This page controls aim assist, close aim, sticky aim and prediction. Aim assist 
 | Third-person correction | On by default. The camera swings round your player, so a target near you needs a bigger turn than the angle it is seen at (about 1.4x at 5 m, 1.2x at 10 m, 1.07x at 30 m); this adds it, so close fights lock on faster. Hideway measures how rigidly your camera orbits and switches itself off in first person or scoped. Off = plain angles |
 | Lock until key release | Stay on the first target until you let go of the aim key |
 | Dead zone | Inside this angle the aim stops moving, so it does not shake |
+
+<figure><img src="../.gitbook/assets/menu-aimbot-3.png" alt="Aimbot page, VISIBILITY CHECK card"><figcaption><p>A little further down: FOV CIRCLE on the left, the VISIBILITY CHECK card on the right (Visible only, the method and the tolerance).</p></figcaption></figure>
+
+## VISIBILITY CHECK
+
+*Back in the menu since 3.8.4 (it was automatic from 3.3 to 3.8.3, with the same defaults).* Under TARGETS on the right.
+
+| Option | What it does |
+|---|---|
+| Visible only | On by default. The aim only goes for players the game is drawing on screen and never through a wall the game's crosshair trace shows. Off = it also locks players behind walls |
+| Visibility check | How visible is judged: **UE5 render time only** (default, the game's own check, works from the first second), **Unreal line of sight** or **Bones (head, chest, knee)** (rays against the level, ready a few seconds into a match). See [Visibility](../guides/visibility.md) |
+| Visibility tolerance | A player counts as visible if the game drew them within this many milliseconds (default 200). Lower = stricter behind cover, higher = steadier |
+| Wait for wall check | Only with one of the two ray methods: the aim waits until the level is read instead of trusting the render time alone |
+
+A weapon tab with **Override** on uses its own **Visible only** (on by default since 3.8.4; older configs get it switched on once).
 
 ## CONTROLLER
 
@@ -53,7 +68,8 @@ Shows the controllers Windows sees on **this** PC and the buttons held right now
 These are decided by Hideway so a saved config cannot leave them in a bad state. See [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu) for the full list.
 
 * **Only with a gun in hand**: aim and trigger stay off while you hold a build piece, the pickaxe or an empty weapon. If Mouse 1 is your aim key, clicking to place a wall would otherwise start the aim and lock onto whoever stands behind it. Judged from the held item's ammo count; if the game's weapon cannot be read, aim keeps working.
-* **Visible only**, **Visibility check**, **Wait for wall check**, **Visibility tolerance (200 ms)**: the aim only goes for players the game is drawing on screen, judged by the game's own render time, and it never aims through a wall that the game's crosshair trace shows. See [Visibility](../guides/visibility.md).
+
+
 * **Aim between bones**: makes **Closest bone** aim at the closest point of the skeleton to your crosshair, any bone segment (on the head it follows the crosshair up to 14 cm above the joint), and lets a chosen part that is behind a wall fall back to the nearest exposed one.
 * **Aim ease-in (80 ms)**: the aim starts gently on a new target instead of with its biggest step at once.
 * **Counts per degree X / Y**: the mouse counts that turn your view by one degree. The program measures them itself once per match, at a calm moment (aim on, device connected, nobody close), with a few tiny moves that cancel out. The Debug page shows the result. If the aim consistently overshoots or falls short, send the log.

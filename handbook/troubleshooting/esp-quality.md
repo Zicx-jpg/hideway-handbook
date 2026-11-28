@@ -45,6 +45,8 @@ Two different things can cause it:
 
 A bone array with a joint more than 2.5 m from the pelvis is rejected and the last good pose is kept, so a stray limb should not show.
 
+Since 3.8.4 each player's newest pose is read on every frame. The game keeps two copies of a pose and rewrites them in turn; Hideway used to read one copy, so it only got the newest pose every other frame. It now follows the game's own marker of which copy is finished. It checks that marker by itself at the start of each match: the log says *pose buffers: the game's read index found* when it is used, or *no read index* when it is not (then skeletons are read the old way, nothing breaks).
+
 ## An enemy vanishes for a few seconds
 
 Check these in order:

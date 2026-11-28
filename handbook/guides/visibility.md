@@ -15,7 +15,7 @@ The render-time flag is the engine's occlusion result, not a ray. A player drawn
 
 ## Settings
 
-There is nothing to tune: the visibility rule is automatic and not in the menu (**Visible only**, **Visibility check**, **Visibility tolerance** and **Wait for wall check** are decided by Hideway, see [Automatic settings](../reference/options.md#automatic-settings-not-in-the-menu)). What is yours: **Trigger visible only** on the Triggerbot page and **Visible only** per weapon class on the Weapons page.
+Since 3.8.4 the visibility rule is back in the menu: Aimbot page, card **VISIBILITY CHECK**, with **Visible only**, **Visibility check** (the method), **Visibility tolerance** and, with a wall-trace method, **Wait for wall check**. The defaults are the ones Hideway used while they were automatic (on, UE5 render time only, 200 ms). **Trigger visible only** is on the Triggerbot page, and each weapon tab with **Override** on has its own **Visible only** (on by default since 3.8.4).
 
 ## If something looks wrong
 
